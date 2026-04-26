@@ -22,37 +22,37 @@ Partial Class WelcomeFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        btnGetStarted = New Button()
         btnClose = New Label()
+        btnGetStarted = New Button()
         SuspendLayout()
-        ' 
-        ' btnGetStarted
-        ' 
-        btnGetStarted.Location = New Point(155, 529)
-        btnGetStarted.Name = "btnGetStarted"
-        btnGetStarted.Size = New Size(394, 47)
-        btnGetStarted.TabIndex = 0
-        btnGetStarted.Text = "GET STARTED"
-        btnGetStarted.UseVisualStyleBackColor = True
         ' 
         ' btnClose
         ' 
         btnClose.AutoSize = True
         btnClose.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClose.Location = New Point(667, 9)
+        btnClose.Location = New Point(391, 18)
         btnClose.Margin = New Padding(4, 0, 4, 0)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(36, 40)
         btnClose.TabIndex = 6
         btnClose.Text = "X"
         ' 
+        ' btnGetStarted
+        ' 
+        btnGetStarted.Location = New Point(60, 459)
+        btnGetStarted.Name = "btnGetStarted"
+        btnGetStarted.Size = New Size(337, 62)
+        btnGetStarted.TabIndex = 7
+        btnGetStarted.Text = "GET STARTED"
+        btnGetStarted.UseVisualStyleBackColor = True
+        ' 
         ' WelcomeFrm
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(716, 712)
-        Controls.Add(btnClose)
+        ClientSize = New Size(450, 600)
         Controls.Add(btnGetStarted)
+        Controls.Add(btnClose)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(4)
         Name = "WelcomeFrm"
@@ -61,7 +61,6 @@ Partial Class WelcomeFrm
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents btnGetStarted As Button
     Friend WithEvents btnClose As Label
+    Friend WithEvents btnGetStarted As Button
 End Class

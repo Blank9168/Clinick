@@ -24,43 +24,61 @@ Partial Class WelcomeFrm
     Private Sub InitializeComponent()
         btnClose = New Label()
         btnGetStarted = New Button()
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnClose
         ' 
         btnClose.AutoSize = True
-        btnClose.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClose.Location = New Point(391, 18)
-        btnClose.Margin = New Padding(4, 0, 4, 0)
+        btnClose.Font = New Font("SansSerif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
+        btnClose.ForeColor = Color.FromArgb(CByte(120), CByte(169), CByte(176))
+        btnClose.Location = New Point(369, 9)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(36, 40)
+        btnClose.Size = New Size(25, 27)
         btnClose.TabIndex = 6
-        btnClose.Text = "X"
+        btnClose.Text = "x"
         ' 
         ' btnGetStarted
         ' 
-        btnGetStarted.Location = New Point(60, 459)
+        btnGetStarted.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        btnGetStarted.Font = New Font("SansSerif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(2))
+        btnGetStarted.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnGetStarted.Location = New Point(61, 377)
+        btnGetStarted.Margin = New Padding(2, 2, 2, 2)
         btnGetStarted.Name = "btnGetStarted"
-        btnGetStarted.Size = New Size(337, 62)
+        btnGetStarted.Size = New Size(270, 44)
         btnGetStarted.TabIndex = 7
-        btnGetStarted.Text = "GET STARTED"
-        btnGetStarted.UseVisualStyleBackColor = True
+        btnGetStarted.Text = "Get Started"
+        btnGetStarted.UseVisualStyleBackColor = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(43, 187)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(312, 106)
+        PictureBox1.TabIndex = 8
+        PictureBox1.TabStop = False
         ' 
         ' WelcomeFrm
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(450, 600)
+        BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
+        ClientSize = New Size(406, 536)
+        Controls.Add(PictureBox1)
         Controls.Add(btnGetStarted)
         Controls.Add(btnClose)
+        ForeColor = SystemColors.ControlText
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(4)
         Name = "WelcomeFrm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
     Friend WithEvents btnClose As Label
     Friend WithEvents btnGetStarted As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

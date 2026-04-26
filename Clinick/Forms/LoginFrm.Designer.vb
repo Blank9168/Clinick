@@ -28,73 +28,87 @@ Partial Class LoginFrm
         Label1 = New Label()
         Label2 = New Label()
         btnClose = New Label()
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnLogin
         ' 
-        btnLogin.Location = New Point(156, 618)
-        btnLogin.Margin = New Padding(4, 5, 4, 5)
+        btnLogin.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        btnLogin.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnLogin.Location = New Point(96, 507)
+        btnLogin.Margin = New Padding(3, 4, 3, 4)
         btnLogin.Name = "btnLogin"
-        btnLogin.Size = New Size(157, 67)
+        btnLogin.Size = New Size(194, 41)
         btnLogin.TabIndex = 0
-        btnLogin.Text = "LOGIN"
-        btnLogin.UseVisualStyleBackColor = True
+        btnLogin.Text = "Log In"
+        btnLogin.UseVisualStyleBackColor = False
         ' 
         ' txtUsername
         ' 
         txtUsername.BorderStyle = BorderStyle.FixedSingle
-        txtUsername.Location = New Point(120, 370)
-        txtUsername.Margin = New Padding(4, 5, 4, 5)
+        txtUsername.Location = New Point(75, 296)
+        txtUsername.Margin = New Padding(3, 4, 3, 4)
         txtUsername.Name = "txtUsername"
-        txtUsername.Size = New Size(242, 31)
+        txtUsername.Size = New Size(238, 27)
         txtUsername.TabIndex = 1
         ' 
         ' txtPassword
         ' 
         txtPassword.BorderStyle = BorderStyle.FixedSingle
-        txtPassword.Location = New Point(120, 493)
-        txtPassword.Margin = New Padding(4, 5, 4, 5)
+        txtPassword.Location = New Point(75, 394)
+        txtPassword.Margin = New Padding(3, 4, 3, 4)
         txtPassword.Name = "txtPassword"
-        txtPassword.Size = New Size(242, 31)
+        txtPassword.Size = New Size(238, 27)
         txtPassword.TabIndex = 2
         txtPassword.UseSystemPasswordChar = True
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(120, 463)
-        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Font = New Font("SansSerif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(2))
+        Label1.Location = New Point(75, 373)
         Label1.Name = "Label1"
-        Label1.Size = New Size(91, 25)
+        Label1.Size = New Size(78, 17)
         Label1.TabIndex = 3
         Label1.Text = "Password:"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(120, 340)
-        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Font = New Font("SansSerif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(2))
+        Label2.Location = New Point(74, 275)
         Label2.Name = "Label2"
-        Label2.Size = New Size(95, 25)
+        Label2.Size = New Size(80, 17)
         Label2.TabIndex = 4
         Label2.Text = "Username:"
         ' 
         ' btnClose
         ' 
         btnClose.AutoSize = True
-        btnClose.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClose.Location = New Point(459, 15)
-        btnClose.Margin = New Padding(4, 0, 4, 0)
+        btnClose.Font = New Font("SansSerif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
+        btnClose.ForeColor = Color.FromArgb(CByte(120), CByte(169), CByte(176))
+        btnClose.Location = New Point(371, 9)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(36, 40)
+        btnClose.Size = New Size(25, 27)
         btnClose.TabIndex = 5
-        btnClose.Text = "X"
+        btnClose.Text = "x"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(135, 105)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(128, 115)
+        PictureBox1.TabIndex = 6
+        PictureBox1.TabStop = False
         ' 
         ' LoginFrm
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(510, 1043)
+        BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
+        ClientSize = New Size(408, 662)
+        Controls.Add(PictureBox1)
         Controls.Add(btnClose)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -102,10 +116,11 @@ Partial Class LoginFrm
         Controls.Add(txtUsername)
         Controls.Add(btnLogin)
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(4, 5, 4, 5)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "LoginFrm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -116,5 +131,6 @@ Partial Class LoginFrm
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnClose As Label
+    Friend WithEvents PictureBox1 As PictureBox
 
 End Class

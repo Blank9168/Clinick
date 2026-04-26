@@ -1,6 +1,6 @@
 ﻿Public Class LoginFrm
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Close()
+        Application.Exit()
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click

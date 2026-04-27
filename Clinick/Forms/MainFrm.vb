@@ -4,8 +4,8 @@
     End Sub
 
     Private Sub btnGeneralCons_Click(sender As Object, e As EventArgs) Handles btnGeneralCons.Click
-        GeneralConsultationFrm.Show()
-        Me.Hide()
+        GeneralConsultationFrm.Show
+        Hide
     End Sub
 
     Private Sub btnDentalS_Click(sender As Object, e As EventArgs) Handles btnDentalS.Click

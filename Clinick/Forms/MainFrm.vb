@@ -24,5 +24,9 @@
         lblDenApt.Text = TotalDental.ToString()
         lblPedApt.Text = TotalPedia.ToString()
 
+        lblDate.Text = DateTime.Now.ToString("MMMM dd, yyyy")
+
     End Sub
+
+
 End Class

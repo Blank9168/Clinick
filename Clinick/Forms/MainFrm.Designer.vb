@@ -49,6 +49,7 @@ Partial Class MainFrm
         PBLogo = New PictureBox()
         PBClinick = New PictureBox()
         btnClose = New Label()
+        lblDate = New Label()
         Panel1.SuspendLayout()
         Panel4.SuspendLayout()
         Panel3.SuspendLayout()
@@ -65,6 +66,7 @@ Partial Class MainFrm
         ' 
         Panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
         Panel1.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
+        Panel1.Controls.Add(lblDate)
         Panel1.Controls.Add(lblTotalApt)
         Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(Panel3)
@@ -77,8 +79,9 @@ Partial Class MainFrm
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(lblUsername)
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(4, 4, 4, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(232, 453)
+        Panel1.Size = New Size(290, 566)
         Panel1.TabIndex = 0
         ' 
         ' lblTotalApt
@@ -86,9 +89,10 @@ Partial Class MainFrm
         lblTotalApt.AutoSize = True
         lblTotalApt.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblTotalApt.ForeColor = Color.Black
-        lblTotalApt.Location = New Point(196, 166)
+        lblTotalApt.Location = New Point(245, 208)
+        lblTotalApt.Margin = New Padding(4, 0, 4, 0)
         lblTotalApt.Name = "lblTotalApt"
-        lblTotalApt.Size = New Size(24, 25)
+        lblTotalApt.Size = New Size(27, 29)
         lblTotalApt.TabIndex = 16
         lblTotalApt.Text = "0"
         ' 
@@ -97,9 +101,10 @@ Partial Class MainFrm
         Panel4.BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         Panel4.Controls.Add(lblPedApt)
         Panel4.Controls.Add(Label10)
-        Panel4.Location = New Point(3, 330)
+        Panel4.Location = New Point(4, 412)
+        Panel4.Margin = New Padding(4, 4, 4, 4)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(229, 56)
+        Panel4.Size = New Size(286, 70)
         Panel4.TabIndex = 14
         ' 
         ' lblPedApt
@@ -107,9 +112,10 @@ Partial Class MainFrm
         lblPedApt.AutoSize = True
         lblPedApt.Font = New Font("Microsoft Sans Serif", 10.2F)
         lblPedApt.ForeColor = Color.Black
-        lblPedApt.Location = New Point(193, 19)
+        lblPedApt.Location = New Point(241, 24)
+        lblPedApt.Margin = New Padding(4, 0, 4, 0)
         lblPedApt.Name = "lblPedApt"
-        lblPedApt.Size = New Size(18, 20)
+        lblPedApt.Size = New Size(24, 25)
         lblPedApt.TabIndex = 17
         lblPedApt.Text = "0"
         ' 
@@ -118,9 +124,10 @@ Partial Class MainFrm
         Label10.AutoSize = True
         Label10.Font = New Font("Microsoft Sans Serif", 8F)
         Label10.ForeColor = Color.Black
-        Label10.Location = New Point(11, 20)
+        Label10.Location = New Point(14, 25)
+        Label10.Margin = New Padding(4, 0, 4, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(74, 17)
+        Label10.Size = New Size(82, 20)
         Label10.TabIndex = 17
         Label10.Text = "Pediatrics:"
         ' 
@@ -129,9 +136,10 @@ Partial Class MainFrm
         Panel3.BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         Panel3.Controls.Add(lblDenApt)
         Panel3.Controls.Add(Label9)
-        Panel3.Location = New Point(3, 264)
+        Panel3.Location = New Point(4, 330)
+        Panel3.Margin = New Padding(4, 4, 4, 4)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(229, 56)
+        Panel3.Size = New Size(286, 70)
         Panel3.TabIndex = 13
         ' 
         ' lblDenApt
@@ -139,9 +147,10 @@ Partial Class MainFrm
         lblDenApt.AutoSize = True
         lblDenApt.Font = New Font("Microsoft Sans Serif", 10.2F)
         lblDenApt.ForeColor = Color.Black
-        lblDenApt.Location = New Point(193, 18)
+        lblDenApt.Location = New Point(241, 22)
+        lblDenApt.Margin = New Padding(4, 0, 4, 0)
         lblDenApt.Name = "lblDenApt"
-        lblDenApt.Size = New Size(18, 20)
+        lblDenApt.Size = New Size(24, 25)
         lblDenApt.TabIndex = 16
         lblDenApt.Text = "0"
         ' 
@@ -150,9 +159,10 @@ Partial Class MainFrm
         Label9.AutoSize = True
         Label9.Font = New Font("Microsoft Sans Serif", 8F)
         Label9.ForeColor = Color.Black
-        Label9.Location = New Point(11, 18)
+        Label9.Location = New Point(14, 22)
+        Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(104, 17)
+        Label9.Size = New Size(116, 20)
         Label9.TabIndex = 16
         Label9.Text = "Dental Service:"
         ' 
@@ -161,9 +171,10 @@ Partial Class MainFrm
         Panel2.BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         Panel2.Controls.Add(lblGenApt)
         Panel2.Controls.Add(Label7)
-        Panel2.Location = New Point(3, 198)
+        Panel2.Location = New Point(4, 248)
+        Panel2.Margin = New Padding(4, 4, 4, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(229, 56)
+        Panel2.Size = New Size(286, 70)
         Panel2.TabIndex = 12
         ' 
         ' lblGenApt
@@ -171,9 +182,10 @@ Partial Class MainFrm
         lblGenApt.AutoSize = True
         lblGenApt.Font = New Font("Microsoft Sans Serif", 10.2F)
         lblGenApt.ForeColor = Color.Black
-        lblGenApt.Location = New Point(193, 17)
+        lblGenApt.Location = New Point(241, 21)
+        lblGenApt.Margin = New Padding(4, 0, 4, 0)
         lblGenApt.Name = "lblGenApt"
-        lblGenApt.Size = New Size(18, 20)
+        lblGenApt.Size = New Size(24, 25)
         lblGenApt.TabIndex = 15
         lblGenApt.Text = "0"
         ' 
@@ -182,9 +194,10 @@ Partial Class MainFrm
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 8F)
         Label7.ForeColor = Color.Black
-        Label7.Location = New Point(11, 20)
+        Label7.Location = New Point(14, 25)
+        Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(145, 17)
+        Label7.Size = New Size(163, 20)
         Label7.TabIndex = 15
         Label7.Text = "General Consultation:"
         ' 
@@ -193,9 +206,10 @@ Partial Class MainFrm
         Label6.AutoSize = True
         Label6.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(2))
         Label6.ForeColor = Color.Black
-        Label6.Location = New Point(13, 218)
+        Label6.Location = New Point(16, 272)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(261, 19)
+        Label6.Size = New Size(323, 23)
         Label6.TabIndex = 11
         Label6.Text = "Total Appointments"
         ' 
@@ -204,9 +218,10 @@ Partial Class MainFrm
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 8F)
         Label5.ForeColor = Color.Black
-        Label5.Location = New Point(11, 166)
+        Label5.Location = New Point(14, 208)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(134, 17)
+        Label5.Size = New Size(151, 20)
         Label5.TabIndex = 10
         Label5.Text = "Total Appointments:"
         ' 
@@ -214,17 +229,19 @@ Partial Class MainFrm
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(2))
-        Label4.Location = New Point(68, 204)
+        Label4.Location = New Point(85, 255)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(0, 19)
+        Label4.Size = New Size(0, 23)
         Label4.TabIndex = 9
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.a81550e786150a070aea73896e641a21
-        PictureBox1.Location = New Point(13, 41)
+        PictureBox1.Location = New Point(16, 51)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(73, 70)
+        PictureBox1.Size = New Size(91, 88)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
@@ -234,9 +251,10 @@ Partial Class MainFrm
         lblName.AutoSize = True
         lblName.Font = New Font("Microsoft Sans Serif", 8F)
         lblName.ForeColor = Color.Black
-        lblName.Location = New Point(92, 92)
+        lblName.Location = New Point(115, 115)
+        lblName.Margin = New Padding(4, 0, 4, 0)
         lblName.Name = "lblName"
-        lblName.Size = New Size(111, 17)
+        lblName.Size = New Size(124, 20)
         lblName.TabIndex = 7
         lblName.Text = "Pepito M. Friend"
         ' 
@@ -244,9 +262,10 @@ Partial Class MainFrm
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 8F)
-        Label1.Location = New Point(11, 14)
+        Label1.Location = New Point(14, 18)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(69, 17)
+        Label1.Size = New Size(79, 20)
         Label1.TabIndex = 6
         Label1.Text = "Welcome!"
         ' 
@@ -255,9 +274,10 @@ Partial Class MainFrm
         lblUsername.AutoSize = True
         lblUsername.Font = New Font("Microsoft Sans Serif", 8F)
         lblUsername.ForeColor = Color.Black
-        lblUsername.Location = New Point(91, 68)
+        lblUsername.Location = New Point(114, 85)
+        lblUsername.Margin = New Padding(4, 0, 4, 0)
         lblUsername.Name = "lblUsername"
-        lblUsername.Size = New Size(86, 17)
+        lblUsername.Size = New Size(97, 20)
         lblUsername.TabIndex = 5
         lblUsername.Text = "Employee01"
         ' 
@@ -266,10 +286,10 @@ Partial Class MainFrm
         btnGeneralCons.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
         btnGeneralCons.Font = New Font("Microsoft Sans Serif", 11F)
         btnGeneralCons.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnGeneralCons.Location = New Point(339, 134)
+        btnGeneralCons.Location = New Point(424, 168)
         btnGeneralCons.Margin = New Padding(2)
         btnGeneralCons.Name = "btnGeneralCons"
-        btnGeneralCons.Size = New Size(443, 66)
+        btnGeneralCons.Size = New Size(554, 82)
         btnGeneralCons.TabIndex = 8
         btnGeneralCons.Text = "General Consultation"
         btnGeneralCons.UseVisualStyleBackColor = False
@@ -279,10 +299,10 @@ Partial Class MainFrm
         btnDentalS.BackColor = Color.FromArgb(CByte(192), CByte(228), CByte(231))
         btnDentalS.Font = New Font("Microsoft Sans Serif", 11F)
         btnDentalS.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnDentalS.Location = New Point(339, 227)
+        btnDentalS.Location = New Point(424, 284)
         btnDentalS.Margin = New Padding(2)
         btnDentalS.Name = "btnDentalS"
-        btnDentalS.Size = New Size(443, 66)
+        btnDentalS.Size = New Size(554, 82)
         btnDentalS.TabIndex = 9
         btnDentalS.Text = "Dental Service"
         btnDentalS.UseVisualStyleBackColor = False
@@ -292,51 +312,56 @@ Partial Class MainFrm
         btnPediatrics.BackColor = Color.FromArgb(CByte(164), CByte(215), CByte(219))
         btnPediatrics.Font = New Font("Microsoft Sans Serif", 11F)
         btnPediatrics.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnPediatrics.Location = New Point(339, 320)
+        btnPediatrics.Location = New Point(424, 400)
         btnPediatrics.Margin = New Padding(2)
         btnPediatrics.Name = "btnPediatrics"
-        btnPediatrics.Size = New Size(443, 66)
+        btnPediatrics.Size = New Size(554, 82)
         btnPediatrics.TabIndex = 10
         btnPediatrics.Text = "Pediatrics"
         btnPediatrics.UseVisualStyleBackColor = False
         ' 
         ' PBGcIcon
         ' 
-        PBGcIcon.Location = New Point(271, 147)
+        PBGcIcon.Location = New Point(339, 184)
+        PBGcIcon.Margin = New Padding(4, 4, 4, 4)
         PBGcIcon.Name = "PBGcIcon"
-        PBGcIcon.Size = New Size(47, 42)
+        PBGcIcon.Size = New Size(59, 52)
         PBGcIcon.TabIndex = 11
         PBGcIcon.TabStop = False
         ' 
         ' PBDenIcon
         ' 
-        PBDenIcon.Location = New Point(271, 238)
+        PBDenIcon.Location = New Point(339, 298)
+        PBDenIcon.Margin = New Padding(4, 4, 4, 4)
         PBDenIcon.Name = "PBDenIcon"
-        PBDenIcon.Size = New Size(47, 42)
+        PBDenIcon.Size = New Size(59, 52)
         PBDenIcon.TabIndex = 12
         PBDenIcon.TabStop = False
         ' 
         ' PbPdIcon
         ' 
-        PbPdIcon.Location = New Point(271, 329)
+        PbPdIcon.Location = New Point(339, 411)
+        PbPdIcon.Margin = New Padding(4, 4, 4, 4)
         PbPdIcon.Name = "PbPdIcon"
-        PbPdIcon.Size = New Size(47, 42)
+        PbPdIcon.Size = New Size(59, 52)
         PbPdIcon.TabIndex = 13
         PbPdIcon.TabStop = False
         ' 
         ' PBLogo
         ' 
-        PBLogo.Location = New Point(196, 12)
+        PBLogo.Location = New Point(245, 15)
+        PBLogo.Margin = New Padding(4, 4, 4, 4)
         PBLogo.Name = "PBLogo"
-        PBLogo.Size = New Size(21, 22)
+        PBLogo.Size = New Size(26, 28)
         PBLogo.TabIndex = 14
         PBLogo.TabStop = False
         ' 
         ' PBClinick
         ' 
-        PBClinick.Location = New Point(384, 12)
+        PBClinick.Location = New Point(480, 15)
+        PBClinick.Margin = New Padding(4, 4, 4, 4)
         PBClinick.Name = "PBClinick"
-        PBClinick.Size = New Size(353, 42)
+        PBClinick.Size = New Size(441, 52)
         PBClinick.TabIndex = 15
         PBClinick.TabStop = False
         ' 
@@ -345,18 +370,27 @@ Partial Class MainFrm
         btnClose.AutoSize = True
         btnClose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
         btnClose.ForeColor = Color.FromArgb(CByte(120), CByte(169), CByte(176))
-        btnClose.Location = New Point(773, 6)
+        btnClose.Location = New Point(966, 8)
+        btnClose.Margin = New Padding(4, 0, 4, 0)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(37, 26)
+        btnClose.Size = New Size(45, 31)
         btnClose.TabIndex = 16
         btnClose.Text = "x"
         ' 
+        ' lblDate
+        ' 
+        lblDate.AutoSize = True
+        lblDate.Location = New Point(14, 512)
+        lblDate.Name = "lblDate"
+        lblDate.Size = New Size(0, 25)
+        lblDate.TabIndex = 17
+        ' 
         ' MainFrm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        ClientSize = New Size(822, 450)
+        ClientSize = New Size(1028, 562)
         Controls.Add(btnClose)
         Controls.Add(PBClinick)
         Controls.Add(PBLogo)
@@ -368,6 +402,7 @@ Partial Class MainFrm
         Controls.Add(btnGeneralCons)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 4, 4, 4)
         Name = "MainFrm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "MainFrm"
@@ -416,4 +451,5 @@ Partial Class MainFrm
     Friend WithEvents PBLogo As PictureBox
     Friend WithEvents PBClinick As PictureBox
     Friend WithEvents btnClose As Label
+    Friend WithEvents lblDate As Label
 End Class

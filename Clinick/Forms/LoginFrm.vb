@@ -13,7 +13,7 @@
 
         If username = employee AndAlso password = employeePass Then
             MessageBox.Show("Login successful! Welcome, Employee.")
-            Dim employeeFrm As New PBPedIcon()
+            Dim employeeFrm As New MainFrm()
             employeeFrm.Show()
             Me.Hide()
         ElseIf username = admin AndAlso password = adminPass Then
@@ -27,7 +27,5 @@
 
     End Sub
 
-    Private Sub LoginFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 End Class

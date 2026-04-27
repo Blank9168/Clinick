@@ -21,5 +21,11 @@
     Public PediaVisitType(100) As String
     Public PediaGuardian(100) As String
 
+    'For Dashboard'
+    Public RecordCount As Integer = 0
+    Public TotalGeneral As Integer = 0
+    Public TotalDental As Integer = 0
+    Public TotalPedia As Integer = 0
+
 
 End Module

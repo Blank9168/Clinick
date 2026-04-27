@@ -31,46 +31,49 @@ Partial Class WelcomeFrm
         ' btnClose
         ' 
         btnClose.AutoSize = True
-        btnClose.Font = New Font("SansSerif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
+        btnClose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
         btnClose.ForeColor = Color.FromArgb(CByte(120), CByte(169), CByte(176))
-        btnClose.Location = New Point(369, 9)
+        btnClose.Location = New Point(461, 11)
+        btnClose.Margin = New Padding(4, 0, 4, 0)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(25, 27)
+        btnClose.Size = New Size(45, 31)
         btnClose.TabIndex = 6
         btnClose.Text = "x"
         ' 
         ' btnGetStarted
         ' 
         btnGetStarted.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        btnGetStarted.Font = New Font("SansSerif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, CByte(2))
+        btnGetStarted.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnGetStarted.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnGetStarted.Location = New Point(61, 377)
-        btnGetStarted.Margin = New Padding(2, 2, 2, 2)
+        btnGetStarted.Location = New Point(76, 471)
+        btnGetStarted.Margin = New Padding(2)
         btnGetStarted.Name = "btnGetStarted"
-        btnGetStarted.Size = New Size(270, 44)
+        btnGetStarted.Size = New Size(338, 55)
         btnGetStarted.TabIndex = 7
         btnGetStarted.Text = "Get Started"
         btnGetStarted.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(43, 187)
+        PictureBox1.Location = New Point(54, 234)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(312, 106)
+        PictureBox1.Size = New Size(390, 132)
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
         ' 
         ' WelcomeFrm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        ClientSize = New Size(406, 536)
+        ClientSize = New Size(508, 670)
         Controls.Add(PictureBox1)
         Controls.Add(btnGetStarted)
         Controls.Add(btnClose)
         ForeColor = SystemColors.ControlText
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 4, 4, 4)
         Name = "WelcomeFrm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"

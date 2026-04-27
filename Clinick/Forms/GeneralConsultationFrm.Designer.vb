@@ -22,15 +22,29 @@ Partial Class GeneralConsultationFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        btnBack = New Button()
         SuspendLayout()
+        ' 
+        ' btnBack
+        ' 
+        btnBack.Location = New Point(235, 175)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(332, 96)
+        btnBack.TabIndex = 0
+        btnBack.Text = "Button1"
+        btnBack.UseVisualStyleBackColor = True
         ' 
         ' GeneralConsultationFrm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(btnBack)
         Name = "GeneralConsultationFrm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         ResumeLayout(False)
     End Sub
+
+    Friend WithEvents btnBack As Button
 End Class

@@ -19,12 +19,12 @@
     End Sub
 
     Private Sub MainFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblTotalApt.Text = RecordCount.ToString()
+        lblTotal.Text = RecordCount.ToString()
         lblGenApt.Text = TotalGeneral.ToString()
         lblDenApt.Text = TotalDental.ToString()
         lblPedApt.Text = TotalPedia.ToString()
 
-        lblDate.Text = DateTime.Now.ToString("MMMM dd, yyyy")
+        LblDateTime.Text = DateTime.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
 
     End Sub
 

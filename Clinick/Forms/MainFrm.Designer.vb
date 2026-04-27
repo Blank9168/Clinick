@@ -22,122 +22,50 @@ Partial Class MainFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Panel1 = New Panel()
-        lblDate = New Label()
-        PictureBox1 = New PictureBox()
-        lblName = New Label()
-        Label1 = New Label()
-        lblUsername = New Label()
         btnGeneralCons = New Button()
         btnDentalS = New Button()
         btnPediatrics = New Button()
         PBGcIcon = New PictureBox()
         PBDenIcon = New PictureBox()
         PbPdIcon = New PictureBox()
-        PBLogo = New PictureBox()
         btnClose = New Label()
+        lblUsername = New Label()
+        Label1 = New Label()
+        lblName = New Label()
+        PictureBox1 = New PictureBox()
+        lblDate = New Label()
+        PBLogo = New PictureBox()
         Button1 = New Button()
         Button2 = New Button()
-        Label2 = New Label()
         Panel2 = New Panel()
-        Label3 = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
+        lblDenApt = New Label()
+        lblPedApt = New Label()
+        lblGenApt = New Label()
         Label6 = New Label()
-        Label7 = New Label()
-        Label8 = New Label()
-        Label9 = New Label()
-        Label10 = New Label()
-        Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Label5 = New Label()
+        Label4 = New Label()
+        Label3 = New Label()
+        LblDateTime = New Label()
+        lblTotal = New Label()
+        Panel1 = New Panel()
         CType(PBGcIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(PBDenIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(PbPdIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PBLogo, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
+        Panel1.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' Panel1
-        ' 
-        Panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        Panel1.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
-        Panel1.Controls.Add(Label10)
-        Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(Panel2)
-        Panel1.Controls.Add(Label2)
-        Panel1.Controls.Add(Button2)
-        Panel1.Controls.Add(Button1)
-        Panel1.Controls.Add(PBLogo)
-        Panel1.Controls.Add(lblDate)
-        Panel1.Controls.Add(PictureBox1)
-        Panel1.Controls.Add(lblName)
-        Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(lblUsername)
-        Panel1.Location = New Point(0, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(232, 453)
-        Panel1.TabIndex = 0
-        ' 
-        ' lblDate
-        ' 
-        lblDate.AutoSize = True
-        lblDate.Location = New Point(11, 410)
-        lblDate.Margin = New Padding(2, 0, 2, 0)
-        lblDate.Name = "lblDate"
-        lblDate.Size = New Size(0, 20)
-        lblDate.TabIndex = 17
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = My.Resources.Resources.a81550e786150a070aea73896e641a21
-        PictureBox1.Location = New Point(22, 78)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(73, 70)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 8
-        PictureBox1.TabStop = False
-        ' 
-        ' lblName
-        ' 
-        lblName.AutoSize = True
-        lblName.Font = New Font("Microsoft Sans Serif", 8F)
-        lblName.ForeColor = Color.Black
-        lblName.Location = New Point(101, 104)
-        lblName.Name = "lblName"
-        lblName.Size = New Size(111, 17)
-        lblName.TabIndex = 7
-        lblName.Text = "Pepito M. Friend"
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(12, 46)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(76, 16)
-        Label1.TabIndex = 6
-        Label1.Text = "Welcome!"
-        ' 
-        ' lblUsername
-        ' 
-        lblUsername.AutoSize = True
-        lblUsername.Font = New Font("Microsoft Sans Serif", 8F)
-        lblUsername.ForeColor = Color.Black
-        lblUsername.Location = New Point(101, 78)
-        lblUsername.Name = "lblUsername"
-        lblUsername.Size = New Size(86, 17)
-        lblUsername.TabIndex = 5
-        lblUsername.Text = "Employee01"
         ' 
         ' btnGeneralCons
         ' 
         btnGeneralCons.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
         btnGeneralCons.Font = New Font("Microsoft Sans Serif", 11F)
         btnGeneralCons.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnGeneralCons.Location = New Point(339, 134)
+        btnGeneralCons.Location = New Point(424, 168)
         btnGeneralCons.Margin = New Padding(2)
         btnGeneralCons.Name = "btnGeneralCons"
-        btnGeneralCons.Size = New Size(443, 66)
+        btnGeneralCons.Size = New Size(554, 82)
         btnGeneralCons.TabIndex = 8
         btnGeneralCons.Text = "General Consultation"
         btnGeneralCons.UseVisualStyleBackColor = False
@@ -147,10 +75,10 @@ Partial Class MainFrm
         btnDentalS.BackColor = Color.FromArgb(CByte(192), CByte(228), CByte(231))
         btnDentalS.Font = New Font("Microsoft Sans Serif", 11F)
         btnDentalS.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnDentalS.Location = New Point(339, 227)
+        btnDentalS.Location = New Point(424, 284)
         btnDentalS.Margin = New Padding(2)
         btnDentalS.Name = "btnDentalS"
-        btnDentalS.Size = New Size(443, 66)
+        btnDentalS.Size = New Size(554, 82)
         btnDentalS.TabIndex = 9
         btnDentalS.Text = "Dental Service"
         btnDentalS.UseVisualStyleBackColor = False
@@ -160,66 +88,126 @@ Partial Class MainFrm
         btnPediatrics.BackColor = Color.FromArgb(CByte(164), CByte(215), CByte(219))
         btnPediatrics.Font = New Font("Microsoft Sans Serif", 11F)
         btnPediatrics.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnPediatrics.Location = New Point(339, 320)
+        btnPediatrics.Location = New Point(424, 400)
         btnPediatrics.Margin = New Padding(2)
         btnPediatrics.Name = "btnPediatrics"
-        btnPediatrics.Size = New Size(443, 66)
+        btnPediatrics.Size = New Size(554, 82)
         btnPediatrics.TabIndex = 10
         btnPediatrics.Text = "Pediatrics"
         btnPediatrics.UseVisualStyleBackColor = False
         ' 
         ' PBGcIcon
         ' 
-        PBGcIcon.Location = New Point(271, 147)
+        PBGcIcon.Location = New Point(339, 184)
+        PBGcIcon.Margin = New Padding(4)
         PBGcIcon.Name = "PBGcIcon"
-        PBGcIcon.Size = New Size(47, 42)
+        PBGcIcon.Size = New Size(59, 52)
         PBGcIcon.TabIndex = 11
         PBGcIcon.TabStop = False
         ' 
         ' PBDenIcon
         ' 
-        PBDenIcon.Location = New Point(271, 238)
+        PBDenIcon.Location = New Point(339, 298)
+        PBDenIcon.Margin = New Padding(4)
         PBDenIcon.Name = "PBDenIcon"
-        PBDenIcon.Size = New Size(47, 42)
+        PBDenIcon.Size = New Size(59, 52)
         PBDenIcon.TabIndex = 12
         PBDenIcon.TabStop = False
         ' 
         ' PbPdIcon
         ' 
-        PbPdIcon.Location = New Point(271, 329)
+        PbPdIcon.Location = New Point(339, 411)
+        PbPdIcon.Margin = New Padding(4)
         PbPdIcon.Name = "PbPdIcon"
-        PbPdIcon.Size = New Size(47, 42)
+        PbPdIcon.Size = New Size(59, 52)
         PbPdIcon.TabIndex = 13
         PbPdIcon.TabStop = False
-        ' 
-        ' PBLogo
-        ' 
-        PBLogo.Location = New Point(196, 12)
-        PBLogo.Name = "PBLogo"
-        PBLogo.Size = New Size(21, 22)
-        PBLogo.TabIndex = 14
-        PBLogo.TabStop = False
         ' 
         ' btnClose
         ' 
         btnClose.AutoSize = True
         btnClose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
         btnClose.ForeColor = Color.FromArgb(CByte(120), CByte(169), CByte(176))
-        btnClose.Location = New Point(773, 6)
+        btnClose.Location = New Point(966, 8)
+        btnClose.Margin = New Padding(4, 0, 4, 0)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(37, 26)
+        btnClose.Size = New Size(45, 31)
         btnClose.TabIndex = 16
         btnClose.Text = "x"
+        ' 
+        ' lblUsername
+        ' 
+        lblUsername.AutoSize = True
+        lblUsername.Font = New Font("Microsoft Sans Serif", 8F)
+        lblUsername.ForeColor = Color.Black
+        lblUsername.Location = New Point(28, 74)
+        lblUsername.Margin = New Padding(4, 0, 4, 0)
+        lblUsername.Name = "lblUsername"
+        lblUsername.Size = New Size(97, 20)
+        lblUsername.TabIndex = 5
+        lblUsername.Text = "Employee01"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(15, 58)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(87, 20)
+        Label1.TabIndex = 6
+        Label1.Text = "Welcome!"
+        ' 
+        ' lblName
+        ' 
+        lblName.AutoSize = True
+        lblName.Font = New Font("Microsoft Sans Serif", 8F)
+        lblName.ForeColor = Color.Black
+        lblName.Location = New Point(126, 130)
+        lblName.Margin = New Padding(4, 0, 4, 0)
+        lblName.Name = "lblName"
+        lblName.Size = New Size(124, 20)
+        lblName.TabIndex = 7
+        lblName.Text = "Pepito M. Friend"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.a81550e786150a070aea73896e641a21
+        PictureBox1.Location = New Point(28, 98)
+        PictureBox1.Margin = New Padding(4)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(91, 88)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 8
+        PictureBox1.TabStop = False
+        ' 
+        ' lblDate
+        ' 
+        lblDate.AutoSize = True
+        lblDate.Location = New Point(14, 512)
+        lblDate.Margin = New Padding(2, 0, 2, 0)
+        lblDate.Name = "lblDate"
+        lblDate.Size = New Size(0, 25)
+        lblDate.TabIndex = 17
+        ' 
+        ' PBLogo
+        ' 
+        PBLogo.Location = New Point(245, 15)
+        PBLogo.Margin = New Padding(4)
+        PBLogo.Name = "PBLogo"
+        PBLogo.Size = New Size(26, 28)
+        PBLogo.TabIndex = 14
+        PBLogo.TabStop = False
         ' 
         ' Button1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         Button1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Button1.Location = New Point(12, 333)
+        Button1.Location = New Point(15, 416)
         Button1.Margin = New Padding(2)
         Button1.Name = "Button1"
-        Button1.Size = New Size(206, 42)
+        Button1.Size = New Size(258, 52)
         Button1.TabIndex = 17
         Button1.Text = "Dashboard"
         Button1.UseVisualStyleBackColor = False
@@ -229,123 +217,153 @@ Partial Class MainFrm
         Button2.BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         Button2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Button2.Location = New Point(12, 388)
+        Button2.Location = New Point(15, 485)
         Button2.Margin = New Padding(2)
         Button2.Name = "Button2"
-        Button2.Size = New Size(206, 42)
+        Button2.Size = New Size(258, 52)
         Button2.TabIndex = 18
         Button2.Text = "Log Out"
         Button2.UseVisualStyleBackColor = False
         ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(12, 14)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(42, 20)
-        Label2.TabIndex = 19
-        Label2.Text = "TIME"
-        ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        Panel2.Controls.Add(Label9)
-        Panel2.Controls.Add(Label8)
-        Panel2.Controls.Add(Label7)
+        Panel2.Controls.Add(lblDenApt)
+        Panel2.Controls.Add(lblPedApt)
+        Panel2.Controls.Add(lblGenApt)
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(Label5)
         Panel2.Controls.Add(Label4)
-        Panel2.Location = New Point(0, 205)
+        Panel2.Location = New Point(0, 256)
+        Panel2.Margin = New Padding(4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(232, 112)
+        Panel2.Size = New Size(290, 140)
         Panel2.TabIndex = 20
         ' 
-        ' Label3
+        ' lblDenApt
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(12, 184)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(145, 16)
-        Label3.TabIndex = 21
-        Label3.Text = "Total Appointments:"
+        lblDenApt.AutoSize = True
+        lblDenApt.Font = New Font("Microsoft Sans Serif", 8F)
+        lblDenApt.Location = New Point(245, 61)
+        lblDenApt.Margin = New Padding(4, 0, 4, 0)
+        lblDenApt.Name = "lblDenApt"
+        lblDenApt.Size = New Size(18, 20)
+        lblDenApt.TabIndex = 28
+        lblDenApt.Text = "0"
         ' 
-        ' Label4
+        ' lblPedApt
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 8F)
-        Label4.Location = New Point(14, 22)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(145, 17)
-        Label4.TabIndex = 22
-        Label4.Text = "General Consultation:"
+        lblPedApt.AutoSize = True
+        lblPedApt.Font = New Font("Microsoft Sans Serif", 8F)
+        lblPedApt.Location = New Point(245, 95)
+        lblPedApt.Margin = New Padding(4, 0, 4, 0)
+        lblPedApt.Name = "lblPedApt"
+        lblPedApt.Size = New Size(18, 20)
+        lblPedApt.TabIndex = 27
+        lblPedApt.Text = "0"
         ' 
-        ' Label5
+        ' lblGenApt
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 8F)
-        Label5.Location = New Point(14, 49)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(104, 17)
-        Label5.TabIndex = 23
-        Label5.Text = "Dental Service:"
+        lblGenApt.AutoSize = True
+        lblGenApt.Font = New Font("Microsoft Sans Serif", 8F)
+        lblGenApt.Location = New Point(245, 28)
+        lblGenApt.Margin = New Padding(4, 0, 4, 0)
+        lblGenApt.Name = "lblGenApt"
+        lblGenApt.Size = New Size(18, 20)
+        lblGenApt.TabIndex = 25
+        lblGenApt.Text = "0"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Microsoft Sans Serif", 8F)
-        Label6.Location = New Point(14, 76)
+        Label6.Location = New Point(18, 95)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(74, 17)
+        Label6.Size = New Size(82, 20)
         Label6.TabIndex = 24
         Label6.Text = "Pediatrics:"
         ' 
-        ' Label7
+        ' Label5
         ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Microsoft Sans Serif", 8F)
-        Label7.Location = New Point(196, 22)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(16, 17)
-        Label7.TabIndex = 25
-        Label7.Text = "0"
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 8F)
+        Label5.Location = New Point(18, 61)
+        Label5.Margin = New Padding(4, 0, 4, 0)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(116, 20)
+        Label5.TabIndex = 23
+        Label5.Text = "Dental Service:"
         ' 
-        ' Label8
+        ' Label4
         ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Microsoft Sans Serif", 8F)
-        Label8.Location = New Point(196, 49)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(16, 17)
-        Label8.TabIndex = 26
-        Label8.Text = "0"
+        Label4.AutoSize = True
+        Label4.Font = New Font("Microsoft Sans Serif", 8F)
+        Label4.Location = New Point(18, 28)
+        Label4.Margin = New Padding(4, 0, 4, 0)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(163, 20)
+        Label4.TabIndex = 22
+        Label4.Text = "General Consultation:"
         ' 
-        ' Label9
+        ' Label3
         ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Microsoft Sans Serif", 8F)
-        Label9.Location = New Point(196, 76)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(16, 17)
-        Label9.TabIndex = 27
-        Label9.Text = "0"
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(15, 230)
+        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(170, 20)
+        Label3.TabIndex = 21
+        Label3.Text = "Total Appointments:"
         ' 
-        ' Label10
+        ' LblDateTime
         ' 
-        Label10.AutoSize = True
-        Label10.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(196, 183)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(15, 16)
-        Label10.TabIndex = 28
-        Label10.Text = "0"
+        LblDateTime.AutoSize = True
+        LblDateTime.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LblDateTime.Location = New Point(12, 8)
+        LblDateTime.Name = "LblDateTime"
+        LblDateTime.Size = New Size(0, 22)
+        LblDateTime.TabIndex = 22
+        ' 
+        ' lblTotal
+        ' 
+        lblTotal.AutoSize = True
+        lblTotal.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTotal.Location = New Point(245, 226)
+        lblTotal.Name = "lblTotal"
+        lblTotal.Size = New Size(21, 22)
+        lblTotal.TabIndex = 23
+        lblTotal.Text = "0"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        Panel1.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
+        Panel1.Controls.Add(lblTotal)
+        Panel1.Controls.Add(LblDateTime)
+        Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(Panel2)
+        Panel1.Controls.Add(Button2)
+        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(PBLogo)
+        Panel1.Controls.Add(lblDate)
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(lblName)
+        Panel1.Controls.Add(Label1)
+        Panel1.Controls.Add(lblUsername)
+        Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(4)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(290, 566)
+        Panel1.TabIndex = 0
         ' 
         ' MainFrm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        ClientSize = New Size(822, 450)
+        ClientSize = New Size(1028, 562)
         Controls.Add(btnClose)
         Controls.Add(PbPdIcon)
         Controls.Add(PBDenIcon)
@@ -355,46 +373,47 @@ Partial Class MainFrm
         Controls.Add(btnGeneralCons)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4)
         Name = "MainFrm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "MainFrm"
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PBGcIcon, ComponentModel.ISupportInitialize).EndInit()
         CType(PBDenIcon, ComponentModel.ISupportInitialize).EndInit()
         CType(PbPdIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PBLogo, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents lblUsername As Label
-    Friend WithEvents lblName As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnGeneralCons As Button
     Friend WithEvents btnDentalS As Button
     Friend WithEvents btnPediatrics As Button
     Friend WithEvents PBGcIcon As PictureBox
     Friend WithEvents PBDenIcon As PictureBox
     Friend WithEvents PbPdIcon As PictureBox
-    Friend WithEvents PBLogo As PictureBox
     Friend WithEvents btnClose As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblName As Label
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblDate As Label
+    Friend WithEvents PBLogo As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblDenApt As Label
+    Friend WithEvents lblPedApt As Label
+    Friend WithEvents lblGenApt As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents LblDateTime As Label
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents Panel1 As Panel
 End Class

@@ -48,7 +48,6 @@ Partial Class MainFrm
         LblDateTime = New Label()
         lblTotal = New Label()
         Panel1 = New Panel()
-        Label2 = New Label()
         CType(PBGcIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(PBDenIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(PbPdIcon, ComponentModel.ISupportInitialize).BeginInit()
@@ -326,7 +325,6 @@ Partial Class MainFrm
         ' 
         Panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
         Panel1.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
-        Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(lblTotal)
         Panel1.Controls.Add(LblDateTime)
         Panel1.Controls.Add(Label3)
@@ -343,16 +341,6 @@ Partial Class MainFrm
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(239, 537)
         Panel1.TabIndex = 0
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(15, 16)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(47, 18)
-        Label2.TabIndex = 24
-        Label2.Text = "TIME"
         ' 
         ' MainFrm
         ' 
@@ -412,5 +400,4 @@ Partial Class MainFrm
     Friend WithEvents LblDateTime As Label
     Friend WithEvents lblTotal As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label2 As Label
 End Class

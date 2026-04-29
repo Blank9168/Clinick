@@ -23,6 +23,7 @@ Partial Class AddPatient_Frm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         GroupBox2 = New GroupBox()
+        Button2 = New Button()
         btnAppointPatient = New Button()
         txtContactInfo = New TextBox()
         Label4 = New Label()
@@ -36,7 +37,6 @@ Partial Class AddPatient_Frm
         Panel1 = New Panel()
         Label1 = New Label()
         btnReturnMainPd = New Button()
-        Button2 = New Button()
         GroupBox2.SuspendLayout()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -62,6 +62,18 @@ Partial Class AddPatient_Frm
         GroupBox2.TabIndex = 26
         GroupBox2.TabStop = False
         GroupBox2.Text = "Patient Information"
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        Button2.Font = New Font("Microsoft Sans Serif", 10.2F)
+        Button2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        Button2.Location = New Point(842, 20)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(107, 36)
+        Button2.TabIndex = 41
+        Button2.Text = "Clear"
+        Button2.UseVisualStyleBackColor = False
         ' 
         ' btnAppointPatient
         ' 
@@ -205,18 +217,6 @@ Partial Class AddPatient_Frm
         btnReturnMainPd.Text = "Return"
         btnReturnMainPd.UseVisualStyleBackColor = False
         ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        Button2.Font = New Font("Microsoft Sans Serif", 10.2F)
-        Button2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Button2.Location = New Point(842, 20)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(107, 36)
-        Button2.TabIndex = 41
-        Button2.Text = "Clear"
-        Button2.UseVisualStyleBackColor = False
-        ' 
         ' AddPatient_Frm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -226,6 +226,7 @@ Partial Class AddPatient_Frm
         Controls.Add(Panel1)
         Controls.Add(GroupBox2)
         Name = "AddPatient_Frm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Add Patient"
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()

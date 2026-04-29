@@ -23,8 +23,16 @@ Partial Class RegisterForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
+        Button2 = New Button()
+        btnAppointPatient = New Button()
+        txtParentGName = New TextBox()
+        Label7 = New Label()
+        Label4 = New Label()
+        rbInfant = New RadioButton()
         lblAppStatus = New Label()
+        rbSchool = New RadioButton()
         lblDateTime = New Label()
+        rbToddler = New RadioButton()
         Label8 = New Label()
         rbSickV = New RadioButton()
         rbVaccine = New RadioButton()
@@ -38,17 +46,9 @@ Partial Class RegisterForm
         Label11 = New Label()
         Label10 = New Label()
         DateTimePicker1 = New DateTimePicker()
-        Label4 = New Label()
-        rbInfant = New RadioButton()
-        rbSchool = New RadioButton()
-        rbToddler = New RadioButton()
         Label1 = New Label()
         btnReturnMainPd = New Button()
         Panel1 = New Panel()
-        txtParentGName = New TextBox()
-        Label7 = New Label()
-        btnAppointPatient = New Button()
-        Button2 = New Button()
         GroupBox1.SuspendLayout()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -78,7 +78,7 @@ Partial Class RegisterForm
         GroupBox1.Controls.Add(Label11)
         GroupBox1.Controls.Add(Label10)
         GroupBox1.Controls.Add(DateTimePicker1)
-        GroupBox1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GroupBox1.Font = New Font("Microsoft Sans Serif", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBox1.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         GroupBox1.Location = New Point(33, 160)
         GroupBox1.Name = "GroupBox1"
@@ -87,10 +87,77 @@ Partial Class RegisterForm
         GroupBox1.TabStop = False
         GroupBox1.Text = "Appointment"
         ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        Button2.Font = New Font("Microsoft Sans Serif", 10.2F)
+        Button2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        Button2.Location = New Point(830, 22)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(107, 36)
+        Button2.TabIndex = 40
+        Button2.Text = "Clear"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' btnAppointPatient
+        ' 
+        btnAppointPatient.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        btnAppointPatient.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAppointPatient.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnAppointPatient.Location = New Point(22, 471)
+        btnAppointPatient.Name = "btnAppointPatient"
+        btnAppointPatient.Size = New Size(898, 54)
+        btnAppointPatient.TabIndex = 39
+        btnAppointPatient.Text = "Appoint Patient"
+        btnAppointPatient.UseVisualStyleBackColor = False
+        ' 
+        ' txtParentGName
+        ' 
+        txtParentGName.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtParentGName.Location = New Point(502, 364)
+        txtParentGName.Name = "txtParentGName"
+        txtParentGName.Size = New Size(418, 30)
+        txtParentGName.TabIndex = 38
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label7.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        Label7.Location = New Point(492, 327)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(239, 25)
+        Label7.TabIndex = 37
+        Label7.Text = "Name of Parent/Guardian:"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Microsoft Sans Serif", 12.0F)
+        Label4.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        Label4.Location = New Point(22, 134)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(113, 25)
+        Label4.TabIndex = 25
+        Label4.Text = "Age Group:"
+        ' 
+        ' rbInfant
+        ' 
+        rbInfant.AutoSize = True
+        rbInfant.Font = New Font("Microsoft Sans Serif", 12.0F)
+        rbInfant.ForeColor = Color.Black
+        rbInfant.Location = New Point(143, 131)
+        rbInfant.Name = "rbInfant"
+        rbInfant.Size = New Size(209, 29)
+        rbInfant.TabIndex = 26
+        rbInfant.TabStop = True
+        rbInfant.Text = "Infant (0-12 months)"
+        rbInfant.UseVisualStyleBackColor = True
+        ' 
         ' lblAppStatus
         ' 
         lblAppStatus.AutoSize = True
-        lblAppStatus.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblAppStatus.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblAppStatus.ForeColor = Color.Black
         lblAppStatus.Location = New Point(217, 91)
         lblAppStatus.Name = "lblAppStatus"
@@ -98,10 +165,23 @@ Partial Class RegisterForm
         lblAppStatus.TabIndex = 35
         lblAppStatus.Text = "aaaa"
         ' 
+        ' rbSchool
+        ' 
+        rbSchool.AutoSize = True
+        rbSchool.Font = New Font("Microsoft Sans Serif", 12.0F)
+        rbSchool.ForeColor = Color.Black
+        rbSchool.Location = New Point(143, 201)
+        rbSchool.Name = "rbSchool"
+        rbSchool.Size = New Size(187, 29)
+        rbSchool.TabIndex = 28
+        rbSchool.TabStop = True
+        rbSchool.Text = "School Age (4y+)"
+        rbSchool.UseVisualStyleBackColor = True
+        ' 
         ' lblDateTime
         ' 
         lblDateTime.AutoSize = True
-        lblDateTime.Font = New Font("Microsoft Sans Serif", 12F)
+        lblDateTime.Font = New Font("Microsoft Sans Serif", 12.0F)
         lblDateTime.ForeColor = Color.Black
         lblDateTime.Location = New Point(635, 131)
         lblDateTime.Name = "lblDateTime"
@@ -109,10 +189,23 @@ Partial Class RegisterForm
         lblDateTime.TabIndex = 34
         lblDateTime.Text = "000000"
         ' 
+        ' rbToddler
+        ' 
+        rbToddler.AutoSize = True
+        rbToddler.Font = New Font("Microsoft Sans Serif", 12.0F)
+        rbToddler.ForeColor = Color.Black
+        rbToddler.Location = New Point(143, 166)
+        rbToddler.Name = "rbToddler"
+        rbToddler.Size = New Size(158, 29)
+        rbToddler.TabIndex = 27
+        rbToddler.TabStop = True
+        rbToddler.Text = "Toddler (1-3y)"
+        rbToddler.UseVisualStyleBackColor = True
+        ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Microsoft Sans Serif", 12F)
+        Label8.Font = New Font("Microsoft Sans Serif", 12.0F)
         Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label8.Location = New Point(492, 91)
         Label8.Name = "Label8"
@@ -123,7 +216,7 @@ Partial Class RegisterForm
         ' rbSickV
         ' 
         rbSickV.AutoSize = True
-        rbSickV.Font = New Font("Microsoft Sans Serif", 12F)
+        rbSickV.Font = New Font("Microsoft Sans Serif", 12.0F)
         rbSickV.Location = New Point(48, 353)
         rbSickV.Name = "rbSickV"
         rbSickV.Size = New Size(113, 29)
@@ -135,7 +228,7 @@ Partial Class RegisterForm
         ' rbVaccine
         ' 
         rbVaccine.AutoSize = True
-        rbVaccine.Font = New Font("Microsoft Sans Serif", 12F)
+        rbVaccine.Font = New Font("Microsoft Sans Serif", 12.0F)
         rbVaccine.Location = New Point(48, 314)
         rbVaccine.Name = "rbVaccine"
         rbVaccine.Size = New Size(135, 29)
@@ -147,7 +240,7 @@ Partial Class RegisterForm
         ' rbGrowth
         ' 
         rbGrowth.AutoSize = True
-        rbGrowth.Font = New Font("Microsoft Sans Serif", 12F)
+        rbGrowth.Font = New Font("Microsoft Sans Serif", 12.0F)
         rbGrowth.Location = New Point(48, 275)
         rbGrowth.Name = "rbGrowth"
         rbGrowth.Size = New Size(157, 29)
@@ -159,7 +252,7 @@ Partial Class RegisterForm
         ' rbGuradian
         ' 
         rbGuradian.AutoSize = True
-        rbGuradian.Font = New Font("Microsoft Sans Serif", 12F)
+        rbGuradian.Font = New Font("Microsoft Sans Serif", 12.0F)
         rbGuradian.Location = New Point(598, 275)
         rbGuradian.Name = "rbGuradian"
         rbGuradian.Size = New Size(113, 29)
@@ -171,7 +264,7 @@ Partial Class RegisterForm
         ' rbGuardian
         ' 
         rbGuardian.AutoSize = True
-        rbGuardian.Font = New Font("Microsoft Sans Serif", 12F)
+        rbGuardian.Font = New Font("Microsoft Sans Serif", 12.0F)
         rbGuardian.Location = New Point(502, 275)
         rbGuardian.Name = "rbGuardian"
         rbGuardian.Size = New Size(90, 29)
@@ -182,7 +275,7 @@ Partial Class RegisterForm
         ' 
         ' txtCancelReason
         ' 
-        txtCancelReason.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtCancelReason.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtCancelReason.Location = New Point(172, 425)
         txtCancelReason.Name = "txtCancelReason"
         txtCancelReason.Size = New Size(748, 30)
@@ -191,7 +284,7 @@ Partial Class RegisterForm
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Microsoft Sans Serif", 12F)
+        Label13.Font = New Font("Microsoft Sans Serif", 12.0F)
         Label13.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label13.Location = New Point(492, 238)
         Label13.Name = "Label13"
@@ -202,7 +295,7 @@ Partial Class RegisterForm
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Microsoft Sans Serif", 12F)
+        Label12.Font = New Font("Microsoft Sans Serif", 12.0F)
         Label12.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label12.Location = New Point(22, 428)
         Label12.Name = "Label12"
@@ -213,7 +306,7 @@ Partial Class RegisterForm
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Microsoft Sans Serif", 12F)
+        Label9.Font = New Font("Microsoft Sans Serif", 12.0F)
         Label9.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label9.Location = New Point(22, 238)
         Label9.Name = "Label9"
@@ -224,7 +317,7 @@ Partial Class RegisterForm
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Microsoft Sans Serif", 12F)
+        Label11.Font = New Font("Microsoft Sans Serif", 12.0F)
         Label11.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label11.Location = New Point(22, 91)
         Label11.Name = "Label11"
@@ -235,7 +328,7 @@ Partial Class RegisterForm
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Microsoft Sans Serif", 12F)
+        Label10.Font = New Font("Microsoft Sans Serif", 12.0F)
         Label10.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label10.Location = New Point(492, 131)
         Label10.Name = "Label10"
@@ -245,62 +338,12 @@ Partial Class RegisterForm
         ' 
         ' DateTimePicker1
         ' 
-        DateTimePicker1.CalendarFont = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Font = New Font("Microsoft Sans Serif", 12F)
+        DateTimePicker1.CalendarFont = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker1.Font = New Font("Microsoft Sans Serif", 12.0F)
         DateTimePicker1.Location = New Point(492, 178)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(428, 30)
         DateTimePicker1.TabIndex = 20
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 12F)
-        Label4.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label4.Location = New Point(22, 134)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(113, 25)
-        Label4.TabIndex = 25
-        Label4.Text = "Age Group:"
-        ' 
-        ' rbInfant
-        ' 
-        rbInfant.AutoSize = True
-        rbInfant.Font = New Font("Microsoft Sans Serif", 12F)
-        rbInfant.ForeColor = Color.Black
-        rbInfant.Location = New Point(143, 131)
-        rbInfant.Name = "rbInfant"
-        rbInfant.Size = New Size(209, 29)
-        rbInfant.TabIndex = 26
-        rbInfant.TabStop = True
-        rbInfant.Text = "Infant (0-12 months)"
-        rbInfant.UseVisualStyleBackColor = True
-        ' 
-        ' rbSchool
-        ' 
-        rbSchool.AutoSize = True
-        rbSchool.Font = New Font("Microsoft Sans Serif", 12F)
-        rbSchool.ForeColor = Color.Black
-        rbSchool.Location = New Point(143, 201)
-        rbSchool.Name = "rbSchool"
-        rbSchool.Size = New Size(187, 29)
-        rbSchool.TabIndex = 28
-        rbSchool.TabStop = True
-        rbSchool.Text = "School Age (4y+)"
-        rbSchool.UseVisualStyleBackColor = True
-        ' 
-        ' rbToddler
-        ' 
-        rbToddler.AutoSize = True
-        rbToddler.Font = New Font("Microsoft Sans Serif", 12F)
-        rbToddler.ForeColor = Color.Black
-        rbToddler.Location = New Point(143, 166)
-        rbToddler.Name = "rbToddler"
-        rbToddler.Size = New Size(158, 29)
-        rbToddler.TabIndex = 27
-        rbToddler.TabStop = True
-        rbToddler.Text = "Toddler (1-3y)"
-        rbToddler.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
@@ -336,58 +379,16 @@ Partial Class RegisterForm
         Panel1.Size = New Size(1006, 135)
         Panel1.TabIndex = 36
         ' 
-        ' txtParentGName
-        ' 
-        txtParentGName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtParentGName.Location = New Point(502, 364)
-        txtParentGName.Name = "txtParentGName"
-        txtParentGName.Size = New Size(418, 30)
-        txtParentGName.TabIndex = 38
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Microsoft Sans Serif", 12F)
-        Label7.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label7.Location = New Point(492, 327)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(239, 25)
-        Label7.TabIndex = 37
-        Label7.Text = "Name of Parent/Guardian:"
-        ' 
-        ' btnAppointPatient
-        ' 
-        btnAppointPatient.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        btnAppointPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAppointPatient.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnAppointPatient.Location = New Point(22, 471)
-        btnAppointPatient.Name = "btnAppointPatient"
-        btnAppointPatient.Size = New Size(898, 54)
-        btnAppointPatient.TabIndex = 39
-        btnAppointPatient.Text = "Appoint Patient"
-        btnAppointPatient.UseVisualStyleBackColor = False
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        Button2.Font = New Font("Microsoft Sans Serif", 10.2F)
-        Button2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Button2.Location = New Point(830, 22)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(107, 36)
-        Button2.TabIndex = 40
-        Button2.Text = "Clear"
-        Button2.UseVisualStyleBackColor = False
-        ' 
         ' RegisterForm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         ClientSize = New Size(1006, 721)
         Controls.Add(Panel1)
         Controls.Add(GroupBox1)
         Name = "RegisterForm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "RegisterForm"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()

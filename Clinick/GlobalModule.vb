@@ -28,4 +28,7 @@
     Public TotalPedia As Integer = 0
 
 
+    'For SubMenu'
+    Public Service As String = ""
+
 End Module

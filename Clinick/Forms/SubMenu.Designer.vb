@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PediatricsFrm
+Partial Class SubMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,12 +24,12 @@ Partial Class PediatricsFrm
     Private Sub InitializeComponent()
         btnBack = New Button()
         Panel1 = New Panel()
-        PictureBox1 = New PictureBox()
-        Label1 = New Label()
+        lblServiceType = New Label()
+        PicServiceIcon = New PictureBox()
         btnAddPatient = New Button()
         btnAppointPatient = New Button()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PicServiceIcon, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnBack
@@ -47,35 +47,35 @@ Partial Class PediatricsFrm
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
-        Panel1.Controls.Add(Label1)
+        Panel1.Controls.Add(lblServiceType)
         Panel1.Controls.Add(btnBack)
-        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(PicServiceIcon)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1006, 228)
         Panel1.TabIndex = 2
         ' 
-        ' PictureBox1
+        ' lblServiceType
         ' 
-        PictureBox1.Image = My.Resources.Resources.Bear
-        PictureBox1.Location = New Point(343, 79)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(84, 77)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 3
-        PictureBox1.TabStop = False
+        lblServiceType.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblServiceType.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        lblServiceType.Location = New Point(422, 98)
+        lblServiceType.Name = "lblServiceType"
+        lblServiceType.Size = New Size(192, 42)
+        lblServiceType.TabIndex = 2
+        lblServiceType.Text = "Pediatrics"
+        lblServiceType.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label1
+        ' PicServiceIcon
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label1.Location = New Point(422, 98)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(192, 42)
-        Label1.TabIndex = 2
-        Label1.Text = "Pediatrics"
+        PicServiceIcon.Image = My.Resources.Resources.Bear
+        PicServiceIcon.Location = New Point(343, 79)
+        PicServiceIcon.Name = "PicServiceIcon"
+        PicServiceIcon.Size = New Size(84, 77)
+        PicServiceIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        PicServiceIcon.TabIndex = 3
+        PicServiceIcon.TabStop = False
         ' 
         ' btnAddPatient
         ' 
@@ -101,7 +101,7 @@ Partial Class PediatricsFrm
         btnAppointPatient.Text = "Appoint Patient"
         btnAppointPatient.UseVisualStyleBackColor = False
         ' 
-        ' PediatricsFrm
+        ' SubMenu
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
@@ -110,19 +110,18 @@ Partial Class PediatricsFrm
         Controls.Add(btnAppointPatient)
         Controls.Add(btnAddPatient)
         Controls.Add(Panel1)
-        Name = "PediatricsFrm"
+        Name = "SubMenu"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Pediatrics"
+        Text = "Sub Menu"
         Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PicServiceIcon, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents btnBack As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblServiceType As Label
+    Friend WithEvents PicServiceIcon As PictureBox
     Friend WithEvents btnAddPatient As Button
     Friend WithEvents btnAppointPatient As Button
 End Class

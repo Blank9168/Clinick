@@ -47,9 +47,9 @@ Partial Class PediatricsFrm
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
-        Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(btnBack)
+        Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
@@ -58,9 +58,11 @@ Partial Class PediatricsFrm
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(378, 100)
+        PictureBox1.Image = My.Resources.Resources.Bear
+        PictureBox1.Location = New Point(343, 79)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(41, 38)
+        PictureBox1.Size = New Size(84, 77)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 3
         PictureBox1.TabStop = False
         ' 

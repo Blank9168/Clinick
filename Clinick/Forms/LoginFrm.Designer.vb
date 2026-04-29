@@ -100,9 +100,10 @@ Partial Class LoginFrm
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.LOGO_PARA_SA_COMPROG__312_x_282_px_
-        PictureBox1.Location = New Point(61, 27)
+        PictureBox1.Location = New Point(38, 27)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(304, 245)
+        PictureBox1.Size = New Size(327, 301)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 6
         PictureBox1.TabStop = False
         ' 
@@ -112,13 +113,13 @@ Partial Class LoginFrm
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         ClientSize = New Size(408, 662)
-        Controls.Add(PictureBox1)
         Controls.Add(btnClose)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(txtPassword)
         Controls.Add(txtUsername)
         Controls.Add(btnLogin)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 4, 3, 4)
         Name = "LoginFrm"

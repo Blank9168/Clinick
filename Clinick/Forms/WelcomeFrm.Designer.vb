@@ -44,7 +44,7 @@ Partial Class WelcomeFrm
         btnGetStarted.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         btnGetStarted.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnGetStarted.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnGetStarted.Location = New Point(67, 412)
+        btnGetStarted.Location = New Point(63, 476)
         btnGetStarted.Margin = New Padding(2)
         btnGetStarted.Name = "btnGetStarted"
         btnGetStarted.Size = New Size(270, 44)
@@ -54,10 +54,12 @@ Partial Class WelcomeFrm
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.Image = My.Resources.Resources.CLINICKONLY
         PictureBox1.InitialImage = My.Resources.Resources.LOGO_PARA_SA_COMPROG__312_x_282_px_
-        PictureBox1.Location = New Point(29, 215)
+        PictureBox1.Location = New Point(21, 100)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(367, 139)
+        PictureBox1.Size = New Size(367, 349)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
         ' 
@@ -67,9 +69,9 @@ Partial Class WelcomeFrm
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         ClientSize = New Size(408, 662)
-        Controls.Add(PictureBox1)
         Controls.Add(btnGetStarted)
         Controls.Add(btnClose)
+        Controls.Add(PictureBox1)
         ForeColor = SystemColors.ControlText
         FormBorderStyle = FormBorderStyle.None
         Name = "WelcomeFrm"

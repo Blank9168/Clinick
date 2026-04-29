@@ -19,10 +19,20 @@
     End Sub
 
     Private Sub MainFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblTotal.Text = RecordCount.ToString()
-        lblGenApt.Text = TotalGeneral.ToString()
-        lblDenApt.Text = TotalDental.ToString()
-        lblPedApt.Text = TotalPedia.ToString()
+        'lblTotal.Text = RecordCount.ToString()
+        'lblGenApt.Text = TotalGeneral.ToString()
+        'lblDenApt.Text = TotalDental.ToString()
+        'lblPedApt.Text = TotalPedia.ToString()
+
         LblDateTime.Text = DateTime.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class

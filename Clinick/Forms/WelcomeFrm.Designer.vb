@@ -54,9 +54,11 @@ Partial Class WelcomeFrm
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(46, 222)
+        PictureBox1.Image = My.Resources.Resources.LOGO_PARA_SA_COMPROG__312_x_282_px_
+        PictureBox1.InitialImage = My.Resources.Resources.LOGO_PARA_SA_COMPROG__312_x_282_px_
+        PictureBox1.Location = New Point(50, 115)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(312, 106)
+        PictureBox1.Size = New Size(307, 250)
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
         ' 

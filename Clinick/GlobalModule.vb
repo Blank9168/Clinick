@@ -1,7 +1,7 @@
 ﻿Module GlobalModule
     'General Variables'
     Public UserID(100) As String
-    Public PatientNam(100) As String
+    Public PatientName(100) As String
     Public ContactInfo(100) As String
     Public ApptSched(100) As String
     Public ApptStatus(100) As String

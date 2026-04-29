@@ -37,7 +37,7 @@ Partial Class LoginFrm
         btnLogin.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         btnLogin.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnLogin.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnLogin.Location = New Point(99, 508)
+        btnLogin.Location = New Point(97, 476)
         btnLogin.Margin = New Padding(3, 4, 3, 4)
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(194, 41)
@@ -99,9 +99,10 @@ Partial Class LoginFrm
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(132, 105)
+        PictureBox1.Image = My.Resources.Resources.LOGO_PARA_SA_COMPROG__312_x_282_px_
+        PictureBox1.Location = New Point(61, 27)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(128, 115)
+        PictureBox1.Size = New Size(304, 245)
         PictureBox1.TabIndex = 6
         PictureBox1.TabStop = False
         ' 

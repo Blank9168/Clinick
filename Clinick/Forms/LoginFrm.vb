@@ -26,4 +26,12 @@
         End If
 
     End Sub
+
+    Private Sub cbShowPass_CheckedChanged(sender As Object, e As EventArgs) Handles cbShowPass.CheckedChanged
+        If cbShowPass.Checked Then
+            txtPassword.UseSystemPasswordChar = False
+        Else
+            txtPassword.UseSystemPasswordChar = True
+        End If
+    End Sub
 End Class

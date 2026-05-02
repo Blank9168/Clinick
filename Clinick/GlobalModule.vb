@@ -1,25 +1,17 @@
 ﻿Module GlobalModule
-    'General Variables'
-    Public UserID(100) As String
-    Public PatientName(100) As String
-    Public ContactInfo(100) As String
-    Public ApptSched(100) As String
-    Public ApptStatus(100) As String
-    Public CancelReason(100) As String
-    Public ServiceType(100) As String
+    Public Service As String
+    Public MaxPatients As Integer = 100
+    Public CurrentCount As Integer = 0
 
-    'General Consultation Variables'
-    Public GenUrgency(100) As String
-    Public GenConcern(100) As String
-
-    'Dental Services Variables'
-    Public DenProcedure(100) As String
-    Public DenPatientType(100) As String
-
-    'Pediatrics Variables'
-    Public PediaAgeGroup(100) As String
-    Public PediaVisitType(100) As String
-    Public PediaGuardian(100) As String
+    ' Requirement: Parallel Arrays
+    Public arrID(MaxPatients) As String
+    Public arrNames(MaxPatients) As String
+    Public arrSex(MaxPatients) As String
+    Public arrContact(MaxPatients) As String
+    Public arrService(MaxPatients) As String
+    Public arrSchedule(MaxPatients) As String
+    Public arrStatus(MaxPatients) As String
+    Public arrCancelReason(MaxPatients) As String
 
     'For Dashboard'
     Public RecordCount As Integer = 0
@@ -28,7 +20,5 @@
     Public TotalPedia As Integer = 0
 
 
-    'For SubMenu'
-    Public Service As String = ""
 
 End Module

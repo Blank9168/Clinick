@@ -48,21 +48,22 @@ Partial Class MainFrm
         Label5 = New Label()
         Panel10 = New Panel()
         Label6 = New Label()
-        DataGridView1 = New DataGridView()
+        dgvSummary = New DataGridView()
         Applied = New DataGridViewTextBoxColumn()
         PatientName = New DataGridViewTextBoxColumn()
+        Contact = New DataGridViewTextBoxColumn()
         ServiceType = New DataGridViewTextBoxColumn()
         Sched = New DataGridViewTextBoxColumn()
-        Doctor = New DataGridViewTextBoxColumn()
-        Status = New DataGridViewTextBoxColumn()
+        Status = New DataGridViewComboBoxColumn()
         Label1 = New Label()
         Label8 = New Label()
         Label9 = New Label()
+        MarkToolStripMenuItem = New ToolStripMenuItem()
         Panel1.SuspendLayout()
         CType(PicLogo, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         Panel14.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvSummary, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnGeneralCons
@@ -345,12 +346,12 @@ Partial Class MainFrm
         Label6.TabIndex = 23
         Label6.Text = "Cancelled"
         ' 
-        ' DataGridView1
+        ' dgvSummary
         ' 
-        DataGridView1.AllowUserToResizeColumns = False
-        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DataGridView1.BackgroundColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        DataGridView1.BorderStyle = BorderStyle.None
+        dgvSummary.AllowUserToResizeColumns = False
+        dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvSummary.BackgroundColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
+        dgvSummary.BorderStyle = BorderStyle.None
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Control
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -358,15 +359,16 @@ Partial Class MainFrm
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, ServiceType, Sched, Doctor, Status})
-        DataGridView1.Location = New Point(20, 520)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersVisible = False
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(990, 196)
-        DataGridView1.TabIndex = 27
+        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvSummary.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
+        dgvSummary.Location = New Point(20, 520)
+        dgvSummary.Name = "dgvSummary"
+        dgvSummary.RowHeadersVisible = False
+        dgvSummary.RowHeadersWidth = 51
+        dgvSummary.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvSummary.Size = New Size(990, 196)
+        dgvSummary.TabIndex = 27
         ' 
         ' Applied
         ' 
@@ -380,6 +382,12 @@ Partial Class MainFrm
         PatientName.MinimumWidth = 6
         PatientName.Name = "PatientName"
         ' 
+        ' Contact
+        ' 
+        Contact.HeaderText = "Contact "
+        Contact.MinimumWidth = 6
+        Contact.Name = "Contact"
+        ' 
         ' ServiceType
         ' 
         ServiceType.HeaderText = "Service Type"
@@ -392,22 +400,19 @@ Partial Class MainFrm
         Sched.MinimumWidth = 6
         Sched.Name = "Sched"
         ' 
-        ' Doctor
-        ' 
-        Doctor.HeaderText = "Doctor"
-        Doctor.MinimumWidth = 6
-        Doctor.Name = "Doctor"
-        ' 
         ' Status
         ' 
         Status.HeaderText = "Status"
+        Status.Items.AddRange(New Object() {"Pending", "Completed", "Cancelled"})
         Status.MinimumWidth = 6
         Status.Name = "Status"
+        Status.Resizable = DataGridViewTriState.True
+        Status.SortMode = DataGridViewColumnSortMode.Automatic
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label1.Location = New Point(232, 100)
         Label1.Name = "Label1"
@@ -418,7 +423,7 @@ Partial Class MainFrm
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label8.Location = New Point(10, 312)
         Label8.Name = "Label8"
@@ -429,7 +434,7 @@ Partial Class MainFrm
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label9.Location = New Point(10, 481)
         Label9.Name = "Label9"
@@ -437,9 +442,15 @@ Partial Class MainFrm
         Label9.TabIndex = 31
         Label9.Text = "Recent"
         ' 
+        ' MarkToolStripMenuItem
+        ' 
+        MarkToolStripMenuItem.Name = "MarkToolStripMenuItem"
+        MarkToolStripMenuItem.Size = New Size(115, 24)
+        MarkToolStripMenuItem.Text = "Mark "
+        ' 
         ' MainFrm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         ClientSize = New Size(1024, 768)
@@ -447,7 +458,7 @@ Partial Class MainFrm
         Controls.Add(Label8)
         Controls.Add(Button2)
         Controls.Add(Label1)
-        Controls.Add(DataGridView1)
+        Controls.Add(dgvSummary)
         Controls.Add(Label2)
         Controls.Add(Panel2)
         Controls.Add(btnPediatrics)
@@ -465,7 +476,7 @@ Partial Class MainFrm
         Panel2.PerformLayout()
         Panel14.ResumeLayout(False)
         Panel14.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvSummary, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -481,7 +492,7 @@ Partial Class MainFrm
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvSummary As DataGridView
     Friend WithEvents PicLogo As PictureBox
     Friend WithEvents LblDate As Label
     Friend WithEvents Label1 As Label
@@ -494,14 +505,15 @@ Partial Class MainFrm
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents lblCompleted As Label
-    Friend WithEvents Applied As DataGridViewTextBoxColumn
-    Friend WithEvents PatientName As DataGridViewTextBoxColumn
-    Friend WithEvents ServiceType As DataGridViewTextBoxColumn
-    Friend WithEvents Sched As DataGridViewTextBoxColumn
-    Friend WithEvents Doctor As DataGridViewTextBoxColumn
-    Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents Panel14 As Panel
     Friend WithEvents lblCancelled As Label
     Friend WithEvents lblTotal As Label
     Friend WithEvents lblPending As Label
+    Friend WithEvents MarkToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Applied As DataGridViewTextBoxColumn
+    Friend WithEvents PatientName As DataGridViewTextBoxColumn
+    Friend WithEvents Contact As DataGridViewTextBoxColumn
+    Friend WithEvents ServiceType As DataGridViewTextBoxColumn
+    Friend WithEvents Sched As DataGridViewTextBoxColumn
+    Friend WithEvents Status As DataGridViewComboBoxColumn
 End Class

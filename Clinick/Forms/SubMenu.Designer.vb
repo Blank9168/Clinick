@@ -39,7 +39,7 @@ Partial Class SubMenu
         btnBack.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnBack.Location = New Point(12, 12)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(108, 35)
+        btnBack.Size = New Size(107, 36)
         btnBack.TabIndex = 1
         btnBack.Text = "Return"
         btnBack.UseVisualStyleBackColor = False

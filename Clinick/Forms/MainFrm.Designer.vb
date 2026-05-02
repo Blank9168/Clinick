@@ -95,7 +95,7 @@ Partial Class MainFrm
         ' btnPediatrics
         ' 
         btnPediatrics.BackColor = Color.FromArgb(CByte(164), CByte(215), CByte(219))
-        btnPediatrics.Font = New Font("Microsoft Sans Serif", 10.2F)
+        btnPediatrics.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnPediatrics.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnPediatrics.Location = New Point(708, 359)
         btnPediatrics.Margin = New Padding(2)
@@ -164,7 +164,7 @@ Partial Class MainFrm
         ' LblDateTime
         ' 
         LblDateTime.AutoSize = True
-        LblDateTime.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LblDateTime.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         LblDateTime.Location = New Point(10, 6)
         LblDateTime.Margin = New Padding(2, 0, 2, 0)
         LblDateTime.Name = "LblDateTime"
@@ -190,7 +190,7 @@ Partial Class MainFrm
         ' LblDate
         ' 
         LblDate.AutoSize = True
-        LblDate.Font = New Font("MS Reference Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        LblDate.Font = New Font("MS Reference Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         LblDate.Location = New Point(598, 31)
         LblDate.Name = "LblDate"
         LblDate.Size = New Size(0, 19)
@@ -209,7 +209,7 @@ Partial Class MainFrm
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label2.Location = New Point(13, 99)
         Label2.Name = "Label2"
@@ -354,7 +354,7 @@ Partial Class MainFrm
         dgvSummary.BorderStyle = BorderStyle.None
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -362,6 +362,7 @@ Partial Class MainFrm
         dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvSummary.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
+        dgvSummary.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         dgvSummary.Location = New Point(20, 520)
         dgvSummary.Name = "dgvSummary"
         dgvSummary.RowHeadersVisible = False
@@ -412,7 +413,7 @@ Partial Class MainFrm
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label1.Location = New Point(232, 100)
         Label1.Name = "Label1"
@@ -423,7 +424,7 @@ Partial Class MainFrm
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label8.Location = New Point(10, 312)
         Label8.Name = "Label8"
@@ -434,7 +435,7 @@ Partial Class MainFrm
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label9.Location = New Point(10, 481)
         Label9.Name = "Label9"
@@ -450,7 +451,7 @@ Partial Class MainFrm
         ' 
         ' MainFrm
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         ClientSize = New Size(1024, 768)

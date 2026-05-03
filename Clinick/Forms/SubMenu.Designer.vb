@@ -27,7 +27,7 @@ Partial Class SubMenu
         lblServiceType = New Label()
         PicServiceIcon = New PictureBox()
         btnAddPatient = New Button()
-        btnAppointPatient = New Button()
+        btnAddAppoint = New Button()
         Panel1.SuspendLayout()
         CType(PicServiceIcon, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -37,9 +37,10 @@ Partial Class SubMenu
         btnBack.BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
         btnBack.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnBack.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnBack.Location = New Point(12, 12)
+        btnBack.Location = New Point(10, 9)
+        btnBack.Margin = New Padding(3, 2, 3, 2)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(107, 36)
+        btnBack.Size = New Size(94, 27)
         btnBack.TabIndex = 1
         btnBack.Text = "Return"
         btnBack.UseVisualStyleBackColor = False
@@ -52,17 +53,18 @@ Partial Class SubMenu
         Panel1.Controls.Add(PicServiceIcon)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1006, 228)
+        Panel1.Size = New Size(880, 171)
         Panel1.TabIndex = 2
         ' 
         ' lblServiceType
         ' 
         lblServiceType.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblServiceType.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        lblServiceType.Location = New Point(422, 98)
+        lblServiceType.Location = New Point(369, 74)
         lblServiceType.Name = "lblServiceType"
-        lblServiceType.Size = New Size(192, 42)
+        lblServiceType.Size = New Size(168, 32)
         lblServiceType.TabIndex = 2
         lblServiceType.Text = "Pediatrics"
         lblServiceType.TextAlign = ContentAlignment.MiddleCenter
@@ -70,9 +72,10 @@ Partial Class SubMenu
         ' PicServiceIcon
         ' 
         PicServiceIcon.Image = My.Resources.Resources.Bear
-        PicServiceIcon.Location = New Point(343, 79)
+        PicServiceIcon.Location = New Point(300, 59)
+        PicServiceIcon.Margin = New Padding(3, 2, 3, 2)
         PicServiceIcon.Name = "PicServiceIcon"
-        PicServiceIcon.Size = New Size(84, 77)
+        PicServiceIcon.Size = New Size(74, 58)
         PicServiceIcon.SizeMode = PictureBoxSizeMode.StretchImage
         PicServiceIcon.TabIndex = 3
         PicServiceIcon.TabStop = False
@@ -82,34 +85,37 @@ Partial Class SubMenu
         btnAddPatient.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         btnAddPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddPatient.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnAddPatient.Location = New Point(244, 331)
+        btnAddPatient.Location = New Point(214, 248)
+        btnAddPatient.Margin = New Padding(3, 2, 3, 2)
         btnAddPatient.Name = "btnAddPatient"
-        btnAddPatient.Size = New Size(549, 115)
+        btnAddPatient.Size = New Size(480, 86)
         btnAddPatient.TabIndex = 24
         btnAddPatient.Text = "Add Patient"
         btnAddPatient.UseVisualStyleBackColor = False
         ' 
-        ' btnAppointPatient
+        ' btnAddAppoint
         ' 
-        btnAppointPatient.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        btnAppointPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAppointPatient.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnAppointPatient.Location = New Point(244, 519)
-        btnAppointPatient.Name = "btnAppointPatient"
-        btnAppointPatient.Size = New Size(549, 115)
-        btnAppointPatient.TabIndex = 25
-        btnAppointPatient.Text = "Appoint Patient"
-        btnAppointPatient.UseVisualStyleBackColor = False
+        btnAddAppoint.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        btnAddAppoint.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddAppoint.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnAddAppoint.Location = New Point(214, 389)
+        btnAddAppoint.Margin = New Padding(3, 2, 3, 2)
+        btnAddAppoint.Name = "btnAddAppoint"
+        btnAddAppoint.Size = New Size(480, 86)
+        btnAddAppoint.TabIndex = 25
+        btnAddAppoint.Text = "Add Appointment"
+        btnAddAppoint.UseVisualStyleBackColor = False
         ' 
         ' SubMenu
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        ClientSize = New Size(1006, 721)
-        Controls.Add(btnAppointPatient)
+        ClientSize = New Size(880, 541)
+        Controls.Add(btnAddAppoint)
         Controls.Add(btnAddPatient)
         Controls.Add(Panel1)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "SubMenu"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Sub Menu"
@@ -123,5 +129,5 @@ Partial Class SubMenu
     Friend WithEvents lblServiceType As Label
     Friend WithEvents PicServiceIcon As PictureBox
     Friend WithEvents btnAddPatient As Button
-    Friend WithEvents btnAppointPatient As Button
+    Friend WithEvents btnAddAppoint As Button
 End Class

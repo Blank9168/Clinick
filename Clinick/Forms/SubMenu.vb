@@ -20,7 +20,7 @@
         Me.Close()
     End Sub
 
-    Private Sub btnAppointPatient_Click(sender As Object, e As EventArgs) Handles btnAppointPatient.Click
+    Private Sub btnAppointPatient_Click(sender As Object, e As EventArgs) Handles btnAddAppoint.Click
         RegisterForm.Show()
         Me.Close()
     End Sub

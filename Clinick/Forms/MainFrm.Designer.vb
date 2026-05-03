@@ -453,7 +453,7 @@ Partial Class MainFrm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
+        BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         ClientSize = New Size(1024, 768)
         Controls.Add(Label9)
         Controls.Add(Label8)

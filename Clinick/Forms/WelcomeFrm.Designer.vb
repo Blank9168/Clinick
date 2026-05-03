@@ -22,55 +22,73 @@ Partial Class WelcomeFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        btnClose = New Label()
         btnGetStarted = New Button()
         PictureBox1 = New PictureBox()
+        btnClose = New Label()
+        PictureBox2 = New PictureBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' btnClose
-        ' 
-        btnClose.AutoSize = True
-        btnClose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
-        btnClose.ForeColor = Color.FromArgb(CByte(120), CByte(169), CByte(176))
-        btnClose.Location = New Point(369, 9)
-        btnClose.Name = "btnClose"
-        btnClose.Size = New Size(37, 26)
-        btnClose.TabIndex = 6
-        btnClose.Text = "x"
         ' 
         ' btnGetStarted
         ' 
-        btnGetStarted.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        btnGetStarted.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
+        btnGetStarted.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnGetStarted.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnGetStarted.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnGetStarted.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnGetStarted.Location = New Point(63, 476)
+        btnGetStarted.Location = New Point(390, 625)
         btnGetStarted.Margin = New Padding(2)
         btnGetStarted.Name = "btnGetStarted"
-        btnGetStarted.Size = New Size(270, 44)
+        btnGetStarted.Size = New Size(237, 41)
         btnGetStarted.TabIndex = 7
         btnGetStarted.Text = "Get Started"
         btnGetStarted.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.CLINICKONLY
+        PictureBox1.BackColor = Color.Transparent
+        PictureBox1.BackgroundImage = My.Resources.Resources.CLINICKONLY
+        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox1.InitialImage = My.Resources.Resources.LOGO_PARA_SA_COMPROG__312_x_282_px_
-        PictureBox1.Location = New Point(21, 100)
+        PictureBox1.Location = New Point(274, 197)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(367, 349)
+        PictureBox1.Size = New Size(469, 423)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
+        ' 
+        ' btnClose
+        ' 
+        btnClose.AutoSize = True
+        btnClose.Enabled = False
+        btnClose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
+        btnClose.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnClose.Location = New Point(975, 9)
+        btnClose.Name = "btnClose"
+        btnClose.Size = New Size(37, 26)
+        btnClose.TabIndex = 6
+        btnClose.Text = "x"
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.BackgroundImage = My.Resources.Resources._683401371_1365757298940834_7959088171303721208_n
+        PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox2.Location = New Point(425, 119)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(167, 215)
+        PictureBox2.TabIndex = 9
+        PictureBox2.TabStop = False
         ' 
         ' WelcomeFrm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        ClientSize = New Size(408, 662)
-        Controls.Add(btnGetStarted)
+        BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        ClientSize = New Size(1024, 768)
+        Controls.Add(PictureBox2)
         Controls.Add(btnClose)
+        Controls.Add(btnGetStarted)
         Controls.Add(PictureBox1)
         ForeColor = SystemColors.ControlText
         FormBorderStyle = FormBorderStyle.None
@@ -78,10 +96,12 @@ Partial Class WelcomeFrm
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-    Friend WithEvents btnClose As Label
     Friend WithEvents btnGetStarted As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnClose As Label
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

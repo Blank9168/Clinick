@@ -15,12 +15,13 @@
         MainFrm.Show()
         Me.Close()
     End Sub
+
     Private Sub btnAddPatient_Click(sender As Object, e As EventArgs) Handles btnAddPatient.Click
         AddPatient_Frm.Show()
         Me.Close()
     End Sub
 
-    Private Sub btnAppointPatient_Click(sender As Object, e As EventArgs) Handles btnAddAppoint.Click
+    Private Sub btnAddAppoint_Click(sender As Object, e As EventArgs) Handles btnAddAppoint.Click
         RegisterForm.Show()
         Me.Close()
     End Sub

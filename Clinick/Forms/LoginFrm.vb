@@ -13,13 +13,11 @@
 
         If username = employee AndAlso password = employeePass Then
             MessageBox.Show("Login successful! Welcome, Employee.")
-            Dim employeeFrm As New MainFrm()
-            employeeFrm.Show()
+            MainFrm.Show()
             Me.Hide()
         ElseIf username = admin AndAlso password = adminPass Then
             MessageBox.Show("Login successful! Welcome, Admin.")
-            Dim adminFrm As New AdminFrm()
-            adminFrm.Show()
+            AdminFrm.Show()
             Me.Hide()
         Else
             MessageBox.Show("Invalid username or password. Please try again.")

@@ -1,10 +1,5 @@
 ﻿Public Class AdminFrm
 
-    ' Tracks which array index is currently selected/loaded into the edit fields
-    Private selectedIndex As Integer = -1
-
-    ' Updates the 4 summary count labels at the top of AdminFrm
-    ' Called every time the grid refreshes or a patient is edited/deleted
     Public Sub UpdateSummaryCounts()
         Dim total As Integer = CurrentCount
         Dim pending As Integer = 0
@@ -24,7 +19,7 @@
             End If
         Next
 
-        ' Also update the dashboard counters in GlobalModule for reference
+        ' Update service breakdown counters in GlobalModule
         TotalGeneral = 0
         TotalDental = 0
         TotalPedia = 0
@@ -40,12 +35,8 @@
         lblPending.Text = pending.ToString()
         lblCompleted.Text = completed.ToString()
         lblCancelled.Text = cancelled.ToString()
-        lblGeneral.Text = TotalGeneral.ToString()
-        lblDental.Text = TotalDental.ToString()
-        lblPedia.Text = TotalPedia.ToString()
     End Sub
 
-    ' Fills the grid with all patients, respecting current filter and search
     Public Sub RefreshGrid()
         dgvAdmin.Rows.Clear()
 
@@ -57,14 +48,12 @@
         Dim searchText As String = txtSearch.Text.Trim().ToLower()
 
         For i As Integer = 0 To CurrentCount - 1
-            ' Filter by status
             If filterStatus <> "" Then
                 If arrStatus(i).ToLower() <> filterStatus Then
                     Continue For
                 End If
             End If
 
-            ' Search by name or ID
             If searchText <> "" Then
                 Dim nameMatch As Boolean = arrNames(i).ToLower().Contains(searchText)
                 Dim idMatch As Boolean = arrID(i).ToLower().Contains(searchText)
@@ -77,20 +66,8 @@
         Next
 
         UpdateSummaryCounts()
-        ClearEditFields()
     End Sub
 
-    ' Clears the edit fields at the bottom and resets selectedIndex
-    Private Sub ClearEditFields()
-        selectedIndex = -1
-        txtEditName.Clear()
-        txtEditContact.Clear()
-        txtEditSchedule.Clear()
-        cmbEditStatus.SelectedIndex = -1
-        lblEditID.Text = "No patient selected"
-    End Sub
-
-    ' Swap helper — keeps all parallel arrays in sync during sort
     Private Sub SwapAllArrays(i As Integer, j As Integer)
         Dim tmpStr As String
         tmpStr = arrID(i) : arrID(i) = arrID(j) : arrID(j) = tmpStr
@@ -103,10 +80,7 @@
         tmpStr = arrCancelReason(i) : arrCancelReason(i) = arrCancelReason(j) : arrCancelReason(j) = tmpStr
     End Sub
 
-    ' Form Events 
-
     Private Sub AdminFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Populate filter ComboBox
         cmbFilter.Items.Clear()
         cmbFilter.Items.Add("All")
         cmbFilter.Items.Add("Pending")
@@ -114,13 +88,13 @@
         cmbFilter.Items.Add("Cancelled")
         cmbFilter.SelectedIndex = 0
 
-        ' Populate edit status ComboBox
-        cmbEditStatus.Items.Clear()
-        cmbEditStatus.Items.Add("Pending")
-        cmbEditStatus.Items.Add("Completed")
-        cmbEditStatus.Items.Add("Cancelled")
+        ' Set up Status ComboBox column items so values are valid when grid loads
+        Dim statusCol As DataGridViewComboBoxColumn = CType(dgvAdmin.Columns("Status"), DataGridViewComboBoxColumn)
+        statusCol.Items.Clear()
+        statusCol.Items.Add("Pending")
+        statusCol.Items.Add("Completed")
+        statusCol.Items.Add("Cancelled")
 
-        ' Start live clock
         tmrClock.Interval = 1000
         tmrClock.Start()
     End Sub
@@ -130,49 +104,47 @@
         RefreshGrid()
     End Sub
 
-    Private Sub tmrClock_Tick(sender As Object, e As EventArgs)
-        LblDate.Text = Date.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
+    Private Sub tmrClock_Tick(sender As Object, e As EventArgs) Handles tmrClock.Tick
+        LblDate.Text = DateTime.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
     End Sub
+
+    ' Navigation
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Application.Exit()
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        AdminFrm.Hide()
+        Me.Hide()
         LoginFrm.Show()
     End Sub
-
-    ' Filter, Search, Sort 
 
     Private Sub cmbFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedIndexChanged
         RefreshGrid()
     End Sub
 
-    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs)
-        RefreshGrid
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        RefreshGrid()
     End Sub
 
-    Private Sub btnSortName_Click(sender As Object, e As EventArgs)
-        ' Bubble sort by patient name A → Z
-        For i = 0 To CurrentCount - 2
-            For j = 0 To CurrentCount - 2 - i
+    Private Sub btnSortName_Click(sender As Object, e As EventArgs) Handles btnSortName.Click
+        For i As Integer = 0 To CurrentCount - 2
+            For j As Integer = 0 To CurrentCount - 2 - i
                 If String.Compare(arrNames(j), arrNames(j + 1)) > 0 Then
                     SwapAllArrays(j, j + 1)
                 End If
             Next
         Next
-        RefreshGrid
+        RefreshGrid()
     End Sub
 
-    Private Sub btnSortSched_Click(sender As Object, e As EventArgs)
-        ' Bubble sort by schedule, "Not Set" pushed to bottom
-        For i = 0 To CurrentCount - 2
-            For j = 0 To CurrentCount - 2 - i
-                Dim a = arrSchedule(j)
-                Dim b = arrSchedule(j + 1)
-                Dim aNotSet = a = "Not Set"
-                Dim bNotSet = b = "Not Set"
+    Private Sub btnSortSched_Click(sender As Object, e As EventArgs) Handles btnSortSched.Click
+        For i As Integer = 0 To CurrentCount - 2
+            For j As Integer = 0 To CurrentCount - 2 - i
+                Dim a As String = arrSchedule(j)
+                Dim b As String = arrSchedule(j + 1)
+                Dim aNotSet As Boolean = (a = "Not Set")
+                Dim bNotSet As Boolean = (b = "Not Set")
 
                 If aNotSet AndAlso Not bNotSet Then
                     SwapAllArrays(j, j + 1)
@@ -183,117 +155,56 @@
                 End If
             Next
         Next
-        RefreshGrid
+        RefreshGrid()
     End Sub
 
-    ' Row Selection → Load Edit Fields 
+    Private Sub dgvAdmin_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles dgvAdmin.CurrentCellDirtyStateChanged
+        If dgvAdmin.IsCurrentCellDirty Then
+            dgvAdmin.CommitEdit(DataGridViewDataErrorContexts.Commit)
+        End If
+    End Sub
 
-    ' When admin clicks a row, load that patient's data into the edit fields below
+    Private Sub dgvAdmin_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAdmin.CellValueChanged
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 6 Then  ' 6 = Status column in AdminFrm (has Sex column too)
+            If dgvAdmin.Rows(e.RowIndex).Cells(0).Value IsNot Nothing AndAlso
+               dgvAdmin.Rows(e.RowIndex).Cells(6).Value IsNot Nothing Then
+
+                Dim selectedID As String = dgvAdmin.Rows(e.RowIndex).Cells(0).Value.ToString
+                Dim newStatus As String = dgvAdmin.Rows(e.RowIndex).Cells(6).Value.ToString
+
+                For i As Integer = 0 To CurrentCount - 1
+                    If arrID(i) = selectedID Then
+                        arrStatus(i) = newStatus
+                        Exit For
+                    End If
+                Next
+                UpdateSummaryCounts()
+            End If
+        End If
+    End Sub
+
+    ' Silences the "value is not valid" ComboBox error dialog
+    Private Sub dgvAdmin_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvAdmin.DataError
+        e.Cancel = True
+    End Sub
+
+    ' When admin clicks a row, find the matching array index and pass it
+    ' to EditPatientFrm before opening it as a modal dialog.
+    ' ShowDialog blocks AdminFrm until EditPatientFrm is closed,
+    ' so RefreshGrid runs automatically via AdminFrm_Activated when it regains focus.
     Private Sub dgvAdmin_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAdmin.CellClick
         If e.RowIndex >= 0 Then
             Dim clickedID As String = dgvAdmin.Rows(e.RowIndex).Cells(0).Value.ToString()
 
-            ' Find the matching index in the parallel arrays
             For i As Integer = 0 To CurrentCount - 1
                 If arrID(i) = clickedID Then
-                    selectedIndex = i
-
-                    ' Load data into edit fields
-                    lblEditID.Text = arrID(i)
-                    txtEditName.Text = arrNames(i)
-                    txtEditContact.Text = arrContact(i)
-                    txtEditSchedule.Text = arrSchedule(i)
-
-                    ' Set the status dropdown to match current status
-                    Dim statusIdx As Integer = cmbEditStatus.Items.IndexOf(arrStatus(i))
-                    If statusIdx >= 0 Then
-                        cmbEditStatus.SelectedIndex = statusIdx
-                    End If
-
+                    ' Pass the index to EditPatientFrm so it knows which patient to load
+                    EditPatientFrm.TargetIndex = i
+                    EditPatientFrm.ShowDialog()
                     Exit For
                 End If
             Next
         End If
-    End Sub
-
-    ' FEATURE: Edit Patient
-
-    ' Saves the edited values from the bottom fields back into the parallel arrays
-    ' Only updates name, contact, schedule, and status — ID and service are not editable
-    Private Sub btnSaveEdit_Click(sender As Object, e As EventArgs) Handles btnSaveEdit.Click
-        If selectedIndex = -1 Then
-            MessageBox.Show("Please select a patient from the grid first.")
-            Return
-        End If
-
-        If txtEditName.Text.Trim() = "" Then
-            MessageBox.Show("Patient name cannot be empty.")
-            Return
-        End If
-
-        ' Save changes back to parallel arrays
-        arrNames(selectedIndex) = txtEditName.Text.Trim()
-        arrContact(selectedIndex) = txtEditContact.Text.Trim()
-        arrSchedule(selectedIndex) = txtEditSchedule.Text.Trim()
-
-        If cmbEditStatus.SelectedIndex >= 0 Then
-            arrStatus(selectedIndex) = cmbEditStatus.SelectedItem.ToString()
-        End If
-
-        MessageBox.Show("Patient " & lblEditID.Text & " updated successfully.")
-        RefreshGrid()
-    End Sub
-
-    ' FEATURE: Delete Patient
-
-    ' Removes the selected patient by shifting all array values after it one step left
-    ' This keeps the parallel arrays packed without gaps
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        If selectedIndex = -1 Then
-            MessageBox.Show("Please select a patient from the grid first.")
-            Return
-        End If
-
-        Dim confirm As DialogResult = MessageBox.Show(
-            "Are you sure you want to delete patient " & lblEditID.Text & "?",
-            "Confirm Delete",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Warning)
-
-        If confirm = DialogResult.Yes Then
-            ' Shift all entries after selectedIndex one position to the left
-            ' This fills the gap left by the deleted patient
-            For i As Integer = selectedIndex To CurrentCount - 2
-                arrID(i) = arrID(i + 1)
-                arrNames(i) = arrNames(i + 1)
-                arrContact(i) = arrContact(i + 1)
-                arrSex(i) = arrSex(i + 1)
-                arrService(i) = arrService(i + 1)
-                arrStatus(i) = arrStatus(i + 1)
-                arrSchedule(i) = arrSchedule(i + 1)
-                arrCancelReason(i) = arrCancelReason(i + 1)
-            Next
-
-            ' Clear the last slot (now a duplicate after the shift)
-            arrID(CurrentCount - 1) = ""
-            arrNames(CurrentCount - 1) = ""
-            arrContact(CurrentCount - 1) = ""
-            arrSex(CurrentCount - 1) = ""
-            arrService(CurrentCount - 1) = ""
-            arrStatus(CurrentCount - 1) = ""
-            arrSchedule(CurrentCount - 1) = ""
-            arrCancelReason(CurrentCount - 1) = ""
-
-            ' Decrease total patient count
-            CurrentCount -= 1
-
-            MessageBox.Show("Patient deleted successfully.")
-            RefreshGrid()
-        End If
-    End Sub
-
-    Private Sub btnClearEdit_Click(sender As Object, e As EventArgs) Handles btnClearEdit.Click
-        ClearEditFields()
     End Sub
 
 End Class

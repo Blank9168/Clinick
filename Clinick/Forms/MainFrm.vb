@@ -1,5 +1,4 @@
 ﻿Public Class MainFrm
-    ' Fills dgvSummary with all patients, respecting current filter and search
     Public Sub RefreshSummaryGrid()
         dgvSummary.Rows.Clear()
 
@@ -12,14 +11,14 @@
         Dim searchText As String = txtSearch.Text.Trim().ToLower()
 
         For i As Integer = 0 To CurrentCount - 1
-            ' Filter by status
+            ' Filter by status 
             If filterStatus <> "" Then
                 If arrStatus(i).ToLower() <> filterStatus Then
                     Continue For  ' skip rows that don't match filter
                 End If
             End If
 
-            ' Search by patient name or ID 
+            ' Search by patient name or ID
             If searchText <> "" Then
                 Dim nameMatch As Boolean = arrNames(i).ToLower().Contains(searchText)
                 Dim idMatch As Boolean = arrID(i).ToLower().Contains(searchText)
@@ -43,6 +42,13 @@
         cmbFilter.Items.Add("Cancelled")
         cmbFilter.SelectedIndex = 0  ' default: show All
 
+        ' Set up Status ComboBox column items so values are valid when grid loads
+        Dim statusCol As DataGridViewComboBoxColumn = CType(dgvSummary.Columns("Status"), DataGridViewComboBoxColumn)
+        statusCol.Items.Clear()
+        statusCol.Items.Add("Pending")
+        statusCol.Items.Add("Completed")
+        statusCol.Items.Add("Cancelled")
+
         ' Start the live clock timer (ticks every second)
         tmrClock.Interval = 1000
         tmrClock.Start()
@@ -53,21 +59,17 @@
         RefreshSummaryGrid()
     End Sub
 
-    ' Live Clock
-
-    ' tmrClock ticks every second so the time display stays current
-    ' Add a Timer control named "tmrClock" to MainFrm in the designer
     Private Sub tmrClock_Tick(sender As Object, e As EventArgs) Handles tmrClock.Tick
         LblDate.Text = DateTime.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
     End Sub
 
-    ' Navigation Buttons
+    ' Navigation Buttons 
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Application.Exit()
     End Sub
 
-    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Me.Hide()
         LoginFrm.Show()
     End Sub
@@ -90,7 +92,12 @@
         Me.Hide()
     End Sub
 
-    'Status Change in Grid
+    Private Sub dgvSummary_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles dgvSummary.CurrentCellDirtyStateChanged
+        If dgvSummary.IsCurrentCellDirty Then
+            dgvSummary.CommitEdit(DataGridViewDataErrorContexts.Commit)
+        End If
+    End Sub
+
     Private Sub dgvSummary_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSummary.CellValueChanged
         If e.RowIndex >= 0 AndAlso e.ColumnIndex = 5 Then
             If dgvSummary.Rows(e.RowIndex).Cells(0).Value IsNot Nothing AndAlso
@@ -109,6 +116,11 @@
         End If
     End Sub
 
+    ' Silences the "value is not valid" ComboBox error dialog
+    Private Sub dgvSummary_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvSummary.DataError
+        e.Cancel = True
+    End Sub
+
     ' Filter by Status 
     ' When the user picks a status from cmbFilter, the grid immediately
     ' shows only patients with that status. Picking "All" shows everyone.
@@ -125,7 +137,7 @@
         RefreshSummaryGrid()
     End Sub
 
-    ' Sort by Name or Schedule 
+    ' Sort by Name or Schedule
     ' btnSortName and btnSortSched are two buttons added to MainFrm in the designer.
     ' They perform a simple bubble sort on the parallel arrays, then refresh the grid.
 

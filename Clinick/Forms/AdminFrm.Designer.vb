@@ -23,7 +23,7 @@ Partial Class AdminFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         LblDate = New Label()
         LblDateTime = New Label()
@@ -49,9 +49,9 @@ Partial Class AdminFrm
         Label9 = New Label()
         btnSortSched = New Button()
         btnSortName = New Button()
-        cmbFilters = New ComboBox()
+        cmbFilter = New ComboBox()
         txtSearch = New TextBox()
-        dgvSummary = New DataGridView()
+        dgvAdmin = New DataGridView()
         Applied = New DataGridViewTextBoxColumn()
         PatientName = New DataGridViewTextBoxColumn()
         Contact = New DataGridViewTextBoxColumn()
@@ -63,7 +63,7 @@ Partial Class AdminFrm
         CType(PicLogo, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(dgvSummary, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvAdmin, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -347,14 +347,14 @@ Partial Class AdminFrm
         btnSortName.Text = "Sort By Name"
         btnSortName.UseVisualStyleBackColor = True
         ' 
-        ' cmbFilters
+        ' cmbFilter
         ' 
-        cmbFilters.Font = New Font("Segoe UI", 12F)
-        cmbFilters.FormattingEnabled = True
-        cmbFilters.Location = New Point(378, 225)
-        cmbFilters.Name = "cmbFilters"
-        cmbFilters.Size = New Size(163, 29)
-        cmbFilters.TabIndex = 42
+        cmbFilter.Font = New Font("Segoe UI", 12F)
+        cmbFilter.FormattingEnabled = True
+        cmbFilter.Location = New Point(378, 225)
+        cmbFilter.Name = "cmbFilter"
+        cmbFilter.Size = New Size(163, 29)
+        cmbFilter.TabIndex = 42
         ' 
         ' txtSearch
         ' 
@@ -366,30 +366,30 @@ Partial Class AdminFrm
         txtSearch.Size = New Size(334, 29)
         txtSearch.TabIndex = 41
         ' 
-        ' dgvSummary
+        ' dgvAdmin
         ' 
-        dgvSummary.AllowUserToResizeColumns = False
-        dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        dgvSummary.BackgroundColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvSummary.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
-        dgvSummary.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        dgvSummary.Location = New Point(14, 270)
-        dgvSummary.Margin = New Padding(3, 2, 3, 2)
-        dgvSummary.Name = "dgvSummary"
-        dgvSummary.RowHeadersVisible = False
-        dgvSummary.RowHeadersWidth = 51
-        dgvSummary.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvSummary.Size = New Size(866, 237)
-        dgvSummary.TabIndex = 39
+        dgvAdmin.AllowUserToResizeColumns = False
+        dgvAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvAdmin.BackgroundColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvAdmin.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
+        dgvAdmin.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        dgvAdmin.Location = New Point(14, 270)
+        dgvAdmin.Margin = New Padding(3, 2, 3, 2)
+        dgvAdmin.Name = "dgvAdmin"
+        dgvAdmin.RowHeadersVisible = False
+        dgvAdmin.RowHeadersWidth = 51
+        dgvAdmin.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvAdmin.Size = New Size(866, 237)
+        dgvAdmin.TabIndex = 39
         ' 
         ' Applied
         ' 
@@ -437,9 +437,9 @@ Partial Class AdminFrm
         ClientSize = New Size(896, 740)
         Controls.Add(btnSortSched)
         Controls.Add(btnSortName)
-        Controls.Add(cmbFilters)
+        Controls.Add(cmbFilter)
         Controls.Add(txtSearch)
-        Controls.Add(dgvSummary)
+        Controls.Add(dgvAdmin)
         Controls.Add(Panel2)
         Controls.Add(btnLogout)
         Controls.Add(Label1)
@@ -455,7 +455,7 @@ Partial Class AdminFrm
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
-        CType(dgvSummary, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvAdmin, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -485,9 +485,9 @@ Partial Class AdminFrm
     Friend WithEvents Label9 As Label
     Friend WithEvents btnSortSched As Button
     Friend WithEvents btnSortName As Button
-    Friend WithEvents cmbFilters As ComboBox
+    Friend WithEvents cmbFilter As ComboBox
     Friend WithEvents txtSearch As TextBox
-    Friend WithEvents dgvSummary As DataGridView
+    Friend WithEvents dgvAdmin As DataGridView
     Friend WithEvents Applied As DataGridViewTextBoxColumn
     Friend WithEvents PatientName As DataGridViewTextBoxColumn
     Friend WithEvents Contact As DataGridViewTextBoxColumn

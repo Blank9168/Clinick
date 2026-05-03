@@ -7,13 +7,11 @@
         txtPatientName.Focus()
     End Sub
 
-    ' BUG FIX #1: Changed from MyBase.Activated to MyBase.Load
     ' Activated fires every time the form gains focus (e.g. after a MessageBox closes),
     ' which was wiping the user's typed input. Load only fires once when the form first opens.
     Private Sub AddPatient_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ClearPatientForm()
 
-        ' BUG FIX #2: Changed default prefix from " " (space) to "" (empty string)
         ' A stray space would produce IDs like " 1001" with a leading space.
         Dim prefix As String = ""
         If Service = "Pediatrics" Then

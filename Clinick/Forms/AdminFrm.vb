@@ -199,7 +199,7 @@
             For i As Integer = 0 To CurrentCount - 1
                 If arrID(i) = clickedID Then
                     ' Pass the index to EditPatientFrm so it knows which patient to load
-                    EditPatientFrm.TargetIndex = i
+                    'EditPatientFrm.TargetIndex = i'
                     EditPatientFrm.ShowDialog()
                     Exit For
                 End If

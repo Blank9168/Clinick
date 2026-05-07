@@ -62,21 +62,23 @@
         Me.Close()
     End Sub
 
-    Private Sub RegisterForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        RefreshAvailableSlots()
+    Private Sub RegisterForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ClearForm()
+        RefreshAvailableSlots()
 
         grpPedia.Visible = False
         grpDental.Visible = False
         grpGeneral.Visible = False
 
-        If Service.Contains("Pedia") Then
+        If Service.Contains("Pediatrics") Then
             grpPedia.Visible = True
         ElseIf Service.Contains("Dental") Then
             grpDental.Visible = True
         ElseIf Service.Contains("General") Then
             grpGeneral.Visible = True
         End If
+
+
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -96,9 +98,11 @@
         Next
 
         If targetIndex <> -1 Then
-            lblPatientNameDisplay.Text = "Appointing: " & arrNames(targetIndex)
-            MessageBox.Show("Patient Found!")
+            lblPatientName.Text = arrNames(targetIndex)
+
+            MessageBox.Show("Patient Found! You can now select the schedule and details.")
         Else
+
             MessageBox.Show("ID not found. Please register the patient first.")
         End If
     End Sub
@@ -115,7 +119,7 @@
             arrStatus(targetIndex) = "Pending"
 
             Dim details As String = ""
-            If Service.Contains("Pedia") Then
+            If Service.Contains("Pediatrics") Then
                 Dim visitType As String = ""
                 If rbVaccine.Checked Then
                     visitType = "Vaccination"
@@ -165,11 +169,5 @@
         RefreshAvailableSlots()
     End Sub
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
 
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
 End Class

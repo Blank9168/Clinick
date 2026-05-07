@@ -178,6 +178,10 @@
 
     End Sub
 
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
 
     '    ' Stores the array index of the patient being edited
     '    ' Set by AdminFrm before opening this form

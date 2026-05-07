@@ -39,10 +39,10 @@ Partial Class SubMenu
         btnBack.Cursor = Cursors.Hand
         btnBack.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnBack.ForeColor = Color.White
-        btnBack.Location = New Point(30, 28)
-        btnBack.Margin = New Padding(4, 4, 4, 4)
+        btnBack.Location = New Point(34, 17)
+        btnBack.Margin = New Padding(3, 2, 3, 2)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(134, 45)
+        btnBack.Size = New Size(81, 28)
         btnBack.TabIndex = 1
         btnBack.Text = "Return"
         btnBack.UseVisualStyleBackColor = False
@@ -52,29 +52,28 @@ Partial Class SubMenu
         Panel1.BackColor = Color.Teal
         Panel1.Controls.Add(Panel3)
         Panel1.Controls.Add(lblServiceType)
-        Panel1.Location = New Point(48, 100)
-        Panel1.Margin = New Padding(4, 4, 4, 4)
+        Panel1.Location = New Point(34, 60)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1165, 186)
+        Panel1.Size = New Size(816, 112)
         Panel1.TabIndex = 2
         ' 
         ' Panel3
         ' 
         Panel3.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Panel3.Location = New Point(299, 96)
-        Panel3.Margin = New Padding(4, 4, 4, 4)
+        Panel3.Location = New Point(209, 58)
+        Panel3.Margin = New Padding(3, 2, 3, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(866, 9)
+        Panel3.Size = New Size(606, 5)
         Panel3.TabIndex = 3
         ' 
         ' lblServiceType
         ' 
         lblServiceType.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblServiceType.ForeColor = Color.White
-        lblServiceType.Location = New Point(51, 74)
-        lblServiceType.Margin = New Padding(4, 0, 4, 0)
+        lblServiceType.Location = New Point(36, 44)
         lblServiceType.Name = "lblServiceType"
-        lblServiceType.Size = New Size(240, 54)
+        lblServiceType.Size = New Size(168, 32)
         lblServiceType.TabIndex = 2
         lblServiceType.Text = "Pediatrics"
         lblServiceType.TextAlign = ContentAlignment.MiddleCenter
@@ -85,10 +84,10 @@ Partial Class SubMenu
         btnAddPatient.Cursor = Cursors.Hand
         btnAddPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddPatient.ForeColor = Color.White
-        btnAddPatient.Location = New Point(551, 339)
-        btnAddPatient.Margin = New Padding(4, 4, 4, 4)
+        btnAddPatient.Location = New Point(386, 203)
+        btnAddPatient.Margin = New Padding(3, 2, 3, 2)
         btnAddPatient.Name = "btnAddPatient"
-        btnAddPatient.Size = New Size(544, 75)
+        btnAddPatient.Size = New Size(381, 45)
         btnAddPatient.TabIndex = 24
         btnAddPatient.Text = "Add Patient"
         btnAddPatient.UseVisualStyleBackColor = False
@@ -99,10 +98,10 @@ Partial Class SubMenu
         btnAddAppoint.Cursor = Cursors.Hand
         btnAddAppoint.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddAppoint.ForeColor = Color.White
-        btnAddAppoint.Location = New Point(551, 515)
-        btnAddAppoint.Margin = New Padding(4, 4, 4, 4)
+        btnAddAppoint.Location = New Point(386, 309)
+        btnAddAppoint.Margin = New Padding(3, 2, 3, 2)
         btnAddAppoint.Name = "btnAddAppoint"
-        btnAddAppoint.Size = New Size(544, 75)
+        btnAddAppoint.Size = New Size(381, 45)
         btnAddAppoint.TabIndex = 25
         btnAddAppoint.Text = "Add Appointment"
         btnAddAppoint.UseVisualStyleBackColor = False
@@ -112,22 +111,22 @@ Partial Class SubMenu
         Panel2.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         Panel2.Controls.Add(btnAddAppoint)
         Panel2.Controls.Add(btnAddPatient)
-        Panel2.Location = New Point(48, 100)
-        Panel2.Margin = New Padding(4, 4, 4, 4)
+        Panel2.Location = New Point(34, 60)
+        Panel2.Margin = New Padding(3, 2, 3, 2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1165, 750)
+        Panel2.Size = New Size(816, 450)
         Panel2.TabIndex = 26
         ' 
         ' SubMenu
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
-        ClientSize = New Size(1258, 901)
+        ClientSize = New Size(881, 541)
         Controls.Add(btnBack)
         Controls.Add(Panel1)
         Controls.Add(Panel2)
-        Margin = New Padding(4, 4, 4, 4)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "SubMenu"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Sub Menu"

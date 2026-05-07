@@ -81,7 +81,7 @@ Partial Class AddPatient_Frm
         GroupBox2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         GroupBox2.Location = New Point(147, 157)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(721, 468)
+        GroupBox2.Size = New Size(721, 486)
         GroupBox2.TabIndex = 26
         GroupBox2.TabStop = False
         GroupBox2.Text = "Patient Information"
@@ -91,7 +91,7 @@ Partial Class AddPatient_Frm
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 12F)
         Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label8.Location = New Point(309, 234)
+        Label8.Location = New Point(38, 317)
         Label8.Name = "Label8"
         Label8.Size = New Size(124, 25)
         Label8.TabIndex = 47
@@ -100,7 +100,7 @@ Partial Class AddPatient_Frm
         ' DateTimePicker1
         ' 
         DateTimePicker1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Location = New Point(309, 264)
+        DateTimePicker1.Location = New Point(38, 347)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(266, 27)
         DateTimePicker1.TabIndex = 46
@@ -118,15 +118,15 @@ Partial Class AddPatient_Frm
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 12F)
         Label7.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label7.Location = New Point(28, 234)
+        Label7.Location = New Point(38, 234)
         Label7.Name = "Label7"
-        Label7.Size = New Size(121, 25)
+        Label7.Size = New Size(116, 25)
         Label7.TabIndex = 44
-        Label7.Text = " Patient age:"
+        Label7.Text = "Patient age:"
         ' 
         ' PictureBox5
         ' 
-        PictureBox5.BackColor = Color.White
+        PictureBox5.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         PictureBox5.BackgroundImage = My.Resources.Resources.ChatGPT_Image_Apr_29__2026__02_47_47_PM
         PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox5.Location = New Point(28, 12)
@@ -171,7 +171,7 @@ Partial Class AddPatient_Frm
         btnAddPatient.BackColor = Color.Teal
         btnAddPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddPatient.ForeColor = Color.White
-        btnAddPatient.Location = New Point(38, 407)
+        btnAddPatient.Location = New Point(38, 413)
         btnAddPatient.Name = "btnAddPatient"
         btnAddPatient.Size = New Size(643, 44)
         btnAddPatient.TabIndex = 30
@@ -191,7 +191,7 @@ Partial Class AddPatient_Frm
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 12F)
         Label4.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label4.Location = New Point(28, 186)
+        Label4.Location = New Point(38, 186)
         Label4.Name = "Label4"
         Label4.Size = New Size(187, 25)
         Label4.TabIndex = 19
@@ -210,7 +210,7 @@ Partial Class AddPatient_Frm
         lblPatientID.AutoSize = True
         lblPatientID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPatientID.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        lblPatientID.Location = New Point(158, 89)
+        lblPatientID.Location = New Point(171, 89)
         lblPatientID.Name = "lblPatientID"
         lblPatientID.Size = New Size(133, 29)
         lblPatientID.TabIndex = 18
@@ -221,7 +221,7 @@ Partial Class AddPatient_Frm
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F)
         Label2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label2.Location = New Point(28, 135)
+        Label2.Location = New Point(38, 135)
         Label2.Name = "Label2"
         Label2.Size = New Size(171, 25)
         Label2.TabIndex = 6
@@ -232,7 +232,7 @@ Partial Class AddPatient_Frm
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label3.Location = New Point(28, 89)
+        Label3.Location = New Point(38, 89)
         Label3.Name = "Label3"
         Label3.Size = New Size(133, 29)
         Label3.TabIndex = 4
@@ -243,7 +243,7 @@ Partial Class AddPatient_Frm
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 12F)
         Label5.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label5.Location = New Point(36, 303)
+        Label5.Location = New Point(309, 234)
         Label5.Name = "Label5"
         Label5.Size = New Size(118, 25)
         Label5.TabIndex = 11
@@ -254,7 +254,7 @@ Partial Class AddPatient_Frm
         rbMale.AutoSize = True
         rbMale.Font = New Font("Microsoft Sans Serif", 12F)
         rbMale.ForeColor = Color.Black
-        rbMale.Location = New Point(38, 331)
+        rbMale.Location = New Point(322, 262)
         rbMale.Name = "rbMale"
         rbMale.Size = New Size(76, 29)
         rbMale.TabIndex = 12
@@ -267,7 +267,7 @@ Partial Class AddPatient_Frm
         rbFemale.AutoSize = True
         rbFemale.Font = New Font("Microsoft Sans Serif", 12F)
         rbFemale.ForeColor = Color.Black
-        rbFemale.Location = New Point(145, 331)
+        rbFemale.Location = New Point(404, 263)
         rbFemale.Name = "rbFemale"
         rbFemale.Size = New Size(98, 29)
         rbFemale.TabIndex = 13
@@ -318,7 +318,6 @@ Partial Class AddPatient_Frm
         ' 
         btnReturnMainPd.BackColor = Color.Teal
         btnReturnMainPd.BackgroundImageLayout = ImageLayout.Center
-        btnReturnMainPd.FlatStyle = FlatStyle.Flat
         btnReturnMainPd.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReturnMainPd.ForeColor = Color.White
         btnReturnMainPd.Location = New Point(14, 12)

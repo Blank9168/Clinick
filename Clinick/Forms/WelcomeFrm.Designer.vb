@@ -32,11 +32,11 @@ Partial Class WelcomeFrm
         ' 
         ' btnGetStarted
         ' 
-        btnGetStarted.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
+        btnGetStarted.BackColor = Color.Teal
         btnGetStarted.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnGetStarted.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnGetStarted.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnGetStarted.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnGetStarted.ForeColor = Color.White
         btnGetStarted.Location = New Point(390, 625)
         btnGetStarted.Margin = New Padding(2)
         btnGetStarted.Name = "btnGetStarted"
@@ -63,7 +63,7 @@ Partial Class WelcomeFrm
         btnClose.AutoSize = True
         btnClose.Enabled = False
         btnClose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
-        btnClose.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnClose.ForeColor = Color.Teal
         btnClose.Location = New Point(975, 9)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(37, 26)

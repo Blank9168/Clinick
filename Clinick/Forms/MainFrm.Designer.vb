@@ -62,10 +62,10 @@ Partial Class MainFrm
         btnGeneralCons.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
         btnGeneralCons.Font = New Font("Microsoft Sans Serif", 12F)
         btnGeneralCons.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnGeneralCons.Location = New Point(46, 820)
+        btnGeneralCons.Location = New Point(44, 840)
         btnGeneralCons.Margin = New Padding(2, 3, 2, 3)
         btnGeneralCons.Name = "btnGeneralCons"
-        btnGeneralCons.Size = New Size(287, 95)
+        btnGeneralCons.Size = New Size(287, 84)
         btnGeneralCons.TabIndex = 8
         btnGeneralCons.Text = "General Consultation"
         btnGeneralCons.UseVisualStyleBackColor = False
@@ -75,10 +75,10 @@ Partial Class MainFrm
         btnDentalS.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
         btnDentalS.Font = New Font("Microsoft Sans Serif", 12F)
         btnDentalS.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnDentalS.Location = New Point(378, 820)
+        btnDentalS.Location = New Point(376, 840)
         btnDentalS.Margin = New Padding(2, 3, 2, 3)
         btnDentalS.Name = "btnDentalS"
-        btnDentalS.Size = New Size(287, 95)
+        btnDentalS.Size = New Size(287, 84)
         btnDentalS.TabIndex = 9
         btnDentalS.Text = "Dental Service"
         btnDentalS.UseVisualStyleBackColor = False
@@ -88,10 +88,10 @@ Partial Class MainFrm
         btnPediatrics.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
         btnPediatrics.Font = New Font("Microsoft Sans Serif", 12F)
         btnPediatrics.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnPediatrics.Location = New Point(712, 820)
+        btnPediatrics.Location = New Point(710, 840)
         btnPediatrics.Margin = New Padding(2, 3, 2, 3)
         btnPediatrics.Name = "btnPediatrics"
-        btnPediatrics.Size = New Size(287, 95)
+        btnPediatrics.Size = New Size(287, 84)
         btnPediatrics.TabIndex = 10
         btnPediatrics.Text = "Pediatrics"
         btnPediatrics.UseVisualStyleBackColor = False
@@ -100,7 +100,7 @@ Partial Class MainFrm
         ' 
         btnClose.AutoSize = True
         btnClose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
-        btnClose.ForeColor = Color.FromArgb(CByte(120), CByte(169), CByte(176))
+        btnClose.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnClose.Location = New Point(975, 21)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(37, 26)
@@ -133,10 +133,10 @@ Partial Class MainFrm
         btnLogout.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
         btnLogout.Font = New Font("Microsoft Sans Serif", 10.2F)
         btnLogout.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnLogout.Location = New Point(897, 95)
+        btnLogout.Location = New Point(887, 103)
         btnLogout.Margin = New Padding(2, 3, 2, 3)
         btnLogout.Name = "btnLogout"
-        btnLogout.Size = New Size(117, 37)
+        btnLogout.Size = New Size(110, 37)
         btnLogout.TabIndex = 18
         btnLogout.Text = "Log Out"
         btnLogout.UseVisualStyleBackColor = False
@@ -191,7 +191,7 @@ Partial Class MainFrm
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label2.Location = New Point(13, 99)
+        Label2.Location = New Point(22, 107)
         Label2.Name = "Label2"
         Label2.Size = New Size(141, 25)
         Label2.TabIndex = 24
@@ -213,12 +213,12 @@ Partial Class MainFrm
         dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvSummary.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
         dgvSummary.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        dgvSummary.Location = New Point(16, 268)
+        dgvSummary.Location = New Point(39, 268)
         dgvSummary.Name = "dgvSummary"
         dgvSummary.RowHeadersVisible = False
         dgvSummary.RowHeadersWidth = 51
         dgvSummary.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvSummary.Size = New Size(990, 479)
+        dgvSummary.Size = New Size(942, 479)
         dgvSummary.TabIndex = 27
         ' 
         ' Applied
@@ -265,7 +265,7 @@ Partial Class MainFrm
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label1.Location = New Point(154, 99)
+        Label1.Location = New Point(155, 107)
         Label1.Name = "Label1"
         Label1.Size = New Size(219, 25)
         Label1.TabIndex = 29
@@ -276,7 +276,7 @@ Partial Class MainFrm
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label8.Location = New Point(14, 773)
+        Label8.Location = New Point(22, 776)
         Label8.Name = "Label8"
         Label8.Size = New Size(181, 25)
         Label8.TabIndex = 30
@@ -287,7 +287,7 @@ Partial Class MainFrm
         Label9.AutoSize = True
         Label9.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label9.Location = New Point(8, 239)
+        Label9.Location = New Point(22, 230)
         Label9.Name = "Label9"
         Label9.Size = New Size(79, 25)
         Label9.TabIndex = 31
@@ -303,6 +303,7 @@ Partial Class MainFrm
         ' 
         txtSearch.BorderStyle = BorderStyle.FixedSingle
         txtSearch.Font = New Font("Microsoft Sans Serif", 12F)
+        txtSearch.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         txtSearch.Location = New Point(21, 172)
         txtSearch.Margin = New Padding(3, 4, 3, 4)
         txtSearch.Name = "txtSearch"
@@ -314,35 +315,37 @@ Partial Class MainFrm
         ' 
         cmbFilter.Font = New Font("Microsoft Sans Serif", 12F)
         cmbFilter.FormattingEnabled = True
-        cmbFilter.Location = New Point(431, 171)
+        cmbFilter.Location = New Point(427, 171)
         cmbFilter.Margin = New Padding(3, 4, 3, 4)
         cmbFilter.Name = "cmbFilter"
-        cmbFilter.Size = New Size(186, 33)
+        cmbFilter.Size = New Size(207, 33)
         cmbFilter.TabIndex = 35
         ' 
         ' btnSortName
         ' 
-        btnSortName.FlatStyle = FlatStyle.Flat
-        btnSortName.Font = New Font("Microsoft Sans Serif", 12F)
-        btnSortName.Location = New Point(637, 172)
+        btnSortName.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
+        btnSortName.Font = New Font("Microsoft Sans Serif", 10F)
+        btnSortName.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnSortName.Location = New Point(659, 171)
         btnSortName.Margin = New Padding(3, 4, 3, 4)
         btnSortName.Name = "btnSortName"
-        btnSortName.Size = New Size(160, 39)
+        btnSortName.Size = New Size(160, 33)
         btnSortName.TabIndex = 37
-        btnSortName.Text = "Sort By Name"
-        btnSortName.UseVisualStyleBackColor = True
+        btnSortName.Text = "Sort by Name"
+        btnSortName.UseVisualStyleBackColor = False
         ' 
         ' btnSortSched
         ' 
-        btnSortSched.FlatStyle = FlatStyle.Flat
-        btnSortSched.Font = New Font("Microsoft Sans Serif", 12F)
-        btnSortSched.Location = New Point(823, 172)
+        btnSortSched.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
+        btnSortSched.Font = New Font("Microsoft Sans Serif", 10F)
+        btnSortSched.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnSortSched.Location = New Point(837, 171)
         btnSortSched.Margin = New Padding(3, 4, 3, 4)
         btnSortSched.Name = "btnSortSched"
-        btnSortSched.Size = New Size(177, 39)
+        btnSortSched.Size = New Size(160, 33)
         btnSortSched.TabIndex = 38
         btnSortSched.Text = "Sort by Schedule"
-        btnSortSched.UseVisualStyleBackColor = True
+        btnSortSched.UseVisualStyleBackColor = False
         ' 
         ' tmrClock
         ' 

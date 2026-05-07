@@ -24,6 +24,9 @@ Partial Class EditPatientFrm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditPatientFrm))
         Panel1 = New Panel()
+        PictureBox3 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        PictureBox1 = New PictureBox()
         lblSearchPrompt = New Label()
         Label1 = New Label()
         btnSearch = New Button()
@@ -38,6 +41,8 @@ Partial Class EditPatientFrm
         Label10 = New Label()
         dtpDate = New DateTimePicker()
         grpGeneral = New GroupBox()
+        Label19 = New Label()
+        PictureBox9 = New PictureBox()
         grpPrimaryConcern = New GroupBox()
         rbPhysicalExam = New RadioButton()
         rbInjury = New RadioButton()
@@ -49,6 +54,8 @@ Partial Class EditPatientFrm
         Label6 = New Label()
         Label7 = New Label()
         grpDental = New GroupBox()
+        Label20 = New Label()
+        PictureBox10 = New PictureBox()
         grpPatientType = New GroupBox()
         rbChild = New RadioButton()
         rbAdult = New RadioButton()
@@ -59,6 +66,8 @@ Partial Class EditPatientFrm
         Label9 = New Label()
         Label11 = New Label()
         grpPedia = New GroupBox()
+        Label21 = New Label()
+        PictureBox11 = New PictureBox()
         GroupBox3 = New GroupBox()
         rbVaccine = New RadioButton()
         rbSickV = New RadioButton()
@@ -75,7 +84,6 @@ Partial Class EditPatientFrm
         Label2 = New Label()
         DateTimePicker1 = New DateTimePicker()
         TextBox1 = New TextBox()
-        PictureBox5 = New PictureBox()
         Label3 = New Label()
         Label4 = New Label()
         btnClear = New Button()
@@ -90,48 +98,40 @@ Partial Class EditPatientFrm
         Label17 = New Label()
         rbMale = New RadioButton()
         rbFemale = New RadioButton()
+        PictureBox5 = New PictureBox()
         panelBg = New PictureBox()
-        PictureBox2 = New PictureBox()
-        PictureBox3 = New PictureBox()
-        PictureBox1 = New PictureBox()
         lblPatientInfo = New Label()
         PictureBox6 = New PictureBox()
         PictureBox7 = New PictureBox()
         Label18 = New Label()
         PictureBox8 = New PictureBox()
-        PictureBox9 = New PictureBox()
-        PictureBox10 = New PictureBox()
-        PictureBox11 = New PictureBox()
-        Label19 = New Label()
-        Label20 = New Label()
-        Label21 = New Label()
         PictureBox12 = New PictureBox()
         PictureBox13 = New PictureBox()
         PictureBox14 = New PictureBox()
         Panel1.SuspendLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         grpAppointment.SuspendLayout()
         grpGeneral.SuspendLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
         grpPrimaryConcern.SuspendLayout()
         grpUrgency.SuspendLayout()
         grpDental.SuspendLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
         grpPatientType.SuspendLayout()
         grpProcedure.SuspendLayout()
         grpPedia.SuspendLayout()
+        CType(PictureBox11, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox3.SuspendLayout()
         grpAgeGroup.SuspendLayout()
         grpPatientInfo.SuspendLayout()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         CType(panelBg, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox11, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox12, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox13, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox14, ComponentModel.ISupportInitialize).BeginInit()
@@ -153,6 +153,38 @@ Partial Class EditPatientFrm
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1007, 95)
         Panel1.TabIndex = 28
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
+        PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox3.Location = New Point(843, 43)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(29, 26)
+        PictureBox3.TabIndex = 49
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), Image)
+        PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox2.Location = New Point(99, 14)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(75, 64)
+        PictureBox2.TabIndex = 48
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Teal
+        PictureBox1.BackgroundImage = My.Resources.Resources.curved_arrow_left_white_icon1
+        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox1.Location = New Point(37, 33)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(34, 29)
+        PictureBox1.TabIndex = 47
+        PictureBox1.TabStop = False
         ' 
         ' lblSearchPrompt
         ' 
@@ -321,6 +353,27 @@ Partial Class EditPatientFrm
         grpGeneral.TabStop = False
         grpGeneral.Text = "General"
         ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        Label19.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
+        Label19.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        Label19.Location = New Point(11, 7)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(88, 25)
+        Label19.TabIndex = 48
+        Label19.Text = "General"
+        ' 
+        ' PictureBox9
+        ' 
+        PictureBox9.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        PictureBox9.Location = New Point(0, 0)
+        PictureBox9.Name = "PictureBox9"
+        PictureBox9.Size = New Size(466, 37)
+        PictureBox9.TabIndex = 51
+        PictureBox9.TabStop = False
+        ' 
         ' grpPrimaryConcern
         ' 
         grpPrimaryConcern.Controls.Add(rbPhysicalExam)
@@ -463,6 +516,27 @@ Partial Class EditPatientFrm
         grpDental.TabStop = False
         grpDental.Text = "Dental"
         ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        Label20.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
+        Label20.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        Label20.Location = New Point(14, 4)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(74, 25)
+        Label20.TabIndex = 52
+        Label20.Text = "Dental"
+        ' 
+        ' PictureBox10
+        ' 
+        PictureBox10.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        PictureBox10.Location = New Point(0, 0)
+        PictureBox10.Name = "PictureBox10"
+        PictureBox10.Size = New Size(463, 34)
+        PictureBox10.TabIndex = 52
+        PictureBox10.TabStop = False
+        ' 
         ' grpPatientType
         ' 
         grpPatientType.Controls.Add(rbChild)
@@ -590,6 +664,27 @@ Partial Class EditPatientFrm
         grpPedia.TabIndex = 34
         grpPedia.TabStop = False
         grpPedia.Text = "Pedia"
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        Label21.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
+        Label21.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        Label21.Location = New Point(13, 5)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(67, 25)
+        Label21.TabIndex = 53
+        Label21.Text = "Pedia"
+        ' 
+        ' PictureBox11
+        ' 
+        PictureBox11.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
+        PictureBox11.Location = New Point(0, 0)
+        PictureBox11.Name = "PictureBox11"
+        PictureBox11.Size = New Size(462, 34)
+        PictureBox11.TabIndex = 52
+        PictureBox11.TabStop = False
         ' 
         ' GroupBox3
         ' 
@@ -789,17 +884,6 @@ Partial Class EditPatientFrm
         TextBox1.Size = New Size(97, 23)
         TextBox1.TabIndex = 45
         ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.BackColor = Color.PowderBlue
-        PictureBox5.BackgroundImage = My.Resources.Resources.ChatGPT_Image_Apr_29__2026__02_47_47_PM
-        PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox5.Location = New Point(53, 143)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(47, 41)
-        PictureBox5.TabIndex = 32
-        PictureBox5.TabStop = False
-        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -951,6 +1035,17 @@ Partial Class EditPatientFrm
         rbFemale.Text = "Female"
         rbFemale.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.BackColor = Color.PowderBlue
+        PictureBox5.BackgroundImage = My.Resources.Resources.ChatGPT_Image_Apr_29__2026__02_47_47_PM
+        PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox5.Location = New Point(53, 143)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(47, 41)
+        PictureBox5.TabIndex = 32
+        PictureBox5.TabStop = False
+        ' 
         ' panelBg
         ' 
         panelBg.BackColor = Color.PowderBlue
@@ -959,38 +1054,6 @@ Partial Class EditPatientFrm
         panelBg.Size = New Size(444, 53)
         panelBg.TabIndex = 45
         panelBg.TabStop = False
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), Image)
-        PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox2.Location = New Point(99, 14)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(75, 64)
-        PictureBox2.TabIndex = 48
-        PictureBox2.TabStop = False
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
-        PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox3.Location = New Point(839, 43)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(39, 26)
-        PictureBox3.TabIndex = 49
-        PictureBox3.TabStop = False
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackColor = Color.Teal
-        PictureBox1.BackgroundImage = My.Resources.Resources.curved_arrow_left_white_icon1
-        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Location = New Point(37, 33)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(34, 29)
-        PictureBox1.TabIndex = 47
-        PictureBox1.TabStop = False
         ' 
         ' lblPatientInfo
         ' 
@@ -1044,69 +1107,6 @@ Partial Class EditPatientFrm
         PictureBox8.Size = New Size(50, 37)
         PictureBox8.TabIndex = 50
         PictureBox8.TabStop = False
-        ' 
-        ' PictureBox9
-        ' 
-        PictureBox9.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        PictureBox9.Location = New Point(0, 0)
-        PictureBox9.Name = "PictureBox9"
-        PictureBox9.Size = New Size(466, 37)
-        PictureBox9.TabIndex = 51
-        PictureBox9.TabStop = False
-        ' 
-        ' PictureBox10
-        ' 
-        PictureBox10.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        PictureBox10.Location = New Point(0, 0)
-        PictureBox10.Name = "PictureBox10"
-        PictureBox10.Size = New Size(463, 34)
-        PictureBox10.TabIndex = 52
-        PictureBox10.TabStop = False
-        ' 
-        ' PictureBox11
-        ' 
-        PictureBox11.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        PictureBox11.Location = New Point(0, 0)
-        PictureBox11.Name = "PictureBox11"
-        PictureBox11.Size = New Size(462, 34)
-        PictureBox11.TabIndex = 52
-        PictureBox11.TabStop = False
-        ' 
-        ' Label19
-        ' 
-        Label19.AutoSize = True
-        Label19.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        Label19.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
-        Label19.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label19.Location = New Point(11, 7)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(88, 25)
-        Label19.TabIndex = 48
-        Label19.Text = "General"
-        ' 
-        ' Label20
-        ' 
-        Label20.AutoSize = True
-        Label20.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        Label20.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
-        Label20.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label20.Location = New Point(14, 4)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(74, 25)
-        Label20.TabIndex = 52
-        Label20.Text = "Dental"
-        ' 
-        ' Label21
-        ' 
-        Label21.AutoSize = True
-        Label21.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
-        Label21.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
-        Label21.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label21.Location = New Point(13, 5)
-        Label21.Name = "Label21"
-        Label21.Size = New Size(67, 25)
-        Label21.TabIndex = 53
-        Label21.Text = "Pedia"
         ' 
         ' PictureBox12
         ' 
@@ -1169,43 +1169,43 @@ Partial Class EditPatientFrm
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 4, 3, 4)
         Name = "EditPatientFrm"
-        Text = "EditPatientFrm"
+        Text = " "
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         grpAppointment.ResumeLayout(False)
         grpAppointment.PerformLayout()
         grpGeneral.ResumeLayout(False)
         grpGeneral.PerformLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
         grpPrimaryConcern.ResumeLayout(False)
         grpPrimaryConcern.PerformLayout()
         grpUrgency.ResumeLayout(False)
         grpUrgency.PerformLayout()
         grpDental.ResumeLayout(False)
         grpDental.PerformLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
         grpPatientType.ResumeLayout(False)
         grpPatientType.PerformLayout()
         grpProcedure.ResumeLayout(False)
         grpProcedure.PerformLayout()
         grpPedia.ResumeLayout(False)
         grpPedia.PerformLayout()
+        CType(PictureBox11, ComponentModel.ISupportInitialize).EndInit()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
         grpAgeGroup.ResumeLayout(False)
         grpAgeGroup.PerformLayout()
         grpPatientInfo.ResumeLayout(False)
         grpPatientInfo.PerformLayout()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         CType(panelBg, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox11, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox12, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox13, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox14, ComponentModel.ISupportInitialize).EndInit()

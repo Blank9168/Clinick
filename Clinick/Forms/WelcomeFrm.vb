@@ -6,4 +6,8 @@
         LoginFrm.Show()
         Me.Hide()
     End Sub
+
+    Private Sub WelcomeFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

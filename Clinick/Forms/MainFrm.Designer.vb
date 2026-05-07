@@ -23,7 +23,7 @@ Partial Class MainFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         btnGeneralCons = New Button()
         btnDentalS = New Button()
         btnPediatrics = New Button()
@@ -57,7 +57,7 @@ Partial Class MainFrm
         Panel11 = New Panel()
         PictureBox5 = New PictureBox()
         Label11 = New Label()
-        Label12 = New Label()
+        lblPending = New Label()
         Label10 = New Label()
         Panel12 = New Panel()
         Panel13 = New Panel()
@@ -66,7 +66,7 @@ Partial Class MainFrm
         Panel2 = New Panel()
         PictureBox6 = New PictureBox()
         Label4 = New Label()
-        Label7 = New Label()
+        lblCompleted = New Label()
         Label3 = New Label()
         Panel3 = New Panel()
         Panel4 = New Panel()
@@ -75,7 +75,7 @@ Partial Class MainFrm
         Panel17 = New Panel()
         PictureBox7 = New PictureBox()
         Label13 = New Label()
-        Label14 = New Label()
+        lblCancelled = New Label()
         Label15 = New Label()
         Panel18 = New Panel()
         Panel19 = New Panel()
@@ -191,14 +191,14 @@ Partial Class MainFrm
         dgvSummary.AllowUserToResizeColumns = False
         dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSummary.BackgroundColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvSummary.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
         dgvSummary.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
@@ -439,7 +439,7 @@ Partial Class MainFrm
         Panel11.BackColor = Color.White
         Panel11.Controls.Add(PictureBox5)
         Panel11.Controls.Add(Label11)
-        Panel11.Controls.Add(Label12)
+        Panel11.Controls.Add(lblPending)
         Panel11.Controls.Add(Label10)
         Panel11.ForeColor = SystemColors.ControlDarkDark
         Panel11.Location = New Point(278, 124)
@@ -471,16 +471,16 @@ Partial Class MainFrm
         Label11.TabIndex = 22
         Label11.Text = "Pending"
         ' 
-        ' Label12
+        ' lblPending
         ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.ForeColor = Color.Black
-        Label12.Location = New Point(51, 48)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(30, 31)
-        Label12.TabIndex = 29
-        Label12.Text = "0"
+        lblPending.AutoSize = True
+        lblPending.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPending.ForeColor = Color.Black
+        lblPending.Location = New Point(51, 48)
+        lblPending.Name = "lblPending"
+        lblPending.Size = New Size(30, 31)
+        lblPending.TabIndex = 29
+        lblPending.Text = "0"
         ' 
         ' Label10
         ' 
@@ -535,7 +535,7 @@ Partial Class MainFrm
         Panel2.BackColor = Color.White
         Panel2.Controls.Add(PictureBox6)
         Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(Label7)
+        Panel2.Controls.Add(lblCompleted)
         Panel2.Controls.Add(Label3)
         Panel2.ForeColor = SystemColors.ControlDarkDark
         Panel2.Location = New Point(489, 124)
@@ -567,16 +567,16 @@ Partial Class MainFrm
         Label4.TabIndex = 22
         Label4.Text = "Completed"
         ' 
-        ' Label7
+        ' lblCompleted
         ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.Black
-        Label7.Location = New Point(51, 48)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(30, 31)
-        Label7.TabIndex = 29
-        Label7.Text = "0"
+        lblCompleted.AutoSize = True
+        lblCompleted.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCompleted.ForeColor = Color.Black
+        lblCompleted.Location = New Point(51, 48)
+        lblCompleted.Name = "lblCompleted"
+        lblCompleted.Size = New Size(30, 31)
+        lblCompleted.TabIndex = 29
+        lblCompleted.Text = "0"
         ' 
         ' Label3
         ' 
@@ -631,7 +631,7 @@ Partial Class MainFrm
         Panel17.BackColor = Color.White
         Panel17.Controls.Add(PictureBox7)
         Panel17.Controls.Add(Label13)
-        Panel17.Controls.Add(Label14)
+        Panel17.Controls.Add(lblCancelled)
         Panel17.Controls.Add(Label15)
         Panel17.ForeColor = SystemColors.ControlDarkDark
         Panel17.Location = New Point(694, 124)
@@ -663,16 +663,16 @@ Partial Class MainFrm
         Label13.TabIndex = 22
         Label13.Text = "Cancelled"
         ' 
-        ' Label14
+        ' lblCancelled
         ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label14.ForeColor = Color.Black
-        Label14.Location = New Point(53, 49)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(30, 31)
-        Label14.TabIndex = 29
-        Label14.Text = "0"
+        lblCancelled.AutoSize = True
+        lblCancelled.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCancelled.ForeColor = Color.Black
+        lblCancelled.Location = New Point(53, 49)
+        lblCancelled.Name = "lblCancelled"
+        lblCancelled.Size = New Size(30, 31)
+        lblCancelled.TabIndex = 29
+        lblCancelled.Text = "0"
         ' 
         ' Label15
         ' 
@@ -976,10 +976,10 @@ Partial Class MainFrm
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Panel16 As Panel
-    Friend WithEvents Label12 As Label
+    Friend WithEvents lblPending As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblCompleted As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
@@ -987,7 +987,7 @@ Partial Class MainFrm
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel17 As Panel
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
+    Friend WithEvents lblCancelled As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Panel18 As Panel
     Friend WithEvents Panel19 As Panel

@@ -147,40 +147,11 @@
     End Sub
 
     Private Sub btnReturnMainPd_Click(sender As Object, e As EventArgs) Handles btnReturnMainPd.Click
-
+        MainFrm.Show()
+        Me.Close()
     End Sub
 
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub panelBg_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub panelBg_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub grpPatientInfo_Enter(sender As Object, e As EventArgs) Handles grpPatientInfo.Enter
-
-    End Sub
-
-    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
-
-    End Sub
-
-    Private Sub Label20_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
 
 
     '    ' Stores the array index of the patient being edited

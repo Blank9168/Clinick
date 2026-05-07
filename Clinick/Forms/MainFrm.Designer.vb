@@ -415,7 +415,7 @@ Partial Class MainFrm
         ' 
         PictureBox4.BackColor = Color.White
         PictureBox4.BackgroundImageLayout = ImageLayout.Center
-        PictureBox4.Image = My.Resources.Resources.papel
+        'PictureBox4.Image = My.Resources.Resources.papel
         PictureBox4.Location = New Point(12, 25)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(38, 40)

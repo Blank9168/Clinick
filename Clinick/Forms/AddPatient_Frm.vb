@@ -5,6 +5,9 @@
         rbMale.Checked = False
         rbFemale.Checked = False
         txtPatientName.Focus()
+        txtAge.Clear()
+        dtpBday.Value = New DateTime(2000, 1, 1)
+
     End Sub
 
     ' Activated fires every time the form gains focus (e.g. after a MessageBox closes),

@@ -24,8 +24,8 @@ Partial Class AddPatient_Frm
     Private Sub InitializeComponent()
         GroupBox2 = New GroupBox()
         Label8 = New Label()
-        DateTimePicker1 = New DateTimePicker()
-        TextBox1 = New TextBox()
+        dtpBday = New DateTimePicker()
+        txtAge = New TextBox()
         Label7 = New Label()
         PictureBox5 = New PictureBox()
         Label6 = New Label()
@@ -60,8 +60,8 @@ Partial Class AddPatient_Frm
         ' 
         GroupBox2.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         GroupBox2.Controls.Add(Label8)
-        GroupBox2.Controls.Add(DateTimePicker1)
-        GroupBox2.Controls.Add(TextBox1)
+        GroupBox2.Controls.Add(dtpBday)
+        GroupBox2.Controls.Add(txtAge)
         GroupBox2.Controls.Add(Label7)
         GroupBox2.Controls.Add(PictureBox5)
         GroupBox2.Controls.Add(Label6)
@@ -79,9 +79,11 @@ Partial Class AddPatient_Frm
         GroupBox2.Controls.Add(rbFemale)
         GroupBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBox2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        GroupBox2.Location = New Point(147, 157)
+        GroupBox2.Location = New Point(129, 118)
+        GroupBox2.Margin = New Padding(3, 2, 3, 2)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(721, 486)
+        GroupBox2.Padding = New Padding(3, 2, 3, 2)
+        GroupBox2.Size = New Size(631, 364)
         GroupBox2.TabIndex = 26
         GroupBox2.TabStop = False
         GroupBox2.Text = "Patient Information"
@@ -91,36 +93,38 @@ Partial Class AddPatient_Frm
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 12F)
         Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label8.Location = New Point(38, 317)
+        Label8.Location = New Point(33, 238)
         Label8.Name = "Label8"
-        Label8.Size = New Size(124, 25)
+        Label8.Size = New Size(103, 20)
         Label8.TabIndex = 47
         Label8.Text = "Date of Birth:"
         ' 
-        ' DateTimePicker1
+        ' dtpBday
         ' 
-        DateTimePicker1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Location = New Point(38, 347)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(266, 27)
-        DateTimePicker1.TabIndex = 46
+        dtpBday.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpBday.Location = New Point(33, 260)
+        dtpBday.Margin = New Padding(3, 2, 3, 2)
+        dtpBday.Name = "dtpBday"
+        dtpBday.Size = New Size(233, 23)
+        dtpBday.TabIndex = 46
         ' 
-        ' TextBox1
+        ' txtAge
         ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(38, 262)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(151, 30)
-        TextBox1.TabIndex = 45
+        txtAge.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtAge.Location = New Point(33, 196)
+        txtAge.Margin = New Padding(3, 2, 3, 2)
+        txtAge.Name = "txtAge"
+        txtAge.Size = New Size(133, 26)
+        txtAge.TabIndex = 45
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 12F)
         Label7.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label7.Location = New Point(38, 234)
+        Label7.Location = New Point(33, 176)
         Label7.Name = "Label7"
-        Label7.Size = New Size(116, 25)
+        Label7.Size = New Size(94, 20)
         Label7.TabIndex = 44
         Label7.Text = "Patient age:"
         ' 
@@ -129,9 +133,10 @@ Partial Class AddPatient_Frm
         PictureBox5.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         PictureBox5.BackgroundImage = My.Resources.Resources.ChatGPT_Image_Apr_29__2026__02_47_47_PM
         PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox5.Location = New Point(28, 12)
+        PictureBox5.Location = New Point(24, 9)
+        PictureBox5.Margin = New Padding(3, 2, 3, 2)
         PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(62, 59)
+        PictureBox5.Size = New Size(54, 44)
         PictureBox5.TabIndex = 32
         PictureBox5.TabStop = False
         ' 
@@ -140,9 +145,9 @@ Partial Class AddPatient_Frm
         Label6.AutoSize = True
         Label6.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Black
-        Label6.Location = New Point(96, 23)
+        Label6.Location = New Point(84, 17)
         Label6.Name = "Label6"
-        Label6.Size = New Size(272, 32)
+        Label6.Size = New Size(214, 26)
         Label6.TabIndex = 43
         Label6.Text = "Patient Information"
         ' 
@@ -151,9 +156,10 @@ Partial Class AddPatient_Frm
         btnClear.BackColor = Color.Teal
         btnClear.Font = New Font("Microsoft Sans Serif", 10.2F)
         btnClear.ForeColor = Color.White
-        btnClear.Location = New Point(593, 84)
+        btnClear.Location = New Point(519, 63)
+        btnClear.Margin = New Padding(3, 2, 3, 2)
         btnClear.Name = "btnClear"
-        btnClear.Size = New Size(97, 34)
+        btnClear.Size = New Size(85, 26)
         btnClear.TabIndex = 41
         btnClear.Text = "Clear"
         btnClear.UseVisualStyleBackColor = False
@@ -161,8 +167,9 @@ Partial Class AddPatient_Frm
         ' PictureBox4
         ' 
         PictureBox4.Location = New Point(0, 0)
+        PictureBox4.Margin = New Padding(3, 2, 3, 2)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(721, 33)
+        PictureBox4.Size = New Size(631, 25)
         PictureBox4.TabIndex = 42
         PictureBox4.TabStop = False
         ' 
@@ -171,9 +178,10 @@ Partial Class AddPatient_Frm
         btnAddPatient.BackColor = Color.Teal
         btnAddPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddPatient.ForeColor = Color.White
-        btnAddPatient.Location = New Point(38, 413)
+        btnAddPatient.Location = New Point(33, 310)
+        btnAddPatient.Margin = New Padding(3, 2, 3, 2)
         btnAddPatient.Name = "btnAddPatient"
-        btnAddPatient.Size = New Size(643, 44)
+        btnAddPatient.Size = New Size(563, 33)
         btnAddPatient.TabIndex = 30
         btnAddPatient.Text = "Add Patient"
         btnAddPatient.UseVisualStyleBackColor = False
@@ -181,9 +189,10 @@ Partial Class AddPatient_Frm
         ' txtContactInfo
         ' 
         txtContactInfo.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtContactInfo.Location = New Point(221, 186)
+        txtContactInfo.Location = New Point(193, 140)
+        txtContactInfo.Margin = New Padding(3, 2, 3, 2)
         txtContactInfo.Name = "txtContactInfo"
-        txtContactInfo.Size = New Size(469, 30)
+        txtContactInfo.Size = New Size(411, 26)
         txtContactInfo.TabIndex = 20
         ' 
         ' Label4
@@ -191,18 +200,19 @@ Partial Class AddPatient_Frm
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 12F)
         Label4.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label4.Location = New Point(38, 186)
+        Label4.Location = New Point(33, 140)
         Label4.Name = "Label4"
-        Label4.Size = New Size(187, 25)
+        Label4.Size = New Size(154, 20)
         Label4.TabIndex = 19
         Label4.Text = "Contact Information:"
         ' 
         ' txtPatientName
         ' 
         txtPatientName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtPatientName.Location = New Point(221, 132)
+        txtPatientName.Location = New Point(193, 99)
+        txtPatientName.Margin = New Padding(3, 2, 3, 2)
         txtPatientName.Name = "txtPatientName"
-        txtPatientName.Size = New Size(469, 30)
+        txtPatientName.Size = New Size(411, 26)
         txtPatientName.TabIndex = 5
         ' 
         ' lblPatientID
@@ -210,9 +220,9 @@ Partial Class AddPatient_Frm
         lblPatientID.AutoSize = True
         lblPatientID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPatientID.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        lblPatientID.Location = New Point(171, 89)
+        lblPatientID.Location = New Point(150, 67)
         lblPatientID.Name = "lblPatientID"
-        lblPatientID.Size = New Size(133, 29)
+        lblPatientID.Size = New Size(105, 24)
         lblPatientID.TabIndex = 18
         lblPatientID.Text = "GEN-1001"
         ' 
@@ -221,9 +231,9 @@ Partial Class AddPatient_Frm
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F)
         Label2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label2.Location = New Point(38, 135)
+        Label2.Location = New Point(33, 101)
         Label2.Name = "Label2"
-        Label2.Size = New Size(171, 25)
+        Label2.Size = New Size(138, 20)
         Label2.TabIndex = 6
         Label2.Text = "Patient Full Name:"
         ' 
@@ -232,9 +242,9 @@ Partial Class AddPatient_Frm
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label3.Location = New Point(38, 89)
+        Label3.Location = New Point(33, 67)
         Label3.Name = "Label3"
-        Label3.Size = New Size(133, 29)
+        Label3.Size = New Size(104, 24)
         Label3.TabIndex = 4
         Label3.Text = "Patient ID:"
         ' 
@@ -243,9 +253,9 @@ Partial Class AddPatient_Frm
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 12F)
         Label5.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label5.Location = New Point(309, 234)
+        Label5.Location = New Point(270, 176)
         Label5.Name = "Label5"
-        Label5.Size = New Size(118, 25)
+        Label5.Size = New Size(94, 20)
         Label5.TabIndex = 11
         Label5.Text = "Patient Sex:"
         ' 
@@ -254,9 +264,10 @@ Partial Class AddPatient_Frm
         rbMale.AutoSize = True
         rbMale.Font = New Font("Microsoft Sans Serif", 12F)
         rbMale.ForeColor = Color.Black
-        rbMale.Location = New Point(322, 262)
+        rbMale.Location = New Point(282, 196)
+        rbMale.Margin = New Padding(3, 2, 3, 2)
         rbMale.Name = "rbMale"
-        rbMale.Size = New Size(76, 29)
+        rbMale.Size = New Size(61, 24)
         rbMale.TabIndex = 12
         rbMale.TabStop = True
         rbMale.Text = "Male"
@@ -267,9 +278,10 @@ Partial Class AddPatient_Frm
         rbFemale.AutoSize = True
         rbFemale.Font = New Font("Microsoft Sans Serif", 12F)
         rbFemale.ForeColor = Color.Black
-        rbFemale.Location = New Point(404, 263)
+        rbFemale.Location = New Point(354, 197)
+        rbFemale.Margin = New Padding(3, 2, 3, 2)
         rbFemale.Name = "rbFemale"
-        rbFemale.Size = New Size(98, 29)
+        rbFemale.Size = New Size(80, 24)
         rbFemale.TabIndex = 13
         rbFemale.TabStop = True
         rbFemale.Text = "Female"
@@ -287,8 +299,9 @@ Partial Class AddPatient_Frm
         Panel1.Controls.Add(PictureBox2)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1006, 723)
+        Panel1.Size = New Size(880, 543)
         Panel1.TabIndex = 27
         ' 
         ' PictureBox1
@@ -296,9 +309,10 @@ Partial Class AddPatient_Frm
         PictureBox1.BackColor = Color.Teal
         PictureBox1.BackgroundImage = My.Resources.Resources.curved_arrow_left_white_icon1
         PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Location = New Point(32, 24)
+        PictureBox1.Location = New Point(28, 18)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(32, 31)
+        PictureBox1.Size = New Size(28, 23)
         PictureBox1.TabIndex = 29
         PictureBox1.TabStop = False
         ' 
@@ -308,9 +322,9 @@ Partial Class AddPatient_Frm
         Label1.BackColor = Color.Teal
         Label1.Font = New Font("Microsoft Sans Serif", 19.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(355, 105)
+        Label1.Location = New Point(311, 79)
         Label1.Name = "Label1"
-        Label1.Size = New Size(315, 37)
+        Label1.Size = New Size(256, 30)
         Label1.TabIndex = 19
         Label1.Text = "Patient Registration"
         ' 
@@ -320,9 +334,10 @@ Partial Class AddPatient_Frm
         btnReturnMainPd.BackgroundImageLayout = ImageLayout.Center
         btnReturnMainPd.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReturnMainPd.ForeColor = Color.White
-        btnReturnMainPd.Location = New Point(14, 12)
+        btnReturnMainPd.Location = New Point(12, 9)
+        btnReturnMainPd.Margin = New Padding(3, 2, 3, 2)
         btnReturnMainPd.Name = "btnReturnMainPd"
-        btnReturnMainPd.Size = New Size(322, 56)
+        btnReturnMainPd.Size = New Size(282, 42)
         btnReturnMainPd.TabIndex = 28
         btnReturnMainPd.Text = "    Back To Dashboard"
         btnReturnMainPd.UseVisualStyleBackColor = False
@@ -330,9 +345,10 @@ Partial Class AddPatient_Frm
         ' PictureBox3
         ' 
         PictureBox3.BackColor = Color.Teal
-        PictureBox3.Location = New Point(147, 92)
+        PictureBox3.Location = New Point(129, 69)
+        PictureBox3.Margin = New Padding(3, 2, 3, 2)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(721, 62)
+        PictureBox3.Size = New Size(631, 46)
         PictureBox3.TabIndex = 31
         PictureBox3.TabStop = False
         ' 
@@ -340,20 +356,22 @@ Partial Class AddPatient_Frm
         ' 
         PictureBox2.BackgroundImage = My.Resources.Resources.resized_logo__1_
         PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox2.Location = New Point(779, 0)
+        PictureBox2.Location = New Point(682, 0)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(238, 128)
+        PictureBox2.Size = New Size(208, 96)
         PictureBox2.TabIndex = 30
         PictureBox2.TabStop = False
         ' 
         ' AddPatient_Frm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        ClientSize = New Size(1006, 721)
+        ClientSize = New Size(880, 541)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 2, 3, 2)
         Name = "AddPatient_Frm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Add Patient"
@@ -392,6 +410,6 @@ Partial Class AddPatient_Frm
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents dtpBday As DateTimePicker
+    Friend WithEvents txtAge As TextBox
 End Class

@@ -88,7 +88,6 @@ Partial Class EditPatientFrm
         Label4 = New Label()
         btnClear = New Button()
         PictureBox4 = New PictureBox()
-        btnAddPatient = New Button()
         txtContactInfo = New TextBox()
         Label5 = New Label()
         txtPatientName = New TextBox()
@@ -150,8 +149,9 @@ Partial Class EditPatientFrm
         Panel1.Controls.Add(txtSearchID)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1007, 95)
+        Panel1.Size = New Size(881, 71)
         Panel1.TabIndex = 28
         ' 
         ' PictureBox3
@@ -159,9 +159,10 @@ Partial Class EditPatientFrm
         PictureBox3.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), Image)
         PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox3.Location = New Point(843, 43)
+        PictureBox3.Location = New Point(745, 36)
+        PictureBox3.Margin = New Padding(3, 2, 3, 2)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(29, 26)
+        PictureBox3.Size = New Size(25, 20)
         PictureBox3.TabIndex = 49
         PictureBox3.TabStop = False
         ' 
@@ -169,9 +170,10 @@ Partial Class EditPatientFrm
         ' 
         PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), Image)
         PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox2.Location = New Point(99, 14)
+        PictureBox2.Location = New Point(87, 10)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(75, 64)
+        PictureBox2.Size = New Size(66, 48)
         PictureBox2.TabIndex = 48
         PictureBox2.TabStop = False
         ' 
@@ -180,9 +182,10 @@ Partial Class EditPatientFrm
         PictureBox1.BackColor = Color.Teal
         PictureBox1.BackgroundImage = My.Resources.Resources.curved_arrow_left_white_icon1
         PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Location = New Point(37, 33)
+        PictureBox1.Location = New Point(32, 25)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(34, 29)
+        PictureBox1.Size = New Size(30, 22)
         PictureBox1.TabIndex = 47
         PictureBox1.TabStop = False
         ' 
@@ -191,9 +194,9 @@ Partial Class EditPatientFrm
         lblSearchPrompt.AutoSize = True
         lblSearchPrompt.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblSearchPrompt.ForeColor = Color.White
-        lblSearchPrompt.Location = New Point(659, 18)
+        lblSearchPrompt.Location = New Point(577, 14)
         lblSearchPrompt.Name = "lblSearchPrompt"
-        lblSearchPrompt.Size = New Size(145, 23)
+        lblSearchPrompt.Size = New Size(117, 19)
         lblSearchPrompt.TabIndex = 46
         lblSearchPrompt.Text = "Search Patient ID:"
         ' 
@@ -202,9 +205,9 @@ Partial Class EditPatientFrm
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(172, 20)
+        Label1.Location = New Point(150, 15)
         Label1.Name = "Label1"
-        Label1.Size = New Size(418, 50)
+        Label1.Size = New Size(341, 41)
         Label1.TabIndex = 19
         Label1.Text = "EDIT PATIENT RECORD"
         ' 
@@ -213,9 +216,10 @@ Partial Class EditPatientFrm
         btnSearch.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         btnSearch.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnSearch.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnSearch.Location = New Point(831, 40)
+        btnSearch.Location = New Point(728, 31)
+        btnSearch.Margin = New Padding(3, 2, 3, 2)
         btnSearch.Name = "btnSearch"
-        btnSearch.Size = New Size(55, 33)
+        btnSearch.Size = New Size(50, 28)
         btnSearch.TabIndex = 45
         btnSearch.UseVisualStyleBackColor = False
         ' 
@@ -224,9 +228,10 @@ Partial Class EditPatientFrm
         btnReturnMainPd.BackColor = Color.Teal
         btnReturnMainPd.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnReturnMainPd.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnReturnMainPd.Location = New Point(23, 26)
+        btnReturnMainPd.Location = New Point(20, 20)
+        btnReturnMainPd.Margin = New Padding(3, 2, 3, 2)
         btnReturnMainPd.Name = "btnReturnMainPd"
-        btnReturnMainPd.Size = New Size(66, 42)
+        btnReturnMainPd.Size = New Size(58, 32)
         btnReturnMainPd.TabIndex = 28
         btnReturnMainPd.UseVisualStyleBackColor = False
         ' 
@@ -234,9 +239,10 @@ Partial Class EditPatientFrm
         ' 
         txtSearchID.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtSearchID.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        txtSearchID.Location = New Point(662, 43)
+        txtSearchID.Location = New Point(579, 32)
+        txtSearchID.Margin = New Padding(3, 2, 3, 2)
         txtSearchID.Name = "txtSearchID"
-        txtSearchID.Size = New Size(163, 30)
+        txtSearchID.Size = New Size(143, 26)
         txtSearchID.TabIndex = 44
         ' 
         ' btnSaveEdit
@@ -244,10 +250,9 @@ Partial Class EditPatientFrm
         btnSaveEdit.BackColor = Color.PowderBlue
         btnSaveEdit.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         btnSaveEdit.ForeColor = Color.DarkSlateGray
-        btnSaveEdit.Location = New Point(37, 595)
-        btnSaveEdit.Margin = New Padding(3, 4, 3, 4)
+        btnSaveEdit.Location = New Point(32, 446)
         btnSaveEdit.Name = "btnSaveEdit"
-        btnSaveEdit.Size = New Size(267, 88)
+        btnSaveEdit.Size = New Size(234, 66)
         btnSaveEdit.TabIndex = 33
         btnSaveEdit.Text = "          SAVE CHANGES"
         btnSaveEdit.UseVisualStyleBackColor = False
@@ -257,10 +262,9 @@ Partial Class EditPatientFrm
         btnDelete.BackColor = Color.PowderBlue
         btnDelete.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         btnDelete.ForeColor = Color.DarkSlateGray
-        btnDelete.Location = New Point(368, 595)
-        btnDelete.Margin = New Padding(3, 4, 3, 4)
+        btnDelete.Location = New Point(322, 446)
         btnDelete.Name = "btnDelete"
-        btnDelete.Size = New Size(280, 88)
+        btnDelete.Size = New Size(245, 66)
         btnDelete.TabIndex = 34
         btnDelete.Text = "      DELETE"
         btnDelete.UseVisualStyleBackColor = False
@@ -270,10 +274,9 @@ Partial Class EditPatientFrm
         btnCancel.BackColor = Color.PowderBlue
         btnCancel.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         btnCancel.ForeColor = Color.DarkSlateGray
-        btnCancel.Location = New Point(722, 595)
-        btnCancel.Margin = New Padding(3, 4, 3, 4)
+        btnCancel.Location = New Point(632, 446)
         btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(229, 88)
+        btnCancel.Size = New Size(200, 66)
         btnCancel.TabIndex = 35
         btnCancel.Text = "     CANCEL"
         btnCancel.UseVisualStyleBackColor = False
@@ -287,9 +290,11 @@ Partial Class EditPatientFrm
         grpAppointment.Controls.Add(dtpDate)
         grpAppointment.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpAppointment.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        grpAppointment.Location = New Point(504, 169)
+        grpAppointment.Location = New Point(441, 127)
+        grpAppointment.Margin = New Padding(3, 2, 3, 2)
         grpAppointment.Name = "grpAppointment"
-        grpAppointment.Size = New Size(431, 95)
+        grpAppointment.Padding = New Padding(3, 2, 3, 2)
+        grpAppointment.Size = New Size(377, 71)
         grpAppointment.TabIndex = 37
         grpAppointment.TabStop = False
         grpAppointment.Text = "Appointment Schedule"
@@ -299,9 +304,10 @@ Partial Class EditPatientFrm
         cmbTimeSlots.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         cmbTimeSlots.FormattingEnabled = True
         cmbTimeSlots.Items.AddRange(New Object() {"08:00 AM", "08:30 AM", "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM"})
-        cmbTimeSlots.Location = New Point(264, 52)
+        cmbTimeSlots.Location = New Point(231, 39)
+        cmbTimeSlots.Margin = New Padding(3, 2, 3, 2)
         cmbTimeSlots.Name = "cmbTimeSlots"
-        cmbTimeSlots.Size = New Size(121, 24)
+        cmbTimeSlots.Size = New Size(106, 21)
         cmbTimeSlots.TabIndex = 36
         ' 
         ' Label8
@@ -309,9 +315,9 @@ Partial Class EditPatientFrm
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 10.2F)
         Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label8.Location = New Point(261, 29)
+        Label8.Location = New Point(228, 22)
         Label8.Name = "Label8"
-        Label8.Size = New Size(56, 20)
+        Label8.Size = New Size(47, 17)
         Label8.TabIndex = 35
         Label8.Text = "Time: "
         ' 
@@ -320,9 +326,9 @@ Partial Class EditPatientFrm
         Label10.AutoSize = True
         Label10.Font = New Font("Microsoft Sans Serif", 10.2F)
         Label10.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label10.Location = New Point(7, 29)
+        Label10.Location = New Point(6, 22)
         Label10.Name = "Label10"
-        Label10.Size = New Size(50, 20)
+        Label10.Size = New Size(42, 17)
         Label10.TabIndex = 21
         Label10.Text = "Date:"
         ' 
@@ -330,9 +336,10 @@ Partial Class EditPatientFrm
         ' 
         dtpDate.CalendarFont = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpDate.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dtpDate.Location = New Point(7, 53)
+        dtpDate.Location = New Point(6, 40)
+        dtpDate.Margin = New Padding(3, 2, 3, 2)
         dtpDate.Name = "dtpDate"
-        dtpDate.Size = New Size(235, 22)
+        dtpDate.Size = New Size(206, 19)
         dtpDate.TabIndex = 20
         ' 
         ' grpGeneral
@@ -346,9 +353,11 @@ Partial Class EditPatientFrm
         grpGeneral.Controls.Add(Label7)
         grpGeneral.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpGeneral.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        grpGeneral.Location = New Point(504, 277)
+        grpGeneral.Location = New Point(441, 208)
+        grpGeneral.Margin = New Padding(3, 2, 3, 2)
         grpGeneral.Name = "grpGeneral"
-        grpGeneral.Size = New Size(462, 223)
+        grpGeneral.Padding = New Padding(3, 2, 3, 2)
+        grpGeneral.Size = New Size(404, 167)
         grpGeneral.TabIndex = 42
         grpGeneral.TabStop = False
         grpGeneral.Text = "General"
@@ -359,9 +368,9 @@ Partial Class EditPatientFrm
         Label19.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         Label19.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
         Label19.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label19.Location = New Point(11, 7)
+        Label19.Location = New Point(10, 5)
         Label19.Name = "Label19"
-        Label19.Size = New Size(88, 25)
+        Label19.Size = New Size(73, 20)
         Label19.TabIndex = 48
         Label19.Text = "General"
         ' 
@@ -369,8 +378,9 @@ Partial Class EditPatientFrm
         ' 
         PictureBox9.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         PictureBox9.Location = New Point(0, 0)
+        PictureBox9.Margin = New Padding(3, 2, 3, 2)
         PictureBox9.Name = "PictureBox9"
-        PictureBox9.Size = New Size(466, 37)
+        PictureBox9.Size = New Size(408, 28)
         PictureBox9.TabIndex = 51
         PictureBox9.TabStop = False
         ' 
@@ -380,9 +390,11 @@ Partial Class EditPatientFrm
         grpPrimaryConcern.Controls.Add(rbInjury)
         grpPrimaryConcern.Controls.Add(rbFever)
         grpPrimaryConcern.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold)
-        grpPrimaryConcern.Location = New Point(177, 65)
+        grpPrimaryConcern.Location = New Point(155, 49)
+        grpPrimaryConcern.Margin = New Padding(3, 2, 3, 2)
         grpPrimaryConcern.Name = "grpPrimaryConcern"
-        grpPrimaryConcern.Size = New Size(151, 135)
+        grpPrimaryConcern.Padding = New Padding(3, 2, 3, 2)
+        grpPrimaryConcern.Size = New Size(132, 101)
         grpPrimaryConcern.TabIndex = 35
         grpPrimaryConcern.TabStop = False
         ' 
@@ -391,9 +403,10 @@ Partial Class EditPatientFrm
         rbPhysicalExam.AutoSize = True
         rbPhysicalExam.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbPhysicalExam.ForeColor = Color.Black
-        rbPhysicalExam.Location = New Point(21, 89)
+        rbPhysicalExam.Location = New Point(18, 67)
+        rbPhysicalExam.Margin = New Padding(3, 2, 3, 2)
         rbPhysicalExam.Name = "rbPhysicalExam"
-        rbPhysicalExam.Size = New Size(116, 20)
+        rbPhysicalExam.Size = New Size(93, 17)
         rbPhysicalExam.TabIndex = 33
         rbPhysicalExam.TabStop = True
         rbPhysicalExam.Text = "Physical Exam"
@@ -404,9 +417,10 @@ Partial Class EditPatientFrm
         rbInjury.AutoSize = True
         rbInjury.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbInjury.ForeColor = Color.Black
-        rbInjury.Location = New Point(21, 56)
+        rbInjury.Location = New Point(18, 42)
+        rbInjury.Margin = New Padding(3, 2, 3, 2)
         rbInjury.Name = "rbInjury"
-        rbInjury.Size = New Size(59, 20)
+        rbInjury.Size = New Size(50, 17)
         rbInjury.TabIndex = 32
         rbInjury.TabStop = True
         rbInjury.Text = "Injury"
@@ -417,9 +431,10 @@ Partial Class EditPatientFrm
         rbFever.AutoSize = True
         rbFever.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbFever.ForeColor = Color.Black
-        rbFever.Location = New Point(21, 23)
+        rbFever.Location = New Point(18, 17)
+        rbFever.Margin = New Padding(3, 2, 3, 2)
         rbFever.Name = "rbFever"
-        rbFever.Size = New Size(85, 20)
+        rbFever.Size = New Size(71, 17)
         rbFever.TabIndex = 31
         rbFever.TabStop = True
         rbFever.Text = "Fever/Flu"
@@ -431,9 +446,11 @@ Partial Class EditPatientFrm
         grpUrgency.Controls.Add(rbUrgent)
         grpUrgency.Controls.Add(rbRoutine)
         grpUrgency.Font = New Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold)
-        grpUrgency.Location = New Point(40, 68)
+        grpUrgency.Location = New Point(35, 51)
+        grpUrgency.Margin = New Padding(3, 2, 3, 2)
         grpUrgency.Name = "grpUrgency"
-        grpUrgency.Size = New Size(107, 135)
+        grpUrgency.Padding = New Padding(3, 2, 3, 2)
+        grpUrgency.Size = New Size(94, 101)
         grpUrgency.TabIndex = 34
         grpUrgency.TabStop = False
         ' 
@@ -442,9 +459,10 @@ Partial Class EditPatientFrm
         rbFollowUp.AutoSize = True
         rbFollowUp.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbFollowUp.ForeColor = Color.Black
-        rbFollowUp.Location = New Point(11, 88)
+        rbFollowUp.Location = New Point(10, 66)
+        rbFollowUp.Margin = New Padding(3, 2, 3, 2)
         rbFollowUp.Name = "rbFollowUp"
-        rbFollowUp.Size = New Size(86, 20)
+        rbFollowUp.Size = New Size(70, 17)
         rbFollowUp.TabIndex = 30
         rbFollowUp.TabStop = True
         rbFollowUp.Text = "Follow-up"
@@ -455,9 +473,10 @@ Partial Class EditPatientFrm
         rbUrgent.AutoSize = True
         rbUrgent.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbUrgent.ForeColor = Color.Black
-        rbUrgent.Location = New Point(11, 59)
+        rbUrgent.Location = New Point(10, 44)
+        rbUrgent.Margin = New Padding(3, 2, 3, 2)
         rbUrgent.Name = "rbUrgent"
-        rbUrgent.Size = New Size(68, 20)
+        rbUrgent.Size = New Size(57, 17)
         rbUrgent.TabIndex = 29
         rbUrgent.TabStop = True
         rbUrgent.Text = "Urgent"
@@ -468,9 +487,10 @@ Partial Class EditPatientFrm
         rbRoutine.AutoSize = True
         rbRoutine.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbRoutine.ForeColor = Color.Black
-        rbRoutine.Location = New Point(11, 28)
+        rbRoutine.Location = New Point(10, 21)
+        rbRoutine.Margin = New Padding(3, 2, 3, 2)
         rbRoutine.Name = "rbRoutine"
-        rbRoutine.Size = New Size(74, 20)
+        rbRoutine.Size = New Size(62, 17)
         rbRoutine.TabIndex = 28
         rbRoutine.TabStop = True
         rbRoutine.Text = "Routine"
@@ -481,9 +501,9 @@ Partial Class EditPatientFrm
         Label6.AutoSize = True
         Label6.Font = New Font("Microsoft Sans Serif", 7.8F)
         Label6.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label6.Location = New Point(39, 40)
+        Label6.Location = New Point(34, 30)
         Label6.Name = "Label6"
-        Label6.Size = New Size(97, 16)
+        Label6.Size = New Size(79, 13)
         Label6.TabIndex = 25
         Label6.Text = "Urgency Level:"
         ' 
@@ -492,9 +512,9 @@ Partial Class EditPatientFrm
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 7.8F)
         Label7.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label7.Location = New Point(177, 40)
+        Label7.Location = New Point(155, 30)
         Label7.Name = "Label7"
-        Label7.Size = New Size(109, 16)
+        Label7.Size = New Size(87, 13)
         Label7.TabIndex = 23
         Label7.Text = "Primary Concern:"
         ' 
@@ -509,9 +529,11 @@ Partial Class EditPatientFrm
         grpDental.Controls.Add(Label11)
         grpDental.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpDental.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        grpDental.Location = New Point(504, 277)
+        grpDental.Location = New Point(441, 208)
+        grpDental.Margin = New Padding(3, 2, 3, 2)
         grpDental.Name = "grpDental"
-        grpDental.Size = New Size(463, 203)
+        grpDental.Padding = New Padding(3, 2, 3, 2)
+        grpDental.Size = New Size(405, 152)
         grpDental.TabIndex = 41
         grpDental.TabStop = False
         grpDental.Text = "Dental"
@@ -522,9 +544,9 @@ Partial Class EditPatientFrm
         Label20.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         Label20.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
         Label20.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label20.Location = New Point(14, 4)
+        Label20.Location = New Point(12, 3)
         Label20.Name = "Label20"
-        Label20.Size = New Size(74, 25)
+        Label20.Size = New Size(62, 20)
         Label20.TabIndex = 52
         Label20.Text = "Dental"
         ' 
@@ -532,8 +554,9 @@ Partial Class EditPatientFrm
         ' 
         PictureBox10.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         PictureBox10.Location = New Point(0, 0)
+        PictureBox10.Margin = New Padding(3, 2, 3, 2)
         PictureBox10.Name = "PictureBox10"
-        PictureBox10.Size = New Size(463, 34)
+        PictureBox10.Size = New Size(405, 26)
         PictureBox10.TabIndex = 52
         PictureBox10.TabStop = False
         ' 
@@ -541,9 +564,11 @@ Partial Class EditPatientFrm
         ' 
         grpPatientType.Controls.Add(rbChild)
         grpPatientType.Controls.Add(rbAdult)
-        grpPatientType.Location = New Point(203, 55)
+        grpPatientType.Location = New Point(178, 41)
+        grpPatientType.Margin = New Padding(3, 2, 3, 2)
         grpPatientType.Name = "grpPatientType"
-        grpPatientType.Size = New Size(216, 89)
+        grpPatientType.Padding = New Padding(3, 2, 3, 2)
+        grpPatientType.Size = New Size(189, 67)
         grpPatientType.TabIndex = 33
         grpPatientType.TabStop = False
         ' 
@@ -552,9 +577,10 @@ Partial Class EditPatientFrm
         rbChild.AutoSize = True
         rbChild.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbChild.ForeColor = Color.Black
-        rbChild.Location = New Point(32, 52)
+        rbChild.Location = New Point(28, 39)
+        rbChild.Margin = New Padding(3, 2, 3, 2)
         rbChild.Name = "rbChild"
-        rbChild.Size = New Size(58, 20)
+        rbChild.Size = New Size(48, 17)
         rbChild.TabIndex = 31
         rbChild.TabStop = True
         rbChild.Text = "Child"
@@ -565,9 +591,10 @@ Partial Class EditPatientFrm
         rbAdult.AutoSize = True
         rbAdult.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbAdult.ForeColor = Color.Black
-        rbAdult.Location = New Point(32, 20)
+        rbAdult.Location = New Point(28, 15)
+        rbAdult.Margin = New Padding(3, 2, 3, 2)
         rbAdult.Name = "rbAdult"
-        rbAdult.Size = New Size(58, 20)
+        rbAdult.Size = New Size(49, 17)
         rbAdult.TabIndex = 30
         rbAdult.TabStop = True
         rbAdult.Text = "Adult"
@@ -578,9 +605,11 @@ Partial Class EditPatientFrm
         grpProcedure.Controls.Add(rbFilling)
         grpProcedure.Controls.Add(rbExtraction)
         grpProcedure.Controls.Add(rbCleaning)
-        grpProcedure.Location = New Point(33, 55)
+        grpProcedure.Location = New Point(29, 41)
+        grpProcedure.Margin = New Padding(3, 2, 3, 2)
         grpProcedure.Name = "grpProcedure"
-        grpProcedure.Size = New Size(139, 135)
+        grpProcedure.Padding = New Padding(3, 2, 3, 2)
+        grpProcedure.Size = New Size(122, 101)
         grpProcedure.TabIndex = 32
         grpProcedure.TabStop = False
         ' 
@@ -589,9 +618,10 @@ Partial Class EditPatientFrm
         rbFilling.AutoSize = True
         rbFilling.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbFilling.ForeColor = Color.Black
-        rbFilling.Location = New Point(25, 88)
+        rbFilling.Location = New Point(22, 66)
+        rbFilling.Margin = New Padding(3, 2, 3, 2)
         rbFilling.Name = "rbFilling"
-        rbFilling.Size = New Size(63, 20)
+        rbFilling.Size = New Size(51, 17)
         rbFilling.TabIndex = 29
         rbFilling.TabStop = True
         rbFilling.Text = "Filling"
@@ -602,9 +632,10 @@ Partial Class EditPatientFrm
         rbExtraction.AutoSize = True
         rbExtraction.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbExtraction.ForeColor = Color.Black
-        rbExtraction.Location = New Point(25, 53)
+        rbExtraction.Location = New Point(22, 40)
+        rbExtraction.Margin = New Padding(3, 2, 3, 2)
         rbExtraction.Name = "rbExtraction"
-        rbExtraction.Size = New Size(86, 20)
+        rbExtraction.Size = New Size(72, 17)
         rbExtraction.TabIndex = 28
         rbExtraction.TabStop = True
         rbExtraction.Text = "Extraction"
@@ -615,9 +646,10 @@ Partial Class EditPatientFrm
         rbCleaning.AutoSize = True
         rbCleaning.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbCleaning.ForeColor = Color.Black
-        rbCleaning.Location = New Point(25, 19)
+        rbCleaning.Location = New Point(22, 14)
+        rbCleaning.Margin = New Padding(3, 2, 3, 2)
         rbCleaning.Name = "rbCleaning"
-        rbCleaning.Size = New Size(81, 20)
+        rbCleaning.Size = New Size(66, 17)
         rbCleaning.TabIndex = 27
         rbCleaning.TabStop = True
         rbCleaning.Text = "Cleaning"
@@ -628,9 +660,9 @@ Partial Class EditPatientFrm
         Label9.AutoSize = True
         Label9.Font = New Font("Microsoft Sans Serif", 7.8F)
         Label9.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label9.Location = New Point(39, 35)
+        Label9.Location = New Point(34, 26)
         Label9.Name = "Label9"
-        Label9.Size = New Size(108, 16)
+        Label9.Size = New Size(86, 13)
         Label9.TabIndex = 25
         Label9.Text = "Procedure Type:"
         ' 
@@ -639,9 +671,9 @@ Partial Class EditPatientFrm
         Label11.AutoSize = True
         Label11.Font = New Font("Microsoft Sans Serif", 7.8F)
         Label11.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label11.Location = New Point(203, 35)
+        Label11.Location = New Point(178, 26)
         Label11.Name = "Label11"
-        Label11.Size = New Size(86, 16)
+        Label11.Size = New Size(70, 13)
         Label11.TabIndex = 23
         Label11.Text = "Patient Type:"
         ' 
@@ -658,9 +690,11 @@ Partial Class EditPatientFrm
         grpPedia.Controls.Add(Label14)
         grpPedia.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpPedia.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        grpPedia.Location = New Point(504, 277)
+        grpPedia.Location = New Point(441, 208)
+        grpPedia.Margin = New Padding(3, 2, 3, 2)
         grpPedia.Name = "grpPedia"
-        grpPedia.Size = New Size(462, 291)
+        grpPedia.Padding = New Padding(3, 2, 3, 2)
+        grpPedia.Size = New Size(404, 218)
         grpPedia.TabIndex = 34
         grpPedia.TabStop = False
         grpPedia.Text = "Pedia"
@@ -671,9 +705,9 @@ Partial Class EditPatientFrm
         Label21.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         Label21.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
         Label21.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label21.Location = New Point(13, 5)
+        Label21.Location = New Point(11, 4)
         Label21.Name = "Label21"
-        Label21.Size = New Size(67, 25)
+        Label21.Size = New Size(54, 20)
         Label21.TabIndex = 53
         Label21.Text = "Pedia"
         ' 
@@ -681,8 +715,9 @@ Partial Class EditPatientFrm
         ' 
         PictureBox11.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         PictureBox11.Location = New Point(0, 0)
+        PictureBox11.Margin = New Padding(3, 2, 3, 2)
         PictureBox11.Name = "PictureBox11"
-        PictureBox11.Size = New Size(462, 34)
+        PictureBox11.Size = New Size(404, 26)
         PictureBox11.TabIndex = 52
         PictureBox11.TabStop = False
         ' 
@@ -691,9 +726,11 @@ Partial Class EditPatientFrm
         GroupBox3.Controls.Add(rbVaccine)
         GroupBox3.Controls.Add(rbSickV)
         GroupBox3.Controls.Add(rbGrowth)
-        GroupBox3.Location = New Point(251, 64)
+        GroupBox3.Location = New Point(220, 48)
+        GroupBox3.Margin = New Padding(3, 2, 3, 2)
         GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(160, 135)
+        GroupBox3.Padding = New Padding(3, 2, 3, 2)
+        GroupBox3.Size = New Size(140, 101)
         GroupBox3.TabIndex = 40
         GroupBox3.TabStop = False
         ' 
@@ -702,9 +739,10 @@ Partial Class EditPatientFrm
         rbVaccine.AutoSize = True
         rbVaccine.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbVaccine.ForeColor = Color.Black
-        rbVaccine.Location = New Point(25, 56)
+        rbVaccine.Location = New Point(22, 42)
+        rbVaccine.Margin = New Padding(3, 2, 3, 2)
         rbVaccine.Name = "rbVaccine"
-        rbVaccine.Size = New Size(98, 20)
+        rbVaccine.Size = New Size(81, 17)
         rbVaccine.TabIndex = 30
         rbVaccine.TabStop = True
         rbVaccine.Text = "Vaccination"
@@ -715,9 +753,10 @@ Partial Class EditPatientFrm
         rbSickV.AutoSize = True
         rbSickV.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbSickV.ForeColor = Color.Black
-        rbSickV.Location = New Point(25, 91)
+        rbSickV.Location = New Point(22, 68)
+        rbSickV.Margin = New Padding(3, 2, 3, 2)
         rbSickV.Name = "rbSickV"
-        rbSickV.Size = New Size(82, 20)
+        rbSickV.Size = New Size(68, 17)
         rbSickV.TabIndex = 31
         rbSickV.TabStop = True
         rbSickV.Text = "Sick Visit"
@@ -728,9 +767,10 @@ Partial Class EditPatientFrm
         rbGrowth.AutoSize = True
         rbGrowth.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbGrowth.ForeColor = Color.Black
-        rbGrowth.Location = New Point(25, 21)
+        rbGrowth.Location = New Point(22, 16)
+        rbGrowth.Margin = New Padding(3, 2, 3, 2)
         rbGrowth.Name = "rbGrowth"
-        rbGrowth.Size = New Size(110, 20)
+        rbGrowth.Size = New Size(93, 17)
         rbGrowth.TabIndex = 29
         rbGrowth.TabStop = True
         rbGrowth.Text = "Growth Check"
@@ -741,9 +781,11 @@ Partial Class EditPatientFrm
         grpAgeGroup.Controls.Add(rbToddler)
         grpAgeGroup.Controls.Add(rbSchool)
         grpAgeGroup.Controls.Add(rbInfant)
-        grpAgeGroup.Location = New Point(9, 63)
+        grpAgeGroup.Location = New Point(8, 47)
+        grpAgeGroup.Margin = New Padding(3, 2, 3, 2)
         grpAgeGroup.Name = "grpAgeGroup"
-        grpAgeGroup.Size = New Size(193, 136)
+        grpAgeGroup.Padding = New Padding(3, 2, 3, 2)
+        grpAgeGroup.Size = New Size(169, 102)
         grpAgeGroup.TabIndex = 39
         grpAgeGroup.TabStop = False
         ' 
@@ -752,9 +794,10 @@ Partial Class EditPatientFrm
         rbToddler.AutoSize = True
         rbToddler.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbToddler.ForeColor = Color.Black
-        rbToddler.Location = New Point(23, 65)
+        rbToddler.Location = New Point(20, 49)
+        rbToddler.Margin = New Padding(3, 2, 3, 2)
         rbToddler.Name = "rbToddler"
-        rbToddler.Size = New Size(112, 20)
+        rbToddler.Size = New Size(90, 17)
         rbToddler.TabIndex = 27
         rbToddler.TabStop = True
         rbToddler.Text = "Toddler (1-3y)"
@@ -765,9 +808,10 @@ Partial Class EditPatientFrm
         rbSchool.AutoSize = True
         rbSchool.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbSchool.ForeColor = Color.Black
-        rbSchool.Location = New Point(23, 95)
+        rbSchool.Location = New Point(20, 71)
+        rbSchool.Margin = New Padding(3, 2, 3, 2)
         rbSchool.Name = "rbSchool"
-        rbSchool.Size = New Size(130, 20)
+        rbSchool.Size = New Size(106, 17)
         rbSchool.TabIndex = 28
         rbSchool.TabStop = True
         rbSchool.Text = "School Age (4y+)"
@@ -778,9 +822,10 @@ Partial Class EditPatientFrm
         rbInfant.AutoSize = True
         rbInfant.Font = New Font("Microsoft Sans Serif", 7.8F)
         rbInfant.ForeColor = Color.Black
-        rbInfant.Location = New Point(23, 35)
+        rbInfant.Location = New Point(20, 26)
+        rbInfant.Margin = New Padding(3, 2, 3, 2)
         rbInfant.Name = "rbInfant"
-        rbInfant.Size = New Size(141, 20)
+        rbInfant.Size = New Size(119, 17)
         rbInfant.TabIndex = 26
         rbInfant.TabStop = True
         rbInfant.Text = "Infant (0-12 months)"
@@ -789,9 +834,10 @@ Partial Class EditPatientFrm
         ' txtParentGName
         ' 
         txtParentGName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtParentGName.Location = New Point(5, 225)
+        txtParentGName.Location = New Point(4, 169)
+        txtParentGName.Margin = New Padding(3, 2, 3, 2)
         txtParentGName.Name = "txtParentGName"
-        txtParentGName.Size = New Size(413, 30)
+        txtParentGName.Size = New Size(362, 26)
         txtParentGName.TabIndex = 38
         ' 
         ' Label12
@@ -799,9 +845,9 @@ Partial Class EditPatientFrm
         Label12.AutoSize = True
         Label12.Font = New Font("Microsoft Sans Serif", 7.8F)
         Label12.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label12.Location = New Point(39, 37)
+        Label12.Location = New Point(34, 28)
         Label12.Name = "Label12"
-        Label12.Size = New Size(75, 16)
+        Label12.Size = New Size(61, 13)
         Label12.TabIndex = 25
         Label12.Text = "Age Group:"
         ' 
@@ -810,9 +856,9 @@ Partial Class EditPatientFrm
         Label13.AutoSize = True
         Label13.Font = New Font("Microsoft Sans Serif", 7.8F)
         Label13.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label13.Location = New Point(239, 37)
+        Label13.Location = New Point(209, 28)
         Label13.Name = "Label13"
-        Label13.Size = New Size(70, 16)
+        Label13.Size = New Size(56, 13)
         Label13.TabIndex = 23
         Label13.Text = "Visit Type:"
         ' 
@@ -821,9 +867,9 @@ Partial Class EditPatientFrm
         Label14.AutoSize = True
         Label14.Font = New Font("Microsoft Sans Serif", 7.8F)
         Label14.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label14.Location = New Point(9, 203)
+        Label14.Location = New Point(8, 152)
         Label14.Name = "Label14"
-        Label14.Size = New Size(162, 16)
+        Label14.Size = New Size(132, 13)
         Label14.TabIndex = 37
         Label14.Text = "Name of Parent/Guardian:"
         ' 
@@ -837,7 +883,6 @@ Partial Class EditPatientFrm
         grpPatientInfo.Controls.Add(Label4)
         grpPatientInfo.Controls.Add(btnClear)
         grpPatientInfo.Controls.Add(PictureBox4)
-        grpPatientInfo.Controls.Add(btnAddPatient)
         grpPatientInfo.Controls.Add(txtContactInfo)
         grpPatientInfo.Controls.Add(Label5)
         grpPatientInfo.Controls.Add(txtPatientName)
@@ -849,9 +894,11 @@ Partial Class EditPatientFrm
         grpPatientInfo.Controls.Add(rbFemale)
         grpPatientInfo.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpPatientInfo.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        grpPatientInfo.Location = New Point(36, 154)
+        grpPatientInfo.Location = New Point(32, 116)
+        grpPatientInfo.Margin = New Padding(3, 2, 3, 2)
         grpPatientInfo.Name = "grpPatientInfo"
-        grpPatientInfo.Size = New Size(444, 414)
+        grpPatientInfo.Padding = New Padding(3, 2, 3, 2)
+        grpPatientInfo.Size = New Size(388, 310)
         grpPatientInfo.TabIndex = 43
         grpPatientInfo.TabStop = False
         grpPatientInfo.Text = "Patient Information"
@@ -861,9 +908,9 @@ Partial Class EditPatientFrm
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label2.Location = New Point(136, 159)
+        Label2.Location = New Point(118, 133)
         Label2.Name = "Label2"
-        Label2.Size = New Size(110, 20)
+        Label2.Size = New Size(91, 17)
         Label2.TabIndex = 47
         Label2.Text = "Date of Birth:"
         ' 
@@ -871,17 +918,19 @@ Partial Class EditPatientFrm
         ' 
         DateTimePicker1.CalendarFont = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DateTimePicker1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Location = New Point(136, 182)
+        DateTimePicker1.Location = New Point(118, 150)
+        DateTimePicker1.Margin = New Padding(3, 2, 3, 2)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(286, 27)
+        DateTimePicker1.Size = New Size(251, 23)
         DateTimePicker1.TabIndex = 46
         ' 
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(11, 183)
+        TextBox1.Location = New Point(11, 151)
+        TextBox1.Margin = New Padding(3, 2, 3, 2)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(97, 23)
+        TextBox1.Size = New Size(85, 20)
         TextBox1.TabIndex = 45
         ' 
         ' Label3
@@ -889,9 +938,9 @@ Partial Class EditPatientFrm
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label3.Location = New Point(10, 159)
+        Label3.Location = New Point(10, 133)
         Label3.Name = "Label3"
-        Label3.Size = New Size(98, 20)
+        Label3.Size = New Size(84, 17)
         Label3.TabIndex = 44
         Label3.Text = "Patient age:"
         ' 
@@ -900,9 +949,9 @@ Partial Class EditPatientFrm
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Black
-        Label4.Location = New Point(55, 15)
+        Label4.Location = New Point(48, 11)
         Label4.Name = "Label4"
-        Label4.Size = New Size(168, 20)
+        Label4.Size = New Size(145, 17)
         Label4.TabIndex = 43
         Label4.Text = "Patient Information"
         ' 
@@ -911,9 +960,10 @@ Partial Class EditPatientFrm
         btnClear.BackColor = Color.FromArgb(CByte(180), CByte(217), CByte(222))
         btnClear.Font = New Font("Microsoft Sans Serif", 10.2F)
         btnClear.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnClear.Location = New Point(11, 291)
+        btnClear.Location = New Point(9, 244)
+        btnClear.Margin = New Padding(3, 2, 3, 2)
         btnClear.Name = "btnClear"
-        btnClear.Size = New Size(411, 30)
+        btnClear.Size = New Size(360, 39)
         btnClear.TabIndex = 41
         btnClear.Text = "Clear"
         btnClear.UseVisualStyleBackColor = False
@@ -921,29 +971,19 @@ Partial Class EditPatientFrm
         ' PictureBox4
         ' 
         PictureBox4.Location = New Point(0, 0)
+        PictureBox4.Margin = New Padding(3, 2, 3, 2)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(431, 33)
+        PictureBox4.Size = New Size(377, 25)
         PictureBox4.TabIndex = 42
         PictureBox4.TabStop = False
-        ' 
-        ' btnAddPatient
-        ' 
-        btnAddPatient.BackColor = Color.Teal
-        btnAddPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAddPatient.ForeColor = Color.White
-        btnAddPatient.Location = New Point(7, 327)
-        btnAddPatient.Name = "btnAddPatient"
-        btnAddPatient.Size = New Size(415, 63)
-        btnAddPatient.TabIndex = 30
-        btnAddPatient.Text = "ADD PATIENT AND CREATE RECORD"
-        btnAddPatient.UseVisualStyleBackColor = False
         ' 
         ' txtContactInfo
         ' 
         txtContactInfo.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtContactInfo.Location = New Point(174, 120)
+        txtContactInfo.Location = New Point(152, 90)
+        txtContactInfo.Margin = New Padding(3, 2, 3, 2)
         txtContactInfo.Name = "txtContactInfo"
-        txtContactInfo.Size = New Size(248, 27)
+        txtContactInfo.Size = New Size(218, 23)
         txtContactInfo.TabIndex = 20
         ' 
         ' Label5
@@ -951,18 +991,19 @@ Partial Class EditPatientFrm
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 10.2F)
         Label5.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label5.Location = New Point(10, 123)
+        Label5.Location = New Point(9, 92)
         Label5.Name = "Label5"
-        Label5.Size = New Size(160, 20)
+        Label5.Size = New Size(134, 17)
         Label5.TabIndex = 19
         Label5.Text = "Contact Information:"
         ' 
         ' txtPatientName
         ' 
         txtPatientName.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtPatientName.Location = New Point(174, 87)
+        txtPatientName.Location = New Point(152, 65)
+        txtPatientName.Margin = New Padding(3, 2, 3, 2)
         txtPatientName.Name = "txtPatientName"
-        txtPatientName.Size = New Size(248, 27)
+        txtPatientName.Size = New Size(218, 23)
         txtPatientName.TabIndex = 5
         ' 
         ' lblPatientID
@@ -970,9 +1011,9 @@ Partial Class EditPatientFrm
         lblPatientID.AutoSize = True
         lblPatientID.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
         lblPatientID.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        lblPatientID.Location = New Point(117, 47)
+        lblPatientID.Location = New Point(102, 35)
         lblPatientID.Name = "lblPatientID"
-        lblPatientID.Size = New Size(113, 25)
+        lblPatientID.Size = New Size(93, 20)
         lblPatientID.TabIndex = 18
         lblPatientID.Text = "GEN-1001"
         ' 
@@ -981,9 +1022,9 @@ Partial Class EditPatientFrm
         Label15.AutoSize = True
         Label15.Font = New Font("Microsoft Sans Serif", 10.2F)
         Label15.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label15.Location = New Point(10, 90)
+        Label15.Location = New Point(9, 68)
         Label15.Name = "Label15"
-        Label15.Size = New Size(147, 20)
+        Label15.Size = New Size(123, 17)
         Label15.TabIndex = 6
         Label15.Text = "Patient Full Name:"
         ' 
@@ -992,9 +1033,9 @@ Partial Class EditPatientFrm
         Label16.AutoSize = True
         Label16.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold)
         Label16.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label16.Location = New Point(8, 47)
+        Label16.Location = New Point(7, 35)
         Label16.Name = "Label16"
-        Label16.Size = New Size(113, 25)
+        Label16.Size = New Size(95, 20)
         Label16.TabIndex = 4
         Label16.Text = "Patient ID:"
         ' 
@@ -1003,9 +1044,9 @@ Partial Class EditPatientFrm
         Label17.AutoSize = True
         Label17.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label17.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label17.Location = New Point(11, 229)
+        Label17.Location = New Point(12, 183)
         Label17.Name = "Label17"
-        Label17.Size = New Size(99, 20)
+        Label17.Size = New Size(83, 17)
         Label17.TabIndex = 11
         Label17.Text = "Patient Sex:"
         ' 
@@ -1014,9 +1055,10 @@ Partial Class EditPatientFrm
         rbMale.AutoSize = True
         rbMale.Font = New Font("Microsoft Sans Serif", 10.2F)
         rbMale.ForeColor = Color.Black
-        rbMale.Location = New Point(13, 253)
+        rbMale.Location = New Point(10, 205)
+        rbMale.Margin = New Padding(3, 2, 3, 2)
         rbMale.Name = "rbMale"
-        rbMale.Size = New Size(66, 24)
+        rbMale.Size = New Size(56, 21)
         rbMale.TabIndex = 12
         rbMale.TabStop = True
         rbMale.Text = "Male"
@@ -1027,9 +1069,10 @@ Partial Class EditPatientFrm
         rbFemale.AutoSize = True
         rbFemale.Font = New Font("Microsoft Sans Serif", 10.2F)
         rbFemale.ForeColor = Color.Black
-        rbFemale.Location = New Point(85, 253)
+        rbFemale.Location = New Point(73, 205)
+        rbFemale.Margin = New Padding(3, 2, 3, 2)
         rbFemale.Name = "rbFemale"
-        rbFemale.Size = New Size(85, 24)
+        rbFemale.Size = New Size(72, 21)
         rbFemale.TabIndex = 13
         rbFemale.TabStop = True
         rbFemale.Text = "Female"
@@ -1040,18 +1083,20 @@ Partial Class EditPatientFrm
         PictureBox5.BackColor = Color.PowderBlue
         PictureBox5.BackgroundImage = My.Resources.Resources.ChatGPT_Image_Apr_29__2026__02_47_47_PM
         PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox5.Location = New Point(53, 143)
+        PictureBox5.Location = New Point(46, 107)
+        PictureBox5.Margin = New Padding(3, 2, 3, 2)
         PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(47, 41)
+        PictureBox5.Size = New Size(41, 31)
         PictureBox5.TabIndex = 32
         PictureBox5.TabStop = False
         ' 
         ' panelBg
         ' 
         panelBg.BackColor = Color.PowderBlue
-        panelBg.Location = New Point(36, 136)
+        panelBg.Location = New Point(32, 102)
+        panelBg.Margin = New Padding(3, 2, 3, 2)
         panelBg.Name = "panelBg"
-        panelBg.Size = New Size(444, 53)
+        panelBg.Size = New Size(388, 40)
         panelBg.TabIndex = 45
         panelBg.TabStop = False
         ' 
@@ -1061,27 +1106,29 @@ Partial Class EditPatientFrm
         lblPatientInfo.BackColor = Color.PowderBlue
         lblPatientInfo.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPatientInfo.ForeColor = Color.DarkSlateGray
-        lblPatientInfo.Location = New Point(105, 143)
+        lblPatientInfo.Location = New Point(92, 107)
         lblPatientInfo.Name = "lblPatientInfo"
-        lblPatientInfo.Size = New Size(334, 38)
+        lblPatientInfo.Size = New Size(261, 30)
         lblPatientInfo.TabIndex = 46
         lblPatientInfo.Text = "PATIENT INFORMATION"
         ' 
         ' PictureBox6
         ' 
         PictureBox6.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        PictureBox6.Location = New Point(504, 136)
+        PictureBox6.Location = New Point(441, 102)
+        PictureBox6.Margin = New Padding(3, 2, 3, 2)
         PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(463, 425)
+        PictureBox6.Size = New Size(405, 319)
         PictureBox6.TabIndex = 47
         PictureBox6.TabStop = False
         ' 
         ' PictureBox7
         ' 
         PictureBox7.BackColor = Color.PowderBlue
-        PictureBox7.Location = New Point(504, 136)
+        PictureBox7.Location = New Point(441, 102)
+        PictureBox7.Margin = New Padding(3, 2, 3, 2)
         PictureBox7.Name = "PictureBox7"
-        PictureBox7.Size = New Size(463, 53)
+        PictureBox7.Size = New Size(405, 40)
         PictureBox7.TabIndex = 48
         PictureBox7.TabStop = False
         ' 
@@ -1091,9 +1138,9 @@ Partial Class EditPatientFrm
         Label18.BackColor = Color.PowderBlue
         Label18.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.DarkSlateGray
-        Label18.Location = New Point(575, 143)
+        Label18.Location = New Point(503, 107)
         Label18.Name = "Label18"
-        Label18.Size = New Size(338, 38)
+        Label18.Size = New Size(267, 30)
         Label18.TabIndex = 49
         Label18.Text = "PATIENT APPOINTMENT"
         ' 
@@ -1102,9 +1149,10 @@ Partial Class EditPatientFrm
         PictureBox8.BackColor = Color.PowderBlue
         PictureBox8.BackgroundImage = CType(resources.GetObject("PictureBox8.BackgroundImage"), Image)
         PictureBox8.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox8.Location = New Point(518, 143)
+        PictureBox8.Location = New Point(453, 107)
+        PictureBox8.Margin = New Padding(3, 2, 3, 2)
         PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(50, 37)
+        PictureBox8.Size = New Size(44, 28)
         PictureBox8.TabIndex = 50
         PictureBox8.TabStop = False
         ' 
@@ -1113,9 +1161,10 @@ Partial Class EditPatientFrm
         PictureBox12.BackColor = Color.PowderBlue
         PictureBox12.BackgroundImage = CType(resources.GetObject("PictureBox12.BackgroundImage"), Image)
         PictureBox12.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox12.Location = New Point(56, 618)
+        PictureBox12.Location = New Point(49, 464)
+        PictureBox12.Margin = New Padding(3, 2, 3, 2)
         PictureBox12.Name = "PictureBox12"
-        PictureBox12.Size = New Size(47, 41)
+        PictureBox12.Size = New Size(41, 31)
         PictureBox12.TabIndex = 51
         PictureBox12.TabStop = False
         ' 
@@ -1124,9 +1173,10 @@ Partial Class EditPatientFrm
         PictureBox13.BackColor = Color.PowderBlue
         PictureBox13.BackgroundImage = CType(resources.GetObject("PictureBox13.BackgroundImage"), Image)
         PictureBox13.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox13.Location = New Point(401, 618)
+        PictureBox13.Location = New Point(351, 464)
+        PictureBox13.Margin = New Padding(3, 2, 3, 2)
         PictureBox13.Name = "PictureBox13"
-        PictureBox13.Size = New Size(47, 41)
+        PictureBox13.Size = New Size(41, 31)
         PictureBox13.TabIndex = 52
         PictureBox13.TabStop = False
         ' 
@@ -1135,18 +1185,19 @@ Partial Class EditPatientFrm
         PictureBox14.BackColor = Color.PowderBlue
         PictureBox14.BackgroundImage = CType(resources.GetObject("PictureBox14.BackgroundImage"), Image)
         PictureBox14.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox14.Location = New Point(747, 618)
+        PictureBox14.Location = New Point(654, 464)
+        PictureBox14.Margin = New Padding(3, 2, 3, 2)
         PictureBox14.Name = "PictureBox14"
-        PictureBox14.Size = New Size(47, 41)
+        PictureBox14.Size = New Size(41, 31)
         PictureBox14.TabIndex = 53
         PictureBox14.TabStop = False
         ' 
         ' EditPatientFrm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightCyan
-        ClientSize = New Size(1007, 721)
+        ClientSize = New Size(881, 541)
         Controls.Add(PictureBox14)
         Controls.Add(PictureBox13)
         Controls.Add(PictureBox12)
@@ -1167,8 +1218,8 @@ Partial Class EditPatientFrm
         Controls.Add(Panel1)
         Controls.Add(PictureBox6)
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 4, 3, 4)
         Name = "EditPatientFrm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = " "
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -1270,7 +1321,6 @@ Partial Class EditPatientFrm
     Friend WithEvents Label4 As Label
     Friend WithEvents btnClear As Button
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents btnAddPatient As Button
     Friend WithEvents txtContactInfo As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtPatientName As TextBox

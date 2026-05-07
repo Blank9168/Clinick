@@ -2,13 +2,13 @@
     Private Sub SubMenu_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         lblServiceType.Text = Service
 
-        If Service = "Dental" Then
-            PicServiceIcon.Image = ForPic.PictureDental.Image
-        ElseIf Service = "Pediatrics" Then
-            PicServiceIcon.Image = ForPic.PicturePedia.Image
-        ElseIf Service = "General" Then
-            PicServiceIcon.Image = ForPic.PictureGeneral.Image
-        End If
+        'If Service = "Dental" Then
+        '    PicServiceIcon.Image = ForPic.PictureDental.Image
+        'ElseIf Service = "Pediatrics" Then
+        '    PicServiceIcon.Image = ForPic.PicturePedia.Image
+        'ElseIf Service = "General" Then
+        '    PicServiceIcon.Image = ForPic.PictureGeneral.Image
+        'End If
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -24,5 +24,9 @@
     Private Sub btnAddAppoint_Click(sender As Object, e As EventArgs) Handles btnAddAppoint.Click
         RegisterForm.Show()
         Me.Close()
+    End Sub
+
+    Private Sub SubMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

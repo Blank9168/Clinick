@@ -25,9 +25,7 @@ Partial Class WelcomeFrm
         btnGetStarted = New Button()
         PictureBox1 = New PictureBox()
         btnClose = New Label()
-        PictureBox2 = New PictureBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnGetStarted
@@ -51,9 +49,9 @@ Partial Class WelcomeFrm
         PictureBox1.BackgroundImage = My.Resources.Resources.CLINICKONLY
         PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox1.InitialImage = My.Resources.Resources.LOGO_PARA_SA_COMPROG__312_x_282_px_
-        PictureBox1.Location = New Point(274, 197)
+        PictureBox1.Location = New Point(249, 172)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(469, 423)
+        PictureBox1.Size = New Size(518, 448)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
@@ -70,23 +68,12 @@ Partial Class WelcomeFrm
         btnClose.TabIndex = 6
         btnClose.Text = "x"
         ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.BackgroundImage = My.Resources.Resources._683401371_1365757298940834_7959088171303721208_n
-        PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(425, 119)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(167, 215)
-        PictureBox2.TabIndex = 9
-        PictureBox2.TabStop = False
-        ' 
         ' WelcomeFrm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         ClientSize = New Size(1024, 768)
-        Controls.Add(PictureBox2)
         Controls.Add(btnClose)
         Controls.Add(btnGetStarted)
         Controls.Add(PictureBox1)
@@ -96,12 +83,10 @@ Partial Class WelcomeFrm
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
     Friend WithEvents btnGetStarted As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnClose As Label
-    Friend WithEvents PictureBox2 As PictureBox
 End Class

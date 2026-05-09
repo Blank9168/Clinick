@@ -19,7 +19,6 @@
             End If
         Next
 
-        ' Update service breakdown counters in GlobalModule
         TotalGeneral = 0
         TotalDental = 0
         TotalPedia = 0
@@ -108,15 +107,19 @@
         LblDate.Text = DateTime.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
     End Sub
 
-    ' Navigation
-
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Application.Exit()
     End Sub
 
-    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Me.Hide()
         LoginFrm.Show()
+    End Sub
+
+    ' Opens HistoryFrm to show the transaction/event log
+    Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
+        HistoryFrm.Show()
+        Me.Hide()
     End Sub
 
     Private Sub cmbFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedIndexChanged
@@ -165,7 +168,7 @@
     End Sub
 
     Private Sub dgvAdmin_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAdmin.CellValueChanged
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 6 Then  ' 6 = Status column in AdminFrm (has Sex column too)
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 6 Then
             If dgvAdmin.Rows(e.RowIndex).Cells(0).Value IsNot Nothing AndAlso
                dgvAdmin.Rows(e.RowIndex).Cells(6).Value IsNot Nothing Then
 
@@ -174,6 +177,9 @@
 
                 For i As Integer = 0 To CurrentCount - 1
                     If arrID(i) = selectedID Then
+                        ' Log old → new status change before updating
+                        LogEvent("Status Changed", arrNames(i),
+                                 "ID: " & arrID(i) & " | " & arrStatus(i) & " → " & newStatus)
                         arrStatus(i) = newStatus
                         Exit For
                     End If
@@ -183,27 +189,20 @@
         End If
     End Sub
 
-    ' Silences the "value is not valid" ComboBox error dialog
     Private Sub dgvAdmin_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvAdmin.DataError
         e.Cancel = True
     End Sub
 
-    ' When admin clicks a row, find the matching array index and pass it
-    ' to EditPatientFrm before opening it as a modal dialog.
-    ' ShowDialog blocks AdminFrm until EditPatientFrm is closed,
-    ' so RefreshGrid runs automatically via AdminFrm_Activated when it regains focus.
     Private Sub dgvAdmin_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAdmin.CellClick
         If e.RowIndex >= 0 Then
             Dim clickedID As String = dgvAdmin.Rows(e.RowIndex).Cells(0).Value.ToString()
 
-            For i As Integer = 0 To CurrentCount - 1
-                If arrID(i) = clickedID Then
-                    ' Pass the index to EditPatientFrm so it knows which patient to load
-                    'EditPatientFrm.TargetIndex = i'
-                    EditPatientFrm.ShowDialog()
-                    Exit For
-                End If
-            Next
+            ' Pre-fill the search box in EditPatientFrm with the clicked patient's ID
+            EditPatientFrm.txtSearchID.Text = clickedID
+            EditPatientFrm.CallerForm = "Admin"  ' so EditPatientFrm returns here after save/delete
+
+            Me.Hide()
+            EditPatientFrm.Show()
         End If
     End Sub
 

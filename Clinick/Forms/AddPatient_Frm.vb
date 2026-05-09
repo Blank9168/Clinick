@@ -51,6 +51,10 @@
 
             CurrentCount += 1
 
+            ' Log the event to history
+            LogEvent("Patient Added", arrNames(CurrentCount - 1),
+                     "ID: " & arrID(CurrentCount - 1) & " | Service: " & Service)
+
             MessageBox.Show("Patient " & arrID(CurrentCount - 1) & " added successfully.")
 
             ' Clear the form and update the ID label for the next patient
@@ -64,7 +68,7 @@
                 prefix = "DEN-"
             End If
             lblPatientID.Text = prefix & (1001 + CurrentCount).ToString()
-            Me.Hide()
+            Me.Close()
             SubMenu.Show()
 
         Else
@@ -74,6 +78,23 @@
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearPatientForm()
+    End Sub
+
+    ' Automatically calculates and fills txtAge when the birthdate is changed
+    ' Age = today's year - birth year, minus 1 if birthday hasn't occurred yet this year
+    Private Sub dtpBday_ValueChanged(sender As Object, e As EventArgs) Handles dtpBday.ValueChanged
+        Dim today As Date = Date.Today
+        Dim bday As Date = dtpBday.Value
+        Dim age As Integer = today.Year - bday.Year
+
+        ' Subtract 1 if the birthday hasn't happened yet this year
+        ' e.g. today is May 2026, birthday is August 2000 → age is 25, not 26
+        If bday.Month > today.Month OrElse
+           (bday.Month = today.Month AndAlso bday.Day > today.Day) Then
+            age -= 1
+        End If
+
+        txtAge.Text = age.ToString()
     End Sub
 
 End Class

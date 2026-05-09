@@ -23,7 +23,7 @@ Partial Class AdminFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         LblDate = New Label()
         LblDateTime = New Label()
@@ -59,6 +59,7 @@ Partial Class AdminFrm
         Sched = New DataGridViewTextBoxColumn()
         Status = New DataGridViewComboBoxColumn()
         tmrClock = New Timer(components)
+        btnHistory = New Button()
         Panel1.SuspendLayout()
         CType(PicLogo, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -371,14 +372,14 @@ Partial Class AdminFrm
         dgvAdmin.AllowUserToResizeColumns = False
         dgvAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvAdmin.BackgroundColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvAdmin.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
         dgvAdmin.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
@@ -430,11 +431,24 @@ Partial Class AdminFrm
         Status.Resizable = DataGridViewTriState.True
         Status.SortMode = DataGridViewColumnSortMode.Automatic
         ' 
+        ' tmrClock
+        ' 
+        ' 
+        ' btnHistory
+        ' 
+        btnHistory.Location = New Point(519, 665)
+        btnHistory.Name = "btnHistory"
+        btnHistory.Size = New Size(75, 23)
+        btnHistory.TabIndex = 45
+        btnHistory.Text = "History"
+        btnHistory.UseVisualStyleBackColor = True
+        ' 
         ' AdminFrm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(896, 740)
+        Controls.Add(btnHistory)
         Controls.Add(btnSortSched)
         Controls.Add(btnSortName)
         Controls.Add(cmbFilter)
@@ -495,4 +509,5 @@ Partial Class AdminFrm
     Friend WithEvents Sched As DataGridViewTextBoxColumn
     Friend WithEvents Status As DataGridViewComboBoxColumn
     Friend WithEvents tmrClock As Timer
+    Friend WithEvents btnHistory As Button
 End Class

@@ -65,7 +65,9 @@
     Private Sub RegisterForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ClearForm()
         RefreshAvailableSlots()
+    End Sub
 
+    Private Sub RegisterForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         grpPedia.Visible = False
         grpDental.Visible = False
         grpGeneral.Visible = False
@@ -77,8 +79,6 @@
         ElseIf Service.Contains("General") Then
             grpGeneral.Visible = True
         End If
-
-
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click

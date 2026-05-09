@@ -94,9 +94,7 @@
         Me.Close()
         SubMenu.Show()
 
-        Else
-        MessageBox.Show("Maximum patient limit reached. Cannot add more patients.")
-        End If
+
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click

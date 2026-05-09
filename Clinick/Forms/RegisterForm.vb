@@ -69,12 +69,6 @@
         End If
     End Sub
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        ClearForm()
-    End Sub
-
-    Dim targetIndex As Integer = -1
-
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         targetIndex = -1
         For i As Integer = 0 To CurrentCount - 1

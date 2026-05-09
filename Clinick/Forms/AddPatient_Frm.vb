@@ -18,15 +18,7 @@
     End Sub
 
     Private Sub UpdateNextID()
-        Dim prefix As String = ""
-        If Service = "Pediatrics" Then
-            prefix = "PED-"
-        ElseIf Service = "General" Then
-            prefix = "GEN-"
-        ElseIf Service = "Dental" Then
-            prefix = "DEN-"
-        End If
-        lblPatientID.Text = prefix & (1001 + CurrentCount).ToString()
+        lblPatientID.Text = "P-" & (1001 + CurrentCount).ToString()
     End Sub
 
 

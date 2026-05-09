@@ -133,8 +133,8 @@
   <data name="LOGO PARA SA COMPROG (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO PARA SA COMPROG (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CLINICKONLY" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CLINICKONLY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="papel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\papel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,6 +160,9 @@
   <data name="LOGO PARA SA COMPROG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO PARA SA COMPROG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AddPatientBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddPatientBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LOGO PARA SA COMPROG (312 x 282 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,14 +172,17 @@
   <data name="logo final (250 x 100 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo final (250 x 100 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ekis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ekis1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LOGO PARA SA COMPROG (312 x 282 px) (100 x 100 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px) (100 x 100 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="resized logo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized logo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LOGOFINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOFINAL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resized logo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized logo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ipin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ipin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,13 +190,13 @@
   <data name="resized logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CLINICKONLY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CLINICKONLY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ekis" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ekis1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="symbolssss (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\symbolssss (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

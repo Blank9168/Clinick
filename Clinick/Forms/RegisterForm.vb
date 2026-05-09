@@ -41,22 +41,30 @@
     Private Sub RefreshAvailableSlots()
         cmbTimeSlots.Items.Clear()
         Dim masterSlots() As String = {
-            "08:00 AM", "08:30 AM", "09:00 AM", "09:30 AM",
-            "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-            "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM",
-            "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM"
-        }
+        "08:00 AM", "08:30 AM", "09:00 AM", "09:30 AM",
+        "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
+        "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM",
+        "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM"
+    }
 
         For Each slot In masterSlots
             cmbTimeSlots.Items.Add(slot)
         Next
 
         Dim selectedDate As String = dtpDate.Value.ToShortDateString
+
         For i As Integer = 0 To CurrentCount - 1
-            If arrSchedule(i).Contains(selectedDate) And arrService(i).Contains(Service) Then
-                Dim takenTime As String = arrSchedule(i).Split("@")(1).Trim()
-                If cmbTimeSlots.Items.Contains(takenTime) Then
-                    cmbTimeSlots.Items.Remove(takenTime)
+            If arrSchedule(i).Contains("@") Then
+                If arrSchedule(i).Contains(selectedDate) Then
+                    If arrService(i) <> "" AndAlso arrService(i).Contains(Service) Then
+                        Dim parts() As String = arrSchedule(i).Split("@")
+                        If parts.Length > 1 Then
+                            Dim takenTime As String = parts(1).Trim()
+                            If cmbTimeSlots.Items.Contains(takenTime) Then
+                                cmbTimeSlots.Items.Remove(takenTime)
+                            End If
+                        End If
+                    End If
                 End If
             End If
         Next

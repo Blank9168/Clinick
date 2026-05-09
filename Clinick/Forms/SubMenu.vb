@@ -1,32 +1,27 @@
 ﻿Public Class SubMenu
-    '    Private Sub SubMenu_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-    '        lblServiceType.Text = Service
 
-    '        'If Service = "Dental" Then
-    '        '    PicServiceIcon.Image = ForPic.PictureDental.Image
-    '        'ElseIf Service = "Pediatrics" Then
-    '        '    PicServiceIcon.Image = ForPic.PicturePedia.Image
-    '        'ElseIf Service = "General" Then
-    '        '    PicServiceIcon.Image = ForPic.PictureGeneral.Image
-    '        'End If
-    '    End Sub
 
-    '    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-    '        MainFrm.Show()
-    '        Me.Close()
-    '    End Sub
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        MainFrm.Show()
+        Me.Close()
+    End Sub
 
-    '    Private Sub btnAddPatient_Click(sender As Object, e As EventArgs) Handles btnAddPatient.Click
-    '        AddPatient_Frm.Show()
-    '        Me.Close()
-    '    End Sub
+    Private Sub btnDentalS_Click(sender As Object, e As EventArgs) Handles btnDentalS.Click
+        Service = "Dental"
+        RegisterForm.Show()
+        Me.Hide()
 
-    '    Private Sub btnAddAppoint_Click(sender As Object, e As EventArgs) Handles btnAddAppoint.Click
-    '        RegisterForm.Show()
-    '        Me.Close()
-    '    End Sub
+    End Sub
 
-    '    Private Sub SubMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub btnGeneralCons_Click(sender As Object, e As EventArgs) Handles btnGeneralCons.Click
+        Service = "General"
+        RegisterForm.Show()
+        Me.Hide()
+    End Sub
 
-    '    End Sub
+    Private Sub btnPediatrics_Click(sender As Object, e As EventArgs) Handles btnPediatrics.Click
+        Service = "Pediatrics"
+        RegisterForm.Show()
+        Me.Hide()
+    End Sub
 End Class

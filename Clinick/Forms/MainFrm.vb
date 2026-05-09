@@ -74,23 +74,7 @@
         LoginFrm.Show()
     End Sub
 
-    Private Sub btnDentalS_Click(sender As Object, e As EventArgs) Handles btnDentalS.Click
-        Service = "Dental"
-        SubMenu.Show()
-        Me.Hide()
-    End Sub
 
-    Private Sub btnGeneralCons_Click(sender As Object, e As EventArgs) Handles btnGeneralCons.Click
-        Service = "General"
-        SubMenu.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnPediatrics_Click(sender As Object, e As EventArgs) Handles btnPediatrics.Click
-        Service = "Pediatrics"
-        SubMenu.Show()
-        Me.Hide()
-    End Sub
 
     ' Step 1: Forces the ComboBox cell to commit as soon as the user picks a value
     ' Without this, CellValueChanged won't fire until the user clicks elsewhere
@@ -198,27 +182,13 @@
         End If
     End Sub
 
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
-
+    Private Sub btnAddPatient_Click(sender As Object, e As EventArgs) Handles btnAddPatient.Click
+        AddPatient_Frm.Show()
+        Me.Hide()
     End Sub
 
-    Private Sub Panel17_Paint(sender As Object, e As PaintEventArgs) Handles Panel17.Paint
-
-    End Sub
-
-    Private Sub Panel11_Paint(sender As Object, e As PaintEventArgs) Handles Panel11.Paint
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
-    Private Sub Panel15_Paint(sender As Object, e As PaintEventArgs)
-
+    Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnAppointment.Click
+        SubMenu.Show()
+        Me.Hide()
     End Sub
 End Class

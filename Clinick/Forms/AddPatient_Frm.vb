@@ -24,7 +24,7 @@
 
 
     Private Sub btnReturnMainPd_Click(sender As Object, e As EventArgs) Handles btnReturnMainPd.Click
-        SubMenu.Show()
+        MainFrm.Show()
         Me.Close()
     End Sub
 
@@ -69,7 +69,7 @@
         arrBday(CurrentCount) = dtpBday.Value
 
 
-        arrService(CurrentCount) = Service
+        arrService(CurrentCount) = " "
         arrStatus(CurrentCount) = "Pending"
         arrSchedule(CurrentCount) = "Not Set"
         arrCancelReason(CurrentCount) = "N/A"
@@ -87,7 +87,7 @@
 
         lblPatientID.Text = "P-" & (1001 + CurrentCount).ToString()
         Me.Close()
-        SubMenu.Show()
+        MainFrm.Show()
 
 
     End Sub

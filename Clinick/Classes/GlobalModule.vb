@@ -42,4 +42,7 @@
     Public TotalDental As Integer = 0
     Public TotalPedia As Integer = 0
 
+
+    Public Process As String = ""
+
 End Module

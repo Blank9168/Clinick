@@ -65,6 +65,8 @@
         arrNames(CurrentCount) = txtPatientName.Text.Trim()
         arrContact(CurrentCount) = txtContactInfo.Text.Trim()
         arrSex(CurrentCount) = If(rbMale.Checked, "Male", "Female")
+        arrAge(CurrentCount) = ageVal
+        arrBday(CurrentCount) = dtpBday.Value
 
 
         arrService(CurrentCount) = Service
@@ -82,15 +84,8 @@
 
         ' Clear the form and update the ID label for the next patient
         ClearPatientForm()
-        Dim prefix As String = ""
-        If Service = "Pediatrics" Then
-            prefix = "PED-"
-        ElseIf Service = "General" Then
-            prefix = "GEN-"
-        ElseIf Service = "Dental" Then
-            prefix = "DEN-"
-        End If
-        lblPatientID.Text = prefix & (1001 + CurrentCount).ToString()
+
+        lblPatientID.Text = "P-" & (1001 + CurrentCount).ToString()
         Me.Close()
         SubMenu.Show()
 

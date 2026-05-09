@@ -25,12 +25,18 @@ Partial Class SubMenu
         btnBack = New Button()
         Panel1 = New Panel()
         Panel3 = New Panel()
-        lblServiceType = New Label()
-        btnAddPatient = New Button()
-        btnAddAppoint = New Button()
         Panel2 = New Panel()
+        PictureBox2 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        PictureBox1 = New PictureBox()
+        btnGeneralCons = New Button()
+        btnDentalS = New Button()
+        btnPediatrics = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnBack
@@ -51,7 +57,6 @@ Partial Class SubMenu
         ' 
         Panel1.BackColor = Color.Teal
         Panel1.Controls.Add(Panel3)
-        Panel1.Controls.Add(lblServiceType)
         Panel1.Location = New Point(34, 60)
         Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
@@ -61,61 +66,104 @@ Partial Class SubMenu
         ' Panel3
         ' 
         Panel3.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Panel3.Location = New Point(209, 58)
+        Panel3.Location = New Point(-3, 53)
         Panel3.Margin = New Padding(3, 2, 3, 2)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(606, 5)
+        Panel3.Size = New Size(818, 10)
         Panel3.TabIndex = 3
-        ' 
-        ' lblServiceType
-        ' 
-        lblServiceType.Font = New Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblServiceType.ForeColor = Color.White
-        lblServiceType.Location = New Point(36, 44)
-        lblServiceType.Name = "lblServiceType"
-        lblServiceType.Size = New Size(168, 32)
-        lblServiceType.TabIndex = 2
-        lblServiceType.Text = "Pediatrics"
-        lblServiceType.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' btnAddPatient
-        ' 
-        btnAddPatient.BackColor = Color.Teal
-        btnAddPatient.Cursor = Cursors.Hand
-        btnAddPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAddPatient.ForeColor = Color.White
-        btnAddPatient.Location = New Point(386, 203)
-        btnAddPatient.Margin = New Padding(3, 2, 3, 2)
-        btnAddPatient.Name = "btnAddPatient"
-        btnAddPatient.Size = New Size(381, 45)
-        btnAddPatient.TabIndex = 24
-        btnAddPatient.Text = "Add Patient"
-        btnAddPatient.UseVisualStyleBackColor = False
-        ' 
-        ' btnAddAppoint
-        ' 
-        btnAddAppoint.BackColor = Color.Teal
-        btnAddAppoint.Cursor = Cursors.Hand
-        btnAddAppoint.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAddAppoint.ForeColor = Color.White
-        btnAddAppoint.Location = New Point(386, 309)
-        btnAddAppoint.Margin = New Padding(3, 2, 3, 2)
-        btnAddAppoint.Name = "btnAddAppoint"
-        btnAddAppoint.Size = New Size(381, 45)
-        btnAddAppoint.TabIndex = 25
-        btnAddAppoint.Text = "Add Appointment"
-        btnAddAppoint.UseVisualStyleBackColor = False
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Panel2.Controls.Add(btnAddAppoint)
-        Panel2.Controls.Add(btnAddPatient)
+        Panel2.Controls.Add(PictureBox2)
+        Panel2.Controls.Add(PictureBox3)
+        Panel2.Controls.Add(PictureBox1)
+        Panel2.Controls.Add(btnGeneralCons)
+        Panel2.Controls.Add(btnDentalS)
+        Panel2.Controls.Add(btnPediatrics)
         Panel2.Location = New Point(34, 60)
         Panel2.Margin = New Padding(3, 2, 3, 2)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(816, 450)
         Panel2.TabIndex = 26
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        PictureBox2.BackgroundImageLayout = ImageLayout.Center
+        PictureBox2.Image = My.Resources.Resources.Ipin
+        PictureBox2.Location = New Point(331, 229)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(45, 36)
+        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox2.TabIndex = 38
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        PictureBox3.BackgroundImageLayout = ImageLayout.Center
+        PictureBox3.Image = My.Resources.Resources.Checklist
+        PictureBox3.Location = New Point(22, 230)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(36, 36)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 39
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        PictureBox1.BackgroundImageLayout = ImageLayout.Center
+        PictureBox1.Image = My.Resources.Resources.Bear
+        PictureBox1.Location = New Point(639, 230)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(45, 36)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 37
+        PictureBox1.TabStop = False
+        ' 
+        ' btnGeneralCons
+        ' 
+        btnGeneralCons.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        btnGeneralCons.Cursor = Cursors.Hand
+        btnGeneralCons.Font = New Font("Microsoft Sans Serif", 10F)
+        btnGeneralCons.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnGeneralCons.Location = New Point(15, 225)
+        btnGeneralCons.Margin = New Padding(2)
+        btnGeneralCons.Name = "btnGeneralCons"
+        btnGeneralCons.Size = New Size(189, 46)
+        btnGeneralCons.TabIndex = 34
+        btnGeneralCons.Text = "        General Consultation"
+        btnGeneralCons.UseVisualStyleBackColor = False
+        ' 
+        ' btnDentalS
+        ' 
+        btnDentalS.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        btnDentalS.Cursor = Cursors.Hand
+        btnDentalS.Font = New Font("Microsoft Sans Serif", 10F)
+        btnDentalS.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnDentalS.Location = New Point(312, 225)
+        btnDentalS.Margin = New Padding(2)
+        btnDentalS.Name = "btnDentalS"
+        btnDentalS.Size = New Size(189, 46)
+        btnDentalS.TabIndex = 35
+        btnDentalS.Text = "        Dental Service"
+        btnDentalS.UseVisualStyleBackColor = False
+        ' 
+        ' btnPediatrics
+        ' 
+        btnPediatrics.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        btnPediatrics.Cursor = Cursors.Hand
+        btnPediatrics.Font = New Font("Microsoft Sans Serif", 10F)
+        btnPediatrics.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
+        btnPediatrics.Location = New Point(609, 225)
+        btnPediatrics.Margin = New Padding(2)
+        btnPediatrics.Name = "btnPediatrics"
+        btnPediatrics.Size = New Size(189, 46)
+        btnPediatrics.TabIndex = 36
+        btnPediatrics.Text = "        Pediatrics"
+        btnPediatrics.UseVisualStyleBackColor = False
         ' 
         ' SubMenu
         ' 
@@ -132,14 +180,20 @@ Partial Class SubMenu
         Text = "Sub Menu"
         Panel1.ResumeLayout(False)
         Panel2.ResumeLayout(False)
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents btnBack As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lblServiceType As Label
-    Friend WithEvents btnAddPatient As Button
-    Friend WithEvents btnAddAppoint As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnGeneralCons As Button
+    Friend WithEvents btnDentalS As Button
+    Friend WithEvents btnPediatrics As Button
 End Class

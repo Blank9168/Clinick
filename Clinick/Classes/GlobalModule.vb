@@ -12,6 +12,8 @@
     Public arrSchedule(MaxPatients) As String
     Public arrStatus(MaxPatients) As String
     Public arrCancelReason(MaxPatients) As String
+    Public arrAge(MaxPatients) As Integer
+    Public arrBday(MaxPatients) As Date
 
     ' History / Transaction Log — parallel arrays
     ' Each index represents one event that happened in the system

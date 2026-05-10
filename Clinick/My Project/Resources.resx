@@ -118,71 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Checklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Checklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="curved-arrow-left-white-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\curved-arrow-left-white-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="resized logo (350 x 150 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized logo (350 x 150 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="curved-arrow-left-white-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\curved-arrow-left-white-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO PARA SA COMPROG (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO PARA SA COMPROG (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="papel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\papel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hourglass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hourglass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Bear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ChatGPT Image Apr 29, 2026, 02_47_47 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ChatGPT Image Apr 29, 2026, 02_47_47 PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO PARA SA COMPROG (312 x 282 px) (50 x 40 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px) (50 x 40 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo final (250 x 100 px) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo final (250 x 100 px) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="resized logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO PARA SA COMPROG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO PARA SA COMPROG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AddPatientBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddPatientBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO PARA SA COMPROG (312 x 282 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="resized logo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized logo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo final (250 x 100 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo final (250 x 100 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ekis" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ekis1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO PARA SA COMPROG (312 x 282 px) (100 x 100 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px) (100 x 100 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGOFINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOFINAL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="resized logo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized logo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hourglass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hourglass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="papel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\papel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddPatientBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddPatientBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Checklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Checklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo final (250 x 100 px) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo final (250 x 100 px) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ipin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ipin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,13 +145,61 @@
   <data name="resized logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LOGO PARA SA COMPROG (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO PARA SA COMPROG (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO PARA SA COMPROG (312 x 282 px) (50 x 40 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px) (50 x 40 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO PARA SA COMPROG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO PARA SA COMPROG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resized logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO PARA SA COMPROG (312 x 282 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ekis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ekis1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="symbolssss (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\symbolssss (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo final (250 x 100 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo final (250 x 100 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChatGPT Image Apr 29, 2026, 02_47_47 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChatGPT Image Apr 29, 2026, 02_47_47 PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO PARA SA COMPROG (312 x 282 px) (100 x 100 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px) (100 x 100 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curved-arrow-left-white-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\curved-arrow-left-white-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CLINICKONLY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CLINICKONLY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resized logo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized logo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="symbolssss (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\symbolssss (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curved-arrow-left-white-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\curved-arrow-left-white-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resized logo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized logo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iconsss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconsss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

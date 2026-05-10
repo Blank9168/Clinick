@@ -182,12 +182,13 @@
         End If
     End Sub
 
-    Private Sub btnAddPatient_Click(sender As Object, e As EventArgs) Handles btnAddPatient.Click
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         AddPatient_Frm.Show()
         Me.Hide()
     End Sub
 
-    Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnAppointment.Click
+    Private Sub btnAppoint_Click(sender As Object, e As EventArgs) Handles btnAppoint.Click
         SubMenu.Show()
         Me.Hide()
     End Sub

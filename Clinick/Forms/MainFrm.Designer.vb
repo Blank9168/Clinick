@@ -25,9 +25,6 @@ Partial Class MainFrm
         components = New ComponentModel.Container()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainFrm))
-        btnGeneralCons = New Button()
-        btnDentalS = New Button()
-        btnPediatrics = New Button()
         btnLogout = New Button()
         Label2 = New Label()
         dgvSummary = New DataGridView()
@@ -38,7 +35,6 @@ Partial Class MainFrm
         Sched = New DataGridViewTextBoxColumn()
         Status = New DataGridViewComboBoxColumn()
         Label1 = New Label()
-        Label8 = New Label()
         Label9 = New Label()
         MarkToolStripMenuItem = New ToolStripMenuItem()
         txtSearch = New TextBox()
@@ -91,9 +87,6 @@ Partial Class MainFrm
         Panel1 = New Panel()
         Panel22 = New Panel()
         Panel23 = New Panel()
-        PictureBox2 = New PictureBox()
-        PictureBox3 = New PictureBox()
-        PictureBox1 = New PictureBox()
         btnEditPatient = New Button()
         Panel24 = New Panel()
         PictureBox9 = New PictureBox()
@@ -121,57 +114,10 @@ Partial Class MainFrm
         Panel19.SuspendLayout()
         CType(PicLogo, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        Panel23.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel24.SuspendLayout()
         CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' btnGeneralCons
-        ' 
-        btnGeneralCons.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        btnGeneralCons.Cursor = Cursors.Hand
-        btnGeneralCons.FlatStyle = FlatStyle.Flat
-        btnGeneralCons.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnGeneralCons.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnGeneralCons.Location = New Point(69, 52)
-        btnGeneralCons.Margin = New Padding(2)
-        btnGeneralCons.Name = "btnGeneralCons"
-        btnGeneralCons.Size = New Size(214, 46)
-        btnGeneralCons.TabIndex = 8
-        btnGeneralCons.Text = "        General Consultation"
-        btnGeneralCons.UseVisualStyleBackColor = False
-        ' 
-        ' btnDentalS
-        ' 
-        btnDentalS.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        btnDentalS.Cursor = Cursors.Hand
-        btnDentalS.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnDentalS.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnDentalS.Location = New Point(351, 52)
-        btnDentalS.Margin = New Padding(2)
-        btnDentalS.Name = "btnDentalS"
-        btnDentalS.Size = New Size(217, 46)
-        btnDentalS.TabIndex = 9
-        btnDentalS.Text = "        Dental Service"
-        btnDentalS.UseVisualStyleBackColor = False
-        ' 
-        ' btnPediatrics
-        ' 
-        btnPediatrics.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        btnPediatrics.Cursor = Cursors.Hand
-        btnPediatrics.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnPediatrics.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnPediatrics.Location = New Point(647, 52)
-        btnPediatrics.Margin = New Padding(2)
-        btnPediatrics.Name = "btnPediatrics"
-        btnPediatrics.Size = New Size(206, 46)
-        btnPediatrics.TabIndex = 10
-        btnPediatrics.Text = "        Pediatrics"
-        btnPediatrics.UseVisualStyleBackColor = False
         ' 
         ' btnLogout
         ' 
@@ -180,7 +126,7 @@ Partial Class MainFrm
         btnLogout.FlatStyle = FlatStyle.Flat
         btnLogout.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnLogout.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnLogout.Location = New Point(772, 87)
+        btnLogout.Location = New Point(31, 567)
         btnLogout.Margin = New Padding(2)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(106, 28)
@@ -273,17 +219,6 @@ Partial Class MainFrm
         Label1.Size = New Size(168, 48)
         Label1.TabIndex = 29
         Label1.Text = "Care is just a click away"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label8.Location = New Point(14, 11)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(151, 21)
-        Label8.TabIndex = 30
-        Label8.Text = "New Appointment"
         ' 
         ' Label9
         ' 
@@ -831,54 +766,11 @@ Partial Class MainFrm
         ' Panel23
         ' 
         Panel23.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
-        Panel23.Controls.Add(PictureBox2)
-        Panel23.Controls.Add(PictureBox3)
-        Panel23.Controls.Add(PictureBox1)
-        Panel23.Controls.Add(Label8)
-        Panel23.Controls.Add(btnGeneralCons)
-        Panel23.Controls.Add(btnDentalS)
-        Panel23.Controls.Add(btnPediatrics)
         Panel23.Location = New Point(0, 610)
         Panel23.Margin = New Padding(3, 2, 3, 2)
         Panel23.Name = "Panel23"
-        Panel23.Size = New Size(896, 131)
+        Panel23.Size = New Size(896, 27)
         Panel23.TabIndex = 52
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        PictureBox2.BackgroundImageLayout = ImageLayout.Center
-        PictureBox2.Image = My.Resources.Resources.Ipin
-        PictureBox2.Location = New Point(370, 56)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(45, 36)
-        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox2.TabIndex = 32
-        PictureBox2.TabStop = False
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        PictureBox3.BackgroundImageLayout = ImageLayout.Center
-        PictureBox3.Image = My.Resources.Resources.Checklist
-        PictureBox3.Location = New Point(76, 57)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(36, 36)
-        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox3.TabIndex = 33
-        PictureBox3.TabStop = False
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        PictureBox1.BackgroundImageLayout = ImageLayout.Center
-        PictureBox1.Image = My.Resources.Resources.Bear
-        PictureBox1.Location = New Point(678, 56)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(45, 36)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 31
-        PictureBox1.TabStop = False
         ' 
         ' btnEditPatient
         ' 
@@ -903,6 +795,7 @@ Partial Class MainFrm
         Panel24.Controls.Add(btnAppoint)
         Panel24.Controls.Add(PictureBox8)
         Panel24.Controls.Add(btnAdd)
+        Panel24.Controls.Add(btnLogout)
         Panel24.Location = New Point(0, 0)
         Panel24.Margin = New Padding(3, 2, 3, 2)
         Panel24.Name = "Panel24"
@@ -986,7 +879,7 @@ Partial Class MainFrm
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        ClientSize = New Size(896, 740)
+        ClientSize = New Size(896, 634)
         Controls.Add(Panel24)
         Controls.Add(btnEditPatient)
         Controls.Add(Label9)
@@ -1002,7 +895,6 @@ Partial Class MainFrm
         Controls.Add(btnSortName)
         Controls.Add(cmbFilter)
         Controls.Add(txtSearch)
-        Controls.Add(btnLogout)
         Controls.Add(Label1)
         Controls.Add(dgvSummary)
         Controls.Add(Label2)
@@ -1038,11 +930,6 @@ Partial Class MainFrm
         CType(PicLogo, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        Panel23.ResumeLayout(False)
-        Panel23.PerformLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel24.ResumeLayout(False)
         Panel24.PerformLayout()
         CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
@@ -1050,14 +937,10 @@ Partial Class MainFrm
         ResumeLayout(False)
         PerformLayout()
     End Sub
-    Friend WithEvents btnGeneralCons As Button
-    Friend WithEvents btnDentalS As Button
-    Friend WithEvents btnPediatrics As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents dgvSummary As DataGridView
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents MarkToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Applied As DataGridViewTextBoxColumn
@@ -1112,9 +995,6 @@ Partial Class MainFrm
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel22 As Panel
     Friend WithEvents Panel23 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnEditPatient As Button
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox

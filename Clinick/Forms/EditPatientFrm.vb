@@ -130,12 +130,6 @@
             Return
         End If
 
-        ' Log the edit event before saving
-        LogEvent("Patient Edited", arrNames(foundIndex),
-                 "ID: " & arrID(foundIndex) & " | Name: " & txtPatientName.Text.Trim() &
-                 " | Contact: " & txtContactInfo.Text.Trim() &
-                 " | Schedule: " & dtpDate.Value.ToShortDateString & " @ " & cmbTimeSlots.Text)
-
         ' Save changes back to parallel arrays
         arrNames(foundIndex) = txtPatientName.Text.Trim()
         arrContact(foundIndex) = txtContactInfo.Text.Trim()
@@ -160,10 +154,7 @@
             "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         If result = DialogResult.Yes Then
-            ' Log the deletion before shifting arrays (name will be lost after shift)
-            LogEvent("Patient Deleted", arrNames(foundIndex),
-                     "ID: " & arrID(foundIndex) & " | Service: " & arrService(foundIndex))
-
+            ' Shift all parallel arrays left from foundIndex to fill the gap
             For i As Integer = foundIndex To CurrentCount - 2
                 arrID(i) = arrID(i + 1)
                 arrNames(i) = arrNames(i + 1)
@@ -211,6 +202,20 @@
 
     Private Sub btnReturnMainPd_Click(sender As Object, e As EventArgs) Handles btnReturnMainPd.Click
         ReturnToCaller()
+    End Sub
+
+    ' Opens MedicalRecordsFrm for the currently loaded patient
+    ' Only available after a patient has been searched and loaded
+    Private Sub btnMedicalRecords_Click(sender As Object, e As EventArgs) Handles btnMedicalRecords.Click
+        If foundIndex = -1 Then
+            MessageBox.Show("Please search for a patient first.")
+            Return
+        End If
+
+        MedicalRecordsFrm.TargetIndex = foundIndex
+        MedicalRecordsFrm.CallerForm = "Edit"
+        Me.Hide()
+        MedicalRecordsFrm.Show()
     End Sub
 
 End Class

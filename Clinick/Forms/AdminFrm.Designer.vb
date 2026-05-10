@@ -23,7 +23,7 @@ Partial Class AdminFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         LblDate = New Label()
         LblDateTime = New Label()
@@ -60,6 +60,8 @@ Partial Class AdminFrm
         Status = New DataGridViewComboBoxColumn()
         tmrClock = New Timer(components)
         btnHistory = New Button()
+        btnReports = New Button()
+        btnMedicalRecords = New Button()
         Panel1.SuspendLayout()
         CType(PicLogo, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -372,14 +374,14 @@ Partial Class AdminFrm
         dgvAdmin.AllowUserToResizeColumns = False
         dgvAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvAdmin.BackgroundColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        dgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvAdmin.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
         dgvAdmin.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
@@ -443,11 +445,31 @@ Partial Class AdminFrm
         btnHistory.Text = "History"
         btnHistory.UseVisualStyleBackColor = True
         ' 
+        ' btnReports
+        ' 
+        btnReports.Location = New Point(27, 339)
+        btnReports.Name = "btnReports"
+        btnReports.Size = New Size(75, 23)
+        btnReports.TabIndex = 46
+        btnReports.Text = "Reports"
+        btnReports.UseVisualStyleBackColor = True
+        ' 
+        ' btnMedicalRecords
+        ' 
+        btnMedicalRecords.Location = New Point(17, 394)
+        btnMedicalRecords.Name = "btnMedicalRecords"
+        btnMedicalRecords.Size = New Size(107, 23)
+        btnMedicalRecords.TabIndex = 47
+        btnMedicalRecords.Text = "Medical Records"
+        btnMedicalRecords.UseVisualStyleBackColor = True
+        ' 
         ' AdminFrm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(896, 634)
+        Controls.Add(btnMedicalRecords)
+        Controls.Add(btnReports)
         Controls.Add(btnHistory)
         Controls.Add(btnSortSched)
         Controls.Add(btnSortName)
@@ -510,4 +532,6 @@ Partial Class AdminFrm
     Friend WithEvents Status As DataGridViewComboBoxColumn
     Friend WithEvents tmrClock As Timer
     Friend WithEvents btnHistory As Button
+    Friend WithEvents btnReports As Button
+    Friend WithEvents btnMedicalRecords As Button
 End Class

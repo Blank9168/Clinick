@@ -34,6 +34,8 @@
 
     End Sub
 
+    ' Form Events 
+
     Private Sub MainFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Populate the filter ComboBox
         ' "All" shows every record; the rest filter by status
@@ -61,9 +63,15 @@
         RefreshSummaryGrid()
     End Sub
 
+    ' Live Clock 
+
+    ' FEATURE FIX: tmrClock ticks every second so the time display stays current
+    ' Add a Timer control named "tmrClock" to MainFrm in the designer
     Private Sub tmrClock_Tick(sender As Object, e As EventArgs) Handles tmrClock.Tick
         LblDate.Text = DateTime.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
     End Sub
+
+    ' Navigation Buttons
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Application.Exit()
@@ -74,7 +82,25 @@
         LoginFrm.Show()
     End Sub
 
+    'Private Sub btnDentalS_Click(sender As Object, e As EventArgs) Handles btnDentalS.Click
+    '    Service = "Dental"
+    '    SubMenu.Show()
+    '    Me.Hide()
+    'End Sub
 
+    'Private Sub btnGeneralCons_Click(sender As Object, e As EventArgs) Handles btnGeneralCons.Click
+    '    Service = "General"
+    '    SubMenu.Show()
+    '    Me.Hide()
+    'End Sub
+
+    'Private Sub btnPediatrics_Click(sender As Object, e As EventArgs) Handles btnPediatrics.Click
+    '    Service = "Pediatrics"
+    '    SubMenu.Show()
+    '    Me.Hide()
+    'End Sub
+
+    ' Status Change in Grid 
 
     ' Step 1: Forces the ComboBox cell to commit as soon as the user picks a value
     ' Without this, CellValueChanged won't fire until the user clicks elsewhere
@@ -95,9 +121,6 @@
 
                 For i As Integer = 0 To CurrentCount - 1
                     If arrID(i) = selectedID Then
-                        ' Log old → new status change before updating
-                        LogEvent("Status Changed", arrNames(i),
-                                 "ID: " & arrID(i) & " | " & arrStatus(i) & " → " & newStatus)
                         arrStatus(i) = newStatus
                         Exit For
                     End If
@@ -111,13 +134,25 @@
         e.Cancel = True
     End Sub
 
+    ' FEATURE: Filter by Status 
+    ' When the user picks a status from cmbFilter, the grid immediately
+    ' shows only patients with that status. Picking "All" shows everyone.
+    ' cmbFilter must be added to MainFrm in the designer (ComboBox, DropDownStyle = DropDownList)
     Private Sub cmbFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedIndexChanged
         RefreshSummaryGrid()
     End Sub
 
+    ' FEATURE: Search by Name or ID 
+    ' Typing in txtSearch filters the grid in real time.
+    ' It matches against both Patient Name and Patient ID columns.
+    ' txtSearch must be added to MainFrm in the designer (TextBox)
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         RefreshSummaryGrid()
     End Sub
+
+    ' FEATURE: Sort by Name or Schedule 
+    ' btnSortName and btnSortSched are two buttons added to MainFrm in the designer.
+    ' They perform a simple bubble sort on the parallel arrays, then refresh the grid.
 
     Private Sub btnSortName_Click(sender As Object, e As EventArgs) Handles btnSortName.Click
         ' Bubble sort all parallel arrays by patient name (A → Z)
@@ -182,13 +217,4 @@
         End If
     End Sub
 
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        AddPatient_Frm.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnAppoint_Click(sender As Object, e As EventArgs) Handles btnAppoint.Click
-        SubMenu.Show()
-        Me.Hide()
-    End Sub
 End Class

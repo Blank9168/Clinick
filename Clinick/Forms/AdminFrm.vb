@@ -79,6 +79,8 @@
         tmpStr = arrCancelReason(i) : arrCancelReason(i) = arrCancelReason(j) : arrCancelReason(j) = tmpStr
     End Sub
 
+    ' Form Events
+
     Private Sub AdminFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbFilter.Items.Clear()
         cmbFilter.Items.Add("All")
@@ -107,6 +109,8 @@
         LblDate.Text = DateTime.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
     End Sub
 
+    ' Navigation
+
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Application.Exit()
     End Sub
@@ -116,11 +120,33 @@
         LoginFrm.Show()
     End Sub
 
-    ' Opens HistoryFrm to show the transaction/event log
-    Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
-        HistoryFrm.Show()
+    ' Opens ReportsFrm — daily, monthly, patient records + print/PDF/Excel export
+    Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
         Me.Hide()
+        ReportsFrm.Show()
     End Sub
+
+    ' Opens MedicalRecordsFrm for the selected patient row
+    ' Admin must click a row first before clicking this button
+    Private Sub btnMedicalRecords_Click(sender As Object, e As EventArgs) Handles btnMedicalRecords.Click
+        If dgvAdmin.CurrentRow Is Nothing OrElse dgvAdmin.CurrentRow.Index < 0 Then
+            MessageBox.Show("Please click on a patient row first.")
+            Return
+        End If
+
+        Dim clickedID As String = dgvAdmin.CurrentRow.Cells(0).Value.ToString()
+        For i As Integer = 0 To CurrentCount - 1
+            If arrID(i) = clickedID Then
+                MedicalRecordsFrm.TargetIndex = i
+                MedicalRecordsFrm.CallerForm = "Admin"
+                Me.Hide()
+                MedicalRecordsFrm.Show()
+                Exit For
+            End If
+        Next
+    End Sub
+
+    ' Filter, Search, Sort 
 
     Private Sub cmbFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedIndexChanged
         RefreshGrid()
@@ -161,6 +187,8 @@
         RefreshGrid()
     End Sub
 
+    ' Status Change in Grid 
+
     Private Sub dgvAdmin_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles dgvAdmin.CurrentCellDirtyStateChanged
         If dgvAdmin.IsCurrentCellDirty Then
             dgvAdmin.CommitEdit(DataGridViewDataErrorContexts.Commit)
@@ -177,9 +205,6 @@
 
                 For i As Integer = 0 To CurrentCount - 1
                     If arrID(i) = selectedID Then
-                        ' Log old → new status change before updating
-                        LogEvent("Status Changed", arrNames(i),
-                                 "ID: " & arrID(i) & " | " & arrStatus(i) & " → " & newStatus)
                         arrStatus(i) = newStatus
                         Exit For
                     End If
@@ -193,6 +218,10 @@
         e.Cancel = True
     End Sub
 
+    ' Row Click → Open EditPatientFrm 
+
+    ' in EditPatientFrm so the admin doesn't have to type it manually.
+    ' EditPatientFrm uses its own search approach so we just pass the ID as a string.
     Private Sub dgvAdmin_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAdmin.CellClick
         If e.RowIndex >= 0 Then
             Dim clickedID As String = dgvAdmin.Rows(e.RowIndex).Cells(0).Value.ToString()

@@ -107,6 +107,7 @@ Partial Class EditPatientFrm
         PictureBox12 = New PictureBox()
         PictureBox13 = New PictureBox()
         PictureBox14 = New PictureBox()
+        btnMedicalRecords = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -250,7 +251,7 @@ Partial Class EditPatientFrm
         btnSaveEdit.BackColor = Color.PowderBlue
         btnSaveEdit.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         btnSaveEdit.ForeColor = Color.DarkSlateGray
-        btnSaveEdit.Location = New Point(32, 446)
+        btnSaveEdit.Location = New Point(20, 446)
         btnSaveEdit.Name = "btnSaveEdit"
         btnSaveEdit.Size = New Size(234, 66)
         btnSaveEdit.TabIndex = 33
@@ -262,7 +263,7 @@ Partial Class EditPatientFrm
         btnDelete.BackColor = Color.PowderBlue
         btnDelete.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         btnDelete.ForeColor = Color.DarkSlateGray
-        btnDelete.Location = New Point(322, 446)
+        btnDelete.Location = New Point(298, 446)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(245, 66)
         btnDelete.TabIndex = 34
@@ -274,7 +275,7 @@ Partial Class EditPatientFrm
         btnCancel.BackColor = Color.PowderBlue
         btnCancel.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         btnCancel.ForeColor = Color.DarkSlateGray
-        btnCancel.Location = New Point(632, 446)
+        btnCancel.Location = New Point(661, 446)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(200, 66)
         btnCancel.TabIndex = 35
@@ -1161,7 +1162,7 @@ Partial Class EditPatientFrm
         PictureBox12.BackColor = Color.PowderBlue
         PictureBox12.BackgroundImage = CType(resources.GetObject("PictureBox12.BackgroundImage"), Image)
         PictureBox12.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox12.Location = New Point(49, 464)
+        PictureBox12.Location = New Point(39, 464)
         PictureBox12.Margin = New Padding(3, 2, 3, 2)
         PictureBox12.Name = "PictureBox12"
         PictureBox12.Size = New Size(41, 31)
@@ -1173,7 +1174,7 @@ Partial Class EditPatientFrm
         PictureBox13.BackColor = Color.PowderBlue
         PictureBox13.BackgroundImage = CType(resources.GetObject("PictureBox13.BackgroundImage"), Image)
         PictureBox13.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox13.Location = New Point(351, 464)
+        PictureBox13.Location = New Point(329, 464)
         PictureBox13.Margin = New Padding(3, 2, 3, 2)
         PictureBox13.Name = "PictureBox13"
         PictureBox13.Size = New Size(41, 31)
@@ -1185,12 +1186,21 @@ Partial Class EditPatientFrm
         PictureBox14.BackColor = Color.PowderBlue
         PictureBox14.BackgroundImage = CType(resources.GetObject("PictureBox14.BackgroundImage"), Image)
         PictureBox14.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox14.Location = New Point(654, 464)
+        PictureBox14.Location = New Point(687, 464)
         PictureBox14.Margin = New Padding(3, 2, 3, 2)
         PictureBox14.Name = "PictureBox14"
         PictureBox14.Size = New Size(41, 31)
         PictureBox14.TabIndex = 53
         PictureBox14.TabStop = False
+        ' 
+        ' btnMedicalRecords
+        ' 
+        btnMedicalRecords.Location = New Point(556, 458)
+        btnMedicalRecords.Name = "btnMedicalRecords"
+        btnMedicalRecords.Size = New Size(97, 48)
+        btnMedicalRecords.TabIndex = 54
+        btnMedicalRecords.Text = "Medical Records"
+        btnMedicalRecords.UseVisualStyleBackColor = True
         ' 
         ' EditPatientFrm
         ' 
@@ -1198,6 +1208,7 @@ Partial Class EditPatientFrm
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightCyan
         ClientSize = New Size(881, 541)
+        Controls.Add(btnMedicalRecords)
         Controls.Add(PictureBox14)
         Controls.Add(PictureBox13)
         Controls.Add(PictureBox12)
@@ -1352,4 +1363,5 @@ Partial Class EditPatientFrm
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents PictureBox13 As PictureBox
     Friend WithEvents PictureBox14 As PictureBox
+    Friend WithEvents btnMedicalRecords As Button
 End Class

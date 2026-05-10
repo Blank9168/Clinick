@@ -23,7 +23,7 @@ Partial Class MainFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainFrm))
         btnLogout = New Button()
         Label2 = New Label()
@@ -89,11 +89,14 @@ Partial Class MainFrm
         btnEditPatient = New Button()
         Panel24 = New Panel()
         PictureBox9 = New PictureBox()
-        Label12 = New Label()
         Label7 = New Label()
         btnAppoint = New Button()
         PictureBox8 = New PictureBox()
         btnAdd = New Button()
+        Label8 = New Label()
+        Button1 = New Button()
+        Button2 = New Button()
+        Button3 = New Button()
         CType(dgvSummary, ComponentModel.ISupportInitialize).BeginInit()
         Panel7.SuspendLayout()
         Panel9.SuspendLayout()
@@ -149,14 +152,14 @@ Partial Class MainFrm
         dgvSummary.AllowUserToResizeColumns = False
         dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSummary.BackgroundColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvSummary.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
         dgvSummary.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
@@ -363,7 +366,7 @@ Partial Class MainFrm
         ' 
         ' PictureBox4
         ' 
-        PictureBox4.BackColor = Color.White
+        PictureBox4.BackColor = Color.FromArgb(CByte(249), CByte(250), CByte(254))
         PictureBox4.BackgroundImageLayout = ImageLayout.Center
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
         PictureBox4.Location = New Point(6, 8)
@@ -400,7 +403,7 @@ Partial Class MainFrm
         ' 
         ' PictureBox5
         ' 
-        PictureBox5.BackColor = Color.White
+        PictureBox5.BackColor = Color.FromArgb(CByte(255), CByte(253), CByte(248))
         PictureBox5.BackgroundImageLayout = ImageLayout.Center
         PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
         PictureBox5.Location = New Point(5, 8)
@@ -496,7 +499,7 @@ Partial Class MainFrm
         ' 
         ' PictureBox6
         ' 
-        PictureBox6.BackColor = Color.White
+        PictureBox6.BackColor = Color.FromArgb(CByte(250), CByte(252), CByte(249))
         PictureBox6.BackgroundImageLayout = ImageLayout.Center
         PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
         PictureBox6.Location = New Point(10, 8)
@@ -592,7 +595,7 @@ Partial Class MainFrm
         ' 
         ' PictureBox7
         ' 
-        PictureBox7.BackColor = Color.White
+        PictureBox7.BackColor = Color.FromArgb(CByte(254), CByte(248), CByte(248))
         PictureBox7.BackgroundImageLayout = ImageLayout.Center
         PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), Image)
         PictureBox7.Location = New Point(12, 8)
@@ -777,9 +780,12 @@ Partial Class MainFrm
         ' Panel24
         ' 
         Panel24.BackColor = Color.FromArgb(CByte(246), CByte(250), CByte(253))
-        Panel24.Controls.Add(PictureBox9)
-        Panel24.Controls.Add(Label12)
+        Panel24.Controls.Add(Button3)
+        Panel24.Controls.Add(Button2)
+        Panel24.Controls.Add(Button1)
         Panel24.Controls.Add(Label7)
+        Panel24.Controls.Add(Label8)
+        Panel24.Controls.Add(PictureBox9)
         Panel24.Controls.Add(btnAppoint)
         Panel24.Controls.Add(PictureBox8)
         Panel24.Controls.Add(PicLogo)
@@ -803,29 +809,17 @@ Partial Class MainFrm
         PictureBox9.TabIndex = 6
         PictureBox9.TabStop = False
         ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
-        Label12.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
-        Label12.Location = New Point(14, 239)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(95, 30)
-        Label12.TabIndex = 5
-        Label12.Text = "Records"
-        ' 
         ' Label7
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
         Label7.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
-        Label7.Location = New Point(12, 212)
+        Label7.Location = New Point(44, 210)
         Label7.Name = "Label7"
-        Label7.Size = New Size(126, 30)
+        Label7.Size = New Size(80, 30)
         Label7.TabIndex = 4
-        Label7.Text = "Dashboard"
+        Label7.Text = "Pepito"
         ' 
         ' btnAppoint
         ' 
@@ -833,7 +827,7 @@ Partial Class MainFrm
         btnAppoint.BackgroundImageLayout = ImageLayout.Zoom
         btnAppoint.FlatStyle = FlatStyle.Flat
         btnAppoint.ForeColor = Color.Azure
-        btnAppoint.Location = New Point(8, 350)
+        btnAppoint.Location = New Point(9, 426)
         btnAppoint.Margin = New Padding(3, 2, 3, 2)
         btnAppoint.Name = "btnAppoint"
         btnAppoint.Size = New Size(156, 46)
@@ -847,7 +841,7 @@ Partial Class MainFrm
         PictureBox8.Location = New Point(0, 205)
         PictureBox8.Margin = New Padding(3, 2, 3, 2)
         PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(175, 74)
+        PictureBox8.Size = New Size(175, 63)
         PictureBox8.TabIndex = 2
         PictureBox8.TabStop = False
         ' 
@@ -857,12 +851,63 @@ Partial Class MainFrm
         btnAdd.BackgroundImageLayout = ImageLayout.Zoom
         btnAdd.FlatStyle = FlatStyle.Flat
         btnAdd.ForeColor = Color.Azure
-        btnAdd.Location = New Point(6, 296)
+        btnAdd.Location = New Point(9, 376)
         btnAdd.Margin = New Padding(3, 2, 3, 2)
         btnAdd.Name = "btnAdd"
         btnAdd.Size = New Size(156, 46)
         btnAdd.TabIndex = 0
         btnAdd.UseVisualStyleBackColor = False
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
+        Label8.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.CadetBlue
+        Label8.Location = New Point(39, 237)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(82, 21)
+        Label8.TabIndex = 24
+        Label8.Text = "Employee"
+        ' 
+        ' Button1
+        ' 
+        Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), Image)
+        Button1.BackgroundImageLayout = ImageLayout.Zoom
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.ForeColor = Color.Azure
+        Button1.Location = New Point(6, 277)
+        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(156, 46)
+        Button1.TabIndex = 25
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' Button2
+        ' 
+        Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), Image)
+        Button2.BackgroundImageLayout = ImageLayout.Zoom
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.ForeColor = Color.Azure
+        Button2.Location = New Point(9, 326)
+        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(156, 46)
+        Button2.TabIndex = 26
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' Button3
+        ' 
+        Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), Image)
+        Button3.BackgroundImageLayout = ImageLayout.Zoom
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.ForeColor = Color.Azure
+        Button3.Location = New Point(9, 476)
+        Button3.Margin = New Padding(3, 2, 3, 2)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(156, 47)
+        Button3.TabIndex = 27
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' MainFrm
         ' 
@@ -994,5 +1039,8 @@ Partial Class MainFrm
     Friend WithEvents btnAppoint As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents Label12 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
 End Class

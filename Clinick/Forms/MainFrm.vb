@@ -217,4 +217,17 @@
         End If
     End Sub
 
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        AddPatient_Frm.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnAppoint_Click(sender As Object, e As EventArgs) Handles btnAppoint.Click
+        SubMenu.Show()
+        Hide()
+    End Sub
+
+    Private Sub Panel15_Paint(sender As Object, e As PaintEventArgs) Handles Panel15.Paint
+
+    End Sub
 End Class

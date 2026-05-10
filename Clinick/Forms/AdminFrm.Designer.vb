@@ -23,7 +23,7 @@ Partial Class AdminFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         LblDate = New Label()
         LblDateTime = New Label()
@@ -70,7 +70,7 @@ Partial Class AdminFrm
         ' Panel1
         ' 
         Panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        Panel1.BackColor = Color.FromArgb(CByte(218), CByte(240), CByte(242))
+        Panel1.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
         Panel1.Controls.Add(LblDate)
         Panel1.Controls.Add(LblDateTime)
         Panel1.Controls.Add(lblName)
@@ -361,7 +361,7 @@ Partial Class AdminFrm
         ' 
         txtSearch.BorderStyle = BorderStyle.FixedSingle
         txtSearch.Font = New Font("Segoe UI", 12F)
-        txtSearch.Location = New Point(19, 226)
+        txtSearch.Location = New Point(27, 225)
         txtSearch.Name = "txtSearch"
         txtSearch.PlaceholderText = "     Search by Name or ID"
         txtSearch.Size = New Size(334, 29)
@@ -372,24 +372,24 @@ Partial Class AdminFrm
         dgvAdmin.AllowUserToResizeColumns = False
         dgvAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvAdmin.BackgroundColor = Color.FromArgb(CByte(250), CByte(249), CByte(244))
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Control
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvAdmin.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
         dgvAdmin.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        dgvAdmin.Location = New Point(14, 270)
+        dgvAdmin.Location = New Point(189, 270)
         dgvAdmin.Margin = New Padding(3, 2, 3, 2)
         dgvAdmin.Name = "dgvAdmin"
         dgvAdmin.RowHeadersVisible = False
         dgvAdmin.RowHeadersWidth = 51
         dgvAdmin.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvAdmin.Size = New Size(866, 237)
+        dgvAdmin.Size = New Size(691, 237)
         dgvAdmin.TabIndex = 39
         ' 
         ' Applied
@@ -436,7 +436,7 @@ Partial Class AdminFrm
         ' 
         ' btnHistory
         ' 
-        btnHistory.Location = New Point(519, 665)
+        btnHistory.Location = New Point(27, 284)
         btnHistory.Name = "btnHistory"
         btnHistory.Size = New Size(75, 23)
         btnHistory.TabIndex = 45
@@ -447,7 +447,7 @@ Partial Class AdminFrm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(896, 740)
+        ClientSize = New Size(896, 634)
         Controls.Add(btnHistory)
         Controls.Add(btnSortSched)
         Controls.Add(btnSortName)

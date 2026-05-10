@@ -86,7 +86,6 @@ Partial Class MainFrm
         LblDate = New Label()
         Panel1 = New Panel()
         Panel22 = New Panel()
-        Panel23 = New Panel()
         btnEditPatient = New Button()
         Panel24 = New Panel()
         PictureBox9 = New PictureBox()
@@ -139,7 +138,7 @@ Partial Class MainFrm
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
-        Label2.Location = New Point(196, 91)
+        Label2.Location = New Point(189, 94)
         Label2.Name = "Label2"
         Label2.Size = New Size(110, 21)
         Label2.TabIndex = 24
@@ -167,7 +166,7 @@ Partial Class MainFrm
         dgvSummary.RowHeadersVisible = False
         dgvSummary.RowHeadersWidth = 51
         dgvSummary.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvSummary.Size = New Size(682, 291)
+        dgvSummary.Size = New Size(682, 311)
         dgvSummary.TabIndex = 27
         ' 
         ' Applied
@@ -214,7 +213,7 @@ Partial Class MainFrm
         Label1.AutoSize = True
         Label1.Font = New Font("Sans Serif Collection", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
-        Label1.Location = New Point(311, 87)
+        Label1.Location = New Point(291, 89)
         Label1.Name = "Label1"
         Label1.Size = New Size(168, 48)
         Label1.TabIndex = 29
@@ -317,7 +316,7 @@ Partial Class MainFrm
         Panel7.Controls.Add(Panel9)
         Panel7.Controls.Add(Panel8)
         Panel7.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Panel7.Location = New Point(180, 137)
+        Panel7.Location = New Point(196, 137)
         Panel7.Margin = New Padding(3, 2, 3, 2)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(9, 67)
@@ -676,10 +675,10 @@ Partial Class MainFrm
         ' PicLogo
         ' 
         PicLogo.Image = My.Resources.Resources.logo_final__250_x_100_px___1_
-        PicLogo.Location = New Point(186, 5)
+        PicLogo.Location = New Point(28, -4)
         PicLogo.Margin = New Padding(3, 2, 3, 2)
         PicLogo.Name = "PicLogo"
-        PicLogo.Size = New Size(189, 80)
+        PicLogo.Size = New Size(189, 96)
         PicLogo.SizeMode = PictureBoxSizeMode.StretchImage
         PicLogo.TabIndex = 23
         PicLogo.TabStop = False
@@ -701,7 +700,7 @@ Partial Class MainFrm
         lblWelcome.AutoSize = True
         lblWelcome.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblWelcome.ForeColor = Color.FromArgb(CByte(100), CByte(151), CByte(152))
-        lblWelcome.Location = New Point(310, 30)
+        lblWelcome.Location = New Point(187, 31)
         lblWelcome.Name = "lblWelcome"
         lblWelcome.Size = New Size(103, 25)
         lblWelcome.TabIndex = 6
@@ -712,7 +711,7 @@ Partial Class MainFrm
         lblName.AutoSize = True
         lblName.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblName.ForeColor = Color.FromArgb(CByte(100), CByte(151), CByte(152))
-        lblName.Location = New Point(409, 30)
+        lblName.Location = New Point(281, 31)
         lblName.Name = "lblName"
         lblName.Size = New Size(165, 25)
         lblName.TabIndex = 7
@@ -732,7 +731,7 @@ Partial Class MainFrm
         ' 
         LblDate.AutoSize = True
         LblDate.Font = New Font("MS Reference Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        LblDate.Location = New Point(626, 38)
+        LblDate.Location = New Point(512, 39)
         LblDate.Name = "LblDate"
         LblDate.Size = New Size(0, 16)
         LblDate.TabIndex = 24
@@ -746,8 +745,6 @@ Partial Class MainFrm
         Panel1.Controls.Add(lblName)
         Panel1.Controls.Add(lblWelcome)
         Panel1.Controls.Add(btnClose)
-        Panel1.Controls.Add(PicLogo)
-        Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
@@ -762,15 +759,6 @@ Partial Class MainFrm
         Panel22.Name = "Panel22"
         Panel22.Size = New Size(608, 8)
         Panel22.TabIndex = 51
-        ' 
-        ' Panel23
-        ' 
-        Panel23.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
-        Panel23.Location = New Point(0, 610)
-        Panel23.Margin = New Padding(3, 2, 3, 2)
-        Panel23.Name = "Panel23"
-        Panel23.Size = New Size(896, 27)
-        Panel23.TabIndex = 52
         ' 
         ' btnEditPatient
         ' 
@@ -794,19 +782,21 @@ Partial Class MainFrm
         Panel24.Controls.Add(Label7)
         Panel24.Controls.Add(btnAppoint)
         Panel24.Controls.Add(PictureBox8)
+        Panel24.Controls.Add(PicLogo)
         Panel24.Controls.Add(btnAdd)
         Panel24.Controls.Add(btnLogout)
+        Panel24.Dock = DockStyle.Left
         Panel24.Location = New Point(0, 0)
         Panel24.Margin = New Padding(3, 2, 3, 2)
         Panel24.Name = "Panel24"
-        Panel24.Size = New Size(174, 610)
+        Panel24.Size = New Size(174, 634)
         Panel24.TabIndex = 54
         ' 
         ' PictureBox9
         ' 
         PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), Image)
         PictureBox9.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox9.Location = New Point(31, 30)
+        PictureBox9.Location = New Point(31, 93)
         PictureBox9.Margin = New Padding(3, 2, 3, 2)
         PictureBox9.Name = "PictureBox9"
         PictureBox9.Size = New Size(115, 94)
@@ -819,7 +809,7 @@ Partial Class MainFrm
         Label12.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
         Label12.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
-        Label12.Location = New Point(14, 185)
+        Label12.Location = New Point(14, 239)
         Label12.Name = "Label12"
         Label12.Size = New Size(95, 30)
         Label12.TabIndex = 5
@@ -831,7 +821,7 @@ Partial Class MainFrm
         Label7.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
         Label7.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
-        Label7.Location = New Point(12, 158)
+        Label7.Location = New Point(12, 212)
         Label7.Name = "Label7"
         Label7.Size = New Size(126, 30)
         Label7.TabIndex = 4
@@ -843,7 +833,7 @@ Partial Class MainFrm
         btnAppoint.BackgroundImageLayout = ImageLayout.Zoom
         btnAppoint.FlatStyle = FlatStyle.Flat
         btnAppoint.ForeColor = Color.Azure
-        btnAppoint.Location = New Point(8, 296)
+        btnAppoint.Location = New Point(8, 350)
         btnAppoint.Margin = New Padding(3, 2, 3, 2)
         btnAppoint.Name = "btnAppoint"
         btnAppoint.Size = New Size(156, 46)
@@ -854,7 +844,7 @@ Partial Class MainFrm
         ' 
         PictureBox8.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
         PictureBox8.BackgroundImageLayout = ImageLayout.None
-        PictureBox8.Location = New Point(0, 151)
+        PictureBox8.Location = New Point(0, 205)
         PictureBox8.Margin = New Padding(3, 2, 3, 2)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(175, 74)
@@ -867,7 +857,7 @@ Partial Class MainFrm
         btnAdd.BackgroundImageLayout = ImageLayout.Zoom
         btnAdd.FlatStyle = FlatStyle.Flat
         btnAdd.ForeColor = Color.Azure
-        btnAdd.Location = New Point(6, 242)
+        btnAdd.Location = New Point(6, 296)
         btnAdd.Margin = New Padding(3, 2, 3, 2)
         btnAdd.Name = "btnAdd"
         btnAdd.Size = New Size(156, 46)
@@ -900,7 +890,6 @@ Partial Class MainFrm
         Controls.Add(Label2)
         Controls.Add(Panel1)
         Controls.Add(Panel22)
-        Controls.Add(Panel23)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 2, 3, 2)
         Name = "MainFrm"
@@ -994,7 +983,6 @@ Partial Class MainFrm
     Friend WithEvents LblDate As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel22 As Panel
-    Friend WithEvents Panel23 As Panel
     Friend WithEvents btnEditPatient As Button
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox

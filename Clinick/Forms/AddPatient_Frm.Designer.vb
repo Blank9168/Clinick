@@ -181,7 +181,7 @@ Partial Class AddPatient_Frm
         btnAddPatient.Location = New Point(33, 310)
         btnAddPatient.Margin = New Padding(3, 2, 3, 2)
         btnAddPatient.Name = "btnAddPatient"
-        btnAddPatient.Size = New Size(563, 33)
+        btnAddPatient.Size = New Size(563, 37)
         btnAddPatient.TabIndex = 30
         btnAddPatient.Text = "Add Patient"
         btnAddPatient.UseVisualStyleBackColor = False
@@ -264,7 +264,7 @@ Partial Class AddPatient_Frm
         rbMale.AutoSize = True
         rbMale.Font = New Font("Microsoft Sans Serif", 12F)
         rbMale.ForeColor = Color.Black
-        rbMale.Location = New Point(282, 196)
+        rbMale.Location = New Point(282, 201)
         rbMale.Margin = New Padding(3, 2, 3, 2)
         rbMale.Name = "rbMale"
         rbMale.Size = New Size(61, 24)
@@ -278,7 +278,7 @@ Partial Class AddPatient_Frm
         rbFemale.AutoSize = True
         rbFemale.Font = New Font("Microsoft Sans Serif", 12F)
         rbFemale.ForeColor = Color.Black
-        rbFemale.Location = New Point(354, 197)
+        rbFemale.Location = New Point(354, 202)
         rbFemale.Margin = New Padding(3, 2, 3, 2)
         rbFemale.Name = "rbFemale"
         rbFemale.Size = New Size(80, 24)
@@ -332,6 +332,7 @@ Partial Class AddPatient_Frm
         ' 
         btnReturnMainPd.BackColor = Color.Teal
         btnReturnMainPd.BackgroundImageLayout = ImageLayout.Center
+        btnReturnMainPd.FlatStyle = FlatStyle.Popup
         btnReturnMainPd.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReturnMainPd.ForeColor = Color.White
         btnReturnMainPd.Location = New Point(12, 9)
@@ -356,10 +357,10 @@ Partial Class AddPatient_Frm
         ' 
         PictureBox2.BackgroundImage = My.Resources.Resources.resized_logo__1_
         PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox2.Location = New Point(682, 0)
+        PictureBox2.Location = New Point(715, 0)
         PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(208, 96)
+        PictureBox2.Size = New Size(175, 115)
         PictureBox2.TabIndex = 30
         PictureBox2.TabStop = False
         ' 

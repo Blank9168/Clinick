@@ -41,60 +41,67 @@ Partial Class ReportsFrm
         ' 
         ' dtpReportDate
         ' 
-        dtpReportDate.Location = New Point(113, 12)
+        dtpReportDate.Location = New Point(129, 16)
+        dtpReportDate.Margin = New Padding(3, 4, 3, 4)
         dtpReportDate.Name = "dtpReportDate"
-        dtpReportDate.Size = New Size(200, 23)
+        dtpReportDate.Size = New Size(228, 27)
         dtpReportDate.TabIndex = 0
         ' 
         ' cmbMonth
         ' 
         cmbMonth.FormattingEnabled = True
-        cmbMonth.Location = New Point(141, 41)
+        cmbMonth.Location = New Point(161, 55)
+        cmbMonth.Margin = New Padding(3, 4, 3, 4)
         cmbMonth.Name = "cmbMonth"
-        cmbMonth.Size = New Size(121, 23)
+        cmbMonth.Size = New Size(138, 28)
         cmbMonth.TabIndex = 1
         ' 
         ' btnGenerateDaily
         ' 
-        btnGenerateDaily.Location = New Point(11, 12)
+        btnGenerateDaily.Location = New Point(13, 16)
+        btnGenerateDaily.Margin = New Padding(3, 4, 3, 4)
         btnGenerateDaily.Name = "btnGenerateDaily"
-        btnGenerateDaily.Size = New Size(96, 23)
+        btnGenerateDaily.Size = New Size(110, 31)
         btnGenerateDaily.TabIndex = 2
         btnGenerateDaily.Text = "Generate Daily"
         btnGenerateDaily.UseVisualStyleBackColor = True
         ' 
         ' btnGenerateMonthly
         ' 
-        btnGenerateMonthly.Location = New Point(12, 41)
+        btnGenerateMonthly.Location = New Point(14, 55)
+        btnGenerateMonthly.Margin = New Padding(3, 4, 3, 4)
         btnGenerateMonthly.Name = "btnGenerateMonthly"
-        btnGenerateMonthly.Size = New Size(123, 23)
+        btnGenerateMonthly.Size = New Size(141, 31)
         btnGenerateMonthly.TabIndex = 3
         btnGenerateMonthly.Text = "Generate Monthly"
         btnGenerateMonthly.UseVisualStyleBackColor = True
         ' 
         ' btnPrint
         ' 
-        btnPrint.Location = New Point(11, 109)
+        btnPrint.Location = New Point(13, 145)
+        btnPrint.Margin = New Padding(3, 4, 3, 4)
         btnPrint.Name = "btnPrint"
-        btnPrint.Size = New Size(75, 23)
+        btnPrint.Size = New Size(86, 31)
         btnPrint.TabIndex = 5
         btnPrint.Text = "Print"
         btnPrint.UseVisualStyleBackColor = True
         ' 
         ' btnExportExcel
         ' 
-        btnExportExcel.Location = New Point(103, 109)
+        btnExportExcel.Location = New Point(118, 145)
+        btnExportExcel.Margin = New Padding(3, 4, 3, 4)
         btnExportExcel.Name = "btnExportExcel"
-        btnExportExcel.Size = New Size(92, 23)
+        btnExportExcel.Size = New Size(105, 31)
         btnExportExcel.TabIndex = 7
         btnExportExcel.Text = "Export Excel"
         btnExportExcel.UseVisualStyleBackColor = True
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(228, 109)
+        btnClose.Location = New Point(261, 145)
+        btnClose.Margin = New Padding(3, 4, 3, 4)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(75, 23)
+        btnClose.Size = New Size(86, 31)
         btnClose.TabIndex = 8
         btnClose.Text = "Close"
         btnClose.UseVisualStyleBackColor = True
@@ -105,53 +112,61 @@ Partial Class ReportsFrm
         dgvReports.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvReports.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvReports.Columns.AddRange(New DataGridViewColumn() {colID, colPatient, colService, colSchedule, colStatus, colProcessed})
-        dgvReports.Location = New Point(20, 160)
+        dgvReports.Location = New Point(23, 213)
+        dgvReports.Margin = New Padding(3, 4, 3, 4)
         dgvReports.Name = "dgvReports"
         dgvReports.ReadOnly = True
-        dgvReports.Size = New Size(828, 418)
+        dgvReports.RowHeadersWidth = 51
+        dgvReports.Size = New Size(946, 557)
         dgvReports.TabIndex = 9
         ' 
         ' colID
         ' 
         colID.HeaderText = "ID"
+        colID.MinimumWidth = 6
         colID.Name = "colID"
         colID.ReadOnly = True
         ' 
         ' colPatient
         ' 
         colPatient.HeaderText = "Patient"
+        colPatient.MinimumWidth = 6
         colPatient.Name = "colPatient"
         colPatient.ReadOnly = True
         ' 
         ' colService
         ' 
         colService.HeaderText = "Service Type"
+        colService.MinimumWidth = 6
         colService.Name = "colService"
         colService.ReadOnly = True
         ' 
         ' colSchedule
         ' 
         colSchedule.HeaderText = "Scheduled For"
+        colSchedule.MinimumWidth = 6
         colSchedule.Name = "colSchedule"
         colSchedule.ReadOnly = True
         ' 
         ' colStatus
         ' 
         colStatus.HeaderText = "Status"
+        colStatus.MinimumWidth = 6
         colStatus.Name = "colStatus"
         colStatus.ReadOnly = True
         ' 
         ' colProcessed
         ' 
-        colProcessed.HeaderText = "Date Processed"
+        colProcessed.HeaderText = "Completed/Cancelled On"
+        colProcessed.MinimumWidth = 6
         colProcessed.Name = "colProcessed"
         colProcessed.ReadOnly = True
         ' 
         ' ReportsFrm
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(880, 595)
+        ClientSize = New Size(1006, 793)
         Controls.Add(dgvReports)
         Controls.Add(btnClose)
         Controls.Add(btnExportExcel)
@@ -161,6 +176,7 @@ Partial Class ReportsFrm
         Controls.Add(cmbMonth)
         Controls.Add(dtpReportDate)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 4, 3, 4)
         Name = "ReportsFrm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "ReportsFrm"

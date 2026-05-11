@@ -124,6 +124,9 @@
   <data name="resized logo (350 x 150 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized logo (350 x 150 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="final na talagang login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\final na talagang login1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Login backg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login backg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +139,8 @@
   <data name="papel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\papel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddPatientBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddPatientBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Iconsss (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconsss (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Checklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Checklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,6 +226,9 @@
   <data name="recorsds" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recorsds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AddPatientBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddPatientBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="curved-arrow-left-white-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\curved-arrow-left-white-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,7 +238,7 @@
   <data name="resized logo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized logo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Iconsss (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconsss (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="final na talagang login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\final na talagang login2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

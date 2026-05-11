@@ -112,7 +112,7 @@ Partial Class LoginFrm
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Panel1.BackgroundImage = My.Resources.Resources.final_na_talagang_login
+        Panel1.BackgroundImage = My.Resources.Resources.final_na_talagang_login1
         Panel1.BackgroundImageLayout = ImageLayout.Center
         Panel1.Controls.Add(btnClose)
         Panel1.Controls.Add(cbShowPass)

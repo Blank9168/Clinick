@@ -146,7 +146,7 @@
                         arrStatus(i) = newStatus
 
                         If newStatus = "Completed" OrElse newStatus = "Cancelled" Then
-                            arrDateProcessed(i) = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt")
+                            arrDateProcessed(i) = DateTime.Now.ToString("MM/dd/yyyy @ hh:mm tt")
                         Else
                             arrDateProcessed(i) = ""
                         End If

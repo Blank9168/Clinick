@@ -232,7 +232,7 @@ Partial Class SubMenu
         ' 
         ' PictureBox4
         ' 
-        PictureBox4.Image = My.Resources.Resources.Iconsss
+        'PictureBox4.Image = My.Resources.Resources.Iconsss
         PictureBox4.Location = New Point(191, 0)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(294, 53)

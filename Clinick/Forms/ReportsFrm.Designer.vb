@@ -31,12 +31,13 @@ Partial Class ReportsFrm
         btnExportPDF = New Button()
         btnExportExcel = New Button()
         btnClose = New Button()
-        txtReportPreview = New TextBox()
+        dgvReports = New DataGridView()
+        CType(dgvReports, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dtpReportDate
         ' 
-        dtpReportDate.Location = New Point(56, 78)
+        dtpReportDate.Location = New Point(12, 12)
         dtpReportDate.Name = "dtpReportDate"
         dtpReportDate.Size = New Size(200, 23)
         dtpReportDate.TabIndex = 0
@@ -44,14 +45,14 @@ Partial Class ReportsFrm
         ' cmbMonth
         ' 
         cmbMonth.FormattingEnabled = True
-        cmbMonth.Location = New Point(56, 133)
+        cmbMonth.Location = New Point(12, 41)
         cmbMonth.Name = "cmbMonth"
         cmbMonth.Size = New Size(121, 23)
         cmbMonth.TabIndex = 1
         ' 
         ' btnGenerateDaily
         ' 
-        btnGenerateDaily.Location = New Point(32, 200)
+        btnGenerateDaily.Location = New Point(11, 80)
         btnGenerateDaily.Name = "btnGenerateDaily"
         btnGenerateDaily.Size = New Size(96, 23)
         btnGenerateDaily.TabIndex = 2
@@ -60,7 +61,7 @@ Partial Class ReportsFrm
         ' 
         ' btnGenerateMonthly
         ' 
-        btnGenerateMonthly.Location = New Point(148, 200)
+        btnGenerateMonthly.Location = New Point(113, 80)
         btnGenerateMonthly.Name = "btnGenerateMonthly"
         btnGenerateMonthly.Size = New Size(123, 23)
         btnGenerateMonthly.TabIndex = 3
@@ -69,7 +70,7 @@ Partial Class ReportsFrm
         ' 
         ' btnGeneratePatientRecords
         ' 
-        btnGeneratePatientRecords.Location = New Point(286, 200)
+        btnGeneratePatientRecords.Location = New Point(262, 80)
         btnGeneratePatientRecords.Name = "btnGeneratePatientRecords"
         btnGeneratePatientRecords.Size = New Size(152, 23)
         btnGeneratePatientRecords.TabIndex = 4
@@ -78,7 +79,7 @@ Partial Class ReportsFrm
         ' 
         ' btnPrint
         ' 
-        btnPrint.Location = New Point(32, 246)
+        btnPrint.Location = New Point(11, 109)
         btnPrint.Name = "btnPrint"
         btnPrint.Size = New Size(75, 23)
         btnPrint.TabIndex = 5
@@ -87,7 +88,7 @@ Partial Class ReportsFrm
         ' 
         ' btnExportPDF
         ' 
-        btnExportPDF.Location = New Point(148, 246)
+        btnExportPDF.Location = New Point(113, 109)
         btnExportPDF.Name = "btnExportPDF"
         btnExportPDF.Size = New Size(75, 23)
         btnExportPDF.TabIndex = 6
@@ -96,7 +97,7 @@ Partial Class ReportsFrm
         ' 
         ' btnExportExcel
         ' 
-        btnExportExcel.Location = New Point(286, 246)
+        btnExportExcel.Location = New Point(262, 109)
         btnExportExcel.Name = "btnExportExcel"
         btnExportExcel.Size = New Size(92, 23)
         btnExportExcel.TabIndex = 7
@@ -105,29 +106,30 @@ Partial Class ReportsFrm
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(32, 397)
+        btnClose.Location = New Point(441, 89)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(75, 23)
         btnClose.TabIndex = 8
         btnClose.Text = "Close"
         btnClose.UseVisualStyleBackColor = True
         ' 
-        ' txtReportPreview
+        ' dgvReports
         ' 
-        txtReportPreview.BorderStyle = BorderStyle.FixedSingle
-        txtReportPreview.Location = New Point(32, 300)
-        txtReportPreview.Multiline = True
-        txtReportPreview.Name = "txtReportPreview"
-        txtReportPreview.PlaceholderText = "Report Preview"
-        txtReportPreview.Size = New Size(406, 81)
-        txtReportPreview.TabIndex = 9
+        dgvReports.AllowUserToAddRows = False
+        dgvReports.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvReports.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvReports.Location = New Point(20, 160)
+        dgvReports.Name = "dgvReports"
+        dgvReports.ReadOnly = True
+        dgvReports.Size = New Size(828, 418)
+        dgvReports.TabIndex = 9
         ' 
         ' ReportsFrm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(txtReportPreview)
+        ClientSize = New Size(880, 595)
+        Controls.Add(dgvReports)
         Controls.Add(btnClose)
         Controls.Add(btnExportExcel)
         Controls.Add(btnExportPDF)
@@ -137,10 +139,12 @@ Partial Class ReportsFrm
         Controls.Add(btnGenerateDaily)
         Controls.Add(cmbMonth)
         Controls.Add(dtpReportDate)
+        FormBorderStyle = FormBorderStyle.None
         Name = "ReportsFrm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "ReportsFrm"
+        CType(dgvReports, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents dtpReportDate As DateTimePicker
@@ -153,4 +157,5 @@ Partial Class ReportsFrm
     Friend WithEvents btnExportExcel As Button
     Friend WithEvents btnClose As Button
     Friend WithEvents txtReportPreview As TextBox
+    Friend WithEvents dgvReports As DataGridView
 End Class

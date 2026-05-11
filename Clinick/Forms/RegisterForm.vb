@@ -11,15 +11,34 @@
         rbMale.Checked = False
         rbFemale.Checked = False
         dtpDate.Value = DateTime.Now
+
         rbRoutine.Checked = False
         rbUrgent.Checked = False
         rbFollowUp.Checked = False
+
+        rbFever.Checked = False
+        rbPhysicalExam.Checked = False
+        rbInjury.Checked = False
+
+
+        'Dental'
         rbCleaning.Checked = False
         rbExtraction.Checked = False
         rbFilling.Checked = False
+
+        rbAdult.Checked = False
+        rbChild.Checked = False
+
+        'pedia'
         rbVaccine.Checked = False
         rbGrowth.Checked = False
         rbSickV.Checked = False
+
+        rbToddler.Checked = False
+        rbInfant.Checked = False
+        rbSchool.Checked = False
+
+
         txtPatientName.ReadOnly = False
         txtContactInfo.ReadOnly = False
         txtAge.ReadOnly = False
@@ -140,44 +159,90 @@
         Dim details As String = ""
 
         If Service.Contains("Pediatrics") Then
+            ' 1. Determine Age Group for Pedia
+            Dim ageGroup As String = ""
+            If rbInfant.Checked Then
+                ageGroup = "Infant"
+            ElseIf rbToddler.Checked Then
+                ageGroup = "Toddler"
+            ElseIf rbSchool.Checked Then
+                ageGroup = "School-Age"
+            Else
+                MessageBox.Show("Please select a Pediatric age group.")
+                Return
+            End If
+
+            ' 2. Determine Visit Type
+            Dim visitType As String = ""
             If rbVaccine.Checked Then
-                details = " (Vaccination)"
+                visitType = "Vaccination"
             ElseIf rbGrowth.Checked Then
-                details = " (Growth Check)"
+                visitType = "Growth Check"
             ElseIf rbSickV.Checked Then
-                details = " (Sick Visit)"
+                visitType = "Sick Visit"
             Else
-                MessageBox.Show("Select a visit type.")
+                MessageBox.Show("Select a pediatric visit type.")
                 Return
             End If
+
+            details = " (" & ageGroup & " - " & visitType & ")"
+
         ElseIf Service.Contains("Dental") Then
+            ' 1. Determine Age Group for Dental
+            Dim dentalAge As String = ""
+            If rbAdult.Checked Then
+                dentalAge = "Adult"
+            ElseIf rbChild.Checked Then
+                dentalAge = "Child"
+            Else
+                MessageBox.Show("Please select Adult or Child for Dental.")
+                Return
+            End If
+
+            ' 2. Determine Procedure
+            Dim procedure As String = ""
             If rbCleaning.Checked Then
-                details = " (Cleaning)"
+                procedure = "Cleaning"
             ElseIf rbExtraction.Checked Then
-                details = " (Extraction)"
+                procedure = "Extraction"
             ElseIf rbFilling.Checked Then
-                details = " (Filling)"
+                procedure = "Filling"
             Else
-                MessageBox.Show("Select a procedure.")
+                MessageBox.Show("Select a dental procedure.")
                 Return
             End If
+
+            details = " (" & dentalAge & " - " & procedure & ")"
+
         ElseIf Service.Contains("General") Then
-            If rbUrgent.Checked Then
-                details = " (Urgent)"
+            ' 1. Determine Condition/Urgency
+            Dim generalType As String = ""
+            If rbFever.Checked Then
+                generalType = "Fever"
+            ElseIf rbPhysicalExam.Checked Then
+                generalType = "Physical Exam"
+            ElseIf rbInjury.Checked Then
+                generalType = "Injury"
+            ElseIf rbUrgent.Checked Then
+                generalType = "Urgent"
             ElseIf rbFollowUp.Checked Then
-                details = " (Follow-up)"
+                generalType = "Follow-up"
             ElseIf rbRoutine.Checked Then
-                details = " (Routine)"
+                generalType = "Routine"
             Else
-                MessageBox.Show("Select urgency.")
+                MessageBox.Show("Select a General Consultation type.")
                 Return
             End If
+
+            details = " (" & generalType & ")"
         End If
+
 
         Dim finalSchedule As String = dtpDate.Value.ToShortDateString & " @ " & cmbTimeSlots.SelectedItem.ToString
         arrSchedule(targetIndex) = finalSchedule
         arrStatus(targetIndex) = "Pending"
         arrService(targetIndex) = Service & details
+        arrDateCreated(CurrentCount) = DateTime.Now.ToString("MM/dd/yyyy")
 
         MessageBox.Show("Appointment set for " & arrNames(targetIndex))
 

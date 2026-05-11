@@ -72,48 +72,89 @@
         Next
 
         If isFound Then
-            ' Show patient info panels
+            ' 1. Show Main Panels
             grpPatientInfo.Visible = True
             panelBg.Visible = True
             lblPatientInfo.Visible = True
             grpAppointment.Visible = True
 
-            ' Hide all service groups first, then show the right one
+            ' 2. Load Basic Data from Parallel Arrays
+            lblPatientID.Text = arrID(foundIndex)
+            txtPatientName.Text = arrNames(foundIndex)
+            txtContactInfo.Text = arrContact(foundIndex)
+            txtAge.Text = arrAge(foundIndex).ToString()
+            dtpDOB.Value = arrBday(foundIndex)
+
+            ' 3. Set Control Permissions
+            txtPatientName.ReadOnly = False
+            txtContactInfo.ReadOnly = False
+            txtAge.ReadOnly = False
+            dtpDOB.Enabled = True
+            rbMale.Enabled = True
+            rbFemale.Enabled = True
+
+            ' 4. Set Gender
+            If arrSex(foundIndex) = "Male" Then
+                rbMale.Checked = True
+            Else
+                rbFemale.Checked = True
+            End If
+
+            ' 5. Reset all specific Radio Buttons
+            rbRoutine.Checked = False : rbUrgent.Checked = False : rbFollowUp.Checked = False
+            rbFever.Checked = False : rbPhysicalExam.Checked = False : rbInjury.Checked = False
+            rbCleaning.Checked = False : rbExtraction.Checked = False : rbFilling.Checked = False
+            rbAdult.Checked = False : rbChild.Checked = False : rbVaccine.Checked = False
+            rbGrowth.Checked = False : rbSickV.Checked = False : rbToddler.Checked = False
+            rbInfant.Checked = False : rbSchool.Checked = False
+
+            ' 6. Parse Service Details
+            Dim serviceDetail As String = arrService(foundIndex)
             grpGeneral.Visible = False
             grpDental.Visible = False
             grpPedia.Visible = False
 
-            ' Load patient data into fields
-            lblPatientID.Text = arrID(foundIndex)
-            txtPatientName.Text = arrNames(foundIndex)
-            txtContactInfo.Text = arrContact(foundIndex)
+            If serviceDetail.Contains("General") Then
+                grpGeneral.Visible = True
+                If serviceDetail.Contains("Routine") Then rbRoutine.Checked = True
+                If serviceDetail.Contains("Urgent") Then rbUrgent.Checked = True
+                If serviceDetail.Contains("Follow-Up") Then rbFollowUp.Checked = True
+                If serviceDetail.Contains("Fever") Then rbFever.Checked = True
+                If serviceDetail.Contains("Physical Exam") Then rbPhysicalExam.Checked = True
+                If serviceDetail.Contains("Injury") Then rbInjury.Checked = True
 
-            ' Parse schedule back into date picker and time slot
-            If arrSchedule(foundIndex).Contains("@") Then
-                Dim scheduleParts() As String = arrSchedule(foundIndex).Split("@")
-                dtpDate.Value = DateTime.Parse(scheduleParts(0).Trim())
-                cmbTimeSlots.Text = scheduleParts(1).Trim()
+            ElseIf serviceDetail.Contains("Dental") Then
+                grpDental.Visible = True
+                If serviceDetail.Contains("Cleaning") Then rbCleaning.Checked = True
+                If serviceDetail.Contains("Extraction") Then rbExtraction.Checked = True
+                If serviceDetail.Contains("Filling") Then rbFilling.Checked = True
+                If serviceDetail.Contains("Adult") Then rbAdult.Checked = True
+                If serviceDetail.Contains("Child") Then rbChild.Checked = True
+
+            ElseIf serviceDetail.Contains("Pedia") Then
+                grpPedia.Visible = True
+                If serviceDetail.Contains("Vaccine") Then rbVaccine.Checked = True
+                If serviceDetail.Contains("Growth") Then rbGrowth.Checked = True
+                If serviceDetail.Contains("Sick Visit") Then rbSickV.Checked = True
+                If serviceDetail.Contains("Infant") Then rbInfant.Checked = True
+                If serviceDetail.Contains("Toddler") Then rbToddler.Checked = True
+                If serviceDetail.Contains("School") Then rbSchool.Checked = True
             End If
 
-            ' Show the correct service group
-            If arrService(foundIndex).Contains("General") Then
-                grpGeneral.Visible = True
-            ElseIf arrService(foundIndex).Contains("Dental") Then
-                grpDental.Visible = True
-            ElseIf arrService(foundIndex).Contains("Pedia") Then
-                grpPedia.Visible = True
+            ' 7. Parse Schedule
+            If arrSchedule(foundIndex).Contains("@") Then
+                Dim parts() = arrSchedule(foundIndex).Split("@")
+                dtpDate.Value = DateTime.Parse(parts(0).Trim())
+                cmbTimeSlots.Text = parts(1).Trim()
             End If
 
             MessageBox.Show("Patient Record Located.")
         Else
-            ' Hide everything on failed search
+            ' Failed Search Logic
             grpPatientInfo.Visible = False
             panelBg.Visible = False
             lblPatientInfo.Visible = False
             grpAppointment.Visible = False
-            grpGeneral.Visible = False
-            grpDental.Visible = False
-            grpPedia.Visible = False
             foundIndex = -1
             MessageBox.Show("Patient ID not found.")
         End If
@@ -206,16 +247,16 @@
 
     ' Opens MedicalRecordsFrm for the currently loaded patient
     ' Only available after a patient has been searched and loaded
-    Private Sub btnMedicalRecords_Click(sender As Object, e As EventArgs) Handles btnMedicalRecords.Click
-        If foundIndex = -1 Then
-            MessageBox.Show("Please search for a patient first.")
-            Return
-        End If
+    'Private Sub btnMedicalRecords_Click(sender As Object, e As EventArgs)
+    '    If foundIndex = -1 Then
+    '        MessageBox.Show("Please search for a patient first.")
+    '        Return
+    '    End If
 
-        MedicalRecordsFrm.TargetIndex = foundIndex
-        MedicalRecordsFrm.CallerForm = "Edit"
-        Me.Hide()
-        MedicalRecordsFrm.Show()
-    End Sub
+    '    MedicalRecordsFrm.TargetIndex = foundIndex
+    '    MedicalRecordsFrm.CallerForm = "Edit"
+    '    Hide()
+    '    MedicalRecordsFrm.Show()
+    'End Sub
 
 End Class

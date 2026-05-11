@@ -4,6 +4,16 @@
     Public Sub RefreshSummaryGrid()
         dgvSummary.Rows.Clear()
 
+
+        TotalGeneral = 0
+        TotalDental = 0
+        TotalPedia = 0
+        pending = 0
+        completed = 0
+        cancelled = 0
+
+
+
         Dim filterStatus As String = ""
         ' cmbFilter is the filter ComboBox added to the form
         If cmbFilter.SelectedIndex > 0 Then
@@ -14,10 +24,22 @@
 
         For i As Integer = 0 To CurrentCount - 1
             ' --- FEATURE: Filter by status ---
+            If arrService(i) IsNot Nothing Then
+                If arrService(i).Contains("General") Then TotalGeneral += 1
+                If arrService(i).Contains("Dental") Then TotalDental += 1
+                If arrService(i).Contains("Pedia") Then TotalPedia += 1
+            End If
+
+            If arrStatus(i) = "Pending" Then
+                pending += 1
+            ElseIf arrStatus(i) = "Completed" Then
+                completed += 1
+            ElseIf arrStatus(i) = "Cancelled" Then
+                cancelled += 1
+            End If
+
             If filterStatus <> "" Then
-                If arrStatus(i).ToLower() <> filterStatus Then
-                    Continue For  ' skip rows that don't match filter
-                End If
+                If arrStatus(i).ToLower() <> filterStatus Then Continue For
             End If
 
             ' --- FEATURE: Search by patient name or ID ---
@@ -30,8 +52,13 @@
             End If
 
             dgvSummary.Rows.Add(arrID(i), arrNames(i), arrContact(i), arrService(i), arrSchedule(i), arrStatus(i))
-        Next
 
+        Next
+        lblTotal.Text = CurrentCount.ToString()
+        lblPending.Text = pending.ToString()
+        lblCompleted.Text = completed.ToString()
+        lblCancelled.Text = cancelled.ToString()
+        dgvSummary.ClearSelection()
     End Sub
 
     ' Form Events 
@@ -61,6 +88,29 @@
     Private Sub MainFrm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         LblDate.Text = DateTime.Now.ToString("MMMM dd, yyyy - hh:mm:ss tt")
         RefreshSummaryGrid()
+
+        If CurrentUser = "Employee" Then
+            lblUserDisplay.Text = "Patrick"
+            lblPositionDisplay.Text = "Front Desk Staff"
+            lblName.Text = "Patrick!"
+            btnAdd.Visible = True
+            btnAppoint.Visible = True
+            btnDB.Visible = True
+            btnReport.Visible = False
+        ElseIf CurrentUser = "Admin" Then
+            lblUserDisplay.Text = "Pepito"
+            lblPositionDisplay.Text = "Administrator"
+            lblName.Text = "Pepito!"
+            btnDB.Visible = True
+            btnReport.Visible = True
+            btnAdd.Visible = False
+            btnAppoint.Visible = False
+        Else
+            lblUserDisplay.Text = "User: Unknown"
+        End If
+
+
+
     End Sub
 
     ' Live Clock 
@@ -82,28 +132,7 @@
         LoginFrm.Show()
     End Sub
 
-    'Private Sub btnDentalS_Click(sender As Object, e As EventArgs) Handles btnDentalS.Click
-    '    Service = "Dental"
-    '    SubMenu.Show()
-    '    Me.Hide()
-    'End Sub
 
-    'Private Sub btnGeneralCons_Click(sender As Object, e As EventArgs) Handles btnGeneralCons.Click
-    '    Service = "General"
-    '    SubMenu.Show()
-    '    Me.Hide()
-    'End Sub
-
-    'Private Sub btnPediatrics_Click(sender As Object, e As EventArgs) Handles btnPediatrics.Click
-    '    Service = "Pediatrics"
-    '    SubMenu.Show()
-    '    Me.Hide()
-    'End Sub
-
-    ' Status Change in Grid 
-
-    ' Step 1: Forces the ComboBox cell to commit as soon as the user picks a value
-    ' Without this, CellValueChanged won't fire until the user clicks elsewhere
     Private Sub dgvSummary_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles dgvSummary.CurrentCellDirtyStateChanged
         If dgvSummary.IsCurrentCellDirty Then
             dgvSummary.CommitEdit(DataGridViewDataErrorContexts.Commit)
@@ -114,7 +143,7 @@
     Private Sub dgvSummary_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSummary.CellValueChanged
         If e.RowIndex >= 0 AndAlso e.ColumnIndex = 5 Then
             If dgvSummary.Rows(e.RowIndex).Cells(0).Value IsNot Nothing AndAlso
-               dgvSummary.Rows(e.RowIndex).Cells(5).Value IsNot Nothing Then
+           dgvSummary.Rows(e.RowIndex).Cells(5).Value IsNot Nothing Then
 
                 Dim selectedID As String = dgvSummary.Rows(e.RowIndex).Cells(0).Value.ToString
                 Dim newStatus As String = dgvSummary.Rows(e.RowIndex).Cells(5).Value.ToString
@@ -122,9 +151,17 @@
                 For i As Integer = 0 To CurrentCount - 1
                     If arrID(i) = selectedID Then
                         arrStatus(i) = newStatus
+
+                        If newStatus = "Completed" OrElse newStatus = "Cancelled" Then
+                            arrDateProcessed(i) = DateTime.Now.ToString("MM/dd/yyyy hh:mm tt")
+                        Else
+                            arrDateProcessed(i) = ""
+                        End If
+
                         Exit For
                     End If
                 Next
+                RefreshSummaryGrid()
             End If
         End If
     End Sub
@@ -203,19 +240,10 @@
         tmpStr = arrStatus(i) : arrStatus(i) = arrStatus(j) : arrStatus(j) = tmpStr
         tmpStr = arrSchedule(i) : arrSchedule(i) = arrSchedule(j) : arrSchedule(j) = tmpStr
         tmpStr = arrCancelReason(i) : arrCancelReason(i) = arrCancelReason(j) : arrCancelReason(j) = tmpStr
+        tmpStr = arrDateCreated(i) : arrDateCreated(i) = arrDateCreated(j) : arrDateCreated(j) = tmpStr
+        tmpStr = arrDateProcessed(i) : arrDateProcessed(i) = arrDateProcessed(j) : arrDateProcessed(j) = tmpStr
     End Sub
 
-    ' When a row is clicked in the grid, pre-fill the Patient ID search box
-    ' in EditPatientFrm and open it — same approach as AdminFrm
-    Private Sub dgvSummary_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSummary.CellClick
-        If e.RowIndex >= 0 Then
-            Dim clickedID As String = dgvSummary.Rows(e.RowIndex).Cells(0).Value.ToString()
-            EditPatientFrm.txtSearchID.Text = clickedID
-            EditPatientFrm.CallerForm = "Main"  ' so EditPatientFrm returns here after save/delete
-            Me.Hide()
-            EditPatientFrm.Show()
-        End If
-    End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         AddPatient_Frm.Show()
@@ -227,7 +255,56 @@
         Hide()
     End Sub
 
-    Private Sub Panel15_Paint(sender As Object, e As PaintEventArgs) Handles Panel15.Paint
+    Private Sub btnEditPatient_Click(sender As Object, e As EventArgs) Handles btnEditPatient.Click
 
+
+        If dgvSummary.CurrentRow IsNot Nothing AndAlso dgvSummary.CurrentRow.Index >= 0 Then
+
+
+            Dim selectedID As String = dgvSummary.CurrentRow.Cells(0).Value.ToString()
+            EditPatientFrm.txtSearchID.Text = selectedID
+            EditPatientFrm.CallerForm = "Main"
+
+            EditPatientFrm.WindowState = FormWindowState.Normal
+            EditPatientFrm.StartPosition = FormStartPosition.CenterScreen
+
+            EditPatientFrm.Show()
+            EditPatientFrm.BringToFront()
+            EditPatientFrm.Focus()
+
+            Me.Hide()
+        Else
+            MessageBox.Show("Please select a patient from the list first.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
     End Sub
+
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        ReportsFrm.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnDB_Click(sender As Object, e As EventArgs) Handles btnDB.Click
+        RefreshSummaryGrid()
+    End Sub
+
+    '    Private Sub dgvSummary_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvSummary.CellFormatting
+    '        If e.ColumnIndex = 5 AndAlso e.RowIndex >= 0 Then
+    '            If e.Value IsNot Nothing Then
+    '                Dim status As String = e.Value.ToString()
+
+    '                Select Case status
+    '                    Case "Pending"
+    '                        e.CellStyle.BackColor = Color.Gray
+    '                        e.CellStyle.ForeColor = Color.White
+    '                    Case "Completed"
+    '                        e.CellStyle.BackColor = Color.MediumSeaGreen
+    '                        e.CellStyle.ForeColor = Color.White
+    '                    Case "Cancelled"
+    '                        e.CellStyle.BackColor = Color.Crimson
+    '                        e.CellStyle.ForeColor = Color.White
+    '                End Select
+    '            End If
+    '        End If
+    '    End Sub
 End Class
+

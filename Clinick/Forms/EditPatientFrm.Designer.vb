@@ -82,8 +82,8 @@ Partial Class EditPatientFrm
         Label14 = New Label()
         grpPatientInfo = New GroupBox()
         Label2 = New Label()
-        DateTimePicker1 = New DateTimePicker()
-        TextBox1 = New TextBox()
+        dtpDOB = New DateTimePicker()
+        txtAge = New TextBox()
         Label3 = New Label()
         Label4 = New Label()
         btnClear = New Button()
@@ -107,7 +107,6 @@ Partial Class EditPatientFrm
         PictureBox12 = New PictureBox()
         PictureBox13 = New PictureBox()
         PictureBox14 = New PictureBox()
-        btnMedicalRecords = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -263,7 +262,7 @@ Partial Class EditPatientFrm
         btnDelete.BackColor = Color.PowderBlue
         btnDelete.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         btnDelete.ForeColor = Color.DarkSlateGray
-        btnDelete.Location = New Point(298, 446)
+        btnDelete.Location = New Point(309, 446)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(245, 66)
         btnDelete.TabIndex = 34
@@ -275,7 +274,7 @@ Partial Class EditPatientFrm
         btnCancel.BackColor = Color.PowderBlue
         btnCancel.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         btnCancel.ForeColor = Color.DarkSlateGray
-        btnCancel.Location = New Point(661, 446)
+        btnCancel.Location = New Point(634, 446)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(200, 66)
         btnCancel.TabIndex = 35
@@ -878,8 +877,8 @@ Partial Class EditPatientFrm
         ' 
         grpPatientInfo.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         grpPatientInfo.Controls.Add(Label2)
-        grpPatientInfo.Controls.Add(DateTimePicker1)
-        grpPatientInfo.Controls.Add(TextBox1)
+        grpPatientInfo.Controls.Add(dtpDOB)
+        grpPatientInfo.Controls.Add(txtAge)
         grpPatientInfo.Controls.Add(Label3)
         grpPatientInfo.Controls.Add(Label4)
         grpPatientInfo.Controls.Add(btnClear)
@@ -915,24 +914,24 @@ Partial Class EditPatientFrm
         Label2.TabIndex = 47
         Label2.Text = "Date of Birth:"
         ' 
-        ' DateTimePicker1
+        ' dtpDOB
         ' 
-        DateTimePicker1.CalendarFont = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Location = New Point(118, 150)
-        DateTimePicker1.Margin = New Padding(3, 2, 3, 2)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(251, 23)
-        DateTimePicker1.TabIndex = 46
+        dtpDOB.CalendarFont = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpDOB.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpDOB.Location = New Point(118, 150)
+        dtpDOB.Margin = New Padding(3, 2, 3, 2)
+        dtpDOB.Name = "dtpDOB"
+        dtpDOB.Size = New Size(251, 23)
+        dtpDOB.TabIndex = 46
         ' 
-        ' TextBox1
+        ' txtAge
         ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(11, 151)
-        TextBox1.Margin = New Padding(3, 2, 3, 2)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(85, 20)
-        TextBox1.TabIndex = 45
+        txtAge.Font = New Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtAge.Location = New Point(11, 151)
+        txtAge.Margin = New Padding(3, 2, 3, 2)
+        txtAge.Name = "txtAge"
+        txtAge.Size = New Size(85, 20)
+        txtAge.TabIndex = 45
         ' 
         ' Label3
         ' 
@@ -1174,7 +1173,7 @@ Partial Class EditPatientFrm
         PictureBox13.BackColor = Color.PowderBlue
         PictureBox13.BackgroundImage = CType(resources.GetObject("PictureBox13.BackgroundImage"), Image)
         PictureBox13.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox13.Location = New Point(329, 464)
+        PictureBox13.Location = New Point(337, 464)
         PictureBox13.Margin = New Padding(3, 2, 3, 2)
         PictureBox13.Name = "PictureBox13"
         PictureBox13.Size = New Size(41, 31)
@@ -1186,21 +1185,12 @@ Partial Class EditPatientFrm
         PictureBox14.BackColor = Color.PowderBlue
         PictureBox14.BackgroundImage = CType(resources.GetObject("PictureBox14.BackgroundImage"), Image)
         PictureBox14.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox14.Location = New Point(687, 464)
+        PictureBox14.Location = New Point(661, 464)
         PictureBox14.Margin = New Padding(3, 2, 3, 2)
         PictureBox14.Name = "PictureBox14"
         PictureBox14.Size = New Size(41, 31)
         PictureBox14.TabIndex = 53
         PictureBox14.TabStop = False
-        ' 
-        ' btnMedicalRecords
-        ' 
-        btnMedicalRecords.Location = New Point(556, 458)
-        btnMedicalRecords.Name = "btnMedicalRecords"
-        btnMedicalRecords.Size = New Size(97, 48)
-        btnMedicalRecords.TabIndex = 54
-        btnMedicalRecords.Text = "Medical Records"
-        btnMedicalRecords.UseVisualStyleBackColor = True
         ' 
         ' EditPatientFrm
         ' 
@@ -1208,7 +1198,6 @@ Partial Class EditPatientFrm
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightCyan
         ClientSize = New Size(881, 541)
-        Controls.Add(btnMedicalRecords)
         Controls.Add(PictureBox14)
         Controls.Add(PictureBox13)
         Controls.Add(PictureBox12)
@@ -1325,8 +1314,8 @@ Partial Class EditPatientFrm
     Friend WithEvents Label14 As Label
     Friend WithEvents grpPatientInfo As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents dtpDOB As DateTimePicker
+    Friend WithEvents txtAge As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Label4 As Label
@@ -1363,5 +1352,4 @@ Partial Class EditPatientFrm
     Friend WithEvents PictureBox12 As PictureBox
     Friend WithEvents PictureBox13 As PictureBox
     Friend WithEvents PictureBox14 As PictureBox
-    Friend WithEvents btnMedicalRecords As Button
 End Class

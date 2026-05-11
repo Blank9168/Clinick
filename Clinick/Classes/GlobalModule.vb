@@ -14,6 +14,8 @@
     Public arrCancelReason(100) As String
     Public arrAge(100) As Integer
     Public arrBday(100) As Date
+    Public arrDateCreated(100) As String
+    Public arrDateProcessed(100) As String
 
     ' Medical Records — parallel arrays
     ' Each index matches the same patient index in the main arrays above
@@ -27,5 +29,14 @@
     Public TotalGeneral As Integer = 0
     Public TotalDental As Integer = 0
     Public TotalPedia As Integer = 0
+    Public pending As Integer = 0
+    Public completed As Integer = 0
+    Public cancelled As Integer = 0
+
+    'for login'
+    Public user As String = " "
+    Public password As String = " "
+    Public CurrentUser As String = ""
+
 
 End Module

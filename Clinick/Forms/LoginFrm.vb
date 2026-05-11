@@ -6,21 +6,20 @@
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = txtUsername.Text
         Dim password As String = txtPassword.Text
-        Dim employee As String = "Employee"
-        Dim employeePass As String = "Clinick123"
-        Dim admin As String = "Admin"
-        Dim adminPass As String = "Admin123"
 
-        If username = employee AndAlso password = employeePass Then
+
+        If username = "Employee" AndAlso password = "Clinick123" Then
+            CurrentUser = "Employee"
             MessageBox.Show("Login successful! Welcome, Employee.")
             MainFrm.Show()
             Me.Hide()
-        ElseIf username = admin AndAlso password = adminPass Then
+        ElseIf username = "Admin" AndAlso password = "Admin123" Then
+            CurrentUser = "Admin"
             MessageBox.Show("Login successful! Welcome, Admin.")
-            AdminFrm.Show()
+            MainFrm.Show()
             Me.Hide()
         Else
-            MessageBox.Show("Invalid username or password. Please try again.")
+            MessageBox.Show("Invalid username or password.")
         End If
 
     End Sub
@@ -31,9 +30,5 @@
         Else
             txtPassword.UseSystemPasswordChar = True
         End If
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
     End Sub
 End Class

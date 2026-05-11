@@ -346,7 +346,7 @@ Partial Class AddPatient_Frm
         ' PictureBox3
         ' 
         PictureBox3.BackColor = Color.Teal
-        PictureBox3.Location = New Point(129, 69)
+        PictureBox3.Location = New Point(129, 72)
         PictureBox3.Margin = New Padding(3, 2, 3, 2)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(631, 46)

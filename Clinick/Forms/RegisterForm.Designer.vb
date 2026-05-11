@@ -1099,18 +1099,22 @@ Partial Class RegisterForm
         ' 
         ' btnAppointPAtient
         ' 
-        btnAppointPAtient.Location = New Point(208, 410)
+        btnAppointPAtient.BackColor = Color.Teal
+        btnAppointPAtient.FlatStyle = FlatStyle.Flat
+        btnAppointPAtient.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAppointPAtient.ForeColor = Color.White
+        btnAppointPAtient.Location = New Point(208, 421)
         btnAppointPAtient.Name = "btnAppointPAtient"
-        btnAppointPAtient.Size = New Size(400, 68)
+        btnAppointPAtient.Size = New Size(438, 57)
         btnAppointPAtient.TabIndex = 76
         btnAppointPAtient.Text = "Schedule Appointment"
-        btnAppointPAtient.UseVisualStyleBackColor = True
+        btnAppointPAtient.UseVisualStyleBackColor = False
         ' 
         ' RegisterForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
+        BackColor = Color.FromArgb(CByte(249), CByte(251), CByte(253))
         ClientSize = New Size(864, 504)
         Controls.Add(btnAppointPAtient)
         Controls.Add(PictureBox8)

@@ -94,30 +94,31 @@ Public Class ReportsFrm
     Private Sub prntDoc_PrintPage(sender As Object, e As PrintPageEventArgs) Handles prntDoc.PrintPage
         Dim fontTitle As New Font("Arial", 16, FontStyle.Bold)
         Dim fontHeader As New Font("Arial", 10, FontStyle.Bold)
-        Dim fontBody As New Font("Arial", 9, FontStyle.Regular)
-        Dim leftMargin As Integer = e.MarginBounds.Left
-        Dim topMargin As Integer = e.MarginBounds.Top
-        Dim yPos As Integer = topMargin
+        Dim fontBody As New Font("Arial", 8, FontStyle.Regular)
 
-        e.Graphics.DrawString(currentReportTitle, fontTitle, Brushes.Black, leftMargin, yPos)
+        Dim startX As Integer = 30
+        Dim startY As Integer = 40
+        Dim yPos As Integer = startY
+
+        e.Graphics.DrawString(currentReportTitle, fontTitle, Brushes.Black, startX, yPos)
         yPos += 40
 
-        Dim xPos As Integer = leftMargin
-        ' Adjusted widths for longer date strings
-        Dim colWidths As Integer() = {50, 120, 100, 180, 70, 180}
+        Dim xPos As Integer = startX
+        Dim colWidths As Integer() = {50, 100, 220, 160, 70, 160}
         Dim headers As String() = {"ID", "Patient", "Service", "Schedule", "Status", "Processed"}
 
         For i As Integer = 0 To headers.Length - 1
             e.Graphics.DrawString(headers(i), fontHeader, Brushes.Black, xPos, yPos)
             xPos += colWidths(i)
         Next
+
         yPos += 25
-        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, leftMargin + 700, yPos)
+        e.Graphics.DrawLine(Pens.Black, startX, yPos, startX + 760, yPos)
         yPos += 10
 
         For Each row As DataGridViewRow In dgvReports.Rows
             If Not row.IsNewRow Then
-                xPos = leftMargin
+                xPos = startX
                 For j As Integer = 0 To 5
                     Dim cellValue As String = If(row.Cells(j).Value?.ToString(), "")
                     e.Graphics.DrawString(cellValue, fontBody, Brushes.Black, xPos, yPos)

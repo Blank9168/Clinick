@@ -57,7 +57,8 @@
         MessageBox.Show("New patient registered: " & targetID)
 
         ClearPatientForm()
-        MainFrm.Show()
+        PatientRecords_Frm.LoadAllPatients()
+        PatientRecords_Frm.Show()
         Me.Close()
     End Sub
 

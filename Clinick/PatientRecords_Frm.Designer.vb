@@ -41,6 +41,7 @@ Partial Class PatientRecords_Frm
         Label2 = New Label()
         Label1 = New Label()
         PictureBox5 = New PictureBox()
+        btnAdd = New Button()
         CType(dgvPatientHistory, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -62,7 +63,7 @@ Partial Class PatientRecords_Frm
         ' 
         btnSearch.BackColor = Color.Teal
         btnSearch.FlatStyle = FlatStyle.Flat
-        btnSearch.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSearch.ForeColor = Color.Transparent
         btnSearch.Location = New Point(365, 22)
         btnSearch.Name = "btnSearch"
@@ -127,7 +128,7 @@ Partial Class PatientRecords_Frm
         ' btnClose
         ' 
         btnClose.FlatStyle = FlatStyle.Flat
-        btnClose.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClose.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnClose.ForeColor = Color.Teal
         btnClose.Location = New Point(713, 23)
         btnClose.Name = "btnClose"
@@ -149,6 +150,7 @@ Partial Class PatientRecords_Frm
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
+        Panel1.Controls.Add(btnAdd)
         Panel1.Controls.Add(PictureBox4)
         Panel1.Controls.Add(PictureBox3)
         Panel1.Controls.Add(btnClose)
@@ -195,7 +197,7 @@ Partial Class PatientRecords_Frm
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Teal
         Label2.Location = New Point(78, 18)
         Label2.Name = "Label2"
@@ -224,9 +226,22 @@ Partial Class PatientRecords_Frm
         PictureBox5.TabIndex = 18
         PictureBox5.TabStop = False
         ' 
+        ' btnAdd
+        ' 
+        btnAdd.BackColor = Color.Teal
+        btnAdd.FlatStyle = FlatStyle.Flat
+        btnAdd.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAdd.ForeColor = Color.Transparent
+        btnAdd.Location = New Point(491, 22)
+        btnAdd.Name = "btnAdd"
+        btnAdd.Size = New Size(120, 35)
+        btnAdd.TabIndex = 18
+        btnAdd.Text = "Add"
+        btnAdd.UseVisualStyleBackColor = True
+        ' 
         ' PatientRecords_Frm
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(249), CByte(251), CByte(253))
         ClientSize = New Size(880, 595)
@@ -269,4 +284,5 @@ Partial Class PatientRecords_Frm
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents btnAdd As Button
 End Class

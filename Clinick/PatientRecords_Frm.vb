@@ -1,9 +1,9 @@
 ﻿Public Class PatientRecords_Frm
-    Private Sub PatientRecords_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub PatientRecords_Frm_Activated(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadAllPatients()
     End Sub
 
-    Private Sub LoadAllPatients()
+    Public Sub LoadAllPatients()
         dgvPatientHistory.Rows.Clear()
 
         For i As Integer = 0 To MasterCount - 1
@@ -72,5 +72,10 @@
             AddPatient_Frm.Show()
             Me.Hide()
         End If
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        AddPatient_Frm.Show()
+        Me.Hide()
     End Sub
 End Class

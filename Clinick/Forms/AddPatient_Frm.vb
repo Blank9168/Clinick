@@ -5,20 +5,16 @@
         rbMale.Checked = False
         rbFemale.Checked = False
         txtAge.Clear()
-        dtpBday.Value = New DateTime(2000, 1, 1)
-        txtPatientName.Focus()
+        dtpBday.Value = DateTime.Now
         UpdateNextID()
+        txtPatientName.Focus()
     End Sub
 
     Private Sub AddPatient_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Only generate a new ID if we aren't editing someone from the records list
-        If lblPatientID.Text = "[ID]" Or lblPatientID.Text = "" Then
-            UpdateNextID()
-        End If
+        UpdateNextID()
     End Sub
 
     Private Sub UpdateNextID()
-
         lblPatientID.Text = "P-" & (1001 + MasterCount).ToString()
     End Sub
 
@@ -28,56 +24,41 @@
     End Sub
 
     Private Sub btnAddPatient_Click(sender As Object, e As EventArgs) Handles btnAddPatient.Click
+        Dim inputName As String = txtPatientName.Text.Trim()
 
-        If MasterCount >= 1000 Then ' Use the size of your Master Array
-            MessageBox.Show("Maximum registration limit reached.")
+        If String.IsNullOrWhiteSpace(inputName) Then
+            MessageBox.Show("Please enter a patient name.")
             Return
         End If
 
-        If String.IsNullOrWhiteSpace(txtPatientName.Text) Then
-            MessageBox.Show("Please enter a valid patient name.")
-            Return
-        End If
-
-
-        Dim targetID As String = lblPatientID.Text
-        Dim isNew As Boolean = True
-        Dim masterIndex As Integer = -1
-
-
+        ' Duplicate Check before incrementing
         For i As Integer = 0 To MasterCount - 1
-            If arrMasterID(i) = targetID Then
-                isNew = False
-                masterIndex = i
-                Exit For
+            If arrMasterName(i).Equals(inputName, StringComparison.OrdinalIgnoreCase) Then
+                MessageBox.Show("Patient '" & inputName & "' is already registered.", "Duplicate Entry")
+                Return
             End If
         Next
 
-        If isNew Then
+        ' Increment and Save
+        Dim targetID As String = lblPatientID.Text
 
-            arrMasterID(MasterCount) = targetID
-            arrMasterName(MasterCount) = txtPatientName.Text.Trim()
-            arrMasterContact(MasterCount) = txtContactInfo.Text.Trim()
-            arrMasterSex(MasterCount) = If(rbMale.Checked, "Male", "Female")
-            arrMasterAge(MasterCount) = CInt(txtAge.Text)
-            arrMasterBday(MasterCount) = dtpBday.Value
+        arrMasterID(MasterCount) = targetID
+        arrMasterName(MasterCount) = inputName
+        arrMasterContact(MasterCount) = txtContactInfo.Text.Trim()
+        arrMasterSex(MasterCount) = If(rbMale.Checked, "Male", "Female")
 
-            MasterCount += 1
-            MessageBox.Show("New patient registered successfully: " & targetID)
-        Else
+        Dim ageVal As Integer = 0
+        Integer.TryParse(txtAge.Text, ageVal)
+        arrMasterAge(MasterCount) = ageVal
+        arrMasterBday(MasterCount) = dtpBday.Value
 
-            arrMasterName(masterIndex) = txtPatientName.Text.Trim()
-            arrMasterContact(masterIndex) = txtContactInfo.Text.Trim()
-            arrMasterSex(masterIndex) = If(rbMale.Checked, "Male", "Female")
-            arrMasterAge(masterIndex) = CInt(txtAge.Text)
-            arrMasterBday(masterIndex) = dtpBday.Value
+        MasterCount += 1 ' ID increments here
 
-            MessageBox.Show("Patient profile updated for " & targetID)
-        End If
+        MessageBox.Show("New patient registered: " & targetID)
 
         ClearPatientForm()
-        Me.Close()
         MainFrm.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -88,9 +69,7 @@
         Dim today As Date = Date.Today
         Dim bday As Date = dtpBday.Value
         Dim age As Integer = today.Year - bday.Year
-        If bday.Month > today.Month OrElse (bday.Month = today.Month AndAlso bday.Day > today.Day) Then
-            age -= 1
-        End If
+        If bday > today.AddYears(-age) Then age -= 1
         txtAge.Text = age.ToString()
     End Sub
 End Class

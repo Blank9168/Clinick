@@ -134,28 +134,27 @@
 
     ' Step 2: Now fires immediately after CommitEdit — updates the parallel array
     Private Sub dgvSummary_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSummary.CellValueChanged
+        ' Index 5 is the Status Column
         If e.RowIndex >= 0 AndAlso e.ColumnIndex = 5 Then
 
             Dim selectedID As String = dgvSummary.Rows(e.RowIndex).Cells(0).Value.ToString()
-            Dim selectedStatus As String = dgvSummary.Rows(e.RowIndex).Cells(5).Value.ToString()
+            Dim newStatus As String = dgvSummary.Rows(e.RowIndex).Cells(5).Value.ToString()
 
             For i As Integer = 0 To CurrentCount - 1
                 If arrID(i) = selectedID Then
-                    arrStatus(i) = selectedStatus
+                    arrStatus(i) = newStatus
 
-                    If selectedStatus = "Completed" Or selectedStatus = "Cancelled" Then
+                    If newStatus = "Completed" Or newStatus = "Cancelled" Then
                         arrDateProcessed(i) = DateTime.Now.ToString("MM/dd/yyyy @ hh:mm tt")
                     Else
                         arrDateProcessed(i) = ""
                     End If
-                    Exit For
+
                 End If
             Next
-
-
             RefreshSummaryGrid()
-
         End If
+
     End Sub
 
 

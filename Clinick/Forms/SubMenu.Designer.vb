@@ -25,18 +25,9 @@ Partial Class SubMenu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SubMenu))
         btnBack = New Button()
         Panel1 = New Panel()
-        PictureBox8 = New PictureBox()
         Label5 = New Label()
         Label1 = New Label()
         Panel2 = New Panel()
-        PictureBox6 = New PictureBox()
-        PictureBox5 = New PictureBox()
-        PictureBox4 = New PictureBox()
-        Label9 = New Label()
-        Label3 = New Label()
-        Label8 = New Label()
-        Label7 = New Label()
-        Label6 = New Label()
         Label2 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox2 = New PictureBox()
@@ -44,17 +35,26 @@ Partial Class SubMenu
         PictureBox1 = New PictureBox()
         btnDentalS = New Button()
         btnPediatrics = New Button()
+        Label6 = New Label()
+        Label7 = New Label()
+        Label8 = New Label()
+        Label3 = New Label()
+        Label9 = New Label()
+        PictureBox4 = New PictureBox()
+        PictureBox5 = New PictureBox()
+        PictureBox6 = New PictureBox()
         PictureBox7 = New PictureBox()
+        PictureBox8 = New PictureBox()
         Panel1.SuspendLayout()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnBack
@@ -83,16 +83,6 @@ Partial Class SubMenu
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(696, 111)
         Panel1.TabIndex = 2
-        ' 
-        ' PictureBox8
-        ' 
-        PictureBox8.BackgroundImage = My.Resources.Resources.Iconsss__8_
-        PictureBox8.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox8.Location = New Point(23, 17)
-        PictureBox8.Name = "PictureBox8"
-        PictureBox8.Size = New Size(91, 75)
-        PictureBox8.TabIndex = 42
-        PictureBox8.TabStop = False
         ' 
         ' Label5
         ' 
@@ -139,99 +129,6 @@ Partial Class SubMenu
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(696, 430)
         Panel2.TabIndex = 26
-        ' 
-        ' PictureBox6
-        ' 
-        PictureBox6.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        PictureBox6.BackgroundImage = My.Resources.Resources.Iconsss__6_
-        PictureBox6.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox6.Location = New Point(503, 341)
-        PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(16, 26)
-        PictureBox6.TabIndex = 50
-        PictureBox6.TabStop = False
-        ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        PictureBox5.BackgroundImage = My.Resources.Resources.Iconsss__6_
-        PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox5.Location = New Point(503, 249)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(16, 26)
-        PictureBox5.TabIndex = 49
-        PictureBox5.TabStop = False
-        ' 
-        ' PictureBox4
-        ' 
-        PictureBox4.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        PictureBox4.BackgroundImage = My.Resources.Resources.Iconsss__6_
-        PictureBox4.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox4.Location = New Point(503, 161)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(16, 26)
-        PictureBox4.TabIndex = 48
-        PictureBox4.TabStop = False
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Label9.Font = New Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.DarkSlateGray
-        Label9.Location = New Point(197, 351)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(166, 26)
-        Label9.TabIndex = 47
-        Label9.Text = "Expert care for children's health" & vbCrLf & "and development" & vbCrLf
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Label3.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.Teal
-        Label3.Location = New Point(193, 326)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(97, 25)
-        Label3.TabIndex = 46
-        Label3.Text = "Pediatrics"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Label8.Font = New Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.ForeColor = Color.DarkSlateGray
-        Label8.Location = New Point(197, 262)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(136, 26)
-        Label8.TabIndex = 45
-        Label8.Text = "Schedule an appointment" & vbCrLf & "with our dentist" & vbCrLf
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Label7.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.Teal
-        Label7.Location = New Point(193, 235)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(139, 25)
-        Label7.TabIndex = 44
-        Label7.Text = "Dental Service"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Label6.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.Teal
-        Label6.Location = New Point(188, 144)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(200, 25)
-        Label6.TabIndex = 43
-        Label6.Text = "General Consultation"
         ' 
         ' Label2
         ' 
@@ -323,6 +220,99 @@ Partial Class SubMenu
         btnPediatrics.TabIndex = 36
         btnPediatrics.UseVisualStyleBackColor = False
         ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        Label6.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.Teal
+        Label6.Location = New Point(188, 144)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(200, 25)
+        Label6.TabIndex = 43
+        Label6.Text = "General Consultation"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        Label7.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.Teal
+        Label7.Location = New Point(193, 235)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(139, 25)
+        Label7.TabIndex = 44
+        Label7.Text = "Dental Service"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        Label8.Font = New Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.DarkSlateGray
+        Label8.Location = New Point(197, 262)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(136, 26)
+        Label8.TabIndex = 45
+        Label8.Text = "Schedule an appointment" & vbCrLf & "with our dentist" & vbCrLf
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        Label3.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.Teal
+        Label3.Location = New Point(193, 326)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(97, 25)
+        Label3.TabIndex = 46
+        Label3.Text = "Pediatrics"
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        Label9.Font = New Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.DarkSlateGray
+        Label9.Location = New Point(197, 351)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(166, 26)
+        Label9.TabIndex = 47
+        Label9.Text = "Expert care for children's health" & vbCrLf & "and development" & vbCrLf
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        PictureBox4.BackgroundImage = My.Resources.Resources.Iconsss__6_
+        PictureBox4.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox4.Location = New Point(503, 161)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(16, 26)
+        PictureBox4.TabIndex = 48
+        PictureBox4.TabStop = False
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        PictureBox5.BackgroundImage = My.Resources.Resources.Iconsss__6_
+        PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox5.Location = New Point(503, 249)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(16, 26)
+        PictureBox5.TabIndex = 49
+        PictureBox5.TabStop = False
+        ' 
+        ' PictureBox6
+        ' 
+        PictureBox6.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
+        PictureBox6.BackgroundImage = My.Resources.Resources.Iconsss__6_
+        PictureBox6.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox6.Location = New Point(503, 341)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(16, 26)
+        PictureBox6.TabIndex = 50
+        PictureBox6.TabStop = False
+        ' 
         ' PictureBox7
         ' 
         PictureBox7.BackColor = Color.FromArgb(CByte(246), CByte(250), CByte(252))
@@ -333,6 +323,16 @@ Partial Class SubMenu
         PictureBox7.Size = New Size(24, 26)
         PictureBox7.TabIndex = 51
         PictureBox7.TabStop = False
+        ' 
+        ' PictureBox8
+        ' 
+        PictureBox8.BackgroundImage = My.Resources.Resources.Iconsss__8_
+        PictureBox8.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox8.Location = New Point(23, 17)
+        PictureBox8.Name = "PictureBox8"
+        PictureBox8.Size = New Size(91, 75)
+        PictureBox8.TabIndex = 42
+        PictureBox8.TabStop = False
         ' 
         ' SubMenu
         ' 
@@ -351,16 +351,16 @@ Partial Class SubMenu
         Text = "Sub Menu"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 

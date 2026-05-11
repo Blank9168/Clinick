@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainFrm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
@@ -139,7 +139,7 @@ Partial Class MainFrm
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
         Label2.Location = New Point(189, 94)
         Label2.Name = "Label2"
@@ -154,7 +154,7 @@ Partial Class MainFrm
         dgvSummary.BackgroundColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -225,7 +225,7 @@ Partial Class MainFrm
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
         Label9.Location = New Point(196, 254)
         Label9.Name = "Label9"
@@ -242,7 +242,7 @@ Partial Class MainFrm
         ' txtSearch
         ' 
         txtSearch.BorderStyle = BorderStyle.FixedSingle
-        txtSearch.Font = New Font("Microsoft Sans Serif", 10F)
+        txtSearch.Font = New Font("Microsoft Sans Serif", 10.0F)
         txtSearch.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         txtSearch.Location = New Point(196, 220)
         txtSearch.Name = "txtSearch"
@@ -253,7 +253,7 @@ Partial Class MainFrm
         ' cmbFilter
         ' 
         cmbFilter.BackColor = SystemColors.ControlLightLight
-        cmbFilter.Font = New Font("Microsoft Sans Serif", 10F)
+        cmbFilter.Font = New Font("Microsoft Sans Serif", 10.0F)
         cmbFilter.FormattingEnabled = True
         cmbFilter.Location = New Point(382, 219)
         cmbFilter.Name = "cmbFilter"
@@ -265,7 +265,7 @@ Partial Class MainFrm
         btnSortName.BackColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
         btnSortName.Cursor = Cursors.Hand
         btnSortName.FlatStyle = FlatStyle.Flat
-        btnSortName.Font = New Font("Microsoft Sans Serif", 10F)
+        btnSortName.Font = New Font("Microsoft Sans Serif", 10.0F)
         btnSortName.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnSortName.Location = New Point(510, 215)
         btnSortName.Name = "btnSortName"
@@ -279,7 +279,7 @@ Partial Class MainFrm
         btnSortSched.BackColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
         btnSortSched.Cursor = Cursors.Hand
         btnSortSched.FlatStyle = FlatStyle.Flat
-        btnSortSched.Font = New Font("Microsoft Sans Serif", 10F)
+        btnSortSched.Font = New Font("Microsoft Sans Serif", 10.0F)
         btnSortSched.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnSortSched.Location = New Point(632, 215)
         btnSortSched.Name = "btnSortSched"
@@ -305,7 +305,7 @@ Partial Class MainFrm
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label5.Location = New Point(48, 11)
         Label5.Name = "Label5"
@@ -379,7 +379,7 @@ Partial Class MainFrm
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label6.Location = New Point(48, 25)
         Label6.Name = "Label6"
@@ -416,7 +416,7 @@ Partial Class MainFrm
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label11.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label11.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label11.Location = New Point(46, 11)
         Label11.Name = "Label11"
@@ -438,7 +438,7 @@ Partial Class MainFrm
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label10.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label10.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label10.Location = New Point(46, 26)
         Label10.Name = "Label10"
@@ -512,7 +512,7 @@ Partial Class MainFrm
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label4.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label4.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label4.Location = New Point(47, 10)
         Label4.Name = "Label4"
@@ -534,7 +534,7 @@ Partial Class MainFrm
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label3.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label3.Location = New Point(47, 26)
         Label3.Name = "Label3"
@@ -608,7 +608,7 @@ Partial Class MainFrm
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label13.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label13.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label13.Location = New Point(53, 11)
         Label13.Name = "Label13"
@@ -630,7 +630,7 @@ Partial Class MainFrm
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label15.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold)
         Label15.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label15.Location = New Point(52, 25)
         Label15.Name = "Label15"
@@ -723,7 +723,7 @@ Partial Class MainFrm
         ' LblDateTime
         ' 
         LblDateTime.AutoSize = True
-        LblDateTime.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LblDateTime.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         LblDateTime.Location = New Point(9, 4)
         LblDateTime.Margin = New Padding(2, 0, 2, 0)
         LblDateTime.Name = "LblDateTime"
@@ -733,7 +733,7 @@ Partial Class MainFrm
         ' LblDate
         ' 
         LblDate.AutoSize = True
-        LblDate.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        LblDate.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
         LblDate.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
         LblDate.Location = New Point(667, 94)
         LblDate.Name = "LblDate"
@@ -768,7 +768,7 @@ Partial Class MainFrm
         btnEditPatient.BackColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
         btnEditPatient.Cursor = Cursors.Hand
         btnEditPatient.FlatStyle = FlatStyle.Flat
-        btnEditPatient.Font = New Font("Microsoft Sans Serif", 10F)
+        btnEditPatient.Font = New Font("Microsoft Sans Serif", 10.0F)
         btnEditPatient.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         btnEditPatient.Location = New Point(778, 215)
         btnEditPatient.Name = "btnEditPatient"
@@ -800,15 +800,14 @@ Partial Class MainFrm
         ' 
         ' btnPatientRecord
         ' 
-        btnPatientRecord.BackgroundImage = My.Resources.Resources.Iconsss__11_
-        btnPatientRecord.BackgroundImageLayout = ImageLayout.Zoom
         btnPatientRecord.Cursor = Cursors.Hand
         btnPatientRecord.FlatStyle = FlatStyle.Flat
         btnPatientRecord.ForeColor = Color.Azure
         btnPatientRecord.Location = New Point(11, 458)
         btnPatientRecord.Name = "btnPatientRecord"
-        btnPatientRecord.Size = New Size(159, 47)
+        btnPatientRecord.Size = New Size(133, 54)
         btnPatientRecord.TabIndex = 28
+        btnPatientRecord.Text = "patient Record"
         btnPatientRecord.UseVisualStyleBackColor = True
         ' 
         ' btnReport
@@ -818,7 +817,7 @@ Partial Class MainFrm
         btnReport.Cursor = Cursors.Hand
         btnReport.FlatStyle = FlatStyle.Flat
         btnReport.ForeColor = Color.Azure
-        btnReport.Location = New Point(11, 335)
+        btnReport.Location = New Point(12, 336)
         btnReport.Margin = New Padding(3, 2, 3, 2)
         btnReport.Name = "btnReport"
         btnReport.Size = New Size(156, 47)
@@ -832,7 +831,7 @@ Partial Class MainFrm
         btnDB.Cursor = Cursors.Hand
         btnDB.FlatStyle = FlatStyle.Flat
         btnDB.ForeColor = Color.Azure
-        btnDB.Location = New Point(11, 278)
+        btnDB.Location = New Point(12, 277)
         btnDB.Margin = New Padding(3, 2, 3, 2)
         btnDB.Name = "btnDB"
         btnDB.Size = New Size(156, 46)
@@ -855,7 +854,7 @@ Partial Class MainFrm
         ' 
         lblPositionDisplay.AutoSize = True
         lblPositionDisplay.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
-        lblPositionDisplay.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPositionDisplay.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPositionDisplay.ForeColor = Color.CadetBlue
         lblPositionDisplay.Location = New Point(50, 238)
         lblPositionDisplay.Name = "lblPositionDisplay"
@@ -914,7 +913,7 @@ Partial Class MainFrm
         ' 
         ' MainFrm
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         ClientSize = New Size(896, 634)

@@ -56,20 +56,20 @@
     Private Sub dgvPatientHistory_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPatientHistory.CellDoubleClick
         Dim i As Integer = e.RowIndex
         If i >= 0 Then
-            AddPatientFrm.lblPatientID.Text = dgvPatientHistory.Rows(i).Cells(0).Value.ToString()
-            AddPatientFrm.txtPatientName.Text = dgvPatientHistory.Rows(i).Cells(1).Value.ToString()
-            AddPatientFrm.txtContactInfo.Text = dgvPatientHistory.Rows(i).Cells(2).Value.ToString()
-            AddPatientFrm.txtAge.Text = dgvPatientHistory.Rows(i).Cells(3).Value.ToString()
+            AddPatient_Frm.lblPatientID.Text = dgvPatientHistory.Rows(i).Cells(0).Value.ToString()
+            AddPatient_Frm.txtPatientName.Text = dgvPatientHistory.Rows(i).Cells(1).Value.ToString()
+            AddPatient_Frm.txtContactInfo.Text = dgvPatientHistory.Rows(i).Cells(2).Value.ToString()
+            AddPatient_Frm.txtAge.Text = dgvPatientHistory.Rows(i).Cells(3).Value.ToString()
 
             If dgvPatientHistory.Rows(i).Cells(4).Value.ToString() = "Male" Then
-                AddPatientFrm.rbMale.Checked = True
+                AddPatient_Frm.rbMale.Checked = True
             Else
-                AddPatientFrm.rbFemale.Checked = True
+                AddPatient_Frm.rbFemale.Checked = True
             End If
 
-            AddPatientFrm.dtpBday.Value = CDate(dgvPatientHistory.Rows(i).Cells(5).Value)
+            AddPatient_Frm.dtpBday.Value = CDate(dgvPatientHistory.Rows(i).Cells(5).Value)
 
-            AddPatientFrm.Show()
+            AddPatient_Frm.Show()
             Me.Hide()
         End If
     End Sub

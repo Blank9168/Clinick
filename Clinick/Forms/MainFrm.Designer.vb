@@ -128,7 +128,7 @@ Partial Class MainFrm
         btnLogout.FlatStyle = FlatStyle.Flat
         btnLogout.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnLogout.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnLogout.Location = New Point(31, 567)
+        btnLogout.Location = New Point(37, 567)
         btnLogout.Margin = New Padding(2)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(106, 28)
@@ -733,17 +733,17 @@ Partial Class MainFrm
         ' LblDate
         ' 
         LblDate.AutoSize = True
-        LblDate.Font = New Font("MS Reference Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        LblDate.Location = New Point(512, 39)
+        LblDate.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        LblDate.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
+        LblDate.Location = New Point(667, 94)
         LblDate.Name = "LblDate"
-        LblDate.Size = New Size(0, 16)
+        LblDate.Size = New Size(0, 21)
         LblDate.TabIndex = 24
         ' 
         ' Panel1
         ' 
         Panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
         Panel1.BackColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
-        Panel1.Controls.Add(LblDate)
         Panel1.Controls.Add(LblDateTime)
         Panel1.Controls.Add(lblName)
         Panel1.Controls.Add(lblWelcome)
@@ -800,6 +800,7 @@ Partial Class MainFrm
         ' 
         ' btnPatientRecord
         ' 
+        btnPatientRecord.Cursor = Cursors.Hand
         btnPatientRecord.Location = New Point(28, 448)
         btnPatientRecord.Name = "btnPatientRecord"
         btnPatientRecord.Size = New Size(133, 54)
@@ -811,6 +812,7 @@ Partial Class MainFrm
         ' 
         btnReport.BackgroundImage = CType(resources.GetObject("btnReport.BackgroundImage"), Image)
         btnReport.BackgroundImageLayout = ImageLayout.Zoom
+        btnReport.Cursor = Cursors.Hand
         btnReport.FlatStyle = FlatStyle.Flat
         btnReport.ForeColor = Color.Azure
         btnReport.Location = New Point(12, 336)
@@ -824,6 +826,7 @@ Partial Class MainFrm
         ' 
         btnDB.BackgroundImage = CType(resources.GetObject("btnDB.BackgroundImage"), Image)
         btnDB.BackgroundImageLayout = ImageLayout.Zoom
+        btnDB.Cursor = Cursors.Hand
         btnDB.FlatStyle = FlatStyle.Flat
         btnDB.ForeColor = Color.Azure
         btnDB.Location = New Point(12, 277)
@@ -839,7 +842,7 @@ Partial Class MainFrm
         lblUserDisplay.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
         lblUserDisplay.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblUserDisplay.ForeColor = Color.FromArgb(CByte(71), CByte(124), CByte(125))
-        lblUserDisplay.Location = New Point(44, 210)
+        lblUserDisplay.Location = New Point(51, 211)
         lblUserDisplay.Name = "lblUserDisplay"
         lblUserDisplay.Size = New Size(80, 30)
         lblUserDisplay.TabIndex = 4
@@ -851,7 +854,7 @@ Partial Class MainFrm
         lblPositionDisplay.BackColor = Color.FromArgb(CByte(197), CByte(229), CByte(232))
         lblPositionDisplay.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPositionDisplay.ForeColor = Color.CadetBlue
-        lblPositionDisplay.Location = New Point(39, 237)
+        lblPositionDisplay.Location = New Point(50, 238)
         lblPositionDisplay.Name = "lblPositionDisplay"
         lblPositionDisplay.Size = New Size(82, 21)
         lblPositionDisplay.TabIndex = 24
@@ -861,7 +864,7 @@ Partial Class MainFrm
         ' 
         PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), Image)
         PictureBox9.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox9.Location = New Point(31, 93)
+        PictureBox9.Location = New Point(34, 93)
         PictureBox9.Margin = New Padding(3, 2, 3, 2)
         PictureBox9.Name = "PictureBox9"
         PictureBox9.Size = New Size(115, 94)
@@ -872,6 +875,7 @@ Partial Class MainFrm
         ' 
         btnAppoint.BackgroundImage = CType(resources.GetObject("btnAppoint.BackgroundImage"), Image)
         btnAppoint.BackgroundImageLayout = ImageLayout.Zoom
+        btnAppoint.Cursor = Cursors.Hand
         btnAppoint.FlatStyle = FlatStyle.Flat
         btnAppoint.ForeColor = Color.Azure
         btnAppoint.Location = New Point(12, 397)
@@ -911,6 +915,7 @@ Partial Class MainFrm
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
         ClientSize = New Size(896, 634)
+        Controls.Add(LblDate)
         Controls.Add(Panel24)
         Controls.Add(btnEditPatient)
         Controls.Add(Label9)

@@ -1,6 +1,6 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ListView
 
-Public Class RegisterForm
+Public Class AppointmentFrm
     Dim targetMasterIndex As Integer = -1
 
     Private Sub ClearForm()

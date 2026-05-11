@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AddPatient_Frm
+Partial Class AddPatientFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

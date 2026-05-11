@@ -8,20 +8,20 @@
 
     Private Sub btnDentalS_Click(sender As Object, e As EventArgs) Handles btnDentalS.Click
         Service = "Dental"
-        RegisterForm.Show()
+        AppointmentFrm.Show()
         Me.Hide()
 
     End Sub
 
     Private Sub btnGeneralCons_Click(sender As Object, e As EventArgs) Handles btnGeneralCons.Click
         Service = "General"
-        RegisterForm.Show()
+        AppointmentFrm.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnPediatrics_Click(sender As Object, e As EventArgs) Handles btnPediatrics.Click
         Service = "Pediatrics"
-        RegisterForm.Show()
+        AppointmentFrm.Show()
         Me.Hide()
     End Sub
 

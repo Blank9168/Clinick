@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class RegisterForm
+Partial Class AppointmentFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class RegisterForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegisterForm))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AppointmentFrm))
         Panel1 = New Panel()
         PictureBox3 = New PictureBox()
         PictureBox2 = New PictureBox()
@@ -142,7 +142,7 @@ Partial Class RegisterForm
         Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(868, 82)
+        Panel1.Size = New Size(864, 82)
         Panel1.TabIndex = 63
         ' 
         ' PictureBox3
@@ -231,7 +231,7 @@ Partial Class RegisterForm
         ' txtSearchName
         ' 
         txtSearchName.Cursor = Cursors.IBeam
-        txtSearchName.Font = New Font("Microsoft Sans Serif", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtSearchName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtSearchName.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         txtSearchName.Location = New Point(576, 40)
         txtSearchName.Margin = New Padding(3, 2, 3, 2)
@@ -349,7 +349,7 @@ Partial Class RegisterForm
         ' 
         ' dtpDOB
         ' 
-        dtpDOB.CalendarFont = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpDOB.CalendarFont = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpDOB.Cursor = Cursors.Hand
         dtpDOB.Font = New Font("Microsoft Sans Serif", 9.75F)
         dtpDOB.Location = New Point(126, 180)
@@ -382,7 +382,7 @@ Partial Class RegisterForm
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 10.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Black
         Label4.Location = New Point(48, 10)
         Label4.Name = "Label4"
@@ -433,7 +433,7 @@ Partial Class RegisterForm
         ' lblPatientID
         ' 
         lblPatientID.AutoSize = True
-        lblPatientID.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        lblPatientID.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         lblPatientID.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         lblPatientID.Location = New Point(109, 43)
         lblPatientID.Name = "lblPatientID"
@@ -455,7 +455,7 @@ Partial Class RegisterForm
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        Label16.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label16.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label16.Location = New Point(14, 43)
         Label16.Name = "Label16"
@@ -513,7 +513,7 @@ Partial Class RegisterForm
         grpPedia.Controls.Add(Label12)
         grpPedia.Controls.Add(Label13)
         grpPedia.Controls.Add(Label14)
-        grpPedia.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        grpPedia.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpPedia.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         grpPedia.Location = New Point(435, 227)
         grpPedia.Margin = New Padding(3, 2, 3, 2)
@@ -528,7 +528,7 @@ Partial Class RegisterForm
         ' 
         Label21.AutoSize = True
         Label21.BackColor = Color.PowderBlue
-        Label21.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        Label21.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label21.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label21.Location = New Point(11, 3)
         Label21.Name = "Label21"
@@ -714,7 +714,7 @@ Partial Class RegisterForm
         grpDental.Controls.Add(grpProcedure)
         grpDental.Controls.Add(Label9)
         grpDental.Controls.Add(Label11)
-        grpDental.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        grpDental.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpDental.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         grpDental.Location = New Point(435, 227)
         grpDental.Margin = New Padding(3, 2, 3, 2)
@@ -729,7 +729,7 @@ Partial Class RegisterForm
         ' 
         Label20.AutoSize = True
         Label20.BackColor = Color.PowderBlue
-        Label20.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        Label20.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label20.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label20.Location = New Point(12, 2)
         Label20.Name = "Label20"
@@ -878,7 +878,7 @@ Partial Class RegisterForm
         grpGeneral.Controls.Add(grpUrgency)
         grpGeneral.Controls.Add(Label6)
         grpGeneral.Controls.Add(Label7)
-        grpGeneral.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        grpGeneral.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpGeneral.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         grpGeneral.Location = New Point(435, 227)
         grpGeneral.Margin = New Padding(3, 2, 3, 2)
@@ -893,7 +893,7 @@ Partial Class RegisterForm
         ' 
         Label19.AutoSize = True
         Label19.BackColor = Color.PowderBlue
-        Label19.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        Label19.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label19.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         Label19.Location = New Point(10, 4)
         Label19.Name = "Label19"
@@ -1058,7 +1058,7 @@ Partial Class RegisterForm
         grpAppointment.Controls.Add(Label8)
         grpAppointment.Controls.Add(Label10)
         grpAppointment.Controls.Add(dtpDate)
-        grpAppointment.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        grpAppointment.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         grpAppointment.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         grpAppointment.Location = New Point(435, 158)
         grpAppointment.Margin = New Padding(3, 2, 3, 2)
@@ -1071,7 +1071,7 @@ Partial Class RegisterForm
         ' cmbTimeSlots
         ' 
         cmbTimeSlots.Cursor = Cursors.Hand
-        cmbTimeSlots.Font = New Font("Microsoft Sans Serif", 9.0F)
+        cmbTimeSlots.Font = New Font("Microsoft Sans Serif", 9F)
         cmbTimeSlots.FormattingEnabled = True
         cmbTimeSlots.Items.AddRange(New Object() {"08:00 AM", "08:30 AM", "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM"})
         cmbTimeSlots.Location = New Point(266, 30)
@@ -1104,7 +1104,7 @@ Partial Class RegisterForm
         ' 
         ' dtpDate
         ' 
-        dtpDate.CalendarFont = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpDate.CalendarFont = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpDate.Cursor = Cursors.Hand
         dtpDate.Font = New Font("Microsoft Sans Serif", 9.75F)
         dtpDate.Location = New Point(12, 31)
@@ -1127,9 +1127,9 @@ Partial Class RegisterForm
         ' 
         btnAppointPAtient.BackColor = Color.PowderBlue
         btnAppointPAtient.Cursor = Cursors.Hand
-        btnAppointPAtient.Font = New Font("Segoe UI", 12.0F)
+        btnAppointPAtient.Font = New Font("Segoe UI", 12F)
         btnAppointPAtient.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnAppointPAtient.Location = New Point(86, 461)
+        btnAppointPAtient.Location = New Point(225, 460)
         btnAppointPAtient.Name = "btnAppointPAtient"
         btnAppointPAtient.Size = New Size(400, 68)
         btnAppointPAtient.TabIndex = 76
@@ -1138,10 +1138,10 @@ Partial Class RegisterForm
         ' 
         ' RegisterForm
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
-        ClientSize = New Size(864, 504)
+        ClientSize = New Size(864, 551)
         Controls.Add(btnAppointPAtient)
         Controls.Add(PictureBox8)
         Controls.Add(Label18)

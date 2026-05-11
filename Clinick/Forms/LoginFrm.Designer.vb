@@ -38,7 +38,7 @@ Partial Class LoginFrm
         btnLogin.BackColor = Color.Teal
         btnLogin.Font = New Font("Microsoft Sans Serif", 10F)
         btnLogin.ForeColor = Color.White
-        btnLogin.Location = New Point(319, 422)
+        btnLogin.Location = New Point(355, 446)
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(207, 31)
         btnLogin.TabIndex = 0
@@ -49,7 +49,7 @@ Partial Class LoginFrm
         ' 
         txtUsername.BorderStyle = BorderStyle.FixedSingle
         txtUsername.Font = New Font("Microsoft Sans Serif", 10.2F)
-        txtUsername.Location = New Point(319, 267)
+        txtUsername.Location = New Point(354, 291)
         txtUsername.Name = "txtUsername"
         txtUsername.Size = New Size(208, 23)
         txtUsername.TabIndex = 1
@@ -58,7 +58,7 @@ Partial Class LoginFrm
         ' 
         txtPassword.BorderStyle = BorderStyle.FixedSingle
         txtPassword.Font = New Font("Microsoft Sans Serif", 10.2F)
-        txtPassword.Location = New Point(319, 340)
+        txtPassword.Location = New Point(354, 364)
         txtPassword.Name = "txtPassword"
         txtPassword.Size = New Size(208, 23)
         txtPassword.TabIndex = 2
@@ -69,7 +69,7 @@ Partial Class LoginFrm
         Label1.AutoSize = True
         Label1.BackColor = Color.White
         Label1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(319, 321)
+        Label1.Location = New Point(355, 344)
         Label1.Name = "Label1"
         Label1.Size = New Size(73, 17)
         Label1.TabIndex = 3
@@ -80,7 +80,7 @@ Partial Class LoginFrm
         Label2.AutoSize = True
         Label2.BackColor = Color.White
         Label2.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(319, 248)
+        Label2.Location = New Point(355, 271)
         Label2.Name = "Label2"
         Label2.Size = New Size(77, 17)
         Label2.TabIndex = 4
@@ -92,7 +92,7 @@ Partial Class LoginFrm
         btnClose.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
         btnClose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(2))
         btnClose.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnClose.Location = New Point(853, 7)
+        btnClose.Location = New Point(857, 9)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(31, 21)
         btnClose.TabIndex = 5
@@ -102,7 +102,7 @@ Partial Class LoginFrm
         ' 
         cbShowPass.AutoSize = True
         cbShowPass.BackColor = Color.FromArgb(CByte(240), CByte(246), CByte(246))
-        cbShowPass.Location = New Point(319, 369)
+        cbShowPass.Location = New Point(355, 392)
         cbShowPass.Name = "cbShowPass"
         cbShowPass.Size = New Size(108, 19)
         cbShowPass.TabIndex = 7
@@ -112,17 +112,20 @@ Partial Class LoginFrm
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Panel1.BackgroundImage = My.Resources.Resources.resize_nnaamn_na_login
+        Panel1.BackgroundImage = My.Resources.Resources.final_na_talagang_login
+        Panel1.BackgroundImageLayout = ImageLayout.Center
+        Panel1.Controls.Add(btnClose)
         Panel1.Controls.Add(cbShowPass)
         Panel1.Controls.Add(txtPassword)
         Panel1.Controls.Add(btnLogin)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(txtUsername)
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(32, 36)
+        Panel1.Dock = DockStyle.Fill
+        Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(824, 506)
+        Panel1.Size = New Size(896, 576)
         Panel1.TabIndex = 11
         ' 
         ' LoginFrm
@@ -131,7 +134,6 @@ Partial Class LoginFrm
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
         ClientSize = New Size(896, 576)
-        Controls.Add(btnClose)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "LoginFrm"
@@ -140,7 +142,6 @@ Partial Class LoginFrm
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents btnLogin As Button

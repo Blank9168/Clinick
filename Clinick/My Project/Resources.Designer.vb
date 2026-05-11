@@ -163,6 +163,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property final_na_talagang_login() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("final na talagang login", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property hourglass() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("hourglass", resourceCulture)

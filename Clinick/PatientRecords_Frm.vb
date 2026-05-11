@@ -50,8 +50,8 @@
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        MainFrm.Show()
-        Me.Close()
+        MainFrm.Show
+        Close
     End Sub
     Private Sub dgvPatientHistory_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPatientHistory.CellDoubleClick
         Dim i As Integer = e.RowIndex

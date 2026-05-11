@@ -289,7 +289,7 @@ Partial Class AddPatient_Frm
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(194), CByte(231), CByte(242))
+        Panel1.BackColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
         Panel1.BorderStyle = BorderStyle.FixedSingle
         Panel1.Controls.Add(GroupBox2)
         Panel1.Controls.Add(PictureBox1)

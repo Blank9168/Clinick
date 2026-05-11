@@ -1,4 +1,4 @@
-﻿Public Class AddPatient_Frm
+﻿Public Class AddPatientFrm
     Private Sub ClearPatientForm()
         txtPatientName.Clear()
         txtContactInfo.Clear()

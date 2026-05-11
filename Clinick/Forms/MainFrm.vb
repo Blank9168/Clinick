@@ -240,7 +240,7 @@
 
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        AddPatient_Frm.Show()
+        AddPatientFrm.Show()
         Me.Hide()
     End Sub
 

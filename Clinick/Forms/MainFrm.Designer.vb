@@ -148,6 +148,7 @@ Partial Class MainFrm
         ' 
         ' dgvSummary
         ' 
+        dgvSummary.AllowUserToAddRows = False
         dgvSummary.AllowUserToResizeColumns = False
         dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSummary.BackgroundColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
@@ -165,6 +166,7 @@ Partial Class MainFrm
         dgvSummary.Location = New Point(196, 284)
         dgvSummary.Margin = New Padding(3, 2, 3, 2)
         dgvSummary.Name = "dgvSummary"
+        dgvSummary.ReadOnly = True
         dgvSummary.RowHeadersVisible = False
         dgvSummary.RowHeadersWidth = 51
         dgvSummary.SelectionMode = DataGridViewSelectionMode.FullRowSelect
@@ -176,30 +178,35 @@ Partial Class MainFrm
         Applied.HeaderText = "Patient ID"
         Applied.MinimumWidth = 6
         Applied.Name = "Applied"
+        Applied.ReadOnly = True
         ' 
         ' PatientName
         ' 
         PatientName.HeaderText = "Patient Name"
         PatientName.MinimumWidth = 6
         PatientName.Name = "PatientName"
+        PatientName.ReadOnly = True
         ' 
         ' Contact
         ' 
         Contact.HeaderText = "Contact "
         Contact.MinimumWidth = 6
         Contact.Name = "Contact"
+        Contact.ReadOnly = True
         ' 
         ' ServiceType
         ' 
         ServiceType.HeaderText = "Service Type"
         ServiceType.MinimumWidth = 6
         ServiceType.Name = "ServiceType"
+        ServiceType.ReadOnly = True
         ' 
         ' Sched
         ' 
         Sched.HeaderText = "Schedule"
         Sched.MinimumWidth = 6
         Sched.Name = "Sched"
+        Sched.ReadOnly = True
         ' 
         ' Status
         ' 
@@ -207,6 +214,7 @@ Partial Class MainFrm
         Status.Items.AddRange(New Object() {"Pending", "Completed", "Cancelled"})
         Status.MinimumWidth = 6
         Status.Name = "Status"
+        Status.ReadOnly = True
         Status.Resizable = DataGridViewTriState.True
         Status.SortMode = DataGridViewColumnSortMode.Automatic
         ' 

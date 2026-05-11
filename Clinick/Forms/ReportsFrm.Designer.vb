@@ -39,21 +39,21 @@ Partial Class ReportsFrm
         colProcessed = New DataGridViewTextBoxColumn()
         PictureBox1 = New PictureBox()
         Panel1 = New Panel()
-        PictureBox2 = New PictureBox()
+        PictureBox6 = New PictureBox()
+        PictureBox5 = New PictureBox()
+        PictureBox4 = New PictureBox()
         PictureBox3 = New PictureBox()
+        PictureBox2 = New PictureBox()
         Label1 = New Label()
         Label2 = New Label()
-        PictureBox4 = New PictureBox()
-        PictureBox5 = New PictureBox()
-        PictureBox6 = New PictureBox()
         CType(dgvReports, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dtpReportDate
@@ -136,6 +136,7 @@ Partial Class ReportsFrm
         ' dgvReports
         ' 
         dgvReports.AllowUserToAddRows = False
+        dgvReports.AllowUserToDeleteRows = False
         dgvReports.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvReports.BackgroundColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
         dgvReports.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -220,14 +221,35 @@ Partial Class ReportsFrm
         Panel1.Size = New Size(856, 497)
         Panel1.TabIndex = 11
         ' 
-        ' PictureBox2
+        ' PictureBox6
         ' 
-        PictureBox2.BackColor = Color.FromArgb(CByte(249), CByte(251), CByte(253))
-        PictureBox2.Location = New Point(15, 15)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(828, 70)
-        PictureBox2.TabIndex = 10
-        PictureBox2.TabStop = False
+        PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), Image)
+        PictureBox6.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox6.Location = New Point(759, 106)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(14, 25)
+        PictureBox6.TabIndex = 14
+        PictureBox6.TabStop = False
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), Image)
+        PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox5.Location = New Point(145, 105)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(23, 25)
+        PictureBox5.TabIndex = 13
+        PictureBox5.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.BackgroundImage = My.Resources.Resources.Iconsss__3_
+        PictureBox4.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox4.Location = New Point(38, 105)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(23, 25)
+        PictureBox4.TabIndex = 12
+        PictureBox4.TabStop = False
         ' 
         ' PictureBox3
         ' 
@@ -237,6 +259,15 @@ Partial Class ReportsFrm
         PictureBox3.Size = New Size(828, 52)
         PictureBox3.TabIndex = 11
         PictureBox3.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.BackColor = Color.FromArgb(CByte(249), CByte(251), CByte(253))
+        PictureBox2.Location = New Point(15, 15)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(828, 70)
+        PictureBox2.TabIndex = 10
+        PictureBox2.TabStop = False
         ' 
         ' Label1
         ' 
@@ -259,36 +290,6 @@ Partial Class ReportsFrm
         Label2.TabIndex = 13
         Label2.Text = "Reports"
         ' 
-        ' PictureBox4
-        ' 
-        PictureBox4.BackgroundImage = My.Resources.Resources.Iconsss__3_
-        PictureBox4.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox4.Location = New Point(38, 105)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(23, 25)
-        PictureBox4.TabIndex = 12
-        PictureBox4.TabStop = False
-        ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), Image)
-        PictureBox5.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox5.Location = New Point(145, 105)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(23, 25)
-        PictureBox5.TabIndex = 13
-        PictureBox5.TabStop = False
-        ' 
-        ' PictureBox6
-        ' 
-        PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), Image)
-        PictureBox6.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox6.Location = New Point(759, 106)
-        PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(14, 25)
-        PictureBox6.TabIndex = 14
-        PictureBox6.TabStop = False
-        ' 
         ' ReportsFrm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -306,11 +307,11 @@ Partial Class ReportsFrm
         CType(dgvReports, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub

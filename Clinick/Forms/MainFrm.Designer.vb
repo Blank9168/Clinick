@@ -23,7 +23,7 @@ Partial Class MainFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainFrm))
         btnLogout = New Button()
         Label2 = New Label()
@@ -152,14 +152,14 @@ Partial Class MainFrm
         dgvSummary.AllowUserToResizeColumns = False
         dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSummary.BackgroundColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvSummary.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
         dgvSummary.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
@@ -800,15 +800,12 @@ Partial Class MainFrm
         ' 
         ' btnPatientRecord
         ' 
-        btnPatientRecord.BackgroundImage = My.Resources.Resources.Iconsss__11_
-        btnPatientRecord.BackgroundImageLayout = ImageLayout.Zoom
         btnPatientRecord.Cursor = Cursors.Hand
-        btnPatientRecord.FlatStyle = FlatStyle.Flat
-        btnPatientRecord.ForeColor = Color.Azure
-        btnPatientRecord.Location = New Point(9, 458)
+        btnPatientRecord.Location = New Point(28, 448)
         btnPatientRecord.Name = "btnPatientRecord"
-        btnPatientRecord.Size = New Size(159, 47)
+        btnPatientRecord.Size = New Size(133, 54)
         btnPatientRecord.TabIndex = 28
+        btnPatientRecord.Text = "patient Record"
         btnPatientRecord.UseVisualStyleBackColor = True
         ' 
         ' btnReport
@@ -818,7 +815,7 @@ Partial Class MainFrm
         btnReport.Cursor = Cursors.Hand
         btnReport.FlatStyle = FlatStyle.Flat
         btnReport.ForeColor = Color.Azure
-        btnReport.Location = New Point(11, 335)
+        btnReport.Location = New Point(12, 336)
         btnReport.Margin = New Padding(3, 2, 3, 2)
         btnReport.Name = "btnReport"
         btnReport.Size = New Size(156, 47)
@@ -832,7 +829,7 @@ Partial Class MainFrm
         btnDB.Cursor = Cursors.Hand
         btnDB.FlatStyle = FlatStyle.Flat
         btnDB.ForeColor = Color.Azure
-        btnDB.Location = New Point(11, 278)
+        btnDB.Location = New Point(12, 277)
         btnDB.Margin = New Padding(3, 2, 3, 2)
         btnDB.Name = "btnDB"
         btnDB.Size = New Size(156, 46)

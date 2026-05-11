@@ -169,6 +169,9 @@
   <data name="resized logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Iconsss (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconsss (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LOGO PARA SA COMPROG (312 x 282 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO PARA SA COMPROG (312 x 282 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,6 +211,9 @@
   <data name="logo final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="resized logo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized logo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="login backg rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login backg rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,16 +244,13 @@
   <data name="tibokng puso mo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tibokng puso mo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="resized logo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized logo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Iconsss (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconsss (8)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="final na talagang login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\final na talagang login2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Iconsss (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconsss (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Iconsss (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconsss (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

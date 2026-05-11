@@ -43,7 +43,8 @@
                 If Not nameMatch AndAlso Not idMatch Then Continue For
             End If
 
-            dgvSummary.Rows.Add(arrID(i), arrNames(i), arrContact(i), arrService(i), arrSchedule(i), arrStatus(i))
+            Dim rowIndex As Integer = dgvSummary.Rows.Add(arrID(i), arrNames(i), arrContact(i), arrService(i), arrSchedule(i), arrStatus(i))
+            dgvSummary.Rows(rowIndex).Tag = i
         Next
 
         ' Update Labels
@@ -90,6 +91,7 @@
             btnAppoint.Visible = True
             btnDB.Visible = True
             btnReport.Visible = False
+            btnPatientRecord.Location = New Point(28, 448)
         ElseIf CurrentUser = "Admin" Then
             lblUserDisplay.Text = "Pepito"
             lblPositionDisplay.Text = "Administrator"
@@ -98,6 +100,7 @@
             btnReport.Visible = True
             btnAdd.Visible = False
             btnAppoint.Visible = False
+            btnPatientRecord.Location = New Point(28, 397)
         Else
             lblUserDisplay.Text = "User: Unknown"
         End If
@@ -132,33 +135,32 @@
         End If
     End Sub
 
-    ' Step 2: Now fires immediately after CommitEdit — updates the parallel array
+
     Private Sub dgvSummary_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSummary.CellValueChanged
-        ' Index 5 is the Status Column
         If e.RowIndex >= 0 AndAlso e.ColumnIndex = 5 Then
 
-            Dim selectedID As String = dgvSummary.Rows(e.RowIndex).Cells(0).Value.ToString()
-            Dim newStatus As String = dgvSummary.Rows(e.RowIndex).Cells(5).Value.ToString()
+            Dim row As DataGridViewRow = dgvSummary.Rows(e.RowIndex)
 
-            For i As Integer = 0 To CurrentCount - 1
-                If arrID(i) = selectedID Then
-                    arrStatus(i) = newStatus
+            If row.Tag IsNot Nothing Then
+                Dim actualIndex As Integer = CInt(row.Tag)
+                Dim newStatus As String = row.Cells(5).Value.ToString()
 
-                    If newStatus = "Completed" Or newStatus = "Cancelled" Then
-                        arrDateProcessed(i) = DateTime.Now.ToString("MM/dd/yyyy @ hh:mm tt")
-                    Else
-                        arrDateProcessed(i) = ""
-                    End If
+                arrStatus(actualIndex) = newStatus
 
+                If newStatus = "Completed" Or newStatus = "Cancelled" Then
+                    arrDateProcessed(actualIndex) = DateTime.Now.ToString("MM/dd/yyyy @ hh:mm tt")
+                Else
+                    arrDateProcessed(actualIndex) = ""
                 End If
-            Next
-            RefreshSummaryGrid()
+
+
+                RefreshSummaryGrid()
+            End If
         End If
 
     End Sub
 
 
-    ' Silences the "value is not valid" ComboBox error dialog
     Private Sub dgvSummary_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvSummary.DataError
         e.Cancel = True
     End Sub

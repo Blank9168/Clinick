@@ -122,6 +122,7 @@ Partial Class PatientRecords_Frm
         Controls.Add(txtSearchName)
         FormBorderStyle = FormBorderStyle.None
         Name = "PatientRecords_Frm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "PatientRecords_Frm"
         CType(dgvPatientHistory, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

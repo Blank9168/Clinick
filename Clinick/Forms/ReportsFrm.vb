@@ -33,7 +33,8 @@ Public Class ReportsFrm
     End Sub
 
     Private Sub btnGenerateDaily_Click(sender As Object, e As EventArgs) Handles btnGenerateDaily.Click
-        Dim selectedDate As String = dtpReportDate.Value.ToShortDateString()
+        ' Format match for Daily Filter
+        Dim selectedDate As String = dtpReportDate.Value.ToString("MM/dd/yyyy")
         Dim rows As New List(Of Integer)
         For i As Integer = 0 To CurrentCount - 1
             If arrSchedule(i) IsNot Nothing AndAlso arrSchedule(i).Contains(selectedDate) Then
@@ -52,6 +53,7 @@ Public Class ReportsFrm
         For i As Integer = 0 To CurrentCount - 1
             If arrSchedule(i) IsNot Nothing AndAlso arrSchedule(i) <> "Not Set" Then
                 Try
+                    ' Split at "@" to get the date part for parsing
                     Dim schedulePart As String = arrSchedule(i).Split("@"c)(0).Trim()
                     Dim schedDate As DateTime = DateTime.Parse(schedulePart)
                     If schedDate.Month = selectedMonth AndAlso schedDate.Year = selectedYear Then
@@ -67,10 +69,10 @@ Public Class ReportsFrm
 
     Private Sub BuildReport(title As String, rows As List(Of Integer))
         dgvReports.Rows.Clear()
-        ' Note: We no longer clear or add columns here because they are fixed in the designer
 
         For Each i In rows
             If arrID(i) <> "" Then
+                ' Now finishDate will match the long format saved in MainFrm
                 Dim finishDate As String = If(arrDateProcessed(i) <> "", arrDateProcessed(i), "---")
                 dgvReports.Rows.Add(arrID(i), arrNames(i), arrService(i), arrSchedule(i), arrStatus(i), finishDate)
             End If
@@ -92,7 +94,7 @@ Public Class ReportsFrm
     Private Sub prntDoc_PrintPage(sender As Object, e As PrintPageEventArgs) Handles prntDoc.PrintPage
         Dim fontTitle As New Font("Arial", 16, FontStyle.Bold)
         Dim fontHeader As New Font("Arial", 10, FontStyle.Bold)
-        Dim fontBody As New Font("Arial", 10, FontStyle.Regular)
+        Dim fontBody As New Font("Arial", 9, FontStyle.Regular)
         Dim leftMargin As Integer = e.MarginBounds.Left
         Dim topMargin As Integer = e.MarginBounds.Top
         Dim yPos As Integer = topMargin
@@ -101,7 +103,8 @@ Public Class ReportsFrm
         yPos += 40
 
         Dim xPos As Integer = leftMargin
-        Dim colWidths As Integer() = {60, 150, 150, 120, 80, 120}
+        ' Adjusted widths for longer date strings
+        Dim colWidths As Integer() = {50, 120, 100, 180, 70, 180}
         Dim headers As String() = {"ID", "Patient", "Service", "Schedule", "Status", "Processed"}
 
         For i As Integer = 0 To headers.Length - 1
@@ -109,7 +112,7 @@ Public Class ReportsFrm
             xPos += colWidths(i)
         Next
         yPos += 25
-        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, leftMargin + 680, yPos)
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, leftMargin + 700, yPos)
         yPos += 10
 
         For Each row As DataGridViewRow In dgvReports.Rows
@@ -146,6 +149,8 @@ Public Class ReportsFrm
             Next
             File.WriteAllText(saveDlg.FileName, csv.ToString())
             MessageBox.Show("Export Successful!")
+            Me.Activate()
+            Me.Focus()
         End If
     End Sub
 

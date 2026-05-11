@@ -4,6 +4,7 @@ Imports System.Drawing.Printing
 Public Class ReportsFrm
 
     Private currentReportTitle As String = ""
+    Private WithEvents prntDoc As New PrintDocument
 
     Private Sub ReportsFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbMonth.Items.Clear()
@@ -16,25 +17,31 @@ Public Class ReportsFrm
         cmbMonth.SelectedIndex = DateTime.Now.Month - 1
 
         dtpReportDate.Value = DateTime.Today
+    End Sub
 
-        btnPrint.Enabled = False
-        btnExportPDF.Enabled = False
-        btnExportExcel.Enabled = False
+    Private Sub ReportsFrm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        LoadAllRecords()
+    End Sub
+
+    Private Sub LoadAllRecords()
+        Dim rows As New List(Of Integer)
+        For i As Integer = 0 To CurrentCount - 1
+            rows.Add(i)
+        Next
+        currentReportTitle = "Full Patient Records"
+        BuildReport(currentReportTitle, rows)
     End Sub
 
     Private Sub btnGenerateDaily_Click(sender As Object, e As EventArgs) Handles btnGenerateDaily.Click
         Dim selectedDate As String = dtpReportDate.Value.ToShortDateString()
         Dim rows As New List(Of Integer)
-
         For i As Integer = 0 To CurrentCount - 1
             If arrSchedule(i) IsNot Nothing AndAlso arrSchedule(i).Contains(selectedDate) Then
                 rows.Add(i)
             End If
         Next
-
         currentReportTitle = "Daily Report - " & selectedDate
         BuildReport(currentReportTitle, rows)
-        MessageBox.Show(rows.Count & " appointment(s) found.")
     End Sub
 
     Private Sub btnGenerateMonthly_Click(sender As Object, e As EventArgs) Handles btnGenerateMonthly.Click
@@ -42,7 +49,6 @@ Public Class ReportsFrm
         Dim selectedYear As Integer = DateTime.Now.Year
         Dim monthName As String = cmbMonth.SelectedItem.ToString()
         Dim rows As New List(Of Integer)
-
         For i As Integer = 0 To CurrentCount - 1
             If arrSchedule(i) IsNot Nothing AndAlso arrSchedule(i) <> "Not Set" Then
                 Try
@@ -55,60 +61,78 @@ Public Class ReportsFrm
                 End Try
             End If
         Next
-
         currentReportTitle = "Monthly Report - " & monthName & " " & selectedYear
         BuildReport(currentReportTitle, rows)
-        MessageBox.Show(rows.Count & " appointment(s) found.")
-    End Sub
-
-    Private Sub btnGeneratePatientRecords_Click(sender As Object, e As EventArgs) Handles btnGeneratePatientRecords.Click
-        Dim rows As New List(Of Integer)
-        For i As Integer = 0 To CurrentCount - 1
-            rows.Add(i)
-        Next
-
-        currentReportTitle = "Full Patient Records"
-        BuildReport(currentReportTitle, rows)
-        MessageBox.Show(rows.Count & " record(s) found.")
     End Sub
 
     Private Sub BuildReport(title As String, rows As List(Of Integer))
         dgvReports.Rows.Clear()
-        dgvReports.Columns.Clear()
-
-        dgvReports.Columns.Add("id", "ID")
-        dgvReports.Columns.Add("name", "Patient")
-        dgvReports.Columns.Add("service", "Service Type")
-        dgvReports.Columns.Add("sched", "Scheduled For")
-        dgvReports.Columns.Add("status", "Status")
-        dgvReports.Columns.Add("finish", "Date Processed")
+        ' Note: We no longer clear or add columns here because they are fixed in the designer
 
         For Each i In rows
             If arrID(i) <> "" Then
-
                 Dim finishDate As String = If(arrDateProcessed(i) <> "", arrDateProcessed(i), "---")
-
                 dgvReports.Rows.Add(arrID(i), arrNames(i), arrService(i), arrSchedule(i), arrStatus(i), finishDate)
             End If
         Next
 
         currentReportTitle = title
         btnPrint.Enabled = True
-        btnExportPDF.Enabled = True
         btnExportExcel.Enabled = True
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        Dim prntDlg As New PrintDialog
+        prntDlg.Document = prntDoc
+        If prntDlg.ShowDialog = DialogResult.OK Then
+            prntDoc.Print()
+        End If
+    End Sub
+
+    Private Sub prntDoc_PrintPage(sender As Object, e As PrintPageEventArgs) Handles prntDoc.PrintPage
+        Dim fontTitle As New Font("Arial", 16, FontStyle.Bold)
+        Dim fontHeader As New Font("Arial", 10, FontStyle.Bold)
+        Dim fontBody As New Font("Arial", 10, FontStyle.Regular)
+        Dim leftMargin As Integer = e.MarginBounds.Left
+        Dim topMargin As Integer = e.MarginBounds.Top
+        Dim yPos As Integer = topMargin
+
+        e.Graphics.DrawString(currentReportTitle, fontTitle, Brushes.Black, leftMargin, yPos)
+        yPos += 40
+
+        Dim xPos As Integer = leftMargin
+        Dim colWidths As Integer() = {60, 150, 150, 120, 80, 120}
+        Dim headers As String() = {"ID", "Patient", "Service", "Schedule", "Status", "Processed"}
+
+        For i As Integer = 0 To headers.Length - 1
+            e.Graphics.DrawString(headers(i), fontHeader, Brushes.Black, xPos, yPos)
+            xPos += colWidths(i)
+        Next
+        yPos += 25
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, leftMargin + 680, yPos)
+        yPos += 10
+
+        For Each row As DataGridViewRow In dgvReports.Rows
+            If Not row.IsNewRow Then
+                xPos = leftMargin
+                For j As Integer = 0 To 5
+                    Dim cellValue As String = If(row.Cells(j).Value?.ToString(), "")
+                    e.Graphics.DrawString(cellValue, fontBody, Brushes.Black, xPos, yPos)
+                    xPos += colWidths(j)
+                Next
+                yPos += 20
+            End If
+        Next
     End Sub
 
     Private Sub btnExportExcel_Click(sender As Object, e As EventArgs) Handles btnExportExcel.Click
         If dgvReports.Rows.Count = 0 Then Return
-
         Dim saveDlg As New SaveFileDialog()
         saveDlg.Filter = "CSV File (*.csv)|*.csv"
         saveDlg.FileName = currentReportTitle.Replace(" ", "_") & ".csv"
-
         If saveDlg.ShowDialog() = DialogResult.OK Then
             Dim csv As New System.Text.StringBuilder()
             csv.AppendLine("ID,Patient,Service Type,Scheduled On,Status,Completed On")
-
             For Each row As DataGridViewRow In dgvReports.Rows
                 If Not row.IsNewRow Then
                     csv.AppendLine(String.Format("{0},{1},{2},{3},{4},{5}",
@@ -120,10 +144,8 @@ Public Class ReportsFrm
                         CsvEscape(row.Cells(5).Value?.ToString())))
                 End If
             Next
-
             File.WriteAllText(saveDlg.FileName, csv.ToString())
             MessageBox.Show("Export Successful!")
-            Process.Start(saveDlg.FileName)
         End If
     End Sub
 
@@ -136,5 +158,4 @@ Public Class ReportsFrm
         MainFrm.Show()
         Me.Close()
     End Sub
-
 End Class

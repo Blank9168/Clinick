@@ -1,4 +1,6 @@
-﻿Public Class RegisterForm
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ListView
+
+Public Class RegisterForm
     Dim targetIndex As Integer = -1
 
     Private Sub ClearForm()
@@ -216,25 +218,31 @@
 
         ElseIf Service.Contains("General") Then
             ' 1. Determine Condition/Urgency
-            Dim generalType As String = ""
+            Dim condition As String = ""
             If rbFever.Checked Then
-                generalType = "Fever"
+                condition = "Fever"
             ElseIf rbPhysicalExam.Checked Then
-                generalType = "Physical Exam"
+                condition = "Physical Exam"
             ElseIf rbInjury.Checked Then
-                generalType = "Injury"
-            ElseIf rbUrgent.Checked Then
-                generalType = "Urgent"
-            ElseIf rbFollowUp.Checked Then
-                generalType = "Follow-up"
-            ElseIf rbRoutine.Checked Then
-                generalType = "Routine"
+                condition = "Injury"
             Else
-                MessageBox.Show("Select a General Consultation type.")
+                MessageBox.Show("Select a Primary Concern type.")
                 Return
             End If
 
-            details = " (" & generalType & ")"
+            Dim urgency As String = ""
+            If rbUrgent.Checked Then
+                urgency = "Urgent"
+            ElseIf rbFollowUp.Checked Then
+                urgency = "Follow-up"
+            ElseIf rbRoutine.Checked Then
+                urgency = "Routine"
+            Else
+                MessageBox.Show("Select a Urgency Level.")
+                Return
+            End If
+
+            details = " (" & condition & " - " & urgency & ")"
         End If
 
 

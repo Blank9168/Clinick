@@ -4,7 +4,6 @@
     Public Sub RefreshSummaryGrid()
         dgvSummary.Rows.Clear()
 
-
         TotalGeneral = 0
         TotalDental = 0
         TotalPedia = 0
@@ -12,10 +11,7 @@
         completed = 0
         cancelled = 0
 
-
-
         Dim filterStatus As String = ""
-        ' cmbFilter is the filter ComboBox added to the form
         If cmbFilter.SelectedIndex > 0 Then
             filterStatus = cmbFilter.SelectedItem.ToString().ToLower()
         End If
@@ -23,7 +19,6 @@
         Dim searchText As String = txtSearch.Text.Trim().ToLower()
 
         For i As Integer = 0 To CurrentCount - 1
-            ' --- FEATURE: Filter by status ---
             If arrService(i) IsNot Nothing Then
                 If arrService(i).Contains("General") Then TotalGeneral += 1
                 If arrService(i).Contains("Dental") Then TotalDental += 1
@@ -42,18 +37,16 @@
                 If arrStatus(i).ToLower() <> filterStatus Then Continue For
             End If
 
-            ' --- FEATURE: Search by patient name or ID ---
             If searchText <> "" Then
                 Dim nameMatch As Boolean = arrNames(i).ToLower().Contains(searchText)
                 Dim idMatch As Boolean = arrID(i).ToLower().Contains(searchText)
-                If Not nameMatch AndAlso Not idMatch Then
-                    Continue For  ' skip rows that don't match search
-                End If
+                If Not nameMatch AndAlso Not idMatch Then Continue For
             End If
 
             dgvSummary.Rows.Add(arrID(i), arrNames(i), arrContact(i), arrService(i), arrSchedule(i), arrStatus(i))
-
         Next
+
+        ' Update Labels
         lblTotal.Text = CurrentCount.ToString()
         lblPending.Text = pending.ToString()
         lblCompleted.Text = completed.ToString()
@@ -256,15 +249,10 @@
     End Sub
 
     Private Sub btnEditPatient_Click(sender As Object, e As EventArgs) Handles btnEditPatient.Click
-
-
         If dgvSummary.CurrentRow IsNot Nothing AndAlso dgvSummary.CurrentRow.Index >= 0 Then
-
-
             Dim selectedID As String = dgvSummary.CurrentRow.Cells(0).Value.ToString()
-            EditPatientFrm.txtSearchID.Text = selectedID
-            EditPatientFrm.CallerForm = "Main"
 
+            EditPatientFrm.txtSearchID.Text = selectedID
             EditPatientFrm.WindowState = FormWindowState.Normal
             EditPatientFrm.StartPosition = FormStartPosition.CenterScreen
 
@@ -287,24 +275,5 @@
         RefreshSummaryGrid()
     End Sub
 
-    '    Private Sub dgvSummary_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvSummary.CellFormatting
-    '        If e.ColumnIndex = 5 AndAlso e.RowIndex >= 0 Then
-    '            If e.Value IsNot Nothing Then
-    '                Dim status As String = e.Value.ToString()
-
-    '                Select Case status
-    '                    Case "Pending"
-    '                        e.CellStyle.BackColor = Color.Gray
-    '                        e.CellStyle.ForeColor = Color.White
-    '                    Case "Completed"
-    '                        e.CellStyle.BackColor = Color.MediumSeaGreen
-    '                        e.CellStyle.ForeColor = Color.White
-    '                    Case "Cancelled"
-    '                        e.CellStyle.BackColor = Color.Crimson
-    '                        e.CellStyle.ForeColor = Color.White
-    '                End Select
-    '            End If
-    '        End If
-    '    End Sub
 End Class
 

@@ -228,7 +228,7 @@
 
             ' Pre-fill the search box in EditPatientFrm with the clicked patient's ID
             EditPatientFrm.txtSearchID.Text = clickedID
-            EditPatientFrm.CallerForm = "Admin"  ' so EditPatientFrm returns here after save/delete
+
 
             Me.Hide()
             EditPatientFrm.Show()

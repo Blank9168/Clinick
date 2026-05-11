@@ -128,23 +128,23 @@
 
     ' Opens MedicalRecordsFrm for the selected patient row
     ' Admin must click a row first before clicking this button
-    Private Sub btnMedicalRecords_Click(sender As Object, e As EventArgs) Handles btnMedicalRecords.Click
-        If dgvAdmin.CurrentRow Is Nothing OrElse dgvAdmin.CurrentRow.Index < 0 Then
-            MessageBox.Show("Please click on a patient row first.")
-            Return
-        End If
+    'Private Sub btnMedicalRecords_Click(sender As Object, e As EventArgs) Handles btnMedicalRecords.Click
+    '    If dgvAdmin.CurrentRow Is Nothing OrElse dgvAdmin.CurrentRow.Index < 0 Then
+    '        MessageBox.Show("Please click on a patient row first.")
+    '        Return
+    '    End If
 
-        Dim clickedID As String = dgvAdmin.CurrentRow.Cells(0).Value.ToString()
-        For i As Integer = 0 To CurrentCount - 1
-            If arrID(i) = clickedID Then
-                MedicalRecordsFrm.TargetIndex = i
-                MedicalRecordsFrm.CallerForm = "Admin"
-                Me.Hide()
-                MedicalRecordsFrm.Show()
-                Exit For
-            End If
-        Next
-    End Sub
+    '    Dim clickedID As String = dgvAdmin.CurrentRow.Cells(0).Value.ToString()
+    '    For i As Integer = 0 To CurrentCount - 1
+    '        If arrID(i) = clickedID Then
+    '            MedicalRecordsFrm.TargetIndex = i
+    '            MedicalRecordsFrm.CallerForm = "Admin"
+    '            Me.Hide()
+    '            MedicalRecordsFrm.Show()
+    '            Exit For
+    '        End If
+    '    Next
+    'End Sub
 
     ' Filter, Search, Sort 
 

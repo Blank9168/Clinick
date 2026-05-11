@@ -135,29 +135,29 @@
     ' Step 2: Now fires immediately after CommitEdit — updates the parallel array
     Private Sub dgvSummary_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSummary.CellValueChanged
         If e.RowIndex >= 0 AndAlso e.ColumnIndex = 5 Then
-            If dgvSummary.Rows(e.RowIndex).Cells(0).Value IsNot Nothing AndAlso
-           dgvSummary.Rows(e.RowIndex).Cells(5).Value IsNot Nothing Then
 
-                Dim selectedID As String = dgvSummary.Rows(e.RowIndex).Cells(0).Value.ToString
-                Dim newStatus As String = dgvSummary.Rows(e.RowIndex).Cells(5).Value.ToString
+            Dim selectedID As String = dgvSummary.Rows(e.RowIndex).Cells(0).Value.ToString()
+            Dim selectedStatus As String = dgvSummary.Rows(e.RowIndex).Cells(5).Value.ToString()
 
-                For i As Integer = 0 To CurrentCount - 1
-                    If arrID(i) = selectedID Then
-                        arrStatus(i) = newStatus
+            For i As Integer = 0 To CurrentCount - 1
+                If arrID(i) = selectedID Then
+                    arrStatus(i) = selectedStatus
 
-                        If newStatus = "Completed" OrElse newStatus = "Cancelled" Then
-                            arrDateProcessed(i) = DateTime.Now.ToString("MM/dd/yyyy @ hh:mm tt")
-                        Else
-                            arrDateProcessed(i) = ""
-                        End If
-
-                        Exit For
+                    If selectedStatus = "Completed" Or selectedStatus = "Cancelled" Then
+                        arrDateProcessed(i) = DateTime.Now.ToString("MM/dd/yyyy @ hh:mm tt")
+                    Else
+                        arrDateProcessed(i) = ""
                     End If
-                Next
-                RefreshSummaryGrid()
-            End If
+                    Exit For
+                End If
+            Next
+
+
+            RefreshSummaryGrid()
+
         End If
     End Sub
+
 
     ' Silences the "value is not valid" ComboBox error dialog
     Private Sub dgvSummary_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvSummary.DataError
@@ -274,6 +274,12 @@
     Private Sub btnDB_Click(sender As Object, e As EventArgs) Handles btnDB.Click
         RefreshSummaryGrid()
     End Sub
+
+    Private Sub btnPatientRecord_Click(sender As Object, e As EventArgs) Handles btnPatientRecord.Click
+        PatientRecords_Frm.Show()
+        Me.Hide()
+    End Sub
+
 
 End Class
 

@@ -1,10 +1,10 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ListView
 
 Public Class RegisterForm
-    Dim targetIndex As Integer = -1
+    Dim targetMasterIndex As Integer = -1
 
     Private Sub ClearForm()
-        targetIndex = -1
+        targetMasterIndex = -1
         txtSearchName.Clear()
         lblPatientID.Text = "---"
         txtPatientName.Text = ""
@@ -22,8 +22,6 @@ Public Class RegisterForm
         rbPhysicalExam.Checked = False
         rbInjury.Checked = False
 
-
-        'Dental'
         rbCleaning.Checked = False
         rbExtraction.Checked = False
         rbFilling.Checked = False
@@ -31,7 +29,6 @@ Public Class RegisterForm
         rbAdult.Checked = False
         rbChild.Checked = False
 
-        'pedia'
         rbVaccine.Checked = False
         rbGrowth.Checked = False
         rbSickV.Checked = False
@@ -39,7 +36,6 @@ Public Class RegisterForm
         rbToddler.Checked = False
         rbInfant.Checked = False
         rbSchool.Checked = False
-
 
         txtPatientName.ReadOnly = False
         txtContactInfo.ReadOnly = False
@@ -67,7 +63,7 @@ Public Class RegisterForm
         Dim selectedDate As String = dtpDate.Value.ToShortDateString
 
         For i As Integer = 0 To CurrentCount - 1
-            If arrSchedule(i).Contains("@") Then
+            If arrSchedule(i) IsNot Nothing AndAlso arrSchedule(i).Contains("@") Then
                 If arrSchedule(i).Contains(selectedDate) Then
                     If arrService(i) <> "" AndAlso arrService(i).Contains(Service) Then
                         Dim parts() As String = arrSchedule(i).Split("@")
@@ -88,8 +84,6 @@ Public Class RegisterForm
         RefreshAvailableSlots()
     End Sub
 
-    ' Load only fires once on the default instance — switching services wouldn't
-    ' update the panel. Activated fires every time the form becomes visible.
     Private Sub RegisterForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         grpPedia.Visible = False
         grpDental.Visible = False
@@ -105,24 +99,24 @@ Public Class RegisterForm
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        targetIndex = -1
+        targetMasterIndex = -1
         Dim searchInput As String = txtSearchName.Text.Trim().ToLower()
 
-        For i As Integer = 0 To CurrentCount - 1
-            If arrNames(i).Trim().ToLower() = searchInput Then
-                targetIndex = i
+        For i As Integer = 0 To MasterCount - 1
+            If arrMasterName(i).Trim().ToLower() = searchInput Then
+                targetMasterIndex = i
                 Exit For
             End If
         Next
 
-        If targetIndex <> -1 Then
-            lblPatientID.Text = arrID(targetIndex)
-            txtPatientName.Text = arrNames(targetIndex)
-            txtContactInfo.Text = arrContact(targetIndex)
-            txtAge.Text = arrAge(targetIndex).ToString()
-            dtpDOB.Value = arrBday(targetIndex)
+        If targetMasterIndex <> -1 Then
+            lblPatientID.Text = arrMasterID(targetMasterIndex)
+            txtPatientName.Text = arrMasterName(targetMasterIndex)
+            txtContactInfo.Text = arrMasterContact(targetMasterIndex)
+            txtAge.Text = arrMasterAge(targetMasterIndex).ToString()
+            dtpDOB.Value = arrMasterBday(targetMasterIndex)
 
-            If arrSex(targetIndex) = "Male" Then
+            If arrMasterSex(targetMasterIndex) = "Male" Then
                 rbMale.Checked = True
             Else
                 rbFemale.Checked = True
@@ -137,13 +131,18 @@ Public Class RegisterForm
 
             MessageBox.Show("Patient Record Verified.")
         Else
-            MessageBox.Show("Patient name not found.")
+            MessageBox.Show("Patient name not found in Registration.")
             ClearForm()
         End If
     End Sub
 
     Private Sub btnAppointPatient_Click(sender As Object, e As EventArgs) Handles btnAppointPAtient.Click
-        If targetIndex = -1 Then
+        If CurrentCount >= MaxPatients Then
+            MessageBox.Show("Maximum appointment limit reached.")
+            Return
+        End If
+
+        If targetMasterIndex = -1 Then
             MessageBox.Show("Please verify a patient first.")
             Return
         End If
@@ -161,7 +160,6 @@ Public Class RegisterForm
         Dim details As String = ""
 
         If Service.Contains("Pediatrics") Then
-            ' 1. Determine Age Group for Pedia
             Dim ageGroup As String = ""
             If rbInfant.Checked Then
                 ageGroup = "Infant"
@@ -174,7 +172,6 @@ Public Class RegisterForm
                 Return
             End If
 
-            ' 2. Determine Visit Type
             Dim visitType As String = ""
             If rbVaccine.Checked Then
                 visitType = "Vaccination"
@@ -190,7 +187,6 @@ Public Class RegisterForm
             details = " (" & ageGroup & " - " & visitType & ")"
 
         ElseIf Service.Contains("Dental") Then
-            ' 1. Determine Age Group for Dental
             Dim dentalAge As String = ""
             If rbAdult.Checked Then
                 dentalAge = "Adult"
@@ -201,7 +197,6 @@ Public Class RegisterForm
                 Return
             End If
 
-            ' 2. Determine Procedure
             Dim procedure As String = ""
             If rbCleaning.Checked Then
                 procedure = "Cleaning"
@@ -217,7 +212,6 @@ Public Class RegisterForm
             details = " (" & dentalAge & " - " & procedure & ")"
 
         ElseIf Service.Contains("General") Then
-            ' 1. Determine Condition/Urgency
             Dim condition As String = ""
             If rbFever.Checked Then
                 condition = "Fever"
@@ -245,14 +239,23 @@ Public Class RegisterForm
             details = " (" & condition & " - " & urgency & ")"
         End If
 
+        arrID(CurrentCount) = lblPatientID.Text
+        arrNames(CurrentCount) = txtPatientName.Text
+        arrContact(CurrentCount) = txtContactInfo.Text
+        arrSex(CurrentCount) = If(rbMale.Checked, "Male", "Female")
+        arrAge(CurrentCount) = CInt(txtAge.Text)
+        arrBday(CurrentCount) = dtpDOB.Value
 
         Dim finalSchedule As String = dtpDate.Value.ToShortDateString & " @ " & cmbTimeSlots.SelectedItem.ToString
-        arrSchedule(targetIndex) = finalSchedule
-        arrStatus(targetIndex) = "Pending"
-        arrService(targetIndex) = Service & details
+        arrSchedule(CurrentCount) = finalSchedule
+        arrStatus(CurrentCount) = "Pending"
+        arrService(CurrentCount) = Service & details
         arrDateCreated(CurrentCount) = DateTime.Now.ToString("MM/dd/yyyy")
+        arrDateProcessed(CurrentCount) = ""
 
-        MessageBox.Show("Appointment set for " & arrNames(targetIndex))
+        CurrentCount += 1
+
+        MessageBox.Show("Appointment set for " & txtPatientName.Text)
 
         Me.Close()
         SubMenu.Show()
@@ -266,5 +269,4 @@ Public Class RegisterForm
         SubMenu.Show()
         Me.Close()
     End Sub
-
 End Class

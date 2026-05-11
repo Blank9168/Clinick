@@ -8,12 +8,7 @@ Public Class ReportsFrm
 
     Private Sub ReportsFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbMonth.Items.Clear()
-        cmbMonth.Items.Add("January") : cmbMonth.Items.Add("February")
-        cmbMonth.Items.Add("March") : cmbMonth.Items.Add("April")
-        cmbMonth.Items.Add("May") : cmbMonth.Items.Add("June")
-        cmbMonth.Items.Add("July") : cmbMonth.Items.Add("August")
-        cmbMonth.Items.Add("September") : cmbMonth.Items.Add("October")
-        cmbMonth.Items.Add("November") : cmbMonth.Items.Add("December")
+        cmbMonth.Items.AddRange(New String() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
         cmbMonth.SelectedIndex = DateTime.Now.Month - 1
 
         dtpReportDate.Value = DateTime.Today
@@ -33,12 +28,14 @@ Public Class ReportsFrm
     End Sub
 
     Private Sub btnGenerateDaily_Click(sender As Object, e As EventArgs) Handles btnGenerateDaily.Click
-        ' Format match for Daily Filter
         Dim selectedDate As String = dtpReportDate.Value.ToString("MM/dd/yyyy")
         Dim rows As New List(Of Integer)
+
         For i As Integer = 0 To CurrentCount - 1
-            If arrSchedule(i) IsNot Nothing AndAlso arrSchedule(i).Contains(selectedDate) Then
-                rows.Add(i)
+            If arrSchedule(i) IsNot Nothing Then
+                If arrSchedule(i).Contains(selectedDate) Then
+                    rows.Add(i)
+                End If
             End If
         Next
         currentReportTitle = "Daily Report - " & selectedDate
@@ -50,10 +47,10 @@ Public Class ReportsFrm
         Dim selectedYear As Integer = DateTime.Now.Year
         Dim monthName As String = cmbMonth.SelectedItem.ToString()
         Dim rows As New List(Of Integer)
+
         For i As Integer = 0 To CurrentCount - 1
             If arrSchedule(i) IsNot Nothing AndAlso arrSchedule(i) <> "Not Set" Then
                 Try
-                    ' Split at "@" to get the date part for parsing
                     Dim schedulePart As String = arrSchedule(i).Split("@"c)(0).Trim()
                     Dim schedDate As DateTime = DateTime.Parse(schedulePart)
                     If schedDate.Month = selectedMonth AndAlso schedDate.Year = selectedYear Then
@@ -71,16 +68,23 @@ Public Class ReportsFrm
         dgvReports.Rows.Clear()
 
         For Each i In rows
-            If arrID(i) <> "" Then
-                ' Now finishDate will match the long format saved in MainFrm
-                Dim finishDate As String = If(arrDateProcessed(i) <> "", arrDateProcessed(i), "---")
-                dgvReports.Rows.Add(arrID(i), arrNames(i), arrService(i), arrSchedule(i), arrStatus(i), finishDate)
+            If Not String.IsNullOrWhiteSpace(arrID(i)) Then
+                Dim finishDate As String = If(Not String.IsNullOrEmpty(arrDateProcessed(i)), arrDateProcessed(i), "---")
+
+                dgvReports.Rows.Add(
+                    arrID(i),
+                    arrNames(i),
+                    arrService(i),
+                    arrSchedule(i),
+                    arrStatus(i),
+                    finishDate
+                )
             End If
         Next
 
         currentReportTitle = title
-        btnPrint.Enabled = True
-        btnExportExcel.Enabled = True
+        btnPrint.Enabled = (dgvReports.Rows.Count > 0)
+        btnExportExcel.Enabled = (dgvReports.Rows.Count > 0)
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
@@ -104,7 +108,7 @@ Public Class ReportsFrm
         yPos += 40
 
         Dim xPos As Integer = startX
-        Dim colWidths As Integer() = {50, 100, 220, 160, 70, 160}
+        Dim colWidths As Integer() = {50, 120, 180, 160, 80, 160}
         Dim headers As String() = {"ID", "Patient", "Service", "Schedule", "Status", "Processed"}
 
         For i As Integer = 0 To headers.Length - 1
@@ -113,7 +117,7 @@ Public Class ReportsFrm
         Next
 
         yPos += 25
-        e.Graphics.DrawLine(Pens.Black, startX, yPos, startX + 760, yPos)
+        e.Graphics.DrawLine(Pens.Black, startX, yPos, startX + 750, yPos)
         yPos += 10
 
         For Each row As DataGridViewRow In dgvReports.Rows
@@ -125,6 +129,11 @@ Public Class ReportsFrm
                     xPos += colWidths(j)
                 Next
                 yPos += 20
+
+                If yPos > e.MarginBounds.Bottom Then
+                    e.HasMorePages = True
+                    Return
+                End If
             End If
         Next
     End Sub
@@ -134,9 +143,11 @@ Public Class ReportsFrm
         Dim saveDlg As New SaveFileDialog()
         saveDlg.Filter = "CSV File (*.csv)|*.csv"
         saveDlg.FileName = currentReportTitle.Replace(" ", "_") & ".csv"
+
         If saveDlg.ShowDialog() = DialogResult.OK Then
             Dim csv As New System.Text.StringBuilder()
             csv.AppendLine("ID,Patient,Service Type,Scheduled On,Status,Completed On")
+
             For Each row As DataGridViewRow In dgvReports.Rows
                 If Not row.IsNewRow Then
                     csv.AppendLine(String.Format("{0},{1},{2},{3},{4},{5}",
@@ -148,10 +159,9 @@ Public Class ReportsFrm
                         CsvEscape(row.Cells(5).Value?.ToString())))
                 End If
             Next
+
             File.WriteAllText(saveDlg.FileName, csv.ToString())
             MessageBox.Show("Export Successful!")
-            Me.Activate()
-            Me.Focus()
         End If
     End Sub
 
@@ -163,9 +173,5 @@ Public Class ReportsFrm
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         MainFrm.Show()
         Me.Close()
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
     End Sub
 End Class

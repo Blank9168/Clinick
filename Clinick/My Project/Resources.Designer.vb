@@ -173,9 +173,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Iconsss() As System.Drawing.Bitmap
+        Friend ReadOnly Property Ipin() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Iconsss", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Ipin", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -183,9 +183,19 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Ipin() As System.Drawing.Bitmap
+        Friend ReadOnly Property Login_backg() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Ipin", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Login backg", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property login_backg_rev() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("login backg rev", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

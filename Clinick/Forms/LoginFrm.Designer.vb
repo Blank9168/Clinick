@@ -28,11 +28,8 @@ Partial Class LoginFrm
         Label1 = New Label()
         Label2 = New Label()
         btnClose = New Label()
-        PictureBox1 = New PictureBox()
         cbShowPass = New CheckBox()
         Panel1 = New Panel()
-        Panel2 = New Panel()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -41,7 +38,7 @@ Partial Class LoginFrm
         btnLogin.BackColor = Color.Teal
         btnLogin.Font = New Font("Microsoft Sans Serif", 10F)
         btnLogin.ForeColor = Color.White
-        btnLogin.Location = New Point(341, 583)
+        btnLogin.Location = New Point(344, 562)
         btnLogin.Margin = New Padding(3, 4, 3, 4)
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(237, 41)
@@ -53,7 +50,7 @@ Partial Class LoginFrm
         ' 
         txtUsername.BorderStyle = BorderStyle.FixedSingle
         txtUsername.Font = New Font("Microsoft Sans Serif", 10.2F)
-        txtUsername.Location = New Point(341, 377)
+        txtUsername.Location = New Point(344, 356)
         txtUsername.Margin = New Padding(3, 4, 3, 4)
         txtUsername.Name = "txtUsername"
         txtUsername.Size = New Size(237, 27)
@@ -63,7 +60,7 @@ Partial Class LoginFrm
         ' 
         txtPassword.BorderStyle = BorderStyle.FixedSingle
         txtPassword.Font = New Font("Microsoft Sans Serif", 10.2F)
-        txtPassword.Location = New Point(341, 475)
+        txtPassword.Location = New Point(344, 454)
         txtPassword.Margin = New Padding(3, 4, 3, 4)
         txtPassword.Name = "txtPassword"
         txtPassword.Size = New Size(237, 27)
@@ -73,8 +70,9 @@ Partial Class LoginFrm
         ' Label1
         ' 
         Label1.AutoSize = True
+        Label1.BackColor = Color.White
         Label1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(341, 449)
+        Label1.Location = New Point(344, 428)
         Label1.Name = "Label1"
         Label1.Size = New Size(88, 20)
         Label1.TabIndex = 3
@@ -83,8 +81,9 @@ Partial Class LoginFrm
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.BackColor = Color.White
         Label2.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(341, 351)
+        Label2.Location = New Point(344, 330)
         Label2.Name = "Label2"
         Label2.Size = New Size(91, 20)
         Label2.TabIndex = 4
@@ -102,50 +101,32 @@ Partial Class LoginFrm
         btnClose.TabIndex = 5
         btnClose.Text = "x"
         ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = My.Resources.Resources.LOGO_PARA_SA_COMPROG__312_x_282_px_
-        PictureBox1.Location = New Point(271, 55)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(354, 349)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 6
-        PictureBox1.TabStop = False
-        ' 
         ' cbShowPass
         ' 
         cbShowPass.AutoSize = True
-        cbShowPass.Location = New Point(341, 513)
+        cbShowPass.BackColor = Color.FromArgb(CByte(240), CByte(246), CByte(246))
+        cbShowPass.Location = New Point(344, 492)
         cbShowPass.Margin = New Padding(3, 4, 3, 4)
         cbShowPass.Name = "cbShowPass"
         cbShowPass.Size = New Size(132, 24)
         cbShowPass.TabIndex = 7
         cbShowPass.Text = "Show Password"
-        cbShowPass.UseVisualStyleBackColor = True
+        cbShowPass.UseVisualStyleBackColor = False
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(246), CByte(254), CByte(255))
-        Panel1.Controls.Add(Panel2)
+        Panel1.BackgroundImage = My.Resources.Resources.login_backg_rev
         Panel1.Controls.Add(cbShowPass)
         Panel1.Controls.Add(txtPassword)
         Panel1.Controls.Add(btnLogin)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(txtUsername)
         Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(47, 51)
+        Panel1.Location = New Point(37, 48)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(928, 667)
+        Panel1.Size = New Size(942, 675)
         Panel1.TabIndex = 11
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = Color.Teal
-        Panel2.Location = New Point(0, 1)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(928, 65)
-        Panel2.TabIndex = 8
         ' 
         ' LoginFrm
         ' 
@@ -160,7 +141,6 @@ Partial Class LoginFrm
         Name = "LoginFrm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         ResumeLayout(False)
@@ -173,9 +153,7 @@ Partial Class LoginFrm
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnClose As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents cbShowPass As CheckBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
 
 End Class

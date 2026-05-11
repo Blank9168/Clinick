@@ -121,6 +121,9 @@
   <data name="resized logo (350 x 150 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized logo (350 x 150 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Login backg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login backg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LOGOFINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOFINAL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -168,6 +171,9 @@
   </data>
   <data name="symbolssss (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\symbolssss (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boogsh welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boogsh welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo final (250 x 100 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo final (250 x 100 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +223,7 @@
   <data name="tibokng puso mo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tibokng puso mo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boogsh welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boogsh welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login backg rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login backg rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

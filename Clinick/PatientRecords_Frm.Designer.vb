@@ -50,7 +50,7 @@ Partial Class PatientRecords_Frm
         ' txtSearchName
         ' 
         txtSearchName.BorderStyle = BorderStyle.FixedSingle
-        txtSearchName.Location = New Point(53, 124)
+        txtSearchName.Location = New Point(54, 124)
         txtSearchName.Name = "txtSearchName"
         txtSearchName.Size = New Size(315, 23)
         txtSearchName.TabIndex = 0
@@ -61,7 +61,7 @@ Partial Class PatientRecords_Frm
         btnSearch.FlatStyle = FlatStyle.Flat
         btnSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSearch.ForeColor = Color.Transparent
-        btnSearch.Location = New Point(383, 117)
+        btnSearch.Location = New Point(384, 117)
         btnSearch.Name = "btnSearch"
         btnSearch.Size = New Size(112, 35)
         btnSearch.TabIndex = 1
@@ -125,7 +125,7 @@ Partial Class PatientRecords_Frm
         btnClose.FlatStyle = FlatStyle.Flat
         btnClose.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnClose.ForeColor = Color.Teal
-        btnClose.Location = New Point(738, 116)
+        btnClose.Location = New Point(739, 116)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(95, 34)
         btnClose.TabIndex = 3
@@ -136,7 +136,7 @@ Partial Class PatientRecords_Frm
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.Reports_Banner__2_
         PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Location = New Point(-3, -4)
+        PictureBox1.Location = New Point(-2, -4)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(961, 87)
         PictureBox1.TabIndex = 11
@@ -156,7 +156,7 @@ Partial Class PatientRecords_Frm
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Teal
-        Label2.Location = New Point(79, 16)
+        Label2.Location = New Point(80, 16)
         Label2.Name = "Label2"
         Label2.Size = New Size(192, 32)
         Label2.TabIndex = 14
@@ -166,7 +166,7 @@ Partial Class PatientRecords_Frm
         ' 
         PictureBox3.BackgroundImage = My.Resources.Resources.Iconsss__9_
         PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox3.Location = New Point(12, 15)
+        PictureBox3.Location = New Point(13, 15)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(58, 50)
         PictureBox3.TabIndex = 15
@@ -176,7 +176,7 @@ Partial Class PatientRecords_Frm
         ' 
         PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), Image)
         PictureBox6.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox6.Location = New Point(749, 121)
+        PictureBox6.Location = New Point(750, 121)
         PictureBox6.Name = "PictureBox6"
         PictureBox6.Size = New Size(14, 25)
         PictureBox6.TabIndex = 16
@@ -187,7 +187,7 @@ Partial Class PatientRecords_Frm
         PictureBox4.BackColor = Color.Teal
         PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), Image)
         PictureBox4.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox4.Location = New Point(394, 122)
+        PictureBox4.Location = New Point(395, 122)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(21, 25)
         PictureBox4.TabIndex = 17

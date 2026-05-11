@@ -805,7 +805,7 @@ Partial Class MainFrm
         btnPatientRecord.Cursor = Cursors.Hand
         btnPatientRecord.FlatStyle = FlatStyle.Flat
         btnPatientRecord.ForeColor = Color.Azure
-        btnPatientRecord.Location = New Point(7, 458)
+        btnPatientRecord.Location = New Point(11, 458)
         btnPatientRecord.Name = "btnPatientRecord"
         btnPatientRecord.Size = New Size(159, 47)
         btnPatientRecord.TabIndex = 28

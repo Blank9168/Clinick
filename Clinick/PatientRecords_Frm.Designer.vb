@@ -35,28 +35,31 @@ Partial Class PatientRecords_Frm
         btnClose = New Button()
         PictureBox1 = New PictureBox()
         Panel1 = New Panel()
-        PictureBox4 = New PictureBox()
+        btnEdit = New Button()
+        btnClearAll = New Button()
+        btnDelete = New Button()
+        btnAdd = New Button()
         PictureBox3 = New PictureBox()
         PictureBox2 = New PictureBox()
+        PictureBox4 = New PictureBox()
         Label2 = New Label()
         Label1 = New Label()
         PictureBox5 = New PictureBox()
-        btnAdd = New Button()
         CType(dgvPatientHistory, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' txtSearchName
         ' 
         txtSearchName.BorderStyle = BorderStyle.FixedSingle
-        txtSearchName.Location = New Point(41, 28)
+        txtSearchName.Location = New Point(20, 28)
         txtSearchName.Name = "txtSearchName"
-        txtSearchName.Size = New Size(315, 23)
+        txtSearchName.Size = New Size(264, 23)
         txtSearchName.TabIndex = 0
         ' 
         ' btnSearch
@@ -65,7 +68,7 @@ Partial Class PatientRecords_Frm
         btnSearch.FlatStyle = FlatStyle.Flat
         btnSearch.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSearch.ForeColor = Color.Transparent
-        btnSearch.Location = New Point(365, 22)
+        btnSearch.Location = New Point(290, 22)
         btnSearch.Name = "btnSearch"
         btnSearch.Size = New Size(120, 35)
         btnSearch.TabIndex = 1
@@ -130,7 +133,7 @@ Partial Class PatientRecords_Frm
         btnClose.FlatStyle = FlatStyle.Flat
         btnClose.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnClose.ForeColor = Color.Teal
-        btnClose.Location = New Point(713, 23)
+        btnClose.Location = New Point(766, 15)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(102, 34)
         btnClose.TabIndex = 3
@@ -141,7 +144,7 @@ Partial Class PatientRecords_Frm
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.Reports_Banner__2_
         PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Location = New Point(-4, -2)
+        PictureBox1.Location = New Point(-14, -2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(961, 87)
         PictureBox1.TabIndex = 11
@@ -150,10 +153,11 @@ Partial Class PatientRecords_Frm
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
+        Panel1.Controls.Add(btnEdit)
+        Panel1.Controls.Add(btnClearAll)
+        Panel1.Controls.Add(btnDelete)
         Panel1.Controls.Add(btnAdd)
-        Panel1.Controls.Add(PictureBox4)
         Panel1.Controls.Add(PictureBox3)
-        Panel1.Controls.Add(btnClose)
         Panel1.Controls.Add(btnSearch)
         Panel1.Controls.Add(txtSearchName)
         Panel1.Controls.Add(PictureBox2)
@@ -163,23 +167,64 @@ Partial Class PatientRecords_Frm
         Panel1.Size = New Size(856, 500)
         Panel1.TabIndex = 12
         ' 
-        ' PictureBox4
+        ' btnEdit
         ' 
-        PictureBox4.BackColor = Color.White
-        PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), Image)
-        PictureBox4.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox4.Location = New Point(726, 28)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(13, 24)
-        PictureBox4.TabIndex = 17
-        PictureBox4.TabStop = False
+        btnEdit.BackColor = Color.Teal
+        btnEdit.FlatStyle = FlatStyle.Flat
+        btnEdit.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnEdit.ForeColor = Color.Transparent
+        btnEdit.Location = New Point(542, 28)
+        btnEdit.Name = "btnEdit"
+        btnEdit.Size = New Size(76, 27)
+        btnEdit.TabIndex = 21
+        btnEdit.Text = "Edit"
+        btnEdit.UseVisualStyleBackColor = True
+        ' 
+        ' btnClearAll
+        ' 
+        btnClearAll.BackColor = Color.Teal
+        btnClearAll.FlatStyle = FlatStyle.Flat
+        btnClearAll.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClearAll.ForeColor = Color.Transparent
+        btnClearAll.Location = New Point(747, 22)
+        btnClearAll.Name = "btnClearAll"
+        btnClearAll.Size = New Size(117, 35)
+        btnClearAll.TabIndex = 20
+        btnClearAll.Text = "Clear All"
+        btnClearAll.UseVisualStyleBackColor = True
+        ' 
+        ' btnDelete
+        ' 
+        btnDelete.BackColor = Color.Teal
+        btnDelete.FlatStyle = FlatStyle.Flat
+        btnDelete.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnDelete.ForeColor = Color.Transparent
+        btnDelete.Location = New Point(624, 24)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(117, 35)
+        btnDelete.TabIndex = 19
+        btnDelete.Text = "Remove"
+        btnDelete.UseVisualStyleBackColor = True
+        ' 
+        ' btnAdd
+        ' 
+        btnAdd.BackColor = Color.Teal
+        btnAdd.FlatStyle = FlatStyle.Flat
+        btnAdd.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAdd.ForeColor = Color.Transparent
+        btnAdd.Location = New Point(416, 22)
+        btnAdd.Name = "btnAdd"
+        btnAdd.Size = New Size(120, 35)
+        btnAdd.TabIndex = 18
+        btnAdd.Text = "Add"
+        btnAdd.UseVisualStyleBackColor = True
         ' 
         ' PictureBox3
         ' 
         PictureBox3.BackColor = Color.Teal
         PictureBox3.BackgroundImage = My.Resources.Resources.Iconsss__10_1
         PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox3.Location = New Point(373, 27)
+        PictureBox3.Location = New Point(298, 27)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(23, 24)
         PictureBox3.TabIndex = 16
@@ -193,6 +238,17 @@ Partial Class PatientRecords_Frm
         PictureBox2.Size = New Size(814, 65)
         PictureBox2.TabIndex = 11
         PictureBox2.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.BackColor = Color.White
+        PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), Image)
+        PictureBox4.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox4.Location = New Point(789, 18)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(13, 24)
+        PictureBox4.TabIndex = 17
+        PictureBox4.TabStop = False
         ' 
         ' Label2
         ' 
@@ -226,25 +282,14 @@ Partial Class PatientRecords_Frm
         PictureBox5.TabIndex = 18
         PictureBox5.TabStop = False
         ' 
-        ' btnAdd
-        ' 
-        btnAdd.BackColor = Color.Teal
-        btnAdd.FlatStyle = FlatStyle.Flat
-        btnAdd.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnAdd.ForeColor = Color.Transparent
-        btnAdd.Location = New Point(491, 22)
-        btnAdd.Name = "btnAdd"
-        btnAdd.Size = New Size(120, 35)
-        btnAdd.TabIndex = 18
-        btnAdd.Text = "Add"
-        btnAdd.UseVisualStyleBackColor = True
-        ' 
         ' PatientRecords_Frm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(249), CByte(251), CByte(253))
         ClientSize = New Size(880, 595)
+        Controls.Add(PictureBox4)
+        Controls.Add(btnClose)
         Controls.Add(PictureBox5)
         Controls.Add(Label1)
         Controls.Add(Label2)
@@ -258,9 +303,9 @@ Partial Class PatientRecords_Frm
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -285,4 +330,7 @@ Partial Class PatientRecords_Frm
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents btnAdd As Button
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnClearAll As Button
+    Friend WithEvents btnEdit As Button
 End Class

@@ -12,10 +12,13 @@
 
     Private Sub AddPatient_Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UpdateNextID()
+        txtAge.ReadOnly = True
     End Sub
 
     Private Sub UpdateNextID()
-        lblPatientID.Text = "P-" & (1001 + MasterCount).ToString()
+        If lblPatientID.Text = "[ID]" OrElse lblPatientID.Text = "" OrElse lblPatientID.Text.StartsWith("P-") = False Then
+            lblPatientID.Text = "P-" & (1001 + MasterCount).ToString()
+        End If
     End Sub
 
     Private Sub btnReturnMainPd_Click(sender As Object, e As EventArgs) Handles btnReturnMainPd.Click
@@ -25,36 +28,51 @@
 
     Private Sub btnAddPatient_Click(sender As Object, e As EventArgs) Handles btnAddPatient.Click
         Dim inputName As String = txtPatientName.Text.Trim()
+        Dim targetID As String = lblPatientID.Text
+        Dim foundIndex As Integer = -1
 
         If String.IsNullOrWhiteSpace(inputName) Then
             MessageBox.Show("Please enter a patient name.")
             Return
         End If
 
-        ' Duplicate Check before incrementing
+
         For i As Integer = 0 To MasterCount - 1
-            If arrMasterName(i).Equals(inputName, StringComparison.OrdinalIgnoreCase) Then
-                MessageBox.Show("Patient '" & inputName & "' is already registered.", "Duplicate Entry")
-                Return
+            If arrMasterID(i) = targetID Then
+                foundIndex = i
+                Exit For
             End If
         Next
 
-        ' Increment and Save
-        Dim targetID As String = lblPatientID.Text
 
-        arrMasterID(MasterCount) = targetID
-        arrMasterName(MasterCount) = inputName
-        arrMasterContact(MasterCount) = txtContactInfo.Text.Trim()
-        arrMasterSex(MasterCount) = If(rbMale.Checked, "Male", "Female")
+        If foundIndex = -1 Then
+            For i As Integer = 0 To MasterCount - 1
+                If arrMasterName(i).Equals(inputName, StringComparison.OrdinalIgnoreCase) Then
+                    MessageBox.Show("Patient '" & inputName & "' is already registered.", "Duplicate Entry")
+                    Return
+                End If
+            Next
+
+            foundIndex = MasterCount
+        End If
+
+        arrMasterID(foundIndex) = targetID
+        arrMasterName(foundIndex) = inputName
+        arrMasterContact(foundIndex) = txtContactInfo.Text.Trim()
+        arrMasterSex(foundIndex) = If(rbMale.Checked, "Male", "Female")
 
         Dim ageVal As Integer = 0
         Integer.TryParse(txtAge.Text, ageVal)
-        arrMasterAge(MasterCount) = ageVal
-        arrMasterBday(MasterCount) = dtpBday.Value
+        arrMasterAge(foundIndex) = ageVal
+        arrMasterBday(foundIndex) = dtpBday.Value
 
-        MasterCount += 1 ' ID increments here
 
-        MessageBox.Show("New patient registered: " & targetID)
+        If foundIndex = MasterCount Then
+            MasterCount += 1
+            MessageBox.Show("New patient registered: " & targetID)
+        Else
+            MessageBox.Show("Patient record updated successfully: " & targetID)
+        End If
 
         ClearPatientForm()
         PatientRecords_Frm.LoadAllPatients()
@@ -73,4 +91,6 @@
         If bday > today.AddYears(-age) Then age -= 1
         txtAge.Text = age.ToString()
     End Sub
+
+
 End Class

@@ -23,7 +23,7 @@ Partial Class MainFrm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainFrm))
         btnLogout = New Button()
         Label2 = New Label()
@@ -86,7 +86,6 @@ Partial Class MainFrm
         LblDate = New Label()
         Panel1 = New Panel()
         Panel22 = New Panel()
-        btnEditPatient = New Button()
         Panel24 = New Panel()
         btnPatientRecord = New Button()
         btnReport = New Button()
@@ -152,14 +151,14 @@ Partial Class MainFrm
         dgvSummary.AllowUserToResizeColumns = False
         dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSummary.BackgroundColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvSummary.Columns.AddRange(New DataGridViewColumn() {Applied, PatientName, Contact, ServiceType, Sched, Status})
         dgvSummary.GridColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
@@ -257,7 +256,7 @@ Partial Class MainFrm
         cmbFilter.FormattingEnabled = True
         cmbFilter.Location = New Point(382, 219)
         cmbFilter.Name = "cmbFilter"
-        cmbFilter.Size = New Size(122, 24)
+        cmbFilter.Size = New Size(211, 24)
         cmbFilter.TabIndex = 35
         ' 
         ' btnSortName
@@ -267,7 +266,7 @@ Partial Class MainFrm
         btnSortName.FlatStyle = FlatStyle.Flat
         btnSortName.Font = New Font("Microsoft Sans Serif", 10F)
         btnSortName.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnSortName.Location = New Point(510, 215)
+        btnSortName.Location = New Point(613, 217)
         btnSortName.Name = "btnSortName"
         btnSortName.Size = New Size(116, 27)
         btnSortName.TabIndex = 37
@@ -281,7 +280,7 @@ Partial Class MainFrm
         btnSortSched.FlatStyle = FlatStyle.Flat
         btnSortSched.Font = New Font("Microsoft Sans Serif", 10F)
         btnSortSched.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnSortSched.Location = New Point(632, 215)
+        btnSortSched.Location = New Point(739, 217)
         btnSortSched.Name = "btnSortSched"
         btnSortSched.Size = New Size(140, 27)
         btnSortSched.TabIndex = 38
@@ -763,20 +762,6 @@ Partial Class MainFrm
         Panel22.Size = New Size(608, 8)
         Panel22.TabIndex = 51
         ' 
-        ' btnEditPatient
-        ' 
-        btnEditPatient.BackColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
-        btnEditPatient.Cursor = Cursors.Hand
-        btnEditPatient.FlatStyle = FlatStyle.Flat
-        btnEditPatient.Font = New Font("Microsoft Sans Serif", 10F)
-        btnEditPatient.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        btnEditPatient.Location = New Point(778, 215)
-        btnEditPatient.Name = "btnEditPatient"
-        btnEditPatient.Size = New Size(100, 27)
-        btnEditPatient.TabIndex = 53
-        btnEditPatient.Text = "Edit Patient"
-        btnEditPatient.UseVisualStyleBackColor = False
-        ' 
         ' Panel24
         ' 
         Panel24.BackColor = Color.FromArgb(CByte(246), CByte(250), CByte(253))
@@ -819,7 +804,7 @@ Partial Class MainFrm
         btnReport.Cursor = Cursors.Hand
         btnReport.FlatStyle = FlatStyle.Flat
         btnReport.ForeColor = Color.Azure
-        btnReport.Location = New Point(11, 337)
+        btnReport.Location = New Point(12, 403)
         btnReport.Margin = New Padding(3, 2, 3, 2)
         btnReport.Name = "btnReport"
         btnReport.Size = New Size(156, 47)
@@ -833,7 +818,7 @@ Partial Class MainFrm
         btnDB.Cursor = Cursors.Hand
         btnDB.FlatStyle = FlatStyle.Flat
         btnDB.ForeColor = Color.Azure
-        btnDB.Location = New Point(11, 277)
+        btnDB.Location = New Point(12, 277)
         btnDB.Margin = New Padding(3, 2, 3, 2)
         btnDB.Name = "btnDB"
         btnDB.Size = New Size(156, 46)
@@ -895,7 +880,7 @@ Partial Class MainFrm
         btnAdd.BackgroundImageLayout = ImageLayout.Zoom
         btnAdd.FlatStyle = FlatStyle.Flat
         btnAdd.ForeColor = Color.Azure
-        btnAdd.Location = New Point(12, 337)
+        btnAdd.Location = New Point(12, 340)
         btnAdd.Margin = New Padding(3, 2, 3, 2)
         btnAdd.Name = "btnAdd"
         btnAdd.Size = New Size(156, 46)
@@ -921,7 +906,6 @@ Partial Class MainFrm
         ClientSize = New Size(896, 634)
         Controls.Add(LblDate)
         Controls.Add(Panel24)
-        Controls.Add(btnEditPatient)
         Controls.Add(Label9)
         Controls.Add(Panel17)
         Controls.Add(Panel18)
@@ -1033,7 +1017,6 @@ Partial Class MainFrm
     Friend WithEvents LblDate As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel22 As Panel
-    Friend WithEvents btnEditPatient As Button
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox

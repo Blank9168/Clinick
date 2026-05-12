@@ -11,7 +11,6 @@ Public Class ReportsFrm
         cmbMonth.Items.AddRange(New String() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
         cmbMonth.SelectedIndex = DateTime.Now.Month - 1
 
-        dtpReportDate.Value = DateTime.Today
     End Sub
 
     Private Sub ReportsFrm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
@@ -27,20 +26,7 @@ Public Class ReportsFrm
         BuildReport(currentReportTitle, rows)
     End Sub
 
-    Private Sub btnGenerateDaily_Click(sender As Object, e As EventArgs) Handles btnGenerateDaily.Click
-        Dim selectedDate As String = dtpReportDate.Value.ToString("MM/dd/yyyy")
-        Dim rows As New List(Of Integer)
 
-        For i As Integer = 0 To CurrentCount - 1
-            If arrSchedule(i) IsNot Nothing Then
-                If arrSchedule(i).Contains(selectedDate) Then
-                    rows.Add(i)
-                End If
-            End If
-        Next
-        currentReportTitle = "Daily Report - " & selectedDate
-        BuildReport(currentReportTitle, rows)
-    End Sub
 
     Private Sub btnGenerateMonthly_Click(sender As Object, e As EventArgs) Handles btnGenerateMonthly.Click
         Dim selectedMonth As Integer = cmbMonth.SelectedIndex + 1
@@ -173,5 +159,13 @@ Public Class ReportsFrm
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         MainFrm.Show()
         Me.Close()
+    End Sub
+
+    Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click
+        LoadAllRecords()
+        cmbMonth.SelectedIndex = DateTime.Now.Month - 1
+
+
+        MessageBox.Show("Showing all patient records.")
     End Sub
 End Class

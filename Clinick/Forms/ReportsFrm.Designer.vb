@@ -23,9 +23,7 @@ Partial Class ReportsFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReportsFrm))
-        dtpReportDate = New DateTimePicker()
         cmbMonth = New ComboBox()
-        btnGenerateDaily = New Button()
         btnGenerateMonthly = New Button()
         btnPrint = New Button()
         btnExportExcel = New Button()
@@ -39,6 +37,7 @@ Partial Class ReportsFrm
         colProcessed = New DataGridViewTextBoxColumn()
         PictureBox1 = New PictureBox()
         Panel1 = New Panel()
+        btnAll = New Button()
         PictureBox6 = New PictureBox()
         PictureBox5 = New PictureBox()
         PictureBox4 = New PictureBox()
@@ -56,33 +55,13 @@ Partial Class ReportsFrm
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' dtpReportDate
-        ' 
-        dtpReportDate.Location = New Point(151, 37)
-        dtpReportDate.Name = "dtpReportDate"
-        dtpReportDate.Size = New Size(200, 23)
-        dtpReportDate.TabIndex = 0
-        ' 
         ' cmbMonth
         ' 
         cmbMonth.FormattingEnabled = True
-        cmbMonth.Location = New Point(535, 37)
+        cmbMonth.Location = New Point(174, 40)
         cmbMonth.Name = "cmbMonth"
         cmbMonth.Size = New Size(121, 23)
         cmbMonth.TabIndex = 1
-        ' 
-        ' btnGenerateDaily
-        ' 
-        btnGenerateDaily.BackColor = Color.Teal
-        btnGenerateDaily.FlatStyle = FlatStyle.Flat
-        btnGenerateDaily.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnGenerateDaily.ForeColor = Color.Transparent
-        btnGenerateDaily.Location = New Point(29, 31)
-        btnGenerateDaily.Name = "btnGenerateDaily"
-        btnGenerateDaily.Size = New Size(111, 35)
-        btnGenerateDaily.TabIndex = 2
-        btnGenerateDaily.Text = "Generate Daily"
-        btnGenerateDaily.UseVisualStyleBackColor = False
         ' 
         ' btnGenerateMonthly
         ' 
@@ -90,11 +69,11 @@ Partial Class ReportsFrm
         btnGenerateMonthly.FlatStyle = FlatStyle.Flat
         btnGenerateMonthly.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnGenerateMonthly.ForeColor = Color.Transparent
-        btnGenerateMonthly.Location = New Point(388, 31)
+        btnGenerateMonthly.Location = New Point(32, 33)
         btnGenerateMonthly.Name = "btnGenerateMonthly"
         btnGenerateMonthly.Size = New Size(136, 35)
         btnGenerateMonthly.TabIndex = 3
-        btnGenerateMonthly.Text = "Generate Monthly"
+        btnGenerateMonthly.Text = "View Monthly"
         btnGenerateMonthly.UseVisualStyleBackColor = False
         ' 
         ' btnPrint
@@ -203,6 +182,7 @@ Partial Class ReportsFrm
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
+        Panel1.Controls.Add(btnAll)
         Panel1.Controls.Add(PictureBox6)
         Panel1.Controls.Add(PictureBox5)
         Panel1.Controls.Add(PictureBox4)
@@ -211,15 +191,26 @@ Partial Class ReportsFrm
         Panel1.Controls.Add(btnPrint)
         Panel1.Controls.Add(PictureBox3)
         Panel1.Controls.Add(cmbMonth)
-        Panel1.Controls.Add(dtpReportDate)
         Panel1.Controls.Add(btnGenerateMonthly)
-        Panel1.Controls.Add(btnGenerateDaily)
         Panel1.Controls.Add(PictureBox2)
         Panel1.Controls.Add(dgvReports)
         Panel1.Location = New Point(12, 86)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(856, 497)
         Panel1.TabIndex = 11
+        ' 
+        ' btnAll
+        ' 
+        btnAll.BackColor = Color.Teal
+        btnAll.FlatStyle = FlatStyle.Flat
+        btnAll.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAll.ForeColor = Color.Transparent
+        btnAll.Location = New Point(329, 33)
+        btnAll.Name = "btnAll"
+        btnAll.Size = New Size(136, 35)
+        btnAll.TabIndex = 15
+        btnAll.Text = "View All"
+        btnAll.UseVisualStyleBackColor = False
         ' 
         ' PictureBox6
         ' 
@@ -315,10 +306,7 @@ Partial Class ReportsFrm
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents dtpReportDate As DateTimePicker
     Friend WithEvents cmbMonth As ComboBox
-    Friend WithEvents btnGenerateDaily As Button
     Friend WithEvents btnGenerateMonthly As Button
     Friend WithEvents btnPrint As Button
     Friend WithEvents btnExportExcel As Button
@@ -340,4 +328,5 @@ Partial Class ReportsFrm
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents btnAll As Button
 End Class

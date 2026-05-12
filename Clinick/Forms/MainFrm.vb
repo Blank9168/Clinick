@@ -91,7 +91,7 @@
             btnAppoint.Visible = True
             btnDB.Visible = True
             btnReport.Visible = False
-            btnPatientRecord.Location = New Point(28, 448)
+            btnPatientRecord.Location = New Point(12, 467)
         ElseIf CurrentUser = "Admin" Then
             lblUserDisplay.Text = "Pepito"
             lblPositionDisplay.Text = "Administrator"
@@ -100,7 +100,7 @@
             btnReport.Visible = True
             btnAdd.Visible = False
             btnAppoint.Visible = False
-            btnPatientRecord.Location = New Point(28, 397)
+            btnPatientRecord.Location = New Point(15, 337)
         Else
             lblUserDisplay.Text = "User: Unknown"
         End If
@@ -249,19 +249,19 @@
         Hide()
     End Sub
 
-    Private Sub btnEditPatient_Click(sender As Object, e As EventArgs) Handles btnEditPatient.Click
+    Private Sub btnEditPatient_Click(sender As Object, e As EventArgs)
         If dgvSummary.CurrentRow IsNot Nothing AndAlso dgvSummary.CurrentRow.Index >= 0 Then
-            Dim selectedID As String = dgvSummary.CurrentRow.Cells(0).Value.ToString()
+            Dim selectedID = dgvSummary.CurrentRow.Cells(0).Value.ToString
 
             EditPatientFrm.txtSearchID.Text = selectedID
             EditPatientFrm.WindowState = FormWindowState.Normal
             EditPatientFrm.StartPosition = FormStartPosition.CenterScreen
 
-            EditPatientFrm.Show()
-            EditPatientFrm.BringToFront()
-            EditPatientFrm.Focus()
+            EditPatientFrm.Show
+            EditPatientFrm.BringToFront
+            EditPatientFrm.Focus
 
-            Me.Hide()
+            Hide
         Else
             MessageBox.Show("Please select a patient from the list first.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If

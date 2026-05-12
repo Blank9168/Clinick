@@ -135,29 +135,11 @@
   <metadata name="DOB.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Patient.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Contact.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Age.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Sex.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DOB.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAtAAAALQCAYAAAC5V0ecAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAN6pJREFUeF7t3XuYZWlB3/seGO6iCANDerprv2vEaxLxaAghIiqPJgFPjALtOSdI
+        vAAADrwBlbxySQAAN6pJREFUeF7t3XuYZWlB3/seGO6iCANDerprv2vEaxLxaAghIiqPJgFPjALtOSdI
         7DBD1buqe7+rGjgcDRypHHLUE48RjYgxAS/xEiOgBgwCT4IGPT7BiIoE8AIMgjKggmECM1xznlXdxTDv
         ru6u2rX3etfl83me7z+51L6tVfvH6j27TpwAAAAAAAAAAAAAAAAAAOCiG86de9BGnb5sFpsnzmLzjKpO
         P1DV6RWhTr/86VV1ek1Vp38XYvqZUKcfDXV6YYjNP6vq5nmhTpuzrZ1HXf+UZ94v//kAANXW/OGzOv39
@@ -401,7 +383,7 @@
   <data name="PictureBox5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAtAAAALQCAYAAAC5V0ecAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAiH1JREFUeF7t3QmYFdWd/nHMnkwyS8aMiSJ9biYz0UxiTMziPzGJMTGTZJKMMxOi
+        vAAADrwBlbxySQAAiH1JREFUeF7t3QmYFdWd/nHMnkwyS8aMiSJ9biYz0UxiTMziPzGJMTGTZJKMMxOi
         mcQMMdhd1XCrutlFgQZlE0XEBURkVRZBdhAVBEVWQRAQEBFBUJFF2bfMpP7PuYji77DcqltV91bV932e
         z/PkSeOputW3675dXXVOo0aEEEKKTuM/1X9aWXUqZ7sXNal1LquqcX6uLOcaZTvVVZbbWllOg7LdO5Tl
         PJCznHHKdh7L2c48Zburc7b7as5yduds1yuWspxDOdvZk7Od7cpytyrb2agsZ23Odp/PWe6zynbmK9t5

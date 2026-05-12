@@ -93,7 +93,7 @@ Partial Class AddPatient_Frm
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 12F)
         Label8.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label8.Location = New Point(33, 238)
+        Label8.Location = New Point(33, 174)
         Label8.Name = "Label8"
         Label8.Size = New Size(103, 20)
         Label8.TabIndex = 47
@@ -102,7 +102,7 @@ Partial Class AddPatient_Frm
         ' dtpBday
         ' 
         dtpBday.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dtpBday.Location = New Point(33, 260)
+        dtpBday.Location = New Point(33, 200)
         dtpBday.Margin = New Padding(3, 2, 3, 2)
         dtpBday.Name = "dtpBday"
         dtpBday.Size = New Size(233, 23)
@@ -111,7 +111,7 @@ Partial Class AddPatient_Frm
         ' txtAge
         ' 
         txtAge.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtAge.Location = New Point(33, 196)
+        txtAge.Location = New Point(33, 257)
         txtAge.Margin = New Padding(3, 2, 3, 2)
         txtAge.Name = "txtAge"
         txtAge.Size = New Size(133, 26)
@@ -122,7 +122,7 @@ Partial Class AddPatient_Frm
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 12F)
         Label7.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
-        Label7.Location = New Point(33, 176)
+        Label7.Location = New Point(33, 235)
         Label7.Name = "Label7"
         Label7.Size = New Size(94, 20)
         Label7.TabIndex = 44
@@ -222,9 +222,8 @@ Partial Class AddPatient_Frm
         lblPatientID.ForeColor = Color.FromArgb(CByte(50), CByte(107), CByte(128))
         lblPatientID.Location = New Point(150, 67)
         lblPatientID.Name = "lblPatientID"
-        lblPatientID.Size = New Size(105, 24)
+        lblPatientID.Size = New Size(0, 24)
         lblPatientID.TabIndex = 18
-        lblPatientID.Text = "GEN-1001"
         ' 
         ' Label2
         ' 

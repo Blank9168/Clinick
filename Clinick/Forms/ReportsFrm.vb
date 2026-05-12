@@ -28,7 +28,7 @@ Public Class ReportsFrm
 
 
 
-    Private Sub btnGenerateMonthly_Click(sender As Object, e As EventArgs) Handles btnGenerateMonthly.Click, Button1.Click
+    Private Sub btnGenerateMonthly_Click(sender As Object, e As EventArgs) Handles btnGenerateMonthly.Click
         Dim selectedMonth = cmbMonth.SelectedIndex + 1
         Dim selectedYear = Date.Now.Year
         Dim monthName = cmbMonth.SelectedItem.ToString
@@ -73,11 +73,11 @@ Public Class ReportsFrm
         btnExportExcel.Enabled = (dgvReports.Rows.Count > 0)
     End Sub
 
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click, Button2.Click
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click, btnPrint.Click
         Dim prntDlg As New PrintDialog
         prntDlg.Document = prntDoc
         If prntDlg.ShowDialog = DialogResult.OK Then
-            prntDoc.Print
+            prntDoc.Print()
         End If
     End Sub
 
@@ -124,7 +124,7 @@ Public Class ReportsFrm
         Next
     End Sub
 
-    Private Sub btnExportExcel_Click(sender As Object, e As EventArgs) Handles btnExportExcel.Click, Button3.Click
+    Private Sub btnExportExcel_Click(sender As Object, e As EventArgs) Handles btnExportExcel.Click, btnExportExcel.Click
         If dgvReports.Rows.Count = 0 Then Return
         Dim saveDlg As New SaveFileDialog
         saveDlg.Filter = "CSV File (*.csv)|*.csv"
@@ -156,16 +156,18 @@ Public Class ReportsFrm
         Return """" & value.Replace("""", """""") & """"
     End Function
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click, Button4.Click
-        MainFrm.Show
-        Close
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click, btnClose.Click
+        MainFrm.Show()
+        Close()
     End Sub
 
-    Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click, Button5.Click
-        LoadAllRecords
+    Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click, btnAll.Click
+        LoadAllRecords()
         cmbMonth.SelectedIndex = Date.Now.Month - 1
 
 
         MessageBox.Show("Showing all patient records.")
     End Sub
+
+
 End Class

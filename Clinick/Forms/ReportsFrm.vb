@@ -28,17 +28,17 @@ Public Class ReportsFrm
 
 
 
-    Private Sub btnGenerateMonthly_Click(sender As Object, e As EventArgs) Handles btnGenerateMonthly.Click
-        Dim selectedMonth As Integer = cmbMonth.SelectedIndex + 1
-        Dim selectedYear As Integer = DateTime.Now.Year
-        Dim monthName As String = cmbMonth.SelectedItem.ToString()
+    Private Sub btnGenerateMonthly_Click(sender As Object, e As EventArgs) Handles btnGenerateMonthly.Click, Button1.Click
+        Dim selectedMonth = cmbMonth.SelectedIndex + 1
+        Dim selectedYear = Date.Now.Year
+        Dim monthName = cmbMonth.SelectedItem.ToString
         Dim rows As New List(Of Integer)
 
-        For i As Integer = 0 To CurrentCount - 1
+        For i = 0 To CurrentCount - 1
             If arrSchedule(i) IsNot Nothing AndAlso arrSchedule(i) <> "Not Set" Then
                 Try
-                    Dim schedulePart As String = arrSchedule(i).Split("@"c)(0).Trim()
-                    Dim schedDate As DateTime = DateTime.Parse(schedulePart)
+                    Dim schedulePart = arrSchedule(i).Split("@"c)(0).Trim
+                    Dim schedDate = Date.Parse(schedulePart)
                     If schedDate.Month = selectedMonth AndAlso schedDate.Year = selectedYear Then
                         rows.Add(i)
                     End If
@@ -73,11 +73,11 @@ Public Class ReportsFrm
         btnExportExcel.Enabled = (dgvReports.Rows.Count > 0)
     End Sub
 
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click, Button2.Click
         Dim prntDlg As New PrintDialog
         prntDlg.Document = prntDoc
         If prntDlg.ShowDialog = DialogResult.OK Then
-            prntDoc.Print()
+            prntDoc.Print
         End If
     End Sub
 
@@ -124,29 +124,29 @@ Public Class ReportsFrm
         Next
     End Sub
 
-    Private Sub btnExportExcel_Click(sender As Object, e As EventArgs) Handles btnExportExcel.Click
+    Private Sub btnExportExcel_Click(sender As Object, e As EventArgs) Handles btnExportExcel.Click, Button3.Click
         If dgvReports.Rows.Count = 0 Then Return
-        Dim saveDlg As New SaveFileDialog()
+        Dim saveDlg As New SaveFileDialog
         saveDlg.Filter = "CSV File (*.csv)|*.csv"
         saveDlg.FileName = currentReportTitle.Replace(" ", "_") & ".csv"
 
-        If saveDlg.ShowDialog() = DialogResult.OK Then
-            Dim csv As New System.Text.StringBuilder()
+        If saveDlg.ShowDialog = DialogResult.OK Then
+            Dim csv As New Text.StringBuilder
             csv.AppendLine("ID,Patient,Service Type,Scheduled On,Status,Completed On")
 
             For Each row As DataGridViewRow In dgvReports.Rows
                 If Not row.IsNewRow Then
                     csv.AppendLine(String.Format("{0},{1},{2},{3},{4},{5}",
-                        CsvEscape(row.Cells(0).Value?.ToString()),
-                        CsvEscape(row.Cells(1).Value?.ToString()),
-                        CsvEscape(row.Cells(2).Value?.ToString()),
-                        CsvEscape(row.Cells(3).Value?.ToString()),
-                        CsvEscape(row.Cells(4).Value?.ToString()),
-                        CsvEscape(row.Cells(5).Value?.ToString())))
+                        CsvEscape(row.Cells(0).Value?.ToString),
+                        CsvEscape(row.Cells(1).Value?.ToString),
+                        CsvEscape(row.Cells(2).Value?.ToString),
+                        CsvEscape(row.Cells(3).Value?.ToString),
+                        CsvEscape(row.Cells(4).Value?.ToString),
+                        CsvEscape(row.Cells(5).Value?.ToString)))
                 End If
             Next
 
-            File.WriteAllText(saveDlg.FileName, csv.ToString())
+            File.WriteAllText(saveDlg.FileName, csv.ToString)
             MessageBox.Show("Export Successful!")
         End If
     End Sub
@@ -156,14 +156,14 @@ Public Class ReportsFrm
         Return """" & value.Replace("""", """""") & """"
     End Function
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        MainFrm.Show()
-        Me.Close()
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click, Button4.Click
+        MainFrm.Show
+        Close
     End Sub
 
-    Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click
-        LoadAllRecords()
-        cmbMonth.SelectedIndex = DateTime.Now.Month - 1
+    Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click, Button5.Click
+        LoadAllRecords
+        cmbMonth.SelectedIndex = Date.Now.Month - 1
 
 
         MessageBox.Show("Showing all patient records.")

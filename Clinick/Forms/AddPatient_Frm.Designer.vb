@@ -101,6 +101,7 @@ Partial Class AddPatient_Frm
         ' 
         ' dtpBday
         ' 
+        dtpBday.Cursor = Cursors.Hand
         dtpBday.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpBday.Location = New Point(33, 200)
         dtpBday.Margin = New Padding(3, 2, 3, 2)
@@ -110,7 +111,8 @@ Partial Class AddPatient_Frm
         ' 
         ' txtAge
         ' 
-        txtAge.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtAge.Cursor = Cursors.IBeam
+        txtAge.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtAge.Location = New Point(33, 257)
         txtAge.Margin = New Padding(3, 2, 3, 2)
         txtAge.Name = "txtAge"
@@ -143,17 +145,18 @@ Partial Class AddPatient_Frm
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.Black
-        Label6.Location = New Point(84, 17)
+        Label6.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Bold)
+        Label6.ForeColor = Color.Teal
+        Label6.Location = New Point(87, 18)
         Label6.Name = "Label6"
-        Label6.Size = New Size(214, 26)
+        Label6.Size = New Size(182, 24)
         Label6.TabIndex = 43
         Label6.Text = "Patient Information"
         ' 
         ' btnClear
         ' 
         btnClear.BackColor = Color.Teal
+        btnClear.Cursor = Cursors.Hand
         btnClear.Font = New Font("Microsoft Sans Serif", 10.2F)
         btnClear.ForeColor = Color.White
         btnClear.Location = New Point(519, 63)
@@ -176,6 +179,7 @@ Partial Class AddPatient_Frm
         ' btnAddPatient
         ' 
         btnAddPatient.BackColor = Color.Teal
+        btnAddPatient.Cursor = Cursors.Hand
         btnAddPatient.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnAddPatient.ForeColor = Color.White
         btnAddPatient.Location = New Point(33, 310)
@@ -188,7 +192,8 @@ Partial Class AddPatient_Frm
         ' 
         ' txtContactInfo
         ' 
-        txtContactInfo.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtContactInfo.Cursor = Cursors.IBeam
+        txtContactInfo.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtContactInfo.Location = New Point(193, 140)
         txtContactInfo.Margin = New Padding(3, 2, 3, 2)
         txtContactInfo.Name = "txtContactInfo"
@@ -208,7 +213,9 @@ Partial Class AddPatient_Frm
         ' 
         ' txtPatientName
         ' 
-        txtPatientName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtPatientName.AcceptsTab = True
+        txtPatientName.Cursor = Cursors.IBeam
+        txtPatientName.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txtPatientName.Location = New Point(193, 99)
         txtPatientName.Margin = New Padding(3, 2, 3, 2)
         txtPatientName.Name = "txtPatientName"
@@ -261,6 +268,7 @@ Partial Class AddPatient_Frm
         ' rbMale
         ' 
         rbMale.AutoSize = True
+        rbMale.Cursor = Cursors.Hand
         rbMale.Font = New Font("Microsoft Sans Serif", 12F)
         rbMale.ForeColor = Color.Black
         rbMale.Location = New Point(282, 201)
@@ -275,6 +283,7 @@ Partial Class AddPatient_Frm
         ' rbFemale
         ' 
         rbFemale.AutoSize = True
+        rbFemale.Cursor = Cursors.Hand
         rbFemale.Font = New Font("Microsoft Sans Serif", 12F)
         rbFemale.ForeColor = Color.Black
         rbFemale.Location = New Point(354, 202)
@@ -319,11 +328,11 @@ Partial Class AddPatient_Frm
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Teal
-        Label1.Font = New Font("Microsoft Sans Serif", 19.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 19F, FontStyle.Bold)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(311, 79)
+        Label1.Location = New Point(316, 77)
         Label1.Name = "Label1"
-        Label1.Size = New Size(256, 30)
+        Label1.Size = New Size(255, 36)
         Label1.TabIndex = 19
         Label1.Text = "Patient Registration"
         ' 
@@ -331,15 +340,16 @@ Partial Class AddPatient_Frm
         ' 
         btnReturnMainPd.BackColor = Color.Teal
         btnReturnMainPd.BackgroundImageLayout = ImageLayout.Center
+        btnReturnMainPd.Cursor = Cursors.Hand
         btnReturnMainPd.FlatStyle = FlatStyle.Popup
         btnReturnMainPd.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnReturnMainPd.ForeColor = Color.White
         btnReturnMainPd.Location = New Point(12, 9)
         btnReturnMainPd.Margin = New Padding(3, 2, 3, 2)
         btnReturnMainPd.Name = "btnReturnMainPd"
-        btnReturnMainPd.Size = New Size(282, 42)
+        btnReturnMainPd.Size = New Size(120, 42)
         btnReturnMainPd.TabIndex = 28
-        btnReturnMainPd.Text = "    Back To Dashboard"
+        btnReturnMainPd.Text = "    Back"
         btnReturnMainPd.UseVisualStyleBackColor = False
         ' 
         ' PictureBox3

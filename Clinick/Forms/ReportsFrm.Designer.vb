@@ -37,6 +37,7 @@ Partial Class ReportsFrm
         colProcessed = New DataGridViewTextBoxColumn()
         PictureBox1 = New PictureBox()
         Panel1 = New Panel()
+        Button1 = New Button()
         btnAll = New Button()
         PictureBox6 = New PictureBox()
         PictureBox5 = New PictureBox()
@@ -45,6 +46,7 @@ Partial Class ReportsFrm
         PictureBox2 = New PictureBox()
         Label1 = New Label()
         Label2 = New Label()
+        PictureBox7 = New PictureBox()
         CType(dgvReports, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -53,23 +55,26 @@ Partial Class ReportsFrm
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' cmbMonth
         ' 
+        cmbMonth.Cursor = Cursors.Hand
         cmbMonth.FormattingEnabled = True
-        cmbMonth.Location = New Point(174, 40)
+        cmbMonth.Location = New Point(29, 40)
         cmbMonth.Name = "cmbMonth"
-        cmbMonth.Size = New Size(121, 23)
+        cmbMonth.Size = New Size(218, 23)
         cmbMonth.TabIndex = 1
         ' 
         ' btnGenerateMonthly
         ' 
         btnGenerateMonthly.BackColor = Color.Teal
+        btnGenerateMonthly.Cursor = Cursors.Hand
         btnGenerateMonthly.FlatStyle = FlatStyle.Flat
         btnGenerateMonthly.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnGenerateMonthly.ForeColor = Color.Transparent
-        btnGenerateMonthly.Location = New Point(32, 33)
+        btnGenerateMonthly.Location = New Point(372, 33)
         btnGenerateMonthly.Name = "btnGenerateMonthly"
         btnGenerateMonthly.Size = New Size(136, 35)
         btnGenerateMonthly.TabIndex = 3
@@ -78,6 +83,7 @@ Partial Class ReportsFrm
         ' 
         ' btnPrint
         ' 
+        btnPrint.Cursor = Cursors.Hand
         btnPrint.FlatStyle = FlatStyle.Flat
         btnPrint.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnPrint.ForeColor = Color.Teal
@@ -90,6 +96,7 @@ Partial Class ReportsFrm
         ' 
         ' btnExportExcel
         ' 
+        btnExportExcel.Cursor = Cursors.Hand
         btnExportExcel.FlatStyle = FlatStyle.Flat
         btnExportExcel.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnExportExcel.ForeColor = Color.Teal
@@ -102,6 +109,7 @@ Partial Class ReportsFrm
         ' 
         ' btnClose
         ' 
+        btnClose.Cursor = Cursors.Hand
         btnClose.FlatStyle = FlatStyle.Flat
         btnClose.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnClose.ForeColor = Color.Teal
@@ -118,7 +126,6 @@ Partial Class ReportsFrm
         dgvReports.AllowUserToDeleteRows = False
         dgvReports.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvReports.BackgroundColor = Color.FromArgb(CByte(221), CByte(240), CByte(243))
-        dgvReports.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvReports.Columns.AddRange(New DataGridViewColumn() {colID, colPatient, colService, colSchedule, colStatus, colProcessed})
         dgvReports.Location = New Point(15, 149)
         dgvReports.Name = "dgvReports"
@@ -150,7 +157,6 @@ Partial Class ReportsFrm
         ' 
         ' colSchedule
         ' 
-        colSchedule.HeaderText = "Scheduled For"
         colSchedule.MinimumWidth = 6
         colSchedule.Name = "colSchedule"
         colSchedule.ReadOnly = True
@@ -182,6 +188,8 @@ Partial Class ReportsFrm
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
+        Panel1.Controls.Add(PictureBox7)
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(btnAll)
         Panel1.Controls.Add(PictureBox6)
         Panel1.Controls.Add(PictureBox5)
@@ -199,13 +207,27 @@ Partial Class ReportsFrm
         Panel1.Size = New Size(856, 497)
         Panel1.TabIndex = 11
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Teal
+        Button1.Cursor = Cursors.Hand
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(264, 33)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(102, 35)
+        Button1.TabIndex = 16
+        Button1.Text = "      Search"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' btnAll
         ' 
         btnAll.BackColor = Color.Teal
+        btnAll.Cursor = Cursors.Hand
         btnAll.FlatStyle = FlatStyle.Flat
         btnAll.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnAll.ForeColor = Color.Transparent
-        btnAll.Location = New Point(329, 33)
+        btnAll.Location = New Point(514, 33)
         btnAll.Name = "btnAll"
         btnAll.Size = New Size(136, 35)
         btnAll.TabIndex = 15
@@ -281,6 +303,17 @@ Partial Class ReportsFrm
         Label2.TabIndex = 13
         Label2.Text = "Reports"
         ' 
+        ' PictureBox7
+        ' 
+        PictureBox7.BackColor = Color.Teal
+        PictureBox7.BackgroundImage = My.Resources.Resources.Iconsss__10_1
+        PictureBox7.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox7.Location = New Point(280, 39)
+        PictureBox7.Name = "PictureBox7"
+        PictureBox7.Size = New Size(23, 24)
+        PictureBox7.TabIndex = 17
+        PictureBox7.TabStop = False
+        ' 
         ' ReportsFrm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -303,6 +336,7 @@ Partial Class ReportsFrm
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -329,4 +363,6 @@ Partial Class ReportsFrm
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents btnAll As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox7 As PictureBox
 End Class
